@@ -7,9 +7,5 @@
     <EURangesAliases />
     <EngineeringUnitAliases />
   </Aliases>
-  <Module Name="&lt;Default&gt;">
-    <GlobalVariables Name="Global Variables">
-      <Variable Name="gTest" />
-    </GlobalVariables>
-  </Module>
+  <Module Name="&lt;Default&gt;" />
 </OpcUaSource>
