@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pdef:Page xmlns:pdef="http://www.br-automation.com/iat2015/pageDefinition/v2" id="Main" layoutRefId="LayoutPage">
+  <Assignments>
+    <Assignment type="Content" baseContentRefId="TopContent" areaRefId="AreaTop" backColor="rgba(215, 215, 215, 1)" />
+    <Assignment type="Content" baseContentRefId="LeftContent" areaRefId="AreaLeft" backColor="rgba(215, 215, 215, 1)" />
+    <Assignment type="Content" baseContentRefId="MainContent" areaRefId="AreaContent" backColor="rgba(255, 255, 255, 1)" />
+  </Assignments>
+</pdef:Page>

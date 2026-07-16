@@ -1,0 +1,13 @@
+VAR
+	gTest : BOOL;
+	gMoveCounter : INT;
+	gPlayerColor : PlayerColorEnum;
+	gDifficultyLevel : DifficultyLevelEnum;
+	gGameState : GameStateEnum;
+	gPieceType : PieceTypeEnum;
+	gBoardBoard : ARRAY[1..8,1..8] OF PieceTypeEnum;
+	gBoardPosition : ARRAY[1..8,1..8] OF PositionStruct;
+	gWinner : WinnerEnum;
+	gCurrentMove : MoveStruct;
+	gVisionBoard : ARRAY[1..8,1..8] OF PieceTypeEnum;
+END_VAR
