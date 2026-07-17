@@ -11,5 +11,15 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="PlayContent.RulesBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PlayContent" widgetRefId="RulesBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="RulesDialog" headerText="Rules" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

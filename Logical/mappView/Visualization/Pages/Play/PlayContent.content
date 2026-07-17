@@ -83,9 +83,41 @@
     <Widget xsi:type="widgets.brease.Label" id="Row1Lb" top="705" left="0" width="40" height="95" zIndex="79" text="1" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="24px" style="Caption" />
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="40" left="840" width="579" height="279" zIndex="80" borderStyle="solid" borderWidth="4px" lineColor="rgba(255, 136, 0, 1)" backColor="rgba(255, 255, 255, 1)" style="Solid_Orange" />
     <Widget xsi:type="widgets.brease.Button" id="NewGameBtn" top="340" left="840" width="130" zIndex="81" text="New Game" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="RulesBtn" top="340" left="990" width="130" zIndex="82" text="Rules" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="RulesBtn" top="340" left="990" width="130" zIndex="82" imageAlign="right" text="Rules" style="Command" />
     <Widget xsi:type="widgets.brease.Button" id="LoadGameBtn" top="340" left="1140" width="130" zIndex="83" text="Load Game" style="Command" />
     <Widget xsi:type="widgets.brease.Button" id="SaveGameBtn" top="340" left="1290" width="130" zIndex="84" text="Save Game" style="Command" />
     <Widget xsi:type="widgets.brease.Image" id="Image1" top="400" left="940" width="400" height="420" zIndex="85" image="Media/happy-cat-cat.gif" borderWidth="0px" borderColor="rgba(51, 51, 51, 0)" imageColor="rgba(0, 0, 0, 0)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveA1" top="705" left="40" width="85" height="85" zIndex="86" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveE1" top="705" left="420" width="85" height="85" zIndex="87" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveF2" top="610" left="515" width="85" height="85" zIndex="88" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveD2" top="610" left="325" width="85" height="85" zIndex="89" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveB2" top="610" left="135" width="85" height="85" zIndex="90" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveG1" top="705" left="610" width="85" height="85" zIndex="91" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveC1" top="705" left="230" width="85" height="85" zIndex="92" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveD4" top="420" left="325" width="85" height="85" zIndex="93" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveB4" top="420" left="135" width="85" height="85" zIndex="94" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveG3" top="515" left="610" width="85" height="85" zIndex="95" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveE3" top="515" left="420" width="85" height="85" zIndex="96" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveC3" top="515" left="230" width="85" height="85" zIndex="97" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveA3" top="515" left="40" width="85" height="85" zIndex="98" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveH2" top="610" left="705" width="85" height="85" zIndex="99" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveD6" top="230" left="325" width="85" height="85" zIndex="100" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveC7" top="135" left="230" width="85" height="85" zIndex="101" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveD8" top="40" left="325" width="85" height="85" zIndex="102" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveC5" top="325" left="230" width="85" height="85" zIndex="103" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveB6" top="230" left="135" width="85" height="85" zIndex="104" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveB8" top="40" left="135" width="85" height="85" zIndex="105" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveA7" top="135" left="40" width="85" height="85" zIndex="106" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveA5" top="325" left="40" width="85" height="85" zIndex="107" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveG5" top="325" left="610" width="85" height="85" zIndex="108" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveF4" top="420" left="515" width="85" height="85" zIndex="109" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveE5" top="325" left="420" width="85" height="85" zIndex="110" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveF6" top="230" left="515" width="85" height="85" zIndex="111" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveG7" top="135" left="610" width="85" height="85" zIndex="112" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveE7" top="135" left="420" width="85" height="85" zIndex="113" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveF8" top="40" left="515" width="85" height="85" zIndex="114" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveH8" top="40" left="705" width="85" height="85" zIndex="115" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveH4" top="420" left="705" width="85" height="85" zIndex="116" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveH6" top="230" left="705" width="85" height="85" zIndex="117" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
   </Widgets>
 </Content>

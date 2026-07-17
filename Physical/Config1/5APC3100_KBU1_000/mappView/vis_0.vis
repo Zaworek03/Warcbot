@@ -14,10 +14,12 @@
   <EventBindingsSets>
     <EventBindingsSet refId="PlayContent" />
     <EventBindingsSet refId="NewGameContent" />
+    <EventBindingsSet refId="RulesContent" />
   </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>
     <Dialog refId="NewGameDialog" />
+		<Dialog refId="RulesDialog" />
   </Dialogs>
   <Contents>
     <Content refId="TopContent" />
@@ -29,6 +31,7 @@
     <Content refId="LiveContent" />
     <Content refId="SettingsContent" />
     <Content refId="NewGameContent" />
+    <Content refId="RulesContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
