@@ -18,8 +18,8 @@
     <Content refId="TopContent" />
     <Content refId="LeftContent" />
     <Content refId="MainContent" />
-    <Content refId="PlayContent" />
-    <Content refId="AlarmContent" />
+		<Content refId="PlayContent" />
+		<Content refId="AlarmContent" />
     <Content refId="LiveContent" />
     <Content refId="SettingsContent" />
     <Content refId="ManualInfoContent" />

@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<pdef:Page xmlns:pdef="http://www.br-automation.com/iat2015/pageDefinition/v2" id="Manual" layoutRefId="LayoutPage">
+<pdef:Page xmlns:pdef="http://www.br-automation.com/iat2015/pageDefinition/v2" id="Manual" layoutRefId="LayoutManual">
   <Assignments>
-    <Assignment type="Content" baseContentRefId="TopContent" areaRefId="AreaTop" backColor="rgba(215, 215, 215, 1)" />
-    <Assignment type="Content" baseContentRefId="LeftContent" areaRefId="AreaLeft" backColor="rgba(215, 215, 215, 1)" />
-    <Assignment type="Content" baseContentRefId="ManualKartezjanskiTytulContent" areaRefId="AreaContent" backColor="rgba(255, 255, 255, 1)" />
+    <Assignment type="Content" baseContentRefId="ManualKartezjanskiTytulContent" areaRefId="AreaKartezjanskiTytul" />
+    <Assignment type="Content" baseContentRefId="ManualJointContent" areaRefId="AreaJoint" />
+    <Assignment type="Content" baseContentRefId="ManualJointNazwaContent" areaRefId="AreaJointNazwa" />
+    <Assignment type="Content" baseContentRefId="ManualKartezjankiContent" areaRefId="AreaKartezjanski" />
+    <Assignment type="Content" baseContentRefId="ManualInfoContent" areaRefId="AreaInfo" />
   </Assignments>
 </pdef:Page>
