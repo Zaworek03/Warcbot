@@ -1,11 +1,11 @@
 VAR
 	gTest : BOOL;
-	gMoveCounter : INT;
+	gMoveCounter : INT := 0;
 	gPlayerColor : PlayerColorEnum;
 	gDifficultyLevel : DifficultyLevelEnum;
 	gGameState : GameStateEnum;
 	gPieceType : PieceTypeEnum;
-	gBoardBoard : ARRAY[1..8,1..8] OF PieceTypeEnum;
+	gBoardBoard : ARRAY[1..8,1..8] OF PieceTypeEnum := [64(EMPTY)];
 	gBoardPosition : ARRAY[1..8,1..8] OF PositionStruct;
 	gWinner : WinnerEnum;
 	gCurrentMove : MoveStruct;
@@ -14,4 +14,6 @@ VAR
 	gCzyjaTura : USINT;
 	gBoard : ARRAY[0..63] OF USINT;
 	gJakiKolor : BOOL;
+	bStartMove : BOOL;
+	gPiece : PieceTypeEnum;
 END_VAR
