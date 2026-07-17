@@ -20,13 +20,14 @@
     <Content refId="MainContent" />
     <Content refId="PlayContent" />
     <Content refId="AlarmContent" />
-    <Content refId="ManualKartezjanskiTytulContent" />
+    <Content refId="ManualContent" />
     <Content refId="LiveContent" />
     <Content refId="SettingsContent" />
+    <Content refId="ManualInfoContent" />
+    <Content refId="ManualJointContent" />
     <Content refId="ManualJointNazwaContent" />
     <Content refId="ManualKartezjankiContent" />
-    <Content refId="ManualJointContent" />
-    <Content refId="ManualInfoContent" />
+    <Content refId="ManualKartezjanskiTytulContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
