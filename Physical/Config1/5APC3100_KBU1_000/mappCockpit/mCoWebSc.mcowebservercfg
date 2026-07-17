@@ -3,7 +3,7 @@
 <Configuration>
   <Element ID="mCoWebServerCfg" Type="mcowebservercfg">
     <Selector ID="HTTP_Server" Value="1">
-      <Property ID="Port" Value="8084" />
+      <Property ID="Port" Value="8083" />
     </Selector>
     <Selector ID="HTTPS_Server" Value="0" />
     <Group ID="DocumentRoot">
