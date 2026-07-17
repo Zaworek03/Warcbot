@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ldef:Layout id="LayoutManual" height="900" width="1600" xmlns:ldef="http://www.br-automation.com/iat2015/layoutDefinition/v2">
+	<Areas>
+		<Area id="AreaKartezjanskiTytul" left="0" top="0" width="800" height="60" zIndex="1" />
+		<Area id="AreaJoint" left="0" top="500" width="800" height="400" zIndex="3" />
+		<Area id="AreaJointNazwa" left="0" top="460" width="800" height="40" zIndex="4" />
+		<Area id="AreaKartezjanski" left="0" top="60" width="800" height="400" zIndex="5" />
+		<Area id="AreaInfo" left="800" top="0" width="800" height="900" zIndex="6" />
+	</Areas>
+</ldef:Layout>
