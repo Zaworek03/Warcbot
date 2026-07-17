@@ -10,10 +10,18 @@
     <Page refId="Settings" />
   </Pages>
   <Navigations />
-  <BindingsSets />
-  <EventBindingsSets />
+  <BindingsSets>
+    <BindingsSet refId="TopContent" />
+  </BindingsSets>
+  <EventBindingsSets>
+    <EventBindingsSet refId="TopContent" />
+    <EventBindingsSet refId="SettingsContent" />
+    <EventBindingsSet refId="Login" />
+  </EventBindingsSets>
   <EventScriptsSets />
-  <Dialogs />
+  <Dialogs>
+    <Dialog refId="LoginDialog" />
+  </Dialogs>
   <Contents>
     <Content refId="TopContent" />
     <Content refId="LeftContent" />
@@ -27,6 +35,7 @@
     <Content refId="ManualJointNazwaContent" />
     <Content refId="ManualKartezjankiContent" />
     <Content refId="ManualKartezjanskiTytulContent" />
+    <Content refId="LoginContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

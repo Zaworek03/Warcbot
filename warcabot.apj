@@ -9,7 +9,7 @@
   <TechnologyPackages>
     <mappCockpit Version="6.7.0" />
     <mappMotion McAcpSim="6.7.2" McDriveLog="6.7.2" McPathXT="6.7.2" McProfGen="6.7.2" Version="6.7.2" />
-    <mappServices Version="6.7.0" />
+    <mappServices Version="6.7.1" />
     <mappView Version="6.7.0" />
     <OpcUaCs Version="6.7.0" />
   </TechnologyPackages>

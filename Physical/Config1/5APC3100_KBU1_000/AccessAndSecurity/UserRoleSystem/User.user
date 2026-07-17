@@ -1,5 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio FileVersion="4.9"?>
 <Configuration>
-  <Element ID="User" Type="User" />
+  <Element ID="Admin" Type="User">
+    <Property ID="Password" Value="$argon2id$v=19$m=512,t=70,p=1$C5GRqXaRKLja$wELl0xLTvZX+CPNQ1hMReZOM/MD6NlB+S3bEGbFyEcE" />
+    <Group ID="Roles">
+      <Property ID="Role[1]" Value="Administraotr" />
+    </Group>
+  </Element>
+  <Element ID="User" Type="User">
+    <Property ID="Password" Value="$argon2id$v=19$m=512,t=70,p=1$nhxyEtFkfNMV$QvBc1nckRsZyvFXCKy0Qi0YYeHkYeLBpAjJhY60b9LY" />
+    <Group ID="Roles">
+      <Property ID="Role[1]" Value="Operator" />
+    </Group>
+  </Element>
+  <Element ID="Serv" Type="User">
+    <Property ID="Password" Value="$argon2id$v=19$m=512,t=70,p=1$FWYvhH59+FoW$qbYZp9wpz/bU43c6v2Vaf8zxNOLpBVJrUy/VqkzGe+g" />
+    <Group ID="Roles">
+      <Property ID="Role[1]" Value="Service" />
+    </Group>
+  </Element>
+  <Element ID="Anon" Type="User">
+    <Property ID="Password" Value="$argon2id$v=19$m=512,t=70,p=1$cjAm4wlL6/fn$qDnWKB5pRvki/IUqDg1QEirCksV2QitWsrAQkx0Pwbg" />
+    <Group ID="Roles">
+      <Property ID="Role[1]" Value="Anonymus" />
+    </Group>
+  </Element>
 </Configuration>

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="TopContent" guid="f9d847c9-348c-42c5-8257-222eb49dbacd" height="60" width="1600" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Image" id="FlagPL" top="10" left="1070" width="80" height="40" zIndex="1" image="Media/Flag/Flag_of_Poland.svg" />
-    <Widget xsi:type="widgets.brease.Image" id="FlagUk" top="10" left="1160" width="80" height="40" zIndex="2" image="Media/Flag/Flag_of_the_United_Kingdom.svg" />
-    <Widget xsi:type="widgets.brease.Image" id="Logo" top="0" left="0" width="180" height="60" zIndex="3" image="Media/LogoBnR.svg" margin="5px" />
-    <Widget xsi:type="widgets.brease.Label" id="LogAsLb" top="5" left="840" width="120" zIndex="4" text="Zalogowany jako:" textColor="rgba(0, 0, 0, 1)" textAlign="center" />
-    <Widget xsi:type="widgets.brease.DateTimeOutput" id="Time" top="15" left="1240" width="360" zIndex="5" textColor="rgba(0, 0, 0, 1)" style="Output" />
-    <Widget xsi:type="widgets.brease.LoginInfo" id="UserAkt" top="25" left="840" zIndex="6" textColor="rgba(0, 0, 0, 1)" />
-    <Widget xsi:type="widgets.brease.Image" id="UserImg" top="10" left="780" width="40" height="40" zIndex="7" image="Media/SymbolLib/User/User.svg" />
-    <Widget xsi:type="widgets.brease.Button" id="LoginBtn" top="15" left="840" width="120" zIndex="0" text="Zaloguj" style="Operate" />
-    <Widget xsi:type="widgets.brease.Image" id="LogoutImg" top="10" left="990" width="40" height="40" zIndex="8" image="Media/SymbolLib/User/Logout.svg" />
+    <Widget xsi:type="widgets.brease.Image" id="FlagPL" top="10" left="1070" width="80" height="40" zIndex="0" image="Media/Flag/Flag_of_Poland.svg" />
+    <Widget xsi:type="widgets.brease.Image" id="FlagUk" top="10" left="1160" width="80" height="40" zIndex="1" image="Media/Flag/Flag_of_the_United_Kingdom.svg" />
+    <Widget xsi:type="widgets.brease.Image" id="Logo" top="0" left="0" width="180" height="60" zIndex="2" image="Media/LogoBnR.svg" margin="5px" />
+    <Widget xsi:type="widgets.brease.Label" id="LogAsLb" top="5" left="840" width="120" zIndex="3" text="Zalogowany jako:" textColor="rgba(0, 0, 0, 1)" textAlign="center" />
+    <Widget xsi:type="widgets.brease.DateTimeOutput" id="Time" top="15" left="1240" width="360" zIndex="4" textColor="rgba(0, 0, 0, 1)" style="Output" />
+    <Widget xsi:type="widgets.brease.LoginInfo" id="UserAkt" top="20" left="840" zIndex="5" textColor="rgba(0, 0, 0, 1)" />
+    <Widget xsi:type="widgets.brease.Image" id="UserImg" top="10" left="780" width="40" height="40" zIndex="6" image="Media/SymbolLib/User/User.svg" />
+    <Widget xsi:type="widgets.brease.Button" id="LoginBtn" top="15" left="840" width="120" zIndex="8" text="Zaloguj" permissionView="['Anonymus']" style="Operate" />
+    <Widget xsi:type="widgets.brease.Image" id="LogoutImg" top="10" left="990" width="40" height="40" zIndex="7" image="Media/SymbolLib/User/Logout.svg" permissionView="['Administraotr', 'Operator', 'Service']" />
   </Widgets>
 </Content>

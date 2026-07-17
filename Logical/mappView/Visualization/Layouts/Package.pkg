@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="File">LayoutPage.layout</Object>
     <Object Type="File">LayoutManual.layout</Object>
+    <Object Type="File">LayoutLogin.layout</Object>
   </Objects>
 </Package>
