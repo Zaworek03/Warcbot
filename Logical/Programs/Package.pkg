@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="Program" Language="IEC">ManualCtrl</Object>
     <Object Type="Package">Motion</Object>
+    <Object Type="Program" Language="IEC">PieceMovementProgram</Object>
   </Objects>
 </Package>
