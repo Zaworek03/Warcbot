@@ -13,7 +13,9 @@
   <BindingsSets />
   <EventBindingsSets />
   <EventScriptsSets />
-  <Dialogs />
+  <Dialogs>
+    <Dialog refId="NewGameDialog" />
+  </Dialogs>
   <Contents>
     <Content refId="TopContent" />
     <Content refId="LeftContent" />
@@ -23,6 +25,7 @@
     <Content refId="ManualContent" />
     <Content refId="LiveContent" />
     <Content refId="SettingsContent" />
+    <Content refId="NewGameContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
