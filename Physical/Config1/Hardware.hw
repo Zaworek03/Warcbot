@@ -34,6 +34,9 @@
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="USER" />
     <Parameter ID="FileDevicePath1" Value="USER_PATH" />
+    <Group ID="FileDevice2" />
+    <Parameter ID="FileDeviceName2" Value="VISION_DIR" />
+    <Parameter ID="FileDevicePath2" Value="C:\Users\Admin\Desktop\Adam\ZDJECIA_WARCABOT" />
   </Module>
   <Module Name="8EAC0122.001-1" Type="8EAC0122.001-1" Version="3.0.0.0">
     <Connection Connector="SS" TargetModule="DriveQ2-Q4-Q6_Racer3_1" TargetConnector="SS1" />
@@ -58,6 +61,7 @@
     <Connection Connector="PLK2" TargetModule="DriveQ2-Q4-Q6_Racer3_1" TargetConnector="PLK1">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
+    <Parameter ID="VisionConfig" Value="gCamera" />
   </Module>
   <Module Name="X20BB80" Type="X20BB80" Version="1.1.0.0" />
   <Module Name="X20BC0083" Type="X20BC0083" Version="2.17.0.0" NodeNumber="1">

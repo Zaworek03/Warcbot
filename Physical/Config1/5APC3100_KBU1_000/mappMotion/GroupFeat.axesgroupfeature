@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="Feature_Programs_Racer3_1" Type="axesgroupfeature" />
+  <Element ID="Feature_FeedForward_Racer3_1" Type="axesgroupfeature">
+    <Selector ID="Type" Value="FeedForward">
+      <Property ID="RiseTime" Value="0.25" />
+    </Selector>
+  </Element>
+  <Element ID="Feature_Jogging_Racer3_1" Type="axesgroupfeature">
+    <Selector ID="Type" Value="Jogging" />
+  </Element>
+  <Element ID="Feature_SharedBrakesSignals_Racer3_1" Type="axesgroupfeature">
+    <Selector ID="Type" Value="SharedBrakesSignals">
+      <Group ID="BrakeComposite[1]">
+        <Group ID="Axes">
+          <Property ID="AxisRef[1]" Value="gAxisQ1_Racer3_1" />
+          <Property ID="AxisRef[2]" Value="gAxisQ2_Racer3_1" />
+          <Property ID="AxisRef[3]" Value="gAxisQ3_Racer3_1" />
+        </Group>
+        <Selector ID="Output">
+          <Property ID="AxisRef" Value="gAxisQ1_Racer3_1" />
+        </Selector>
+      </Group>
+      <Group ID="BrakeComposite[2]">
+        <Group ID="Axes">
+          <Property ID="AxisRef[1]" Value="gAxisQ4_Racer3_1" />
+          <Property ID="AxisRef[2]" Value="gAxisQ5_Racer3_1" />
+          <Property ID="AxisRef[3]" Value="gAxisQ6_Racer3_1" />
+        </Group>
+        <Selector ID="Output">
+          <Property ID="AxisRef" Value="gAxisQ4_Racer3_1" />
+        </Selector>
+      </Group>
+    </Selector>
+  </Element>
+</Configuration>
