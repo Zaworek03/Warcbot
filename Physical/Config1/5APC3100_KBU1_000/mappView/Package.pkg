@@ -11,5 +11,6 @@
     <Object Type="File">PlayContent.eventbinding</Object>
     <Object Type="File">NewGameContent.eventbinding</Object>
     <Object Type="File">RulesContent.eventbinding</Object>
+    <Object Type="File">AlarmContent.eventbinding</Object>
   </Objects>
 </Package>
