@@ -4,5 +4,7 @@
   <Objects>
     <Object Type="Program" Language="IEC">ManualCtrl</Object>
     <Object Type="Package">Motion</Object>
+    <Object Type="Program" Language="IEC">Program</Object>
+    <Object Type="Program" Language="IEC">camera</Object>
   </Objects>
 </Package>
