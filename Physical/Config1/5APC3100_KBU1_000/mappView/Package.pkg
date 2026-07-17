@@ -4,5 +4,7 @@
   <Objects>
     <Object Type="File">Config.mappviewcfg</Object>
     <Object Type="File">vis_0.vis</Object>
+    <Object Type="File">PlayContent.eventbinding</Object>
+    <Object Type="File">NewGameContent.eventbinding</Object>
   </Objects>
 </Package>

@@ -11,7 +11,10 @@
   </Pages>
   <Navigations />
   <BindingsSets />
-  <EventBindingsSets />
+  <EventBindingsSets>
+    <EventBindingsSet refId="PlayContent" />
+    <EventBindingsSet refId="NewGameContent" />
+  </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>
     <Dialog refId="NewGameDialog" />
