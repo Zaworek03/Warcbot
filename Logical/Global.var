@@ -10,4 +10,8 @@ VAR
 	gWinner : WinnerEnum;
 	gCurrentMove : MoveStruct;
 	gVisionBoard : ARRAY[1..8,1..8] OF PieceTypeEnum;
+	gGraStart : BOOL;
+	gCzyjaTura : USINT;
+	gBoard : ARRAY[0..63] OF USINT;
+	gJakiKolor : BOOL;
 END_VAR

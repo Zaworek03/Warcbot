@@ -6,6 +6,7 @@
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
     <Task Name="Program" Source="Programs.Motion.Program.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="TestOpcua" Source="Programs.TestOpcua.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />

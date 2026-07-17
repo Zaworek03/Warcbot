@@ -25,4 +25,19 @@
       <Property ID="Role[1]" Value="Anonymus" />
     </Group>
   </Element>
+  <Element ID="Opcua" Type="User">
+    <Property ID="Password" Value="$argon2id$v=19$m=512,t=70,p=1$hTcIgHzV86Zj$4EYtfJO0PYEu33OKDDT+cvwBZh2T7hLDYTEF0na8/F0" />
+    <Group ID="Roles">
+      <Property ID="Role[1]" Value="DefaultRole" />
+    </Group>
+  </Element>
+  <Element ID="Security" Type="User">
+    <Property ID="Password" Value="$argon2id$v=19$m=512,t=70,p=1$cvanxzxzSPkz$juoYvxbqVQi0BuMxEHh+TVsuUpkyvoQsiSa9UyuEsfo" />
+    <Group ID="Roles">
+      <Property ID="Role[1]" Value="BR_Engineer" />
+      <Property ID="Role[2]" Value="BR_SafetyAdmin" />
+      <Property ID="Role[3]" Value="BR_SecurityAdmin" />
+      <Property ID="Role[4]" Value="DefaultRole" />
+    </Group>
+  </Element>
 </Configuration>
