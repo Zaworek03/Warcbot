@@ -1,4 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="SettingsContent" guid="2e9c75d1-1ea5-463c-8f4e-d645f507d5d9" height="840" width="1450" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Widgets />
+  <Widgets>
+    <Widget xsi:type="widgets.brease.TabControl" id="TabControlAdmin" top="40" left="40" width="1100" height="760" zIndex="0">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItemUsers" left="0" zIndex="0" text="TabItem1">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.Login" id="Login" top="70" left="20" zIndex="0" />
+            <Widget xsi:type="widgets.brease.UserList" id="UserList" top="10" left="360" width="700" zIndex="1">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemFName" width="180" zIndex="0" columnType="FullName" text="UserListItem1" />
+                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemDate" width="180" zIndex="1" columnType="LastLogin" text="UserListItem2" />
+                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemRoles" width="180" zIndex="2" columnType="Roles" text="UserListItem3" />
+                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemLocked" width="80" zIndex="3" columnType="IsLocked" text="UserListItem4" />
+                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemAdmin" width="80" zIndex="4" columnType="IsAdmin" text="UserListItem5" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserAdd" top="330" left="360" zIndex="2" text="Button1" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserRemove" top="330" left="480" zIndex="3" text="Button2" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserModify" top="330" left="600" zIndex="4" text="Button3" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" zIndex="1" text="TabItem2">
+          <Widgets />
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem3" left="0" zIndex="2" text="TabItem3">
+          <Widgets />
+        </Widget>
+      </Widgets>
+    </Widget>
+  </Widgets>
 </Content>

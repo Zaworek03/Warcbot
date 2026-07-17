@@ -47,6 +47,8 @@
       <Group ID="Authorization">
         <Group ID="AnonymousAccess">
           <Property ID="DefaultRole0" Value="BR_Anonymous" />
+          <Property ID="UserRole0" Value="BR_Engineer" />
+          <Property ID="UserRole1" Value="Anonymus" />
         </Group>
       </Group>
       <Property ID="AppCertificateTrustListValidation" Value="1" />

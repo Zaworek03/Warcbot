@@ -25,11 +25,11 @@
       <Property ID="PasswordMaxAge" Value="0" />
       <Property ID="PasswordExpirationNotification" Value="0" />
       <Property ID="PasswordHistory" Value="0" />
-      <Property ID="PasswordChangeReq" Value="TRUE" />
-      <Property ID="PasswordCase" Value="TRUE" />
-      <Property ID="PasswordAlpha" Value="TRUE" />
-      <Property ID="PasswordSpecial" Value="TRUE" />
-      <Property ID="PasswordLength" Value="8" />
+      <Property ID="PasswordChangeReq" Value="FALSE" />
+      <Property ID="PasswordCase" Value="FALSE" />
+      <Property ID="PasswordAlpha" Value="FALSE" />
+      <Property ID="PasswordSpecial" Value="FALSE" />
+      <Property ID="PasswordLength" Value="1" />
     </Group>
     <Group ID="UserAccount">
       <Property ID="InvalidPasswordAttempts" Value="3" />
@@ -46,11 +46,57 @@
       <Property ID="ImportUnchecked" Value="FALSE" />
       <Property ID="FileChecksum" Value="2" />
     </Group>
+    <Group ID="Users">
+      <Group ID="DefUser#1">
+        <Property ID="id" Value="Admin" />
+        <Property ID="name" Value="Administroator" />
+        <Property ID="lang" />
+        <Property ID="measSystem" Value="0" />
+      </Group>
+      <Group ID="DefUser#2">
+        <Property ID="id" Value="User" />
+        <Property ID="name" Value="Operator" />
+        <Property ID="lang" />
+        <Property ID="measSystem" Value="0" />
+      </Group>
+      <Group ID="DefUser#3">
+        <Property ID="id" Value="Anon" />
+        <Property ID="name" Value="Anonymus" />
+        <Property ID="lang" />
+        <Property ID="measSystem" Value="0" />
+      </Group>
+      <Group ID="DefUser#4">
+        <Property ID="id" Value="Serv" />
+        <Property ID="name" Value="Service" />
+        <Property ID="lang" />
+        <Property ID="measSystem" Value="0" />
+      </Group>
+    </Group>
     <Group ID="Roles">
       <Group ID="DefRole#1">
         <Property ID="id" Value="BR_SecurityAdmin" />
         <Property ID="level" Value="100" />
         <Property ID="admin" Value="TRUE" />
+      </Group>
+      <Group ID="DefRole#2">
+        <Property ID="id" Value="Administraotr" />
+        <Property ID="level" Value="100" />
+        <Property ID="admin" Value="TRUE" />
+      </Group>
+      <Group ID="DefRole#3">
+        <Property ID="id" Value="Operator" />
+        <Property ID="level" Value="30" />
+        <Property ID="admin" Value="FALSE" />
+      </Group>
+      <Group ID="DefRole#4">
+        <Property ID="id" Value="Anonymus" />
+        <Property ID="level" Value="10" />
+        <Property ID="admin" Value="FALSE" />
+      </Group>
+      <Group ID="DefRole#5">
+        <Property ID="id" Value="Service" />
+        <Property ID="level" Value="50" />
+        <Property ID="admin" Value="FALSE" />
       </Group>
     </Group>
   </Element>
