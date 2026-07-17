@@ -6,5 +6,6 @@
     <Object Type="Package">Motion</Object>
     <Object Type="Program" Language="IEC">TestOpcua</Object>
     <Object Type="Program" Language="IEC">PieceMovementProgram</Object>
+    <Object Type="Program" Language="IEC">camera</Object>
   </Objects>
 </Package>

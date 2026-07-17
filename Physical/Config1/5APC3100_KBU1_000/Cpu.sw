@@ -8,6 +8,7 @@
     <Task Name="Program" Source="Programs.Motion.Program.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="TestOpcua" Source="Programs.TestOpcua.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="PieceMovem" Source="Programs.PieceMovementProgram.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="Program2" Source="Programs.camera.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />

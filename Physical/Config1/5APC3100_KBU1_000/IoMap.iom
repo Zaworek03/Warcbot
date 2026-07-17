@@ -1,4 +1,5 @@
-
 VAR_CONFIG
-
+	::Program2:bTrigger AT %QX."VSS112Q22.042P-000".ImageAcquisition;
+	::Program2:bAcquisitionDone AT %IX."VSS112Q22.042P-000".ImageAcquisitionReady;
+	::Program2:bCameraAlarm AT %IW."VSS112Q22.042P-000".ImageProcessingError;
 END_VAR
