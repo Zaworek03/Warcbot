@@ -4,5 +4,7 @@
   <Objects>
     <Object Type="Package" Description="AreaContents">AreaContents</Object>
     <Object Type="Package">LoginDialog</Object>
+    <Object Type="Package">NewGameDialog</Object>
+    <Object Type="Package">RulesDialog</Object>
   </Objects>
 </Package>

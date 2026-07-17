@@ -8,5 +8,8 @@
     <Object Type="File">SettingsContent.eventbinding</Object>
     <Object Type="File">TopContent.binding</Object>
     <Object Type="File">Login.eventbinding</Object>
+    <Object Type="File">PlayContent.eventbinding</Object>
+    <Object Type="File">NewGameContent.eventbinding</Object>
+    <Object Type="File">RulesContent.eventbinding</Object>
   </Objects>
 </Package>

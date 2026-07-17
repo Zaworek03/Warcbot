@@ -17,9 +17,14 @@
     <EventBindingsSet refId="TopContent" />
     <EventBindingsSet refId="SettingsContent" />
     <EventBindingsSet refId="Login" />
+    <EventBindingsSet refId="PlayContent" />
+    <EventBindingsSet refId="NewGameContent" />
+    <EventBindingsSet refId="RulesContent" />
   </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>
+    <Dialog refId="NewGameDialog" />
+		<Dialog refId="RulesDialog" />
     <Dialog refId="LoginDialog" />
   </Dialogs>
   <Contents>
@@ -30,12 +35,17 @@
 		<Content refId="AlarmContent" />
     <Content refId="LiveContent" />
     <Content refId="SettingsContent" />
+<<<<<<< HEAD
     <Content refId="ManualInfoContent" />
     <Content refId="ManualJointContent" />
     <Content refId="ManualJointNazwaContent" />
     <Content refId="ManualKartezjankiContent" />
     <Content refId="ManualKartezjanskiTytulContent" />
     <Content refId="LoginContent" />
+=======
+    <Content refId="NewGameContent" />
+    <Content refId="RulesContent" />
+>>>>>>> Wizualizacja
   </Contents>
   <SnippetsSets />
   <VariablesSets />
