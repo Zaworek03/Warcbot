@@ -20,7 +20,6 @@
     <Content refId="MainContent" />
     <Content refId="PlayContent" />
     <Content refId="AlarmContent" />
-    <Content refId="ManualContent" />
     <Content refId="LiveContent" />
     <Content refId="SettingsContent" />
     <Content refId="ManualInfoContent" />

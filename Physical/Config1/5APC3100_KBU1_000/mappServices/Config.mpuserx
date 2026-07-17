@@ -22,17 +22,17 @@
       </Selector>
     </Group>
     <Group ID="PasswordPolicy">
-      <Property ID="PasswordMaxAge" Value="0" />
+      <Property ID="PasswordMaxAge" Value="999999" />
       <Property ID="PasswordExpirationNotification" Value="0" />
       <Property ID="PasswordHistory" Value="0" />
-      <Property ID="PasswordChangeReq" Value="TRUE" />
-      <Property ID="PasswordCase" Value="TRUE" />
-      <Property ID="PasswordAlpha" Value="TRUE" />
-      <Property ID="PasswordSpecial" Value="TRUE" />
+      <Property ID="PasswordChangeReq" Value="FALSE" />
+      <Property ID="PasswordCase" Value="FALSE" />
+      <Property ID="PasswordAlpha" Value="FALSE" />
+      <Property ID="PasswordSpecial" Value="FALSE" />
       <Property ID="PasswordLength" Value="8" />
     </Group>
     <Group ID="UserAccount">
-      <Property ID="InvalidPasswordAttempts" Value="3" />
+      <Property ID="InvalidPasswordAttempts" Value="999" />
       <Property ID="UserExpirationTime" Value="0" />
       <Property ID="AutoLogoutTime" Value="3600" />
       <Property ID="UserNameLength" Value="1" />
@@ -45,6 +45,14 @@
       <Property ID="ImportRole" Value="2" />
       <Property ID="ImportUnchecked" Value="FALSE" />
       <Property ID="FileChecksum" Value="2" />
+    </Group>
+    <Group ID="Users">
+      <Group ID="DefUser#1">
+        <Property ID="id" Value="Engineer" />
+        <Property ID="name" />
+        <Property ID="lang" />
+        <Property ID="measSystem" Value="0" />
+      </Group>
     </Group>
     <Group ID="Roles">
       <Group ID="DefRole#1">
