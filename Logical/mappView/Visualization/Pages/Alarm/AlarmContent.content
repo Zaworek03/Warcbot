@@ -1,4 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="AlarmContent" guid="20d23c73-8060-4918-8f8a-07ad2e77e919" height="840" width="1450" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Widgets />
+  <Widgets>
+    <Widget xsi:type="widgets.brease.TabControl" id="TabControl1" top="40" left="40" width="1380" height="759" zIndex="0">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem1" left="0" zIndex="0" text="TabItem1">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList1" top="10" left="0" width="1380" height="630" zIndex="0">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem1" width="280" zIndex="0" columnType="timestamp" text="AlarmListItem1" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem2" width="520" zIndex="1" text="AlarmListItem2" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem3" width="140" zIndex="2" columnType="code" text="AlarmListItem3" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem4" width="120" zIndex="3" columnType="state" text="AlarmListItem4" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem5" width="320" zIndex="4" columnType="additionalInfo1" text="AlarmListItem5" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Button" id="AckAllBtn" top="670" left="240" width="180" height="40" zIndex="1" text="fwegfwr" />
+            <Widget xsi:type="widgets.brease.Button" id="AckBtn" top="670" left="20" width="180" height="40" zIndex="2" text="fsewfesgv" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" zIndex="1" text="TabItem2">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.AlarmHistory" id="AlarmHistory1" top="10" left="0" width="1380" height="630" zIndex="0">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItem1" zIndex="0" text="AlarmHistoryItem1" />
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItem2" zIndex="1" text="AlarmHistoryItem2" />
+              </Widgets>
+            </Widget>
+          </Widgets>
+        </Widget>
+      </Widgets>
+    </Widget>
+  </Widgets>
 </Content>

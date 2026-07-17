@@ -5,5 +5,6 @@
     <Object Type="File">LayoutPage.layout</Object>
     <Object Type="File">LayoutLogin.layout</Object>
     <Object Type="File">LayoutDialogPlay.layout</Object>
+    <Object Type="File">layoutDialogAlarmHist.layout</Object>
   </Objects>
 </Package>
