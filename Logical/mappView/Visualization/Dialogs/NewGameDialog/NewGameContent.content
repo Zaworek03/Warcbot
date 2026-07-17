@@ -1,10 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="NewGameContent" guid="a9a54696-ec36-4d4c-a6e7-598f06504c47" height="300" width="500" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Button" id="BlackBtn" top="100" left="60" width="140" height="50" zIndex="0" text="Czarne" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="WhiteBtn" top="160" left="60" width="140" height="50" zIndex="1" text="Biale" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="MediumModeBtn" top="140" left="300" width="140" zIndex="2" text="Sredni" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="HardModeBtn" top="180" left="300" width="140" zIndex="3" text="Ciezki" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="EasyModeBtn" top="100" left="300" width="140" zIndex="4" text="Latwy" style="Command" />
+    <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="60" left="40" height="160" zIndex="0">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.ToggleButton" id="BlackToggleBtn" top="0" left="0" width="200" height="75" zIndex="0" text="Black" style="Command" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="WhiteToggleBtn" top="85" left="0" width="200" height="75" zIndex="1" text="White" style="Command" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar2" top="60" left="260" height="160" zIndex="1">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.ToggleButton" id="EasyModeToggleBtn" top="0" left="0" width="200" height="40" zIndex="0" text="Easy" style="Command" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton2" top="120" left="0" width="200" height="40" zIndex="1" text="Hard" style="Command" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton3" top="60" left="0" width="200" height="40" zIndex="2" text="Medium" style="Command" />
+      </Widgets>
+    </Widget>
   </Widgets>
 </Content>
