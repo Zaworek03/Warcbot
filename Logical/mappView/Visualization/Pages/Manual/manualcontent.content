@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Content id="manualcontent" guid="f6a9002a-47ef-4a97-a370-7a4e2a9daf77" height="840" width="1450" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Content id="ManualContent" guid="f6a9002a-47ef-4a97-a370-7a4e2a9daf77" height="840" width="1450" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Label" id="LabelKartezjanskiTytul" top="20" left="260" width="200" height="60" zIndex="1" text="CARTESIAN SYSTEM" backColor="rgba(255, 255, 255, 0)" style="Caption" />
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="0" left="0" width="725" zIndex="0" backColor="rgba(255, 218, 185, 1)" />

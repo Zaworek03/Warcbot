@@ -38,8 +38,8 @@
     <Content refId="LoginContent" />
 	<Content refId="NewGameContent" />
     <Content refId="RulesContent" />
-    <Content refId="manualcontent" />
-  </Contents>
+    <Content refId="ManualContent" />
+	</Contents>
   <SnippetsSets />
   <VariablesSets />
   <ExpressionsSets />

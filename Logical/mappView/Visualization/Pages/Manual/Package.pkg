@@ -3,11 +3,6 @@
 <Package SubType="PagePackage" PackageType="PagePackage" xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="File" Description="Page description">Manual.page</Object>
-    <Object Type="File">ManualKartezjanskiTytulContent.content</Object>
-    <Object Type="File">ManualJointNazwaContent.content</Object>
-    <Object Type="File">ManualKartezjankiContent.content</Object>
-    <Object Type="File">ManualJointContent.content</Object>
-    <Object Type="File">ManualInfoContent.content</Object>
-    <Object Type="File">manualcontent.content</Object>
+    <Object Type="File">ManualContent.content</Object>
   </Objects>
 </Package>
