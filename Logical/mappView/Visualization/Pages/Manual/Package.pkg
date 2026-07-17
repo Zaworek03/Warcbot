@@ -8,5 +8,6 @@
     <Object Type="File">ManualKartezjankiContent.content</Object>
     <Object Type="File">ManualJointContent.content</Object>
     <Object Type="File">ManualInfoContent.content</Object>
+    <Object Type="File">manualcontent.content</Object>
   </Objects>
 </Package>

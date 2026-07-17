@@ -35,15 +35,11 @@
 		<Content refId="AlarmContent" />
     <Content refId="LiveContent" />
     <Content refId="SettingsContent" />
-	<Content refId="ManualInfoContent" />
-    <Content refId="ManualJointContent" />
-    <Content refId="ManualJointNazwaContent" />
-    <Content refId="ManualKartezjankiContent" />
-    <Content refId="ManualKartezjanskiTytulContent" />
     <Content refId="LoginContent" />
 	<Content refId="NewGameContent" />
     <Content refId="RulesContent" />
-	</Contents>
+    <Content refId="manualcontent" />
+  </Contents>
   <SnippetsSets />
   <VariablesSets />
   <ExpressionsSets />

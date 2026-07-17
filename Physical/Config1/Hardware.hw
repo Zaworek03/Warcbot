@@ -136,6 +136,7 @@
     <Connection Connector="PLK2" TargetModule="DriveQ2-Q4-Q6_Racer3_1" TargetConnector="PLK1">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
+    <Parameter ID="VisionConfig" Value="gCamera" />
   </Module>
   <Module Name="X20BB80" Type="X20BB80" Version="1.1.0.0" />
   <Module Name="X20BC0083" Type="X20BC0083" Version="2.17.0.0" NodeNumber="1">

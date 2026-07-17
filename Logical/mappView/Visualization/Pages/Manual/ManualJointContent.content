@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ManualJointContent" guid="c794558c-482b-44aa-92f5-788bd9088f41" height="400" width="800" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<Widgets>
-		<Widget xsi:type="widgets.brease.Label" id="LabelAxis1" top="60" left="140" zIndex="0" text="AXIS 1" style="Caption" />
-		<Widget xsi:type="widgets.brease.Label" id="LabelAxis2" top="180" left="140" zIndex="1" text="AXIS 2" style="Caption" />
-		<Widget xsi:type="widgets.brease.Label" id="LabelAxis3" top="300" left="140" zIndex="2" text="AXIS 3" style="Caption" />
-		<Widget xsi:type="widgets.brease.Label" id="LabelAxis4" top="60" left="480" zIndex="3" text="AXIS 4" style="Caption" />
-		<Widget xsi:type="widgets.brease.Label" id="LabelAxis5" top="180" left="480" zIndex="4" text="AXIS 5" style="Caption" />
-		<Widget xsi:type="widgets.brease.Label" id="LabelAxis6" top="300" left="480" zIndex="5" text="AXIS 6" style="Caption" />
-		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis1Plus" top="40" left="220" width="60" height="70" zIndex="6" image="Media/SymbolLib/Edit/Add.svg" backColor="rgba(224, 224, 224, 1)" />
-		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis2Plus" top="160" left="220" width="60" height="70" zIndex="7" image="Media/SymbolLib/Edit/Add.svg" backColor="rgba(224, 224, 224, 1)" />
-		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis3Plus" top="280" left="220" width="60" height="70" zIndex="8" image="Media/SymbolLib/Edit/Add.svg" backColor="rgba(224, 224, 224, 1)" />
-		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis4Plus" top="40" left="560" width="60" height="70" zIndex="9" image="Media/SymbolLib/Edit/Add.svg" backColor="rgba(224, 224, 224, 1)" />
-		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis5Plus" top="160" left="560" width="60" height="70" zIndex="10" image="Media/SymbolLib/Edit/Add.svg" backColor="rgba(224, 224, 224, 1)" />
-		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis6Plus" top="280" left="560" width="60" height="70" zIndex="11" image="Media/SymbolLib/Edit/Add.svg" backColor="rgba(224, 224, 224, 1)" />
-	</Widgets>
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="LabelAxis1" top="60" left="140" zIndex="0" text="AXIS 1" style="Caption" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelAxis2" top="180" left="140" zIndex="1" text="AXIS 2" style="Caption" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelAxis3" top="300" left="140" zIndex="2" text="AXIS 3" style="Caption" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelAxis4" top="60" left="480" zIndex="3" text="AXIS 4" style="Caption" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelAxis5" top="180" left="480" zIndex="4" text="AXIS 5" style="Caption" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelAxis6" top="300" left="480" zIndex="5" text="AXIS 6" style="Caption" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis1Plus" top="40" left="220" width="60" height="70" zIndex="6" image="Media/SymbolLib/Edit/Add.svg" backColor="rgba(224, 224, 224, 1)" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis2Plus" top="160" left="220" width="60" height="70" zIndex="7" image="Media/SymbolLib/Edit/Add.svg" backColor="rgba(224, 224, 224, 1)" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis3Plus" top="280" left="220" width="60" height="70" zIndex="8" image="Media/SymbolLib/Edit/Add.svg" backColor="rgba(224, 224, 224, 1)" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis4Plus" top="40" left="560" width="60" height="70" zIndex="9" image="Media/SymbolLib/Edit/Add.svg" backColor="rgba(224, 224, 224, 1)" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis5Plus" top="160" left="560" width="60" height="70" zIndex="10" image="Media/SymbolLib/Edit/Add.svg" backColor="rgba(224, 224, 224, 1)" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis6Plus" top="280" left="560" width="60" height="70" zIndex="11" image="Media/SymbolLib/Edit/Add.svg" backColor="rgba(224, 224, 224, 1)" />
+  </Widgets>
 </Content>
