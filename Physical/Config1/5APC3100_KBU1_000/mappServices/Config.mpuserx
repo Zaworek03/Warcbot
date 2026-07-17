@@ -48,10 +48,6 @@
     </Group>
     <Group ID="Users">
       <Group ID="DefUser#1">
-<<<<<<< HEAD
-        <Property ID="id" Value="Engineer" />
-        <Property ID="name" />
-=======
         <Property ID="id" Value="Admin" />
         <Property ID="name" Value="Administroator" />
         <Property ID="lang" />
@@ -72,7 +68,6 @@
       <Group ID="DefUser#4">
         <Property ID="id" Value="Serv" />
         <Property ID="name" Value="Service" />
->>>>>>> origin/userMng
         <Property ID="lang" />
         <Property ID="measSystem" Value="0" />
       </Group>
