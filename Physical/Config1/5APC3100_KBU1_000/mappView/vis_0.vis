@@ -27,6 +27,7 @@
     <Content refId="ManualKartezjankiContent" />
     <Content refId="ManualJointContent" />
     <Content refId="ManualInfoContent" />
+    <Content refId="manualcontent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

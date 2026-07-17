@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ManualInfoContent" guid="e251b43b-3178-49d5-9a42-670f8d3abc2f" height="900" width="800" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<Widgets>
-		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis1" top="200" left="180" width="160" zIndex="0" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis2" top="320" left="180" width="160" zIndex="1" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis3" top="440" left="180" width="160" zIndex="2" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis4" top="560" left="180" width="160" zIndex="3" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis5" top="680" left="180" width="160" zIndex="4" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-		<Widget xsi:type="widgets.brease.Label" id="Label1" top="120" left="40" width="340" zIndex="5" text="ANGULAR POSITION OF INDIVIDUAL AXES" style="Caption" />
-		<Widget xsi:type="widgets.brease.Label" id="Label2" top="200" left="60" zIndex="6" text="AXIS 1" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-		<Widget xsi:type="widgets.brease.Label" id="Label3" top="320" left="60" zIndex="7" text="AXIS 2" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-		<Widget xsi:type="widgets.brease.Label" id="Label4" top="440" left="60" zIndex="8" text="AXIS 3" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-		<Widget xsi:type="widgets.brease.Label" id="Label5" top="560" left="60" zIndex="9" text="AXIS 4" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-		<Widget xsi:type="widgets.brease.Label" id="Label6" top="680" left="60" zIndex="10" text="AXIS 5" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis6" top="800" left="180" width="160" zIndex="11" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-		<Widget xsi:type="widgets.brease.Label" id="Label7" top="800" left="60" zIndex="12" text="AXIS 6" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-		<Widget xsi:type="widgets.brease.Label" id="Label8" top="120" left="420" width="360" zIndex="13" text="CARTESIAN POSITION OF INDIVIDUAL AXES" style="Caption" />
-		<Widget xsi:type="widgets.brease.Label" id="Label9" top="200" left="500" width="40" zIndex="14" text="X" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputX" top="200" left="560" width="160" zIndex="15" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputY" top="320" left="560" width="160" zIndex="16" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputZ" top="440" left="560" width="160" zIndex="17" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-		<Widget xsi:type="widgets.brease.Label" id="Label10" top="320" left="500" width="40" zIndex="18" text="Y" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-		<Widget xsi:type="widgets.brease.Label" id="Label11" top="440" left="500" width="40" zIndex="19" text="Z" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-	</Widgets>
+  <Widgets>
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis1" top="200" left="180" width="160" zIndex="0" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis2" top="320" left="180" width="160" zIndex="1" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis3" top="440" left="180" width="160" zIndex="2" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis4" top="560" left="180" width="160" zIndex="3" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis5" top="680" left="180" width="160" zIndex="4" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="120" left="40" width="340" zIndex="5" text="ANGULAR POSITION OF INDIVIDUAL AXES" style="Caption" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="200" left="60" zIndex="6" text="AXIS 1" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="320" left="60" zIndex="7" text="AXIS 2" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="440" left="60" zIndex="8" text="AXIS 3" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="560" left="60" zIndex="9" text="AXIS 4" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="680" left="60" zIndex="10" text="AXIS 5" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis6" top="800" left="180" width="160" zIndex="11" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label7" top="800" left="60" zIndex="12" text="AXIS 6" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+    <Widget xsi:type="widgets.brease.Label" id="Label8" top="120" left="420" width="360" zIndex="13" text="CARTESIAN POSITION OF INDIVIDUAL AXES" style="Caption" />
+    <Widget xsi:type="widgets.brease.Label" id="Label9" top="200" left="500" width="40" zIndex="14" text="X" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputX" top="200" left="560" width="160" zIndex="15" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputY" top="320" left="560" width="160" zIndex="16" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputZ" top="440" left="560" width="160" zIndex="17" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label10" top="320" left="500" width="40" zIndex="18" text="Y" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+    <Widget xsi:type="widgets.brease.Label" id="Label11" top="440" left="500" width="40" zIndex="19" text="Z" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+  </Widgets>
 </Content>
