@@ -7,5 +7,6 @@
     <Object Type="Program" Language="IEC">TestOpcua</Object>
     <Object Type="Program" Language="IEC">PieceMovementProgram</Object>
     <Object Type="Program" Language="IEC">camera</Object>
+    <Object Type="Program" Language="IEC">VisVariable</Object>
   </Objects>
 </Package>

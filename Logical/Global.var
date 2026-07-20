@@ -16,4 +16,6 @@ VAR
 	gJakiKolor : BOOL;
 	bStartMove : BOOL;
 	gPiece : PieceTypeEnum;
+	gPickPiece : ARRAY[1..8,1..8] OF BOOL := [64(EMPTY)];
+	gEnableMove : ARRAY[1..8,1..8] OF BOOL;
 END_VAR

@@ -119,5 +119,7 @@
     <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveH8" top="40" left="705" width="85" height="85" zIndex="115" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
     <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveH4" top="420" left="705" width="85" height="85" zIndex="116" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
     <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveH6" top="230" left="705" width="85" height="85" zIndex="117" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteB8" top="95" left="155" width="85" height="85" zIndex="118" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteD8" top="95" left="295" width="85" height="85" zIndex="119" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
   </Widgets>
 </Content>
