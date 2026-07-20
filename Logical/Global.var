@@ -11,8 +11,9 @@ VAR
 	gCurrentMove : MoveStruct;
 	gVisionBoard : ARRAY[1..8,1..8] OF PieceTypeEnum;
 	gGraStart : BOOL;
-	gCzyjaTura : USINT;
-	gBoard : ARRAY[0..63] OF USINT;
+	gTrudnosc : USINT;
+	gWyborPionkaBoard : ARRAY[0..7,0..7] OF USINT;
+	gBoard : ARRAY[0..7,0..7] OF USINT;
 	gJakiKolor : BOOL;
 	bStartMove : BOOL;
 	gPiece : PieceTypeEnum;
