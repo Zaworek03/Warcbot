@@ -12,5 +12,6 @@
     <Object Type="File">NewGameContent.eventbinding</Object>
     <Object Type="File">RulesContent.eventbinding</Object>
     <Object Type="File">AlarmContent.eventbinding</Object>
+    <Object Type="File">OpcUaServer.uaserver</Object>
   </Objects>
 </Package>

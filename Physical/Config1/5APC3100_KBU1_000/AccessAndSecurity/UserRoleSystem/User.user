@@ -2,13 +2,13 @@
 <?AutomationStudio FileVersion="4.9"?>
 <Configuration>
   <Element ID="Admin" Type="User">
-    <Property ID="Password" Value="$argon2id$v=19$m=512,t=70,p=1$C5GRqXaRKLja$wELl0xLTvZX+CPNQ1hMReZOM/MD6NlB+S3bEGbFyEcE" />
+    <Property ID="Password" Value="$argon2id$v=19$m=512,t=70,p=1$nYE5P2MtbHCK$00jbnVlUalG+j4/IAo/3HyPpOjfxyVYMsS4DTQnQ8gg" />
     <Group ID="Roles">
       <Property ID="Role[1]" Value="Administraotr" />
     </Group>
   </Element>
   <Element ID="User" Type="User">
-    <Property ID="Password" Value="$argon2id$v=19$m=512,t=70,p=1$nhxyEtFkfNMV$QvBc1nckRsZyvFXCKy0Qi0YYeHkYeLBpAjJhY60b9LY" />
+    <Property ID="Password" Value="$argon2id$v=19$m=512,t=70,p=1$wpdNvfpNinJ1$pm3/H2gr5wfGRhEUaOyJ8OvCXEtmaB39wvty+v/ZcCE" />
     <Group ID="Roles">
       <Property ID="Role[1]" Value="Operator" />
     </Group>
@@ -32,7 +32,7 @@
     </Group>
   </Element>
   <Element ID="Security" Type="User">
-    <Property ID="Password" Value="$argon2id$v=19$m=512,t=70,p=1$cvanxzxzSPkz$juoYvxbqVQi0BuMxEHh+TVsuUpkyvoQsiSa9UyuEsfo" />
+    <Property ID="Password" Value="$argon2id$v=19$m=512,t=70,p=1$w7F46J3Vveon$vSGn7FaIvi7FVd2Ht7LVqQiiDu44f5a1fwxyHTZXze0" />
     <Group ID="Roles">
       <Property ID="Role[1]" Value="BR_Engineer" />
       <Property ID="Role[2]" Value="BR_SafetyAdmin" />

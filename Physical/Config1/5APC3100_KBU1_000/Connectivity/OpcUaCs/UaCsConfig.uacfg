@@ -7,7 +7,7 @@
       <Property ID="Multicore" Value="1" />
     </Group>
     <Group ID="Network">
-      <Property ID="TcpPort" Value="4840" />
+      <Property ID="TcpPort" Value="4842" />
       <Group ID="Discovery">
         <Property ID="RegisterAtServer" Value="0" />
         <Property ID="ServerUrl" Value="opc.tcp://" />

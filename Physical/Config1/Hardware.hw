@@ -3,6 +3,12 @@
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
   <Module Name="5AC901.IPLK-00" Type="5AC901.IPLK-00" Version="2.1.0.0">
     <Connection Connector="SL" TargetModule="5APC3100_KBU1_000" TargetConnector="SL2" />
+    <Connector Name="IF1">
+      <Parameter ID="MtuSize" Value="1500" />
+      <Parameter ID="CycleTime" Value="400" />
+      <Parameter ID="InternetAddress" Value="192.168.200.240" />
+      <Parameter ID="SubnetMask" Value="255.255.255.0" />
+    </Connector>
   </Module>
   <Module Name="5APC3100_KBU1_000" Type="5APC3100.KBU1-000" Version="2.3.1.0">
     <Connector Name="IF3">
@@ -30,7 +36,6 @@
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="warcabot_Config1" />
-    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
     <Parameter ID="TimerDevice" Value="5AC901.IPLK-00.IF1" />
     <Parameter ID="TaskClassIdleTime" Value="2000" />
@@ -42,9 +47,10 @@
     <Group ID="FileDevice2" />
     <Parameter ID="FileDeviceName2" Value="CNC_PrgDir" />
     <Parameter ID="FileDevicePath2" Value="USER_PATH\Programs" />
-  </Module>
-  <Module Name="8EAC0122.001-1" Type="8EAC0122.001-1" Version="3.0.0.0">
-    <Connection Connector="SS" TargetModule="DriveQ2-Q4-Q6_Racer3_1" TargetConnector="SS1" />
+    <Parameter ID="ActivateWebServer" Value="1" />
+    <Parameter ID="WebServerProtocol" Value="1" />
+    <Parameter ID="ActivateSdm" Value="1" />
+    <Parameter ID="Authentication" Value="0" />
   </Module>
   <Module Name="DriveQ1-Q3-Q5_Racer3_1" Type="8EI8X8MWT10.xxxx-1" Version="2.4.0.0" NodeNumber="2">
     <Connection Connector="PLK1" TargetModule="X20BC0083" TargetConnector="PLK2">
@@ -90,7 +96,7 @@
     <Parameter ID="JerkTime" Location="DriveConfiguration/Channel[3]/RealAxis/JerkFilter" Value="0.01" />
     <Parameter ID="FeatureRef[1]" Location="DriveConfiguration/Channel[3]/RealAxis/AxisFeatures" Value="Feature_Brake_Racer3_1" />
   </Module>
-  <Module Name="DriveQ2-Q4-Q6_Racer3_1" Type="8EI8X8MWT10.xxxx-1" Version="2.4.0.0" NodeNumber="4">
+  <Module Name="DriveQ2-Q4-Q6_Racer3_1" Type="8EI8X8MWT10.xxxx-1" Version="2.4.0.0" NodeNumber="3">
     <Connection Connector="PLK1" TargetModule="VSS112Q22.042P-000" TargetConnector="PLK2">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
@@ -129,7 +135,7 @@
     <Parameter ID="JerkTime" Location="DriveConfiguration/Channel[3]/RealAxis/JerkFilter" Value="0.01" />
     <Parameter ID="FeatureRef[1]" Location="DriveConfiguration/Channel[3]/RealAxis/AxisFeatures" Value="Feature_Brake_Racer3_1" />
   </Module>
-  <Module Name="VSS112Q22.042P-000" Type="VSS112Q22.042P-000" Version="1.11.0.929" NodeNumber="3">
+  <Module Name="VSS112Q22.042P-000" Type="VSS112Q22.042P-000" Version="1.11.0.929" NodeNumber="4">
     <Connection Connector="PLK1" TargetModule="DriveQ1-Q3-Q5_Racer3_1" TargetConnector="PLK2">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>

@@ -21,5 +21,25 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="TopContent.FlagPL.Click">
+      <Source xsi:type="widgets.brease.Image.Event" contentRefId="TopContent" widgetRefId="FlagPL" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.SetLanguage" value="pl" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="TopContent.FlagUk.Click">
+      <Source xsi:type="widgets.brease.Image.Event" contentRefId="TopContent" widgetRefId="FlagUk" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.SetLanguage" value="en" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

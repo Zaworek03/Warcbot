@@ -8,7 +8,7 @@
     <Widget xsi:type="widgets.brease.DateTimeOutput" id="Time" top="15" left="1240" width="360" zIndex="4" textColor="rgba(0, 0, 0, 1)" style="Output" />
     <Widget xsi:type="widgets.brease.LoginInfo" id="UserAkt" top="20" left="840" zIndex="5" textColor="rgba(0, 0, 0, 1)" />
     <Widget xsi:type="widgets.brease.Image" id="UserImg" top="10" left="780" width="40" height="40" zIndex="6" image="Media/SymbolLib/User/User.svg" />
-    <Widget xsi:type="widgets.brease.Button" id="LoginBtn" top="15" left="840" width="120" zIndex="8" text="Zaloguj" permissionView="['Anonymus']" style="Operate" />
+    <Widget xsi:type="widgets.brease.Button" id="LoginBtn" top="15" left="840" width="120" zIndex="8" text="$IAT/Button.LOGIN" permissionView="['Anonymus']" style="Operate" />
     <Widget xsi:type="widgets.brease.Image" id="LogoutImg" top="10" left="990" width="40" height="40" zIndex="7" image="Media/SymbolLib/User/Logout.svg" permissionView="['Administraotr', 'Operator', 'Service']" />
   </Widgets>
 </Content>
