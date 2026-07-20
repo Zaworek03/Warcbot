@@ -8,5 +8,6 @@
     <File Private="true">LocalFunctions.fun</File>
     <File>CheckMove.st</File>
     <File>CheckRegularCapture.st</File>
+    <File>CanPlayerCapture.st</File>
   </Files>
 </Program>

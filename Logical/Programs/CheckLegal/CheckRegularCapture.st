@@ -61,7 +61,7 @@ FUNCTION CheckRegularCapture
 
 			END_IF;
 		
-		WHITE_KING,
+			WHITE_KING,
 		BLACK_KING:
 
 			IF ((RowDiff = 2) OR (RowDiff = -2)) AND

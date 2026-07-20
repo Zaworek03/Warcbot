@@ -1,9 +1,5 @@
-
 VAR
 	MoveLegal : BOOL;
 	Piece : PieceTypeEnum;
-END_VAR
-
-VAR CONSTANT
-
+	PlayerColor : PlayerColorEnum;
 END_VAR
