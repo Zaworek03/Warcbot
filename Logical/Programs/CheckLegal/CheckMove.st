@@ -40,7 +40,15 @@ FUNCTION CheckMove
 				((ColDiff = 1) OR (ColDiff = -1)) THEN
 				CheckMove := TRUE;
 			END_IF;
+			
+		WHITE_KING,
+		BLACK_KING:
 
+			IF ((RowDiff = 1) OR (RowDiff = -1)) AND
+				((ColDiff = 1) OR (ColDiff = -1)) THEN
+				CheckMove := TRUE;
+			END_IF;
+		
 	END_CASE;
 	
 END_FUNCTION
