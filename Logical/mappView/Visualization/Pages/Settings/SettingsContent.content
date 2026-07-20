@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Content id="SettingsContent" guid="2e9c75d1-1ea5-463c-8f4e-d645f507d5d9" height="840" width="1450" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Content id="SettingsContent" guid="2e9c75d1-1ea5-463c-8f4e-d645f507d5d9" height="840" width="1450" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
   <Widgets>
-    <Widget xsi:type="widgets.brease.TabControl" id="TabControlAdmin" top="40" left="40" width="1100" height="760" zIndex="0">
+    <Widget xsi:type="widgets.brease.TabControl" id="TabControlAdmin" top="40" left="40" width="1380" height="760" zIndex="0">
       <Widgets>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItemUsers" left="0" zIndex="0" text="TabItem1">
           <Widgets>
@@ -21,7 +21,16 @@
           </Widgets>
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" zIndex="1" text="TabItem2">
-          <Widgets />
+          <Widgets>
+            <Widget xsi:type="widgets.brease.Table" id="Table1" top="70" left="100" zIndex="0">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.TableItem" id="TableItem1" zIndex="0" text="TableItem1" />
+                <Widget xsi:type="widgets.brease.TableItem" id="TableItem2" zIndex="1" text="TableItem2" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Button" id="Button1" top="410" left="220" zIndex="1" text="sv" />
+            <Widget xsi:type="widgets.brease.Button" id="Button2" top="410" left="360" zIndex="2" text="ld" />
+          </Widgets>
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem3" left="0" zIndex="2" text="TabItem3">
           <Widgets />

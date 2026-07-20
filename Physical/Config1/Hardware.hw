@@ -52,6 +52,12 @@
     <Parameter ID="WebServerProtocol" Value="1" />
     <Parameter ID="ActivateSdm" Value="1" />
     <Parameter ID="Authentication" Value="0" />
+    <Group ID="FileDevice3" />
+    <Parameter ID="FileDeviceName3" Value="SG" />
+    <Parameter ID="FileDevicePath3" Value="USER_PATH" />
+  </Module>
+  <Module Name="8EAC0122.001-1" Type="8EAC0122.001-1" Version="3.0.0.0">
+    <Connection Connector="SS" TargetModule="DriveQ2-Q4-Q6_Racer3_1" TargetConnector="SS1" />
   </Module>
   <Module Name="DriveQ1-Q3-Q5_Racer3_1" Type="8EI8X8MWT10.xxxx-1" Version="2.4.0.0" NodeNumber="2">
     <Connection Connector="PLK1" TargetModule="X20BC0083" TargetConnector="PLK2">

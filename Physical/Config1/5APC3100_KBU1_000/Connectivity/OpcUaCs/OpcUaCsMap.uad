@@ -24,5 +24,18 @@
       <Variable Name="AxisQ5Pos" />
       <Variable Name="AxisQ6Pos" />
     </Task>
+    <Task Name="SaveGame">
+      <Variable Name="UIConnect">
+        <Variable Name="Recipe">
+          <Variable Name="List">
+            <Variable Name="Names" />
+            <Variable Name="SelectedIndex" />
+            <Variable Name="LastModified" />
+          </Variable>
+          <Variable Name="Load" />
+          <Variable Name="Save" />
+        </Variable>
+      </Variable>
+    </Task>
   </Module>
 </OpcUaSource>

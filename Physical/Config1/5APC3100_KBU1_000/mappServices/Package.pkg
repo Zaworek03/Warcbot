@@ -3,8 +3,9 @@
 <Package SubType="mappServices" PackageType="mappServices" xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="File">Config.mpuserx</Object>
-    <Object Type="File">Config_1.mpalarmxcore</Object>
-    <Object Type="File">Config_2.mpalarmxlist</Object>
-    <Object Type="File">Config_3.mpalarmxhistory</Object>
+    <Object Type="File">ConfAlCore.mpalarmxcore</Object>
+    <Object Type="File">ConfAlList.mpalarmxlist</Object>
+    <Object Type="File">ConfAlHist.mpalarmxhistory</Object>
+    <Object Type="File">SaveRecipe.mprecipexml</Object>
   </Objects>
 </Package>
