@@ -4,6 +4,7 @@ PROGRAM _INIT
 	gEnableMove;
 	gPickMove;
 	gBoardActual;
+	gGameRound;
 	 
 END_PROGRAM
 
