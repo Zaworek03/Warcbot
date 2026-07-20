@@ -3,6 +3,6 @@
 <Program SubType="IEC" xmlns="http://br-automation.co.at/AS/Program">
   <Files>
     <File Description="Init, cyclic, exit code">Main.st</File>
-    <File Private="true">Variables.var</File>
+    <File Private="true">Main.var</File>
   </Files>
 </Program>

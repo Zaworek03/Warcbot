@@ -46,7 +46,7 @@ PROGRAM _CYCLIC
 			mcGroupHome();
 		
 		ROBOT_HOMED:
-			IF gRequestManualMode THEN
+			IF gMotionInterface.RequestManualMode THEN
 				RobotState := ROBOT_MANUAL;
 			END_IF;
 			
@@ -99,6 +99,9 @@ PROGRAM _CYCLIC
 				END_IF;
 			
 			END_IF;		
+			\
+		ROBOT_AUTO:
+			
 	END_CASE;
 	
 	Robot();	

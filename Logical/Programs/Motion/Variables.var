@@ -1,6 +1,7 @@
 VAR
 	Robot : MpRoboArm6Axis;
 	RobotPar : MpRoboArm6AxisParType;
+	mcGroupHome : MC_BR_GroupHome_15;
 END_VAR
 (*Jog Joint*)
 VAR
@@ -26,6 +27,4 @@ END_VAR
 VAR
 	AxisPos : ARRAY[0..5] OF REAL := [2(0),-90,0,90,0];
 	RobotState : RobotStateType;
-	gRequestManualMode : BOOL;
-	mcGroupHome : MC_BR_GroupHome_15;
 END_VAR

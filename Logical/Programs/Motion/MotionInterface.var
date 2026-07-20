@@ -1,0 +1,3 @@
+VAR
+	gMotionInterface : MotionInterfaceType;
+END_VAR
