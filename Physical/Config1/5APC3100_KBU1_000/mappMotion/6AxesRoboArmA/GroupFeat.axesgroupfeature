@@ -34,4 +34,10 @@
       </Group>
     </Selector>
   </Element>
+  <Element ID="Feature_WorkspaceMonitoring_Racer3_1" Type="axesgroupfeature">
+    <Selector ID="Type" Value="WorkspaceMonitoring">
+      <Property ID="WorkspaceRef" Value="Workspace_1" />
+      <Selector ID="SelfCollisionDetection" Value="Enabled" />
+    </Selector>
+  </Element>
 </Configuration>

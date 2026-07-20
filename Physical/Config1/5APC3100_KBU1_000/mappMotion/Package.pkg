@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="Package">6AxesRoboArmA</Object>
     <Object Type="File">Hierarchy.objecthierarchy</Object>
+    <Object Type="File">Config_4.workspace</Object>
   </Objects>
 </Package>

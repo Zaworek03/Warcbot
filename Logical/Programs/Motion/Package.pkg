@@ -2,6 +2,11 @@
 <?AutomationStudio FileVersion="4.9"?>
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
-    <Object Type="Program" Language="IEC">Program</Object>
+    <Object Type="File" Private="true">MotionInterface.typ</Object>
+    <Object Type="File">MotionInterface.var</Object>
+    <Object Type="File" Description="Local data types" Private="true">Types.typ</Object>
+    <Object Type="File" Description="Local variables" Private="true">Variables.var</Object>
+    <Object Type="Program" Language="IEC">MotionCtrl</Object>
+    <Object Type="Program" Language="IEC">FixAxisDir</Object>
   </Objects>
 </Package>

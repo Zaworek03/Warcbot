@@ -18,12 +18,13 @@
       <Variable Name="gWyborRuchuBoard" />
       <Variable Name="gBoard" />
     </GlobalVariables>
-    <Task Name="Program">
-      <Variable Name="Robot">
-        <Variable Name="Info">
-          <Variable Name="JointAxisPosition" RecursiveEnable="2" />
-        </Variable>
-      </Variable>
+    <Task Name="FixAxisDir">
+      <Variable Name="AxisQ1Pos" />
+      <Variable Name="AxisQ3Pos" />
+      <Variable Name="AxisQ2Pos" />
+      <Variable Name="AxisQ4Pos" />
+      <Variable Name="AxisQ5Pos" />
+      <Variable Name="AxisQ6Pos" />
     </Task>
   </Module>
 </OpcUaSource>
