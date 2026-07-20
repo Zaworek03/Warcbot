@@ -3,4 +3,10 @@ VAR
 IceCreamIngredients_Type*)
 	MpRecipeXml_0 : MpRecipeXml;
 	MpRecipeRegPar_0 : MpRecipeRegPar;
+	
+	MpRecipeUI_0 : MpRecipeUI;
+	(*MpRecipeUI for UI Connection to the ice cream machine*)
+	UIConnect : MpRecipeUIConnectType;
+	(*UI Connection - contains the parameters needed for the connection*)
+
 END_VAR
