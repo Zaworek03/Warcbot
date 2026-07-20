@@ -2,4 +2,6 @@ VAR
 	PlayerColor : PlayerColorEnum;
 	Piece : PieceTypeEnum;
 	instMovePiece : FB_MovePiece;
+	MoveLegal : BOOL;
+	PlayerColor : PlayerColorEnum;
 END_VAR

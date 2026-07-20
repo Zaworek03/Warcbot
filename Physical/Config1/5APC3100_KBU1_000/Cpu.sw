@@ -7,7 +7,6 @@
   <TaskClass Name="Cyclic#4">
     <Task Name="Program" Source="Programs.Motion.Program.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
     <Task Name="PieceMovem" Source="Programs.PieceMovementProgram.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
-    <Task Name="CheckLegal" Source="Programs.CheckLegal.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
