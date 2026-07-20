@@ -8,5 +8,6 @@
     <Object Type="Program" Language="IEC">camera</Object>
     <Object Type="Program" Language="IEC">SaveGame</Object>
     <Object Type="Program" Language="IEC">AlarmHistory</Object>
+    <Object Type="Program" Language="IEC">VisVariable</Object>
   </Objects>
 </Package>
