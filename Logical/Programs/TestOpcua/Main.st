@@ -1,41 +1,59 @@
 
 PROGRAM _INIT
 
-	FOR i := 0 TO 63 DO
-		gBoard[i] := 0;
+	FOR i := 0 TO 7 DO
+		FOR j := 0 TO 7 DO
+			gBoard[i,j] := 0;
+		END_FOR;
 	END_FOR;
-	gBoard[0] := 2;
-	gBoard[2] := 2;
-	gBoard[4] := 2;
-	gBoard[6] := 2;
-
-	gBoard[9] := 2;
-	gBoard[11] := 2;
-	gBoard[13] := 2;
-	gBoard[15] := 2;
-
-	gBoard[16] := 2;
-	gBoard[18] := 2;
-	gBoard[20] := 2;
-	gBoard[22] := 2;
-
-	gBoard[41] := 1;
-	gBoard[43] := 1;
-	gBoard[45] := 1;
-	gBoard[47] := 1;
-
-	gBoard[48] := 1;
-	gBoard[50] := 1;
-	gBoard[52] := 1;
-	gBoard[54] := 1;
-
-	gBoard[57] := 1;
-	gBoard[59] := 1;
-	gBoard[61] := 1;
-	gBoard[63] := 1;
+	FOR i := 0 TO 7 DO
+		FOR j := 0 TO 7 DO
+			gLegalnePozycjeBoard[i,j] := 0;
+		END_FOR;
+	END_FOR;
+	FOR i := 0 TO 7 DO
+		FOR j := 0 TO 7 DO
+			gWyborPionkaBoard[i,j] := 0;
+		END_FOR;
+	END_FOR;
+	FOR i := 0 TO 7 DO
+		FOR j := 0 TO 7 DO
+			gWyborRuchuBoard[i,j] := 0;
+		END_FOR;
+	END_FOR;
+	gTrudnosc := 0;
+	gBoard[0,1] := 2;
+	gBoard[0,3] := 2;
+	gBoard[0,5] := 2;
+	gBoard[0,7] := 2;
+	
+	gBoard[1,0] := 2;
+	gBoard[1,2] := 2;
+	gBoard[1,4] := 2;
+	gBoard[1,6] := 2;
+	
+	gBoard[2,1] := 2;
+	gBoard[2,3] := 2;
+	gBoard[2,5] := 2;
+	gBoard[2,7] := 2;
+	
+	gBoard[5,0] := 1;
+	gBoard[5,2] := 1;
+	gBoard[5,4] := 1;
+	gBoard[5,6] := 1;
+	
+	gBoard[6,1] := 1;
+	gBoard[6,3] := 1;
+	gBoard[6,5] := 1;
+	gBoard[6,7] := 1;
+	
+	gBoard[7,0] := 1;
+	gBoard[7,2] := 1;
+	gBoard[7,4] := 1;
+	gBoard[7,6] := 1;
 	gGraStart := FALSE;
 	gJakiKolor := FALSE;
-	gCzyjaTura := 1;
+
 	
 END_PROGRAM
 
