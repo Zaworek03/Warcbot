@@ -1,0 +1,6 @@
+VAR
+	IceFormula : IceCreamIngredients_Type; (*Variable with the structure
+IceCreamIngredients_Type*)
+	MpRecipeXml_0 : MpRecipeXml;
+	MpRecipeRegPar_0 : MpRecipeRegPar;
+END_VAR

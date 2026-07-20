@@ -5,5 +5,4 @@
   <Element ID="Operator" Type="Role" />
   <Element ID="Service" Type="Role" />
   <Element ID="Anonymus" Type="Role" />
-  <Element ID="DefaultRole" Type="Role" />
 </Configuration>

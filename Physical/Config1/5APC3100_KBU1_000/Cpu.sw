@@ -9,6 +9,7 @@
     <Task Name="TestOpcua" Source="Programs.TestOpcua.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="PieceMovem" Source="Programs.PieceMovementProgram.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Program2" Source="Programs.camera.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="SaveGame" Source="Programs.SaveGame.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
@@ -41,5 +42,7 @@
     <LibraryObject Name="DataObj" Source="Libraries.DataObj.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="ArSsl" Source="Libraries.ArSsl.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="MpAlarmX" Source="Libraries.MpAlarmX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpServer" Source="Libraries.MpServer.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpRecipe" Source="Libraries.MpRecipe.lby" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

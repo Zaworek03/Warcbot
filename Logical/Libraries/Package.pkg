@@ -30,5 +30,7 @@
     <Object Type="Library" Language="binary" Description="The DataObj library can be used to dynamically create, dynamically delete and copy data objects, etc. ">DataObj</Object>
     <Object Type="Library" Language="binary" Description="This library contains FBs for handling SSL configurations.">ArSsl</Object>
     <Object Type="Library" Language="Binary" Description="Advanced alarm management">MpAlarmX</Object>
+    <Object Type="Library" Language="Binary" Description="Communication library for mappView widgets">MpServer</Object>
+    <Object Type="Library" Language="Binary" Description="Recipe management">MpRecipe</Object>
   </Objects>
 </Package>

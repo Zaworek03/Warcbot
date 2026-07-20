@@ -42,6 +42,9 @@
     <Group ID="FileDevice2" />
     <Parameter ID="FileDeviceName2" Value="CNC_PrgDir" />
     <Parameter ID="FileDevicePath2" Value="USER_PATH\Programs" />
+    <Group ID="FileDevice3" />
+    <Parameter ID="FileDeviceName3" Value="SR" />
+    <Parameter ID="FileDevicePath3" Value="C:\Temp\" />
   </Module>
   <Module Name="8EAC0122.001-1" Type="8EAC0122.001-1" Version="3.0.0.0">
     <Connection Connector="SS" TargetModule="DriveQ2-Q4-Q6_Racer3_1" TargetConnector="SS1" />
