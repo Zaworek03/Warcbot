@@ -1,0 +1,8 @@
+VAR
+	AxisQ1Pos : LREAL;
+	AxisQ2Pos : LREAL;
+	AxisQ3Pos : LREAL;
+	AxisQ4Pos : LREAL;
+	AxisQ5Pos : LREAL;
+	AxisQ6Pos : LREAL;
+END_VAR
