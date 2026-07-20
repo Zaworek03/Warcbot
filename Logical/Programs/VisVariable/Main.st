@@ -3,6 +3,7 @@ PROGRAM _INIT
 	gPickPiece;
 	gEnableMove;
 	gPickMove;
+	gBoardActual;
 	 
 END_PROGRAM
 

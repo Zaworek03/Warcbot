@@ -20,4 +20,5 @@ VAR
 	gEnableMove : ARRAY[1..8,1..8] OF BOOL; (*Mozliwe ruchy na szachownicy*)
 	gPickMove : ARRAY[1..8,1..8] OF BOOL; (*Wybrany ruch przez gracza*)
 	gBoardActual : ARRAY[1..8,1..8] OF INT; (*Aktualna plansza rozgrywki (0 puste pole, 1 biale, 2 czarne, 3 damka biale, 4 damka czarne)*)
+	gGameRound : BOOL; (*False ruch robota, True ruch czlowieka*)
 END_VAR
