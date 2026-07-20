@@ -16,6 +16,7 @@ VAR
 	gJakiKolor : BOOL;
 	bStartMove : BOOL;
 	gPiece : PieceTypeEnum;
-	gPickPiece : ARRAY[1..8,1..8] OF BOOL := [64(EMPTY)];
-	gEnableMove : ARRAY[1..8,1..8] OF BOOL;
+	gPickPiece : ARRAY[1..8,1..8] OF BOOL; (*Klikniety przez gracza pionek*)
+	gEnableMove : ARRAY[1..8,1..8] OF BOOL; (*Mozliwe ruchy na szachownicy*)
+	gPickMove : ARRAY[1..8,1..8] OF BOOL; (*Wybrany ruch przez gracza*)
 END_VAR

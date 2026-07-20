@@ -12,6 +12,7 @@
       <Variable Name="gTest" />
       <Variable Name="gPickPiece" RecursiveEnable="2" />
       <Variable Name="gEnableMove" RecursiveEnable="2" />
+      <Variable Name="gPickMove" RecursiveEnable="2" />
     </GlobalVariables>
     <Task Name="Program">
       <Variable Name="Robot">

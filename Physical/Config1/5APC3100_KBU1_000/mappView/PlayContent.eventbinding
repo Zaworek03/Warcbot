@@ -177,20 +177,20 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_6">
-      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[1,1]" event="ValueChanged" />
+    <EventBinding id="EventBinding_7">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[2,2]" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Sequence>
           <Step order="0">
             <Action>
-              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA1">
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB2">
                 <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
           <Step order="1">
             <Action>
-              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA1">
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB2">
                 <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
               </Target>
             </Action>
@@ -201,19 +201,1080 @@
         <Sequence>
           <Step order="0">
             <Action>
-              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA1">
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB2">
                 <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="1">
             <Action>
-              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA1">
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB2">
                 <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="false" />
               </Target>
             </Action>
           </Step>
         </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_6">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[2,4]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD2">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD2">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD2">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD2">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_8">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[2,6]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF2">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF2">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF2">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF2">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_9">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[2,8]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH2">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH2">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH2">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH2">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_10">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[3,1]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_11">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[3,3]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveC3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveC3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveC3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveC3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_12">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[3,5]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveE3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveE3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveE3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveE3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_13">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[2,6]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveG3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveG3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveG3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveG3">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_14">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[4,2]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_15">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[4,4]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_16">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[4,6]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_17">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[4,8]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH4">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_18">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[5,1]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_19">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[5,3]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveC5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveC5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveC5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveC5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_20">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[5,5]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveE5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveE5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveE5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveE5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_21">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[5,7]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveG5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveG5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveG5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveG5">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_22">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[6,2]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_23">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[6,4]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_24">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[6,6]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_25">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[6,8]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH6">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_26">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[7,1]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_27">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[7,3]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveC7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveC7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveC7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveC7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_28">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[7,5]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveE7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveE7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveE7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveE7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_29">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[7,7]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveG7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveG7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveG7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveG7">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_30">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[8,2]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveB8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_31">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[8,4]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveD8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_32">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[8,6]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveF8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_33">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[8,8]" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveH8">
+                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="PlayContent.EnableMoveA1.Click">
+      <Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveA1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="" />
+        </Action>
       </EventHandler>
     </EventBinding>
     <EventBinding id="PlayContent.WhiteB8.Click">
@@ -672,84 +1733,6 @@
             <Action>
               <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickPiece[8,8]">
                 <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_7">
-      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[1,1]" event="ValueChanged" />
-      <EventHandler condition="newValue = TRUE">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA1">
-                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA1">
-                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-      <EventHandler condition="newValue = FALSE">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA1">
-                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA1">
-                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="false" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_8">
-      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnableMove[1,1]" event="ValueChanged" />
-      <EventHandler condition="newValue = TRUE">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA1">
-                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA1">
-                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="true" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-      <EventHandler condition="newValue = FALSE">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA1">
-                <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="PlayContent" widgetRefId="EnableMoveA1">
-                <Method xsi:type="widgets.brease.Rectangle.Action.SetEnable" value="false" />
               </Target>
             </Action>
           </Step>
