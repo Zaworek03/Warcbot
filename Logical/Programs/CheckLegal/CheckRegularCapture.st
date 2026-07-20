@@ -60,6 +60,29 @@ FUNCTION CheckRegularCapture
 				END_IF;
 
 			END_IF;
+		
+		WHITE_KING,
+		BLACK_KING:
+
+			IF ((RowDiff = 2) OR (RowDiff = -2)) AND
+				((ColDiff = 2) OR (ColDiff = -2)) THEN
+
+				MiddleRow := (FromRow + ToRow) / 2;
+				MiddleColumn := (FromColumn + ToColumn) / 2;
+
+				MiddlePiece := Board[MiddleRow, MiddleColumn];
+
+				IF ((Piece = WHITE_KING) AND
+					((MiddlePiece = BLACK) OR (MiddlePiece = BLACK_KING)))
+					OR
+					((Piece = BLACK_KING) AND
+					((MiddlePiece = WHITE) OR (MiddlePiece = WHITE_KING))) THEN
+
+					CheckRegularCapture := TRUE;
+
+				END_IF;
+
+			END_IF;
 
 	END_CASE;
 	
