@@ -119,7 +119,37 @@
     <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveH8" top="40" left="705" width="85" height="85" zIndex="115" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
     <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveH4" top="420" left="705" width="85" height="85" zIndex="116" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
     <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveH6" top="230" left="705" width="85" height="85" zIndex="117" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteB8" top="95" left="155" width="85" height="85" zIndex="118" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteD8" top="95" left="295" width="85" height="85" zIndex="119" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteB8" top="40" left="135" width="85" height="85" zIndex="118" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteD8" top="40" left="325" width="85" height="85" zIndex="119" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteF8" top="40" left="515" width="85" height="85" zIndex="120" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteH8" top="40" left="705" width="85" height="85" zIndex="121" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteC7" top="135" left="230" width="85" height="85" zIndex="122" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteE7" top="135" left="420" width="85" height="85" zIndex="123" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteG7" top="135" left="610" width="85" height="85" zIndex="124" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteB6" top="230" left="135" width="85" height="85" zIndex="125" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteD6" top="230" left="325" width="85" height="85" zIndex="126" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteC5" top="325" left="230" width="85" height="85" zIndex="127" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteG5" top="325" left="610" width="85" height="85" zIndex="128" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteA7" top="135" left="40" width="85" height="85" zIndex="129" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteA5" top="325" left="40" width="85" height="85" zIndex="130" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteH6" top="230" left="705" width="85" height="85" zIndex="131" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteF6" top="230" left="515" width="85" height="85" zIndex="132" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteE5" top="325" left="420" width="85" height="85" zIndex="133" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteC1" top="705" left="230" width="85" height="85" zIndex="134" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteH2" top="610" left="705" width="85" height="85" zIndex="135" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteE1" top="705" left="420" width="85" height="85" zIndex="136" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteB2" top="610" left="135" width="85" height="85" zIndex="137" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteC3" top="515" left="230" width="85" height="85" zIndex="138" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteA1" top="705" left="40" width="85" height="85" zIndex="139" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteA3" top="515" left="40" width="85" height="85" zIndex="140" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteE3" top="515" left="420" width="85" height="85" zIndex="141" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteH4" top="420" left="705" width="85" height="85" zIndex="142" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteF4" top="420" left="515" width="85" height="85" zIndex="143" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteD4" top="420" left="325" width="85" height="85" zIndex="144" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteD2" top="610" left="325" width="85" height="85" zIndex="145" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteB4" top="420" left="135" width="85" height="85" zIndex="146" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteF2" top="610" left="515" width="85" height="85" zIndex="147" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteG3" top="515" left="610" width="85" height="85" zIndex="148" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="WhiteG1" top="705" left="610" width="85" height="85" zIndex="149" lineColor="rgba(71, 71, 71, 0)" backColor="rgba(255, 255, 255, 1)" margin="5px" />
   </Widgets>
 </Content>
