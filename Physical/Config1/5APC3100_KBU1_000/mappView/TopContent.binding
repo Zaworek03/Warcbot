@@ -6,10 +6,7 @@
 <Target xsi:type="brease" contentRefId="AlarmContent" widgetRefId="AlarmList1" attribute="mpLink" />
 </Binding>
 
-<Binding mode="oneWay">
-<Source xsi:type="mapp" refId="MpLinkgAlarmXHistory" attribute="link" />
-<Target xsi:type="brease" contentRefId="AlarmContent" widgetRefId="AlarmHistory1" attribute="mpLink" />
-</Binding>
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::SaveGame:UIConnect.Recipe.List.Names" attribute="value" samplingRate="slow" />
 <Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="TableItem1" attribute="stringValue" />
@@ -21,6 +18,10 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::SaveGame:UIConnect.Recipe.List.SelectedIndex" attribute="value" />
 <Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="Table1" attribute="selectedRow" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="mapp" refId="MpLinkgAlarmXHistory" attribute="link" />
+<Target xsi:type="brease" contentRefId="AlarmContent" widgetRefId="AlarmHistory1" attribute="mpLink" />
 </Binding>
 </Bindings>
 </BindingsSet>
