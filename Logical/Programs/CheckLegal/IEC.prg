@@ -7,5 +7,6 @@
     <File Description="Local variables" Private="true">Variables.var</File>
     <File Private="true">LocalFunctions.fun</File>
     <File>CheckMove.st</File>
+    <File>CheckRegularCapture.st</File>
   </Files>
 </Program>

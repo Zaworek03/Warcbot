@@ -27,7 +27,7 @@ PROGRAM _CYCLIC
 		gCurrentMove.FROM_ROW,
 		gCurrentMove.FROM_COLUMN];
 
-		MoveLegal := CheckMove(
+		MoveLegal := CheckRegularCapture(
 		FromRow := gCurrentMove.FROM_ROW,
 		FromColumn := gCurrentMove.FROM_COLUMN,
 		ToRow := gCurrentMove.TO_ROW,
