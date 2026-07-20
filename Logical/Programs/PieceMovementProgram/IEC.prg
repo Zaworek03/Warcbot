@@ -7,5 +7,8 @@
     <File Description="Local variables" Private="true">Variables.var</File>
     <File Private="true">LocalFunctions.fun</File>
     <File>FB_MovePiece.st</File>
+    <File>CheckMove.st</File>
+    <File>CheckRegularCapture.st</File>
+    <File>CanPlayerCapture.st</File>
   </Files>
 </Program>
