@@ -1,26 +1,5 @@
 
 PROGRAM _INIT
-
-	FOR i := 0 TO 7 DO
-		FOR j := 0 TO 7 DO
-			gBoard[i,j] := 0;
-		END_FOR;
-	END_FOR;
-	FOR i := 0 TO 7 DO
-		FOR j := 0 TO 7 DO
-			gLegalnePozycjeBoard[i,j] := 0;
-		END_FOR;
-	END_FOR;
-	FOR i := 0 TO 7 DO
-		FOR j := 0 TO 7 DO
-			gWyborPionkaBoard[i,j] := 0;
-		END_FOR;
-	END_FOR;
-	FOR i := 0 TO 7 DO
-		FOR j := 0 TO 7 DO
-			gWyborRuchuBoard[i,j] := 0;
-		END_FOR;
-	END_FOR;
 	gTrudnosc := 0;
 	gBoard[0,1] := 2;
 	gBoard[0,3] := 2;

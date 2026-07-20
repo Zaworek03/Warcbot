@@ -12,10 +12,8 @@
       <Variable Name="gTest" />
       <Variable Name="gGraStart" />
       <Variable Name="gJakiKolor" />
-      <Variable Name="gLegalnePozycjeBoard" />
       <Variable Name="gTrudnosc" />
       <Variable Name="gWyborPionkaBoard" />
-      <Variable Name="gWyborRuchuBoard" />
       <Variable Name="gBoard" />
     </GlobalVariables>
     <Task Name="FixAxisDir">

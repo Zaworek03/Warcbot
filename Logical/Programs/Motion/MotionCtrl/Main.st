@@ -99,8 +99,6 @@ PROGRAM _CYCLIC
 				END_IF;
 			
 			END_IF;		
-			\
-		ROBOT_AUTO:
 			
 	END_CASE;
 	
