@@ -2,6 +2,7 @@
 PROGRAM _INIT
 	gPickPiece;
 	gEnableMove;
+	gPickMove;
 	 
 END_PROGRAM
 
