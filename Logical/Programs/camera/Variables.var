@@ -1,7 +1,7 @@
 VAR
-	ViComponentLink : ViComponentInternalMappLinkType;
 	bCameraAlarm : UINT;
 	bAcquisitionDone : BOOL;
 	bTrigger : BOOL;
 	bEnable : BOOL;
+	gCameraCtrl : CameraControlType;
 END_VAR

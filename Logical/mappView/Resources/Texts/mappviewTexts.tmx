@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="Button.LOGIN">
+      <tuv xml:lang="pl">
+        <seg>Zaloguj</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Log in</seg>
+      </tuv>
+    </tu>
+    <tu tuid="OpisProjektu1">
+      <tuv xml:lang="pl">
+        <seg>W ramach projektu Warcabot powstał kompletny system sterowania, w którym sześcioosiowy robot Comau Racer 3 potrafi rozegrać pełną partię warcabów z człowiekiem. Robot samodzielnie wykonuje wszystkie ruchy pionków na planszy, a gracz deklaruje swoje posunięcia poprzez intuicyjną wizualizację mapp View, pełniącą rolę interfejsu między człowiekiem a maszyną. Dzięki integracji systemu wizyjnego (mappVision) możliwy jest odczyt pozycji pionków i weryfikacja poprawności każdego ruchu, natomiast logika gry czuwa nad legalnością posunięć obu stron. </seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>As part of the Warcabot project, a complete control system was developed in which a six-axis Comau Racer 3 robot is capable of playing a full game of checkers against a human opponent. The robot autonomously moves all pieces on the board, while the player declares their moves through an intuitive mapp View visualization that serves as the interface between the human and the machine. By integrating the mapp Vision system, the positions of the pieces can be detected and the correctness of each move can be verified, while the game logic ensures that all moves made by both sides are legal.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="OpisProjektu2">
+      <tuv xml:lang="pl">
+        <seg>Aplikacja została zbudowana w środowisku B&amp;R Automation Studio z wykorzystaniem pakietów mapp — między innymi mapp View, PackML, AlarmX, UserX, Recipe oraz Audit — a sekwencje ruchów robota zrealizowano w języku Structured Text. Przed uruchomieniem na stanowisku rzeczywistym całość została zweryfikowana na cyfrowym modelu w środowisku Scene Viewer, co pozwoliło bezpiecznie przetestować ruchy i konfigurację. Szczególny nacisk położono na bezpieczeństwo, niezawodność oraz przejrzystość obsługi.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The application was developed in B&amp;R Automation Studio using a range of mapp technology packages, including mapp View, PackML, AlarmX, UserX, Recipe, and Audit. The robot motion sequences were implemented in Structured Text. Before deployment on the physical workstation, the complete system was verified using a digital model in Scene Viewer, allowing the robot movements and system configuration to be tested safely. Particular emphasis was placed on safety, reliability, and ease of operation.</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

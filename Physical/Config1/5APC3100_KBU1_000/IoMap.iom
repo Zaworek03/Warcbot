@@ -1,5 +1,17 @@
 VAR_CONFIG
-	::Program2:bTrigger AT %QX."VSS112Q22.042P-000".ImageAcquisition;
-	::Program2:bAcquisitionDone AT %IX."VSS112Q22.042P-000".ImageAcquisitionReady;
-	::Program2:bCameraAlarm AT %IW."VSS112Q22.042P-000".ImageProcessingError;
+	::Program2:gCameraCtrl.Cmd.AcquireImage AT %QX."VSS112Q22.042P-000".ImageAcquisition;
+	::Program2:gCameraCtrl.Status.AcquisitionReady AT %IX."VSS112Q22.042P-000".ImageAcquisitionReady;
+	::Program2:gCameraCtrl.Status.ProcessingError AT %IW."VSS112Q22.042P-000".ImageProcessingError;
+	::Program2:gCameraCtrl.Status.ProcessingActive AT %IX."VSS112Q22.042P-000".ImageProcessingActive;
+	::Program2:gCameraCtrl.Cmd.SearchAcquisitionSettings AT %QX."VSS112Q22.042P-000".SearchAcquisitionSettings;
+	::Program2:gCameraCtrl.Parameters.FlashColor AT %QB."VSS112Q22.042P-000".FlashColor01;
+	::Program2:gCameraCtrl.Parameters.FlashSegment AT %QB."VSS112Q22.042P-000".FlashSegment01;
+	::Program2:gCameraCtrl.Parameters.SetFocus AT %QW."VSS112Q22.042P-000".SetFocus;
+	::Program2:gCameraCtrl.Parameters.ExposureTime AT %QD."VSS112Q22.042P-000".ExposureTime01;
+	::Program2:gCameraCtrl.Status.ReadFocus AT %IW."VSS112Q22.042P-000".ReadFocus;
+	::Program2:gCameraCtrl.Parameters.ExposureTime AT %ID."VSS112Q22.042P-000".ReadExposureTime;
+	::Program2:gCameraCtrl.NumResults AT %IB."VSS112Q22.042P-000".NumResults_Out_1;
+	::Program2:gCameraCtrl.Pieces[1].PositionX AT %ID."VSS112Q22.042P-000".PositionX_Out_101;
+	::Program2:gCameraCtrl.Pieces[1].PositionY AT %ID."VSS112Q22.042P-000".PositionY_Out_101;
+	::Program2:gCameraCtrl.Pieces[1].Area AT %ID."VSS112Q22.042P-000".Area_Out_101;
 END_VAR

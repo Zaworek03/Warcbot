@@ -4,8 +4,5 @@
   <Element ID="gCamera" Type="visioncomponent">
     <Property ID="VisionApplicationReference" Value="ViApplication" />
     <Group ID="CalibrationSelections" />
-    <Group ID="CompatibleVisionApplications">
-      <Property ID="CompatibleVA[1]" Value="ViApplication" />
-    </Group>
   </Element>
 </Configuration>

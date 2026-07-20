@@ -1,26 +1,37 @@
-
 PROGRAM _INIT
-	bEnable := FALSE;
-	bTrigger := FALSE;
-	 
+
+	gCameraCtrl.Cmd.Enable := TRUE;
+	gCameraCtrl.Cmd.AcquireImage := FALSE;
+	gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
+
 END_PROGRAM
+
 
 PROGRAM _CYCLIC
-	
-	IF NOT bEnable THEN
-		bTrigger := FALSE;
-	END_IF;
-    
-	IF bTrigger AND bAcquisitionDone THEN
-		bTrigger := FALSE; 
+
+	IF NOT gCameraCtrl.Cmd.Enable THEN
+		gCameraCtrl.Cmd.AcquireImage := FALSE;
 	END_IF;
 
-	IF bCameraAlarm > 0 THEN
-		
+	IF gCameraCtrl.Cmd.AcquireImage
+		AND gCameraCtrl.Status.AcquisitionReady THEN
+
+		gCameraCtrl.Cmd.AcquireImage := FALSE;
+
 	END_IF;
+
+	IF gCameraCtrl.Status.ProcessingError <> 0 THEN
+
+		(* Obs³uga b³êdu kamery bêdzie dodana póŸniej *)
+
+	END_IF;
+
 END_PROGRAM
+
 
 PROGRAM _EXIT
-	 
-END_PROGRAM
 
+	gCameraCtrl.Cmd.AcquireImage := FALSE;
+	gCameraCtrl.Cmd.Enable := FALSE;
+
+END_PROGRAM
