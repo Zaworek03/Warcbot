@@ -13,5 +13,11 @@
     <Object Type="File">RulesContent.eventbinding</Object>
     <Object Type="File">AlarmContent.eventbinding</Object>
     <Object Type="File">OpcUaServer.uaserver</Object>
+    <Object Type="File">WinContent.eventbinding</Object>
+    <Object Type="File">LoseContent.eventbinding</Object>
+    <Object Type="File">InvalidPieceContent.eventbinding</Object>
+    <Object Type="File">RoundContent.eventbinding</Object>
+    <Object Type="File">ColorContent.eventbinding</Object>
+    <Object Type="File">AbortGameContent.eventbinding</Object>
   </Objects>
 </Package>

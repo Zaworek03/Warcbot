@@ -55,7 +55,7 @@ END_FUNCTION
 
 {REDUND_ERROR} FUNCTION CanPlayerCapture : BOOL (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
 	VAR_INPUT
-		PlayerColor : PlayerColorEnum;
+
 		Board : ARRAY[1..8,1..8] OF PieceTypeEnum;
 	END_VAR
 	VAR

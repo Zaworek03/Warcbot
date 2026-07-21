@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="WinContent" guid="a314e65b-0acd-4932-9ca3-d8ae068414f0" height="150" width="300" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="Title" top="10" left="0" width="300" zIndex="0" text="Gratulacje!" textAlign="center bottom" bold="true" style="Title2" />
+    <Widget xsi:type="widgets.brease.Label" id="Description" top="40" left="20" width="260" height="40" zIndex="1" multiLine="true" text="Wygrales rozgrywke z robotem, mozesz byc z siebie dumny." wordWrap="true" textColor="rgba(0, 0, 0, 1)" textAlign="left top" />
+    <Widget xsi:type="widgets.brease.Button" id="BackBtn" top="100" left="100" zIndex="2" text="wroc" style="Command" />
+  </Widgets>
+</Content>

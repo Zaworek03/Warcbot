@@ -20,6 +20,10 @@
       <Variable Name="gPickMove" RecursiveEnable="2" />
       <Variable Name="gBoardActual" RecursiveEnable="2" />
       <Variable Name="gGameRound" />
+      <Variable Name="gPlayerColor" />
+      <Variable Name="gDifficultyLevel" />
+      <Variable Name="gStart" />
+      <Variable Name="gEnablePiece" RecursiveEnable="2" />
     </GlobalVariables>
     <Task Name="FixAxisDir">
       <Variable Name="AxisQ1Pos" />
@@ -41,6 +45,14 @@
           <Variable Name="Save" />
         </Variable>
       </Variable>
+    </Task>
+    <Task Name="GameStats">
+      <Variable Name="EndGame" />
+      <Variable Name="WinOrLose" />
+      <Variable Name="MoveCount" />
+      <Variable Name="DeadBlackPiece" />
+      <Variable Name="DeadWhitePiece" />
+      <Variable Name="MoveHistory" RecursiveEnable="2" />
     </Task>
   </Module>
 </OpcUaSource>

@@ -11,5 +11,76 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="NewGameContent.BlackToggleBtn.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="NewGameContent" widgetRefId="BlackToggleBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPlayerColor">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="NewGameContent.WhiteToggleBtn.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="NewGameContent" widgetRefId="WhiteToggleBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPlayerColor">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="NewGameContent.EasyModeToggleBtn.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="NewGameContent" widgetRefId="EasyModeToggleBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gDifficultyLevel">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="NewGameContent.MediumModeToggleBtn.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="NewGameContent" widgetRefId="MediumModeToggleBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gDifficultyLevel">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="NewGameContent.HardModeToggleBtn.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="NewGameContent" widgetRefId="HardModeToggleBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gDifficultyLevel">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="NewGameContent.StartBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="NewGameContent" widgetRefId="StartBtn" event="Click" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gStart">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.CloseDialog" dialogId="NewGameDialog" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
