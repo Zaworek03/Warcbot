@@ -4,4 +4,8 @@ VAR
 	DeadWhitePiece : INT; (*Zbite biale pionki*)
 	DeadBlackPiece : INT; (*Zbite czarne pionki*)
 	MoveCount : INT; (*Ilosc ruchow*)
+	i : USINT;
+	j : USINT;
+	whiteOnBoard : INT;
+	blackOnBoard : INT;
 END_VAR
