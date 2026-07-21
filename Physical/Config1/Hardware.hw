@@ -36,7 +36,6 @@
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="warcabot_Config1" />
-    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
     <Parameter ID="TimerDevice" Value="5AC901.IPLK-00.IF1" />
     <Parameter ID="TaskClassIdleTime" Value="2000" />
@@ -48,13 +47,13 @@
     <Group ID="FileDevice2" />
     <Parameter ID="FileDeviceName2" Value="CNC_PrgDir" />
     <Parameter ID="FileDevicePath2" Value="USER_PATH\Programs" />
+    <Group ID="FileDevice3" />
+    <Parameter ID="FileDeviceName3" Value="SG" />
+    <Parameter ID="FileDevicePath3" Value="USER_PATH" />
     <Parameter ID="ActivateWebServer" Value="1" />
     <Parameter ID="WebServerProtocol" Value="1" />
     <Parameter ID="ActivateSdm" Value="1" />
     <Parameter ID="Authentication" Value="0" />
-    <Group ID="FileDevice3" />
-    <Parameter ID="FileDeviceName3" Value="SG" />
-    <Parameter ID="FileDevicePath3" Value="USER_PATH" />
   </Module>
   <Module Name="8EAC0122.001-1" Type="8EAC0122.001-1" Version="3.0.0.0">
     <Connection Connector="SS" TargetModule="DriveQ2-Q4-Q6_Racer3_1" TargetConnector="SS1" />
