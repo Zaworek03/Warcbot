@@ -81,7 +81,7 @@
     <Widget xsi:type="widgets.brease.Label" id="Row3Lb" top="515" left="0" width="40" height="95" zIndex="77" text="3" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="24px" style="Caption" />
     <Widget xsi:type="widgets.brease.Label" id="Row2Lb" top="610" left="0" width="40" height="95" zIndex="78" text="2" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="24px" style="Caption" />
     <Widget xsi:type="widgets.brease.Label" id="Row1Lb" top="705" left="0" width="40" height="95" zIndex="79" text="1" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="24px" style="Caption" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="115" left="840" width="579" height="200" zIndex="80" borderStyle="solid" borderWidth="4px" lineColor="rgba(255, 136, 0, 1)" backColor="rgba(255, 255, 255, 1)" style="Solid_Orange" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="115" left="840" width="580" height="210" zIndex="80" borderStyle="solid" borderWidth="4px" lineColor="rgba(255, 136, 0, 1)" backColor="rgba(255, 255, 255, 1)" style="Solid_Orange" />
     <Widget xsi:type="widgets.brease.Button" id="NewGameBtn" top="340" left="840" width="130" zIndex="81" text="New Game" style="Command" />
     <Widget xsi:type="widgets.brease.Button" id="RulesBtn" top="340" left="990" width="130" zIndex="82" imageAlign="right" text="Rules" style="Command" />
     <Widget xsi:type="widgets.brease.Button" id="SaveGameBtn" top="340" left="1140" width="280" zIndex="83" text="Load / Save Game" style="Command" />

@@ -1,4 +1,0 @@
-VAR
-	Robot : MpRoboArm6Axis;
-	RobotPar : MpRoboArm6AxisParType;
-END_VAR

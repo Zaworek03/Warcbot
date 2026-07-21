@@ -1,17 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BindingsSet id="SaveContent" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Bindings>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::SaveGame:UIConnect.Recipe.List.Names" attribute="value" samplingRate="slow" />
-<Target xsi:type="brease" contentRefId="SaveContent" widgetRefId="TableItem1" attribute="stringValue" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::SaveGame:UIConnect.Recipe.List.LastModified" attribute="value" samplingRate="slow" />
-<Target xsi:type="brease" contentRefId="SaveContent" widgetRefId="TableItem2" attribute="stringValue" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::SaveGame:UIConnect.Recipe.List.SelectedIndex" attribute="value" />
-<Target xsi:type="brease" contentRefId="SaveContent" widgetRefId="Table1" attribute="selectedRow" />
-</Binding>
+	<Bindings>
+		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::SaveGame:UIConnect.Recipe.List.SelectedIndex" attribute="value" />
+			<Target xsi:type="brease" contentRefId="SaveContent" widgetRefId="Table1" attribute="selectedRow" />
+		</Binding>
+		
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::SaveGame:Saved" attribute="value" />
+			<Target xsi:type="brease" contentRefId="NewSaveContent" widgetRefId="SaveSucces" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::SaveGame:InvSavFileName" attribute="value" />
+			<Target xsi:type="brease" contentRefId="NewSaveContent" widgetRefId="SaveFail" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::SaveGame:IndexOOR" attribute="value" />
+			<Target xsi:type="brease" contentRefId="NewSaveContent" widgetRefId="Label1" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::SaveGame:NIndexOOR" attribute="value" />
+			<Target xsi:type="brease" contentRefId="NewSaveContent" widgetRefId="BtnSave" attribute="enable" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::SaveGame:UIConnect.Recipe.List.Names" attribute="value" samplingRate="slow" />
+			<Target xsi:type="brease" contentRefId="SaveContent" widgetRefId="TableItem1" attribute="stringValue" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::SaveGame:UIConnect.Recipe.List.LastModified" attribute="value" samplingRate="slow" />
+			<Target xsi:type="brease" contentRefId="SaveContent" widgetRefId="TableItem2" attribute="stringValue" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::SaveGame:SaveFileName" attribute="value" />
+			<Target xsi:type="brease" contentRefId="NewSaveContent" widgetRefId="TextInFileName" attribute="value" />
+		</Binding>
+		
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::SaveGame:CurrentFileName" attribute="value" />
+			<Target xsi:type="brease" contentRefId="DeleteConfContent" widgetRefId="TextOutput1" attribute="value" />
+		</Binding>
 </Bindings>
 </BindingsSet>

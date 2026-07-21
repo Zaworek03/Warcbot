@@ -63,7 +63,6 @@
         </Variable>
       </Variable>
       <Variable Name="OpenExportDialog" />
-      <Variable Name="ExportTest" />
     </Task>
     <Task Name="GameStats">
       <Variable Name="EndGame" />

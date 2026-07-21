@@ -54,6 +54,7 @@ PROGRAM _CYCLIC
 	
 		IF Load THEN
 			UIConnect.Recipe.Load := TRUE;
+			gBoardActual := Save.BoardActual;
 			Load := FALSE;
 		END_IF;
 	

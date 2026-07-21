@@ -5,8 +5,9 @@
     <Object Type="File">Config.mappviewcfg</Object>
     <Object Type="File">vis_0.vis</Object>
     <Object Type="File">OpcUaServer.uaserver</Object>
-    <Object Type="File">TopContent.binding</Object>
     <Object Type="File">SaveContent.binding</Object>
+    <Object Type="File">AlarmContent.binding</Object>
+    <Object Type="File">PlayContent.binding</Object>
     <Object Type="File">TopContent.eventbinding</Object>
     <Object Type="File">SettingsContent.eventbinding</Object>
     <Object Type="File">Login.eventbinding</Object>

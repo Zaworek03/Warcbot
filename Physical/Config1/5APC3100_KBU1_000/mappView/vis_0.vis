@@ -11,8 +11,9 @@
   </Pages>
   <Navigations />
   <BindingsSets>
-    <BindingsSet refId="TopContent" />
     <BindingsSet refId="SaveContent" />
+    <BindingsSet refId="AlarmContent" />
+    <BindingsSet refId="PlayContent" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="TopContent" />

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="PlayContent" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::GameStats:MoveCount" attribute="value" />
+			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="NumMovePlayer" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::GameStats:DeadBlackPiece" attribute="value" />
+			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="NumDeadBlackPiece" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::GameStats:DeadWhitePiece" attribute="value" />
+			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="NumDeadWhitePiece" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gStart" attribute="value" />
+			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="NumMovePlayer" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gStart" attribute="value" />
+			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="NumDeadBlackPiece" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gStart" attribute="value" />
+			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="NumDeadWhitePiece" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gStart" attribute="value" />
+			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="HistoryMove1" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gStart" attribute="value" />
+			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="HistoryMove2" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gStart" attribute="value" />
+			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="HistoryMove3" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gStart" attribute="value" />
+			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="HistoryMove4" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::GameStats:MoveHistory[1]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="HistoryMove1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::GameStats:MoveHistory[2]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="HistoryMove2" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::GameStats:MoveHistory[3]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="HistoryMove3" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::GameStats:MoveHistory[4]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="HistoryMove4" attribute="value" />
+		</Binding>
+  </Bindings>
+</BindingsSet>
