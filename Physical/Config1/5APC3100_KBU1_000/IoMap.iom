@@ -14,4 +14,5 @@ VAR_CONFIG
 	::Program2:gCameraCtrl.Pieces[1].PositionX AT %ID."VSS112Q22.042P-000".PositionX_Out_101;
 	::Program2:gCameraCtrl.Pieces[1].PositionY AT %ID."VSS112Q22.042P-000".PositionY_Out_101;
 	::Program2:gCameraCtrl.Pieces[1].Area AT %ID."VSS112Q22.042P-000".Area_Out_101;
+	::Program2:gCameraCtrl.Pieces[1].Score AT %IB."VSS112Q22.042P-000".Score_Out_101;
 END_VAR
