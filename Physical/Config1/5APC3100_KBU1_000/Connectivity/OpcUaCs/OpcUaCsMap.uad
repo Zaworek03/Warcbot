@@ -51,6 +51,7 @@
       <Variable Name="MoveCount" />
       <Variable Name="DeadBlackPiece" />
       <Variable Name="DeadWhitePiece" />
+      <Variable Name="MoveHistory" RecursiveEnable="2" />
     </Task>
   </Module>
 </OpcUaSource>

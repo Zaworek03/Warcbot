@@ -260,5 +260,9 @@
     <Widget xsi:type="widgets.brease.NumericOutput" id="NumMovePlayer" top="200" left="1020" zIndex="256" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="999" textColor="rgba(0, 0, 0, 1)" textAlign="left" fontSize="18px" enable="false" style="FavoriteWatch" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="NumDeadBlackPiece" top="240" left="1020" zIndex="257" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="999" textColor="rgba(0, 0, 0, 1)" textAlign="left" fontSize="18px" enable="false" style="FavoriteWatch" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="NumDeadWhitePiece" top="280" left="1020" zIndex="258" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="999" textColor="rgba(0, 0, 0, 1)" textAlign="left" fontSize="18px" enable="false" style="FavoriteWatch" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="HistoryMove1" top="160" left="1280" zIndex="259" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" style="Output" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="HistoryMove2" top="200" left="1280" zIndex="260" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" style="Output" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="HistoryMove3" top="240" left="1280" zIndex="261" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" style="Output" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="HistoryMove4" top="280" left="1280" zIndex="262" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" style="Output" />
   </Widgets>
 </Content>
