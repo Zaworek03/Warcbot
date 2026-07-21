@@ -264,5 +264,6 @@
     <Widget xsi:type="widgets.brease.TextOutput" id="HistoryMove2" top="200" left="1280" zIndex="260" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" style="Output" />
     <Widget xsi:type="widgets.brease.TextOutput" id="HistoryMove3" top="240" left="1280" zIndex="261" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" style="Output" />
     <Widget xsi:type="widgets.brease.TextOutput" id="HistoryMove4" top="280" left="1280" zIndex="262" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" style="Output" />
+    <Widget xsi:type="widgets.brease.Button" id="AbortGameBtn" top="340" left="840" width="130" zIndex="263" text="Abort Game" style="Command" />
   </Widgets>
 </Content>

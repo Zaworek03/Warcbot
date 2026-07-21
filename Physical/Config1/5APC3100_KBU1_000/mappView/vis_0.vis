@@ -25,6 +25,7 @@
     <EventBindingsSet refId="InvalidPieceContent" />
     <EventBindingsSet refId="RoundContent" />
     <EventBindingsSet refId="ColorContent" />
+    <EventBindingsSet refId="AbortGameContent" />
   </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>
@@ -36,6 +37,7 @@
     <Dialog refId="InvalidPiece" />
     <Dialog refId="RoundDialog" />
     <Dialog refId="ColorDialog" />
+    <Dialog refId="AbortGameDialog" />
   </Dialogs>
   <Contents>
     <Content refId="TopContent" />
@@ -54,6 +56,7 @@
     <Content refId="InvalidPieceContent" />
     <Content refId="RoundContent" />
     <Content refId="ColorContent" />
+    <Content refId="AbortGameContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

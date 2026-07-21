@@ -18,5 +18,6 @@
     <Object Type="File">InvalidPieceContent.eventbinding</Object>
     <Object Type="File">RoundContent.eventbinding</Object>
     <Object Type="File">ColorContent.eventbinding</Object>
+    <Object Type="File">AbortGameContent.eventbinding</Object>
   </Objects>
 </Package>

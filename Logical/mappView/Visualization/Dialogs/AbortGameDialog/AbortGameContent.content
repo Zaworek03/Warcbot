@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="AbortGameContent" guid="37cf8318-8566-4f00-b535-c5c2ae894ba3" height="150" width="300" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="Title" top="15" left="0" width="300" zIndex="0" text="Uwaga!" textAlign="center bottom" bold="true" style="Title2" />
+    <Widget xsi:type="widgets.brease.Label" id="Description" top="45" left="20" width="260" height="40" zIndex="1" multiLine="true" text="Czy napewno chcesz zakonczyc gre?" wordWrap="true" textColor="rgba(0, 0, 0, 1)" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Button" id="BackBtn" top="100" left="160" zIndex="2" text="Anuluj" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="EndBtn" top="100" left="40" zIndex="3" text="Zakoncz" style="Command" />
+  </Widgets>
+</Content>

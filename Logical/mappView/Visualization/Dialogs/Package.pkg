@@ -11,5 +11,6 @@
     <Object Type="Package">InvalidPiece</Object>
     <Object Type="Package">RoundDialog</Object>
     <Object Type="Package">ColorDialog</Object>
+    <Object Type="Package">AbortGameDialog</Object>
   </Objects>
 </Package>
