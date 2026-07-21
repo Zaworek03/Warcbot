@@ -5,10 +5,6 @@ FUNCTION_BLOCK FB_MovePiece
 		Piece := Board[FromRow, FromColumn];
 		Board[ToRow, ToColumn] := Piece;
 		Board[FromRow, FromColumn] := EMPTY;
-
-		(* Zast¹p gMoveCounter przez MoveCounter *)
-		MoveCounter := MoveCounter + 1;
-
 		Done := TRUE;
 	END_IF;
 	

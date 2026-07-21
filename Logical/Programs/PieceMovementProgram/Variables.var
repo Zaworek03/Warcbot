@@ -1,7 +1,14 @@
 VAR
-	PlayerColor : PlayerColorEnum;
 	Piece : PieceTypeEnum;
 	instMovePiece : FB_MovePiece;
 	MoveLegal : BOOL;
-	PlayerColor : PlayerColorEnum;
+	instInitGame : FB_InitGame;
+	instInitBoard : FB_InitBoard;
+	bInitGame : BOOL;
+	bInitBoard : BOOL;
+	bMovePiece : BOOL;
+	bCanCaptureAgain : BOOL;
+	stCurrentPiece : PieceTypeEnum;
+	bTest : BOOL;
+	instPromotePiece : FB_PromotePiece;
 END_VAR

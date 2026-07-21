@@ -1,41 +1,62 @@
 PROGRAM _INIT
 	
-	gBoardBoard[2,2] := WHITE;
-
-	gCurrentMove.FROM_ROW := 2;
-	gCurrentMove.FROM_COLUMN := 2;
-
-	gCurrentMove.TO_ROW := 3;
-	gCurrentMove.TO_COLUMN := 3;
-
-	gMoveCounter := 0;
-	
-	gTest := FALSE;
+	bInitGame := FALSE;
+	bInitBoard := FALSE;
+	bMovePiece := FALSE;
+	bTest := FALSE;
+		
 
 END_PROGRAM
 
 
 PROGRAM _CYCLIC
 
-	IF gTest THEN
-		bStartMove := TRUE;
-		gTest := FALSE;
-	END_IF;
-
-	instMovePiece(
-	Execute := bStartMove, 
-	FromRow := gCurrentMove.FROM_ROW, 
-	FromColumn := gCurrentMove.FROM_COLUMN, 
-	ToRow := gCurrentMove.TO_ROW, 
-	ToColumn := gCurrentMove.TO_COLUMN, 
-	Piece := gPiece, 
-	Board := gBoardBoard,       
-	MoveCounter := gMoveCounter  
+	instInitGame(
+		Execute := bInitGame, 
+		MovesWithoutCapture := gMovesWithoutCapture,
+		PlayerColor := gPlayerColor, 
+		Winner := gWinner,       
+		GameState := gGameState  
 	);
-
+	
+	instInitBoard(
+		Execute := bInitBoard, 
+		BoardBoard := gBoardBoard,
+		GameState := gGameState  
+	);		
+	
+	instMovePiece(
+		Execute := bMovePiece,
+		FromRow := gCurrentMove.FROM_ROW, 
+		FromColumn := gCurrentMove.FROM_COLUMN,
+		ToRow := gCurrentMove.TO_ROW,
+		ToColumn := gCurrentMove.TO_COLUMN,
+		Board := gBoardBoard
+	);
+	
 	IF instMovePiece.Done THEN
-		bStartMove := FALSE;
+		bMovePiece := FALSE; (* Wy³¹czamy trigger, aby nie wykonaæ ruchu ponownie w nastêpnym cyklu *)
 	END_IF;
+	
+	instPromotePiece(
+		Execute := TRUE,
+		Row := gCurrentMove.TO_ROW,
+		Column := gCurrentMove.TO_COLUMN,
+		Board := gBoardBoard
+	);
+	
+	IF bTest THEN
+		
+		stCurrentPiece := gBoardBoard[gCurrentMove.TO_ROW, gCurrentMove.TO_COLUMN];
+		
+		bCanCaptureAgain := CanPieceCaptureAgain(
+		Row := gCurrentMove.TO_ROW,      (* Nowy wiersz po ruchu *)
+		Column := gCurrentMove.TO_COLUMN,   (* Nowa kolumna po ruchu *)
+		Piece := stCurrentPiece,
+		Board := gBoardBoard
+		);
+		
+	END_IF;		
 
 END_PROGRAM
 

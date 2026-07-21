@@ -1,6 +1,6 @@
 VAR
 	gTest : BOOL;
-	gMoveCounter : INT := 0;
+	gMovesWithoutCapture : INT := 0;
 	gPlayerColor : PlayerColorEnum;
 	gDifficultyLevel : DifficultyLevelEnum;
 	gGameState : GameStateEnum;

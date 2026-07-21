@@ -6,7 +6,7 @@
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
     <Task Name="Program" Source="Programs.Motion.Program.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
-    <Task Name="PieceMovem" Source="Programs.PieceMovementProgram.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
+    <Task Name="PieceMovem" Source="Programs.PieceMovementProgram.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
@@ -69,7 +69,6 @@
     <LibraryObject Name="AsMem" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsIO" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="MpUserX" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="AsIecCon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="UaCoal" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="ArSvcReg" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="ArCert" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -87,5 +86,6 @@
     <LibraryObject Name="AsIoTrc" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="ArSsl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsIOAcc" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="AsIecCon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

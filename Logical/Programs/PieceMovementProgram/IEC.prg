@@ -10,5 +10,9 @@
     <File>CheckMove.st</File>
     <File>CheckRegularCapture.st</File>
     <File>CanPlayerCapture.st</File>
+    <File>FB_InitGame.st</File>
+    <File>FB_InitBoard.st</File>
+    <File>CanPieceCaptureAgain.st</File>
+    <File>FB_PromotePiece.st</File>
   </Files>
 </Program>
