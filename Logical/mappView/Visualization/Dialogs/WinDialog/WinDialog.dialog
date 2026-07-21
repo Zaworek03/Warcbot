@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ddef:Dialog id="WinDialog" layoutRefId="layoutRefId" xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2">
+<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="WinDialog" layoutRefId="LayoutWinNLose">
   <Assignments>
-    <!--<Assignment type="" baseContentRefId="" areaRefId="" />-->
+    <Assignment type="Content" baseContentRefId="WinContent" areaRefId="WinOrLoseArea" />
   </Assignments>
 </ddef:Dialog>

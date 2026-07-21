@@ -27,6 +27,7 @@
     <Dialog refId="RulesDialog" />
     <Dialog refId="LoginDialog" />
     <Dialog refId="WinDialog" />
+    <Dialog refId="LoseDialog" />
   </Dialogs>
   <Contents>
     <Content refId="TopContent" />
@@ -41,6 +42,7 @@
     <Content refId="RulesContent" />
     <Content refId="ManualContent" />
     <Content refId="WinContent" />
+    <Content refId="Lose" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

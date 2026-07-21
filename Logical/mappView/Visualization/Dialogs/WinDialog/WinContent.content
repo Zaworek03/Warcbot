@@ -3,6 +3,6 @@
   <Widgets>
     <Widget xsi:type="widgets.brease.Label" id="Title" top="10" left="0" width="300" zIndex="0" text="Gratulacje!" textAlign="center bottom" bold="true" style="Title2" />
     <Widget xsi:type="widgets.brease.Label" id="Description" top="40" left="20" width="260" height="40" zIndex="1" multiLine="true" text="Wygrales rozgrywke z robotem, mozesz byc z siebie dumny." wordWrap="true" textColor="rgba(0, 0, 0, 1)" textAlign="left top" />
-    <Widget xsi:type="widgets.brease.Button" id="Button1" top="100" left="100" zIndex="2" text="Button1" />
+    <Widget xsi:type="widgets.brease.Button" id="BackBtn" top="100" left="100" zIndex="2" text="wroc" style="Command" />
   </Widgets>
 </Content>

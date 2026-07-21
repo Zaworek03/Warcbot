@@ -7,5 +7,6 @@
     <Object Type="Package">NewGameDialog</Object>
     <Object Type="Package">RulesDialog</Object>
     <Object Type="Package">WinDialog</Object>
+    <Object Type="Package">LoseDialog</Object>
   </Objects>
 </Package>

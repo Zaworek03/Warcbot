@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ddef:Dialog id="LoseDialog" layoutRefId="layoutRefId" xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2">
+  <Assignments>
+    <!--<Assignment type="" baseContentRefId="" areaRefId="" />-->
+  </Assignments>
+</ddef:Dialog>
