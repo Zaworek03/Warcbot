@@ -9,5 +9,6 @@
     <Object Type="Package">SavGameDialog</Object>
     <Object Type="Package">NewSaveDialog</Object>
     <Object Type="Package">DeleteConfDialog</Object>
+    <Object Type="Package">AHExportDialog</Object>
   </Objects>
 </Package>

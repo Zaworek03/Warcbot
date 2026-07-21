@@ -1,3 +1,8 @@
 VAR
+	AlarmTest : INT := 0;
 	MpAlarmXHistory_0 : MpAlarmXHistory;
+	AHExport : BOOL := FALSE;
+	DirCreate_0 : DirCreate;
+	ExportTest : BOOL := FALSE;
+	OpenExportDialog : BOOL;
 END_VAR

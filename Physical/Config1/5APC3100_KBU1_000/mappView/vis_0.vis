@@ -23,6 +23,7 @@
     <EventBindingsSet refId="SaveContent" />
     <EventBindingsSet refId="NewSaveContent" />
     <EventBindingsSet refId="DeleteConfContent" />
+    <EventBindingsSet refId="AHExportContent" />
   </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>
@@ -32,6 +33,7 @@
     <Dialog refId="SavGameDialog" />
     <Dialog refId="NewSaveDialog" />
     <Dialog refId="DeleteConfDialog" />
+    <Dialog refId="AHExportDialog" />
   </Dialogs>
   <Contents>
     <Content refId="TopContent" />
@@ -48,6 +50,7 @@
     <Content refId="SaveContent" />
     <Content refId="NewSaveContent" />
     <Content refId="DeleteConfContent" />
+    <Content refId="AHExportContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

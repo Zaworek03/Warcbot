@@ -50,5 +50,15 @@
       <Variable Name="IndexOOR" />
       <Variable Name="NIndexOOR" />
     </Task>
+    <Task Name="AlarmHisto">
+      <Variable Name="AHExport" />
+      <Variable Name="MpAlarmXHistory_0">
+        <Variable Name="Info">
+          <Variable Name="GeneratedFileName" />
+        </Variable>
+      </Variable>
+      <Variable Name="OpenExportDialog" />
+      <Variable Name="ExportTest" />
+    </Task>
   </Module>
 </OpcUaSource>

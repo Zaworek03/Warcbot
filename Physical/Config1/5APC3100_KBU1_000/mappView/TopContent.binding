@@ -7,18 +7,9 @@
 </Binding>
 
 
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::SaveGame:UIConnect.Recipe.List.Names" attribute="value" samplingRate="slow" />
-<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="TableItem1" attribute="stringValue" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::SaveGame:UIConnect.Recipe.List.LastModified" attribute="value" samplingRate="slow" />
-<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="TableItem2" attribute="stringValue" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::SaveGame:UIConnect.Recipe.List.SelectedIndex" attribute="value" />
-<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="Table1" attribute="selectedRow" />
-</Binding>
+
+
+
 <Binding mode="twoWay">
 <Source xsi:type="mapp" refId="MpLinkgAlarmXHistory" attribute="link" />
 <Target xsi:type="brease" contentRefId="AlarmContent" widgetRefId="AlarmHistory1" attribute="mpLink" />
@@ -60,6 +51,10 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::SaveGame:NIndexOOR" attribute="value" />
 <Target xsi:type="brease" contentRefId="NewSaveContent" widgetRefId="BtnSave" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AlarmHisto:MpAlarmXHistory_0.Info.GeneratedFileName" attribute="value" />
+<Target xsi:type="brease" contentRefId="AHExportContent" widgetRefId="TextOutput1" attribute="value" />
 </Binding>
 </Bindings>
 </BindingsSet>
