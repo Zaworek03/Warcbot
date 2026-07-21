@@ -4,24 +4,22 @@
   <Objects>
     <Object Type="File">Config.mappviewcfg</Object>
     <Object Type="File">vis_0.vis</Object>
+    <Object Type="File">OpcUaServer.uaserver</Object>
+    <Object Type="File">TopContent.binding</Object>
+    <Object Type="File">SaveContent.binding</Object>
     <Object Type="File">TopContent.eventbinding</Object>
     <Object Type="File">SettingsContent.eventbinding</Object>
-    <Object Type="File">TopContent.binding</Object>
     <Object Type="File">Login.eventbinding</Object>
     <Object Type="File">PlayContent.eventbinding</Object>
     <Object Type="File">NewGameContent.eventbinding</Object>
     <Object Type="File">RulesContent.eventbinding</Object>
     <Object Type="File">AlarmContent.eventbinding</Object>
-    <Object Type="File">OpcUaServer.uaserver</Object>
     <Object Type="File">WinContent.eventbinding</Object>
     <Object Type="File">LoseContent.eventbinding</Object>
     <Object Type="File">InvalidPieceContent.eventbinding</Object>
     <Object Type="File">RoundContent.eventbinding</Object>
     <Object Type="File">ColorContent.eventbinding</Object>
     <Object Type="File">AbortGameContent.eventbinding</Object>
-    <Object Type="File">SaveContent.eventbinding</Object>
-    <Object Type="File">NewSaveContent.eventbinding</Object>
-    <Object Type="File">DeleteConfContent.eventbinding</Object>
-    <Object Type="File">AHExportContent.eventbinding</Object>
+    <Object Type="File">SaveGame.eventbinding</Object>
   </Objects>
 </Package>

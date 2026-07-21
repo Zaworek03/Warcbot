@@ -51,6 +51,16 @@
           </Target>
         </Action>
       </EventHandler>
-    </EventBinding>
+		</EventBinding>
+		<EventBinding id="AHExportContent.BtnOk.Click">
+			<Source xsi:type="widgets.brease.Button.Event" contentRefId="AHExportContent" widgetRefId="BtnOk" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="clientSystem.Action">
+						<Method xsi:type="clientSystem.Action.CloseDialog" dialogId="AHExportDialog" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
   </Bindings>
 </EventBindingSet>

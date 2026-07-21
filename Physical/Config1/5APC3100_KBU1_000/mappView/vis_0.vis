@@ -12,6 +12,7 @@
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="TopContent" />
+    <BindingsSet refId="SaveContent" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="TopContent" />
@@ -26,6 +27,8 @@
     <EventBindingsSet refId="RoundContent" />
     <EventBindingsSet refId="ColorContent" />
     <EventBindingsSet refId="AbortGameContent" />
+    <EventBindingsSet refId="SaveGame" />
+    <EventBindingsSet refId="AlarmContent" />
   </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>
@@ -38,6 +41,10 @@
     <Dialog refId="RoundDialog" />
     <Dialog refId="ColorDialog" />
     <Dialog refId="AbortGameDialog" />
+    <Dialog refId="SavGameDialog" />
+    <Dialog refId="NewSaveDialog" />
+    <Dialog refId="DeleteConfDialog" />
+    <Dialog refId="AHExportDialog" />
   </Dialogs>
   <Contents>
     <Content refId="TopContent" />
@@ -57,6 +64,10 @@
     <Content refId="RoundContent" />
     <Content refId="ColorContent" />
     <Content refId="AbortGameContent" />
+    <Content refId="SaveContent" />
+    <Content refId="NewSaveContent" />
+    <Content refId="DeleteConfContent" />
+    <Content refId="AHExportContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

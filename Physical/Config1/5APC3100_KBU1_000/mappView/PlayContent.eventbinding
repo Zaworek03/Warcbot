@@ -40522,7 +40522,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-		<EventBinding id="EventBinding_37">
+    <EventBinding id="EventBinding_37">
       <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gGameRound" event="ValueChanged" />
       <Operand datatype="BOOL" name="StartValue">
         <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gStart">
@@ -40652,6 +40652,16 @@
         <Action>
           <Target xsi:type="clientSystem.Action">
             <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="AbortGameDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="PlayContent.SaveGameBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PlayContent" widgetRefId="SaveGameBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="SavGameDialog" />
           </Target>
         </Action>
       </EventHandler>
