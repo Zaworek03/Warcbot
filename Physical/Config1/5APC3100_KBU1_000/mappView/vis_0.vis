@@ -21,7 +21,10 @@
     <EventBindingsSet refId="NewGameContent" />
     <EventBindingsSet refId="RulesContent" />
     <EventBindingsSet refId="WinContent" />
-    <EventBindingsSet refId="Lose" />
+    <EventBindingsSet refId="LoseContent" />
+    <EventBindingsSet refId="InvalidPieceContent" />
+    <EventBindingsSet refId="RoundContent" />
+    <EventBindingsSet refId="ColorContent" />
   </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>
@@ -30,6 +33,9 @@
     <Dialog refId="LoginDialog" />
     <Dialog refId="WinDialog" />
     <Dialog refId="LoseDialog" />
+    <Dialog refId="InvalidPiece" />
+    <Dialog refId="RoundDialog" />
+    <Dialog refId="ColorDialog" />
   </Dialogs>
   <Contents>
     <Content refId="TopContent" />
@@ -44,7 +50,10 @@
     <Content refId="RulesContent" />
     <Content refId="ManualContent" />
     <Content refId="WinContent" />
-    <Content refId="Lose" />
+    <Content refId="LoseContent" />
+    <Content refId="InvalidPieceContent" />
+    <Content refId="RoundContent" />
+    <Content refId="ColorContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

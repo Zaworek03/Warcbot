@@ -23,6 +23,7 @@
       <Variable Name="gPlayerColor" />
       <Variable Name="gDifficultyLevel" />
       <Variable Name="gStart" />
+      <Variable Name="gEnablePiece" RecursiveEnable="2" />
     </GlobalVariables>
     <Task Name="FixAxisDir">
       <Variable Name="AxisQ1Pos" />

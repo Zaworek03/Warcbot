@@ -8,5 +8,8 @@
     <Object Type="Package">RulesDialog</Object>
     <Object Type="Package">WinDialog</Object>
     <Object Type="Package">LoseDialog</Object>
+    <Object Type="Package">InvalidPiece</Object>
+    <Object Type="Package">RoundDialog</Object>
+    <Object Type="Package">ColorDialog</Object>
   </Objects>
 </Package>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Content id="Lose" guid="b14c84a3-3163-4e57-8f9a-bae63daa7ab2" height="150" width="300" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Content id="LoseContent" guid="b14c84a3-3163-4e57-8f9a-bae63daa7ab2" height="150" width="300" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Label" id="Title" top="15" left="0" width="300" zIndex="0" text="Gratulacje!" textAlign="center bottom" bold="true" style="Title2" />
     <Widget xsi:type="widgets.brease.Label" id="Description" top="45" left="20" width="260" height="40" zIndex="1" multiLine="true" text="Przegrales rozgrywke z robotem, mozesz byc z siebie dumny." wordWrap="true" textColor="rgba(0, 0, 0, 1)" textAlign="left top" />
