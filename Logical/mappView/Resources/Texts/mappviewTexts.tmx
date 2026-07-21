@@ -35,5 +35,45 @@
         <seg>The application was developed in B&amp;R Automation Studio using a range of mapp technology packages, including mapp View, PackML, AlarmX, UserX, Recipe, and Audit. The robot motion sequences were implemented in Structured Text. Before deployment on the physical workstation, the complete system was verified using a digital model in Scene Viewer, allowing the robot movements and system configuration to be tested safely. Particular emphasis was placed on safety, reliability, and ease of operation.</seg>
       </tuv>
     </tu>
+    <tu tuid="autorzy">
+      <tuv xml:lang="pl">
+        <seg>Autorzy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Authors</seg>
+      </tuv>
+    </tu>
+    <tu tuid="nowagra">
+      <tuv xml:lang="pl">
+        <seg>Nowa gra</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>New game</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zasady">
+      <tuv xml:lang="pl">
+        <seg>Zasady</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Rules</seg>
+      </tuv>
+    </tu>
+    <tu tuid="wczytanie">
+      <tuv xml:lang="pl">
+        <seg>Wczytaj grę</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Load game</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zapiszgre">
+      <tuv xml:lang="pl">
+        <seg>Zapisz grę</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Save game</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
