@@ -1,0 +1,4 @@
+VAR
+	WinOrLose : BOOL; (*True - wygrana, False - przegrana*)
+	EndGame : BOOL; (*True - Koniec gry, False - gra wciaz trwa*)
+END_VAR

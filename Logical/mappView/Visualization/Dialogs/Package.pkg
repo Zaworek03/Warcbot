@@ -6,5 +6,6 @@
     <Object Type="Package">LoginDialog</Object>
     <Object Type="Package">NewGameDialog</Object>
     <Object Type="Package">RulesDialog</Object>
+    <Object Type="Package">WinDialog</Object>
   </Objects>
 </Package>
