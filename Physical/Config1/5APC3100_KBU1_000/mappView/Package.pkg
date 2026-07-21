@@ -22,5 +22,6 @@
     <Object Type="File">ColorContent.eventbinding</Object>
     <Object Type="File">AbortGameContent.eventbinding</Object>
     <Object Type="File">SaveGame.eventbinding</Object>
+    <Object Type="Package">CheckersEventBindings</Object>
   </Objects>
 </Package>

@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="ClickEnableMove" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>    
+		<EventBinding id="PlayContent.EnableMoveA1.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveA1" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[1,1]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveC1.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveC1" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[1,3]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveE1.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveE1" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[1,5]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveG1.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveG1" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[1,7]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveB2.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveB2" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[2,2]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveD2.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveD2" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[2,4]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveF2.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveF2" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[2,6]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveH2.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveH2" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[2,8]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveA3.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveA3" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[3,1]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveC3.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveC3" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[3,3]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveE3.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveE3" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[3,5]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveG3.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveG3" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[3,7]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveB4.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveB4" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[4,2]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveD4.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveD4" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[4,4]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveF4.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveF4" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[4,6]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveH4.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveH4" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[4,8]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveA5.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveA5" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[5,1]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveC5.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveC5" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[5,3]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveE5.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveE5" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[5,5]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveG5.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveG5" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[5,7]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveB6.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveB6" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[6,2]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveD6.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveD6" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[6,4]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveF6.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveF6" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[6,6]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveH6.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveH6" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[6,8]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveA7.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveA7" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[7,1]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveC7.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveC7" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[7,3]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveE7.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveE7" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[7,5]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveG7.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveG7" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[7,7]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveB8.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveB8" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[8,2]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveD8.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveD8" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[8,4]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveF8.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveF8" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[8,6]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="PlayContent.EnableMoveH8.Click">
+			<Source xsi:type="widgets.brease.Rectangle.Event" contentRefId="PlayContent" widgetRefId="EnableMoveH8" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gPickMove[8,8]">
+						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+  </Bindings>
+</EventBindingSet>

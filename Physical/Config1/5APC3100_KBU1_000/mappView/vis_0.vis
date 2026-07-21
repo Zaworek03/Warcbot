@@ -30,6 +30,13 @@
     <EventBindingsSet refId="AbortGameContent" />
     <EventBindingsSet refId="SaveGame" />
     <EventBindingsSet refId="AlarmContent" />
+    <EventBindingsSet refId="gEnableMove" />
+    <EventBindingsSet refId="ClickEnableMove" />
+    <EventBindingsSet refId="gBoardActual" />
+    <EventBindingsSet refId="ClickWhite" />
+    <EventBindingsSet refId="ClickBlack" />
+    <EventBindingsSet refId="ClickWhiteK" />
+    <EventBindingsSet refId="ClickBlackK" />
   </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>
