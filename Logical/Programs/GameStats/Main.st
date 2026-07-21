@@ -2,6 +2,9 @@
 PROGRAM _INIT
 	WinOrLose;
 	EndGame;
+	gPlayerColor;
+	gDifficultyLevel;
+	gStart;
 	 
 END_PROGRAM
 

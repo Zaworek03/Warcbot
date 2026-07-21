@@ -1,10 +1,5 @@
 
 TYPE
-	PlayerColorEnum : 
-		(
-		WHITE_COLOR,
-		BLACK_COLOR
-		);
 	DifficultyLevelEnum : 
 		(
 		HARD,
@@ -27,12 +22,6 @@ TYPE
 		BLACK,
 		WHITE_KING,
 		WHITE
-		);
-	WinnerEnum : 
-		(
-		ROBOT,
-		PLAYER,
-		NONE
 		);
 	PositionStruct : 	STRUCT 
 		Z : REAL;

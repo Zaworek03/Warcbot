@@ -20,6 +20,9 @@
       <Variable Name="gPickMove" RecursiveEnable="2" />
       <Variable Name="gBoardActual" RecursiveEnable="2" />
       <Variable Name="gGameRound" />
+      <Variable Name="gPlayerColor" />
+      <Variable Name="gDifficultyLevel" />
+      <Variable Name="gStart" />
     </GlobalVariables>
     <Task Name="FixAxisDir">
       <Variable Name="AxisQ1Pos" />
