@@ -6,5 +6,8 @@
     <Object Type="Package">LoginDialog</Object>
     <Object Type="Package">NewGameDialog</Object>
     <Object Type="Package">RulesDialog</Object>
+    <Object Type="Package">SavGameDialog</Object>
+    <Object Type="Package">NewSaveDialog</Object>
+    <Object Type="Package">DeleteConfDialog</Object>
   </Objects>
 </Package>

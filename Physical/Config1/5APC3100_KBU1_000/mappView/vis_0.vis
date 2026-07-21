@@ -20,26 +20,35 @@
     <EventBindingsSet refId="PlayContent" />
     <EventBindingsSet refId="NewGameContent" />
     <EventBindingsSet refId="RulesContent" />
+    <EventBindingsSet refId="SaveContent" />
+    <EventBindingsSet refId="NewSaveContent" />
+    <EventBindingsSet refId="DeleteConfContent" />
   </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>
     <Dialog refId="NewGameDialog" />
-		<Dialog refId="RulesDialog" />
+    <Dialog refId="RulesDialog" />
     <Dialog refId="LoginDialog" />
+    <Dialog refId="SavGameDialog" />
+    <Dialog refId="NewSaveDialog" />
+    <Dialog refId="DeleteConfDialog" />
   </Dialogs>
   <Contents>
     <Content refId="TopContent" />
     <Content refId="LeftContent" />
     <Content refId="MainContent" />
-		<Content refId="PlayContent" />
-		<Content refId="AlarmContent" />
+    <Content refId="PlayContent" />
+    <Content refId="AlarmContent" />
     <Content refId="LiveContent" />
     <Content refId="SettingsContent" />
     <Content refId="LoginContent" />
-	<Content refId="NewGameContent" />
+    <Content refId="NewGameContent" />
     <Content refId="RulesContent" />
-		<Content refId="ManualContent" />
-	</Contents>
+    <Content refId="ManualContent" />
+    <Content refId="SaveContent" />
+    <Content refId="NewSaveContent" />
+    <Content refId="DeleteConfContent" />
+  </Contents>
   <SnippetsSets />
   <VariablesSets />
   <ExpressionsSets />
