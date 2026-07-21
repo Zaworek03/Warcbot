@@ -35947,5 +35947,67 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBinding_37">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gGameRound" event="ValueChanged" />
+      <Operand datatype="BOOL" name="StartValue">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gStart">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="StartValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="PlayContent" widgetRefId="MoveHumanLb">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="PlayContent" widgetRefId="MoveRobotLb">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = TRUE AND StartValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="PlayContent" widgetRefId="MoveHumanLb">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="PlayContent" widgetRefId="MoveRobotLb">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE AND StartValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="PlayContent" widgetRefId="MoveHumanLb">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="PlayContent" widgetRefId="MoveRobotLb">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
