@@ -1,37 +1,35 @@
+
 TYPE
-	CameraCommandType : STRUCT
-		Enable                    : BOOL;
-		AcquireImage              : BOOL;
+	CameraCommandType : 	STRUCT 
+		Enable : BOOL;
+		AcquireImage : BOOL;
 		SearchAcquisitionSettings : BOOL;
 	END_STRUCT;
-
-	CameraParameterType : STRUCT
-		FlashColor   : USINT;
+	CameraParameterType : 	STRUCT 
+		FlashColor : USINT;
 		FlashSegment : USINT;
-		SetFocus     : UINT;
+		SetFocus : UINT;
 		ExposureTime : UDINT;
 	END_STRUCT;
-
-	CameraStatusType : STRUCT
+	CameraStatusType : 	STRUCT 
 		AcquisitionReady : BOOL;
 		ProcessingActive : BOOL;
-		ProcessingError  : UINT;
-		ReadFocus        : UINT;
+		ProcessingError : UINT;
+		ReadFocus : UINT;
 		ReadExposureTime : UDINT;
 	END_STRUCT;
-	
-	DetectedPieceType : STRUCT
+	DetectedPieceType : 	STRUCT 
 		PositionX : DINT;
 		PositionY : DINT;
-		Area      : UDINT;
-		Valid     : BOOL;
+		Area : UDINT;
+		Valid : BOOL;
+		Score : USINT;
 	END_STRUCT;
-
-	CameraControlType : STRUCT
-		Cmd        : CameraCommandType;
+	CameraControlType : 	STRUCT 
+		Cmd : CameraCommandType;
 		Parameters : CameraParameterType;
-		Status     : CameraStatusType;
+		Status : CameraStatusType;
 		NumResults : USINT;
-		Pieces     : ARRAY[1..24] OF DetectedPieceType;
+		Pieces : ARRAY[1..24]OF DetectedPieceType;
 	END_STRUCT;
 END_TYPE

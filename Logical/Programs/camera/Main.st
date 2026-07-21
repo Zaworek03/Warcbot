@@ -14,7 +14,7 @@ PROGRAM _CYCLIC
 	END_IF;
 
 	IF gCameraCtrl.Cmd.AcquireImage
-		AND gCameraCtrl.Status.AcquisitionReady THEN
+		AND NOT gCameraCtrl.Status.AcquisitionReady THEN
 
 		gCameraCtrl.Cmd.AcquireImage := FALSE;
 
