@@ -20,6 +20,8 @@
     <EventBindingsSet refId="PlayContent" />
     <EventBindingsSet refId="NewGameContent" />
     <EventBindingsSet refId="RulesContent" />
+    <EventBindingsSet refId="WinContent" />
+    <EventBindingsSet refId="Lose" />
   </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>

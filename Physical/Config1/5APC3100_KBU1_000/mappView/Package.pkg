@@ -13,5 +13,7 @@
     <Object Type="File">RulesContent.eventbinding</Object>
     <Object Type="File">AlarmContent.eventbinding</Object>
     <Object Type="File">OpcUaServer.uaserver</Object>
+    <Object Type="File">WinContent.eventbinding</Object>
+    <Object Type="File">Lose.eventbinding</Object>
   </Objects>
 </Package>

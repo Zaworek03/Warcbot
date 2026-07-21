@@ -42,5 +42,9 @@
         </Variable>
       </Variable>
     </Task>
+    <Task Name="GameStats">
+      <Variable Name="EndGame" />
+      <Variable Name="WinOrLose" />
+    </Task>
   </Module>
 </OpcUaSource>
