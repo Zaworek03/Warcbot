@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="SaveContent" guid="223a34c5-7109-482e-82e5-d8c8fa41fb6f" height="300" width="500" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Table" id="Table1" top="20" left="20" width="460" height="220" zIndex="0">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem1" zIndex="0" columnWidth="280" text="File name" />
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem2" zIndex="1" columnWidth="180" text="Modification Date" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Button" id="BtnNewSave" top="250" left="20" width="140" zIndex="1" text="New save" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="BtnLoad" top="250" left="180" width="140" zIndex="2" text="Load" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="BtnDelete" top="250" left="340" width="140" zIndex="3" text="Delete" style="Command" />
+  </Widgets>
+</Content>

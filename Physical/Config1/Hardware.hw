@@ -51,7 +51,10 @@
     <Parameter ID="FileDevicePath2" Value="USER_PATH\Programs" />
     <Group ID="FileDevice3" />
     <Parameter ID="FileDeviceName3" Value="SG" />
-    <Parameter ID="FileDevicePath3" Value="USER_PATH" />
+    <Parameter ID="FileDevicePath3" Value="USER_PATH\SavedGames" />
+    <Group ID="FileDevice4" />
+    <Parameter ID="FileDeviceName4" Value="AH" />
+    <Parameter ID="FileDevicePath4" Value="USER_PATH\AlarmHistory" />
     <Parameter ID="ActivateWebServer" Value="1" />
     <Parameter ID="WebServerProtocol" Value="1" />
     <Parameter ID="ActivateSdm" Value="1" />

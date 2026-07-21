@@ -19,5 +19,9 @@
     <Object Type="File">RoundContent.eventbinding</Object>
     <Object Type="File">ColorContent.eventbinding</Object>
     <Object Type="File">AbortGameContent.eventbinding</Object>
+    <Object Type="File">SaveContent.eventbinding</Object>
+    <Object Type="File">NewSaveContent.eventbinding</Object>
+    <Object Type="File">DeleteConfContent.eventbinding</Object>
+    <Object Type="File">AHExportContent.eventbinding</Object>
   </Objects>
 </Package>

@@ -21,12 +21,33 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="AlarmContent.Button1.Click_1">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AlarmContent" widgetRefId="Button1" event="Click" />
+    <EventBinding id="EventBinding_37">
+      <Source xsi:type="opcUa.Event" refId="::AlarmHisto:OpenExportDialog" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="AHExportDialog" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::AlarmHisto:OpenExportDialog">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AlarmContent.BtnExport.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AlarmContent" widgetRefId="BtnExport" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="widgets.brease.AlarmHistory.Action" contentRefId="AlarmContent" widgetRefId="AlarmHistory1">
-            <Method xsi:type="widgets.brease.AlarmHistory.Action.OpenConfiguration" type="Filtering" />
+          <Target xsi:type="opcUa.NodeAction" refId="::AlarmHisto:AHExport">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
       </EventHandler>

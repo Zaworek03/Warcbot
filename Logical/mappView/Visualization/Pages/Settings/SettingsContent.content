@@ -1,35 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Content id="SettingsContent" guid="2e9c75d1-1ea5-463c-8f4e-d645f507d5d9" height="840" width="1450" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
+<Content id="SettingsContent" guid="2e9c75d1-1ea5-463c-8f4e-d645f507d5d9" height="840" width="1450" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.TabControl" id="TabControlAdmin" top="40" left="40" width="1380" height="760" zIndex="0">
       <Widgets>
-        <Widget xsi:type="widgets.brease.TabItem" id="TabItemUsers" left="0" zIndex="0" text="TabItem1">
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItemUsers" left="0" width="200" zIndex="0" text="User menegment">
           <Widgets>
-            <Widget xsi:type="widgets.brease.Login" id="Login" top="70" left="20" zIndex="0" />
-            <Widget xsi:type="widgets.brease.UserList" id="UserList" top="10" left="360" width="700" zIndex="1">
+            <Widget xsi:type="widgets.brease.Login" id="Login" top="230" left="60" zIndex="0" />
+            <Widget xsi:type="widgets.brease.UserList" id="UserList" top="110" left="400" width="960" height="430" zIndex="1">
               <Widgets>
-                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemFName" width="180" zIndex="0" columnType="FullName" text="UserListItem1" />
-                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemDate" width="180" zIndex="1" columnType="LastLogin" text="UserListItem2" />
-                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemRoles" width="180" zIndex="2" columnType="Roles" text="UserListItem3" />
-                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemLocked" width="80" zIndex="3" columnType="IsLocked" text="UserListItem4" />
-                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemAdmin" width="80" zIndex="4" columnType="IsAdmin" text="UserListItem5" />
+                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemFName" width="280" zIndex="0" columnType="FullName" text="Full Name" />
+                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemDate" width="300" zIndex="1" columnType="LastLogin" text="Last Login" />
+                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemRoles" width="180" zIndex="2" columnType="Roles" text="Roles" />
+                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemLocked" width="120" zIndex="3" columnType="IsLocked" text="Locked" />
+                <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemAdmin" width="120" zIndex="4" columnType="IsAdmin" text="Admin" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.Button" id="BtnUserAdd" top="330" left="360" zIndex="2" text="Button1" />
-            <Widget xsi:type="widgets.brease.Button" id="BtnUserRemove" top="330" left="480" zIndex="3" text="Button2" />
-            <Widget xsi:type="widgets.brease.Button" id="BtnUserModify" top="330" left="600" zIndex="4" text="Button3" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserAdd" top="570" left="400" width="160" zIndex="2" text="Add User" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserRemove" top="570" left="580" width="160" zIndex="3" text="Remove User" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserModify" top="570" left="760" width="160" zIndex="4" text="Modify User" style="Command" />
           </Widgets>
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" zIndex="1" text="TabItem2">
           <Widgets>
-            <Widget xsi:type="widgets.brease.Table" id="Table1" top="70" left="100" zIndex="0">
-              <Widgets>
-                <Widget xsi:type="widgets.brease.TableItem" id="TableItem1" zIndex="0" text="TableItem1" />
-                <Widget xsi:type="widgets.brease.TableItem" id="TableItem2" zIndex="1" text="TableItem2" />
-              </Widgets>
-            </Widget>
-            <Widget xsi:type="widgets.brease.Button" id="Button1" top="410" left="220" zIndex="1" text="sv" />
-            <Widget xsi:type="widgets.brease.Button" id="Button2" top="410" left="360" zIndex="2" text="ld" />
+            <Widget xsi:type="widgets.brease.Button" id="Button1" top="410" left="220" zIndex="0" text="sv" />
+            <Widget xsi:type="widgets.brease.Button" id="Button2" top="410" left="360" zIndex="1" text="ld" />
           </Widgets>
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem3" left="0" zIndex="2" text="TabItem3">

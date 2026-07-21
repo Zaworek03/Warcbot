@@ -7,5 +7,6 @@
     <Object Type="File">LayoutDialogPlay.layout</Object>
     <Object Type="File">layoutDialogAlarmHist.layout</Object>
     <Object Type="File">LayoutWinNLose.layout</Object>
+    <Object Type="File">layoutOK.layout</Object>
   </Objects>
 </Package>

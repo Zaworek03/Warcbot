@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="DeleteConfContent" guid="25873a94-c396-4f66-9b9f-554ef6b292d6" height="200" width="400" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Button" id="BtnDelete" top="150" left="20" width="160" zIndex="0" text="Delete" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="BtnCancel" top="150" left="220" width="160" zIndex="1" text="Cancel" style="Command" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="20" left="20" width="360" height="60" zIndex="2" text="Are you sure you want to delete this save file?" wordWrap="true" textAlign="center bottom" style="Caption" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput1" top="100" left="20" width="360" zIndex="3" value="Not selected" textAlign="center" style="Output" />
+  </Widgets>
+</Content>

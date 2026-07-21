@@ -42,10 +42,28 @@
             <Variable Name="SelectedIndex" />
             <Variable Name="LastModified" />
           </Variable>
-          <Variable Name="Load" />
-          <Variable Name="Save" />
         </Variable>
       </Variable>
+      <Variable Name="SaveFileName" />
+      <Variable Name="NewSave" />
+      <Variable Name="InvSavFileName" />
+      <Variable Name="Saved" />
+      <Variable Name="NSDialogOpen" />
+      <Variable Name="Load" />
+      <Variable Name="DeleteSave" />
+      <Variable Name="CurrentFileName" />
+      <Variable Name="IndexOOR" />
+      <Variable Name="NIndexOOR" />
+    </Task>
+    <Task Name="AlarmHisto">
+      <Variable Name="AHExport" />
+      <Variable Name="MpAlarmXHistory_0">
+        <Variable Name="Info">
+          <Variable Name="GeneratedFileName" />
+        </Variable>
+      </Variable>
+      <Variable Name="OpenExportDialog" />
+      <Variable Name="ExportTest" />
     </Task>
     <Task Name="GameStats">
       <Variable Name="EndGame" />

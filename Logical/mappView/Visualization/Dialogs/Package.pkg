@@ -12,5 +12,9 @@
     <Object Type="Package">RoundDialog</Object>
     <Object Type="Package">ColorDialog</Object>
     <Object Type="Package">AbortGameDialog</Object>
+    <Object Type="Package">SavGameDialog</Object>
+    <Object Type="Package">NewSaveDialog</Object>
+    <Object Type="Package">DeleteConfDialog</Object>
+    <Object Type="Package">AHExportDialog</Object>
   </Objects>
 </Package>
