@@ -23,5 +23,6 @@
 <Source xsi:type="mapp" refId="MpLinkgAlarmXHistory" attribute="link" />
 <Target xsi:type="brease" contentRefId="AlarmContent" widgetRefId="AlarmHistory1" attribute="mpLink" />
 </Binding>
+
 </Bindings>
 </BindingsSet>
