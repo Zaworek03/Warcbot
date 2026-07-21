@@ -20,4 +20,5 @@ VAR
 	gPlayerColor : BOOL; (*True - biale, False - czarne*)
 	gDifficultyLevel : INT; (*0 - Easy, 1 - Medium, 2 - Hard*)
 	gStart : BOOL; (*True - rozpocznij nowa gre, False - nic*)
+	gEnablePiece : ARRAY[1..8,1..8] OF BOOL; (*Pionki mozliwe do klikniecia podczas tury*)
 END_VAR

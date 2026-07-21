@@ -1,4 +1,7 @@
 VAR
 	WinOrLose : BOOL; (*True - wygrana, False - przegrana*)
 	EndGame : BOOL; (*True - Koniec gry, False - gra wciaz trwa*)
+	DeadWhitePiece : INT; (*Zbite biale pionki*)
+	DeadBlackPiece : INT; (*Zbite czarne pionki*)
+	MoveCount : INT; (*Ilosc ruchow*)
 END_VAR

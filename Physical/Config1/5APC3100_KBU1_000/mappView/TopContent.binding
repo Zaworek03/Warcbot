@@ -24,5 +24,29 @@
 <Target xsi:type="brease" contentRefId="AlarmContent" widgetRefId="AlarmHistory1" attribute="mpLink" />
 </Binding>
 
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::GameStats:MoveCount" attribute="value" />
+<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="NumMovePlayer" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::GameStats:DeadBlackPiece" attribute="value" />
+<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="NumDeadBlackPiece" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::GameStats:DeadWhitePiece" attribute="value" />
+<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="NumDeadWhitePiece" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gStart" attribute="value" />
+<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="NumMovePlayer" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gStart" attribute="value" />
+<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="NumDeadBlackPiece" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gStart" attribute="value" />
+<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="NumDeadWhitePiece" attribute="visible" />
+</Binding>
 </Bindings>
 </BindingsSet>

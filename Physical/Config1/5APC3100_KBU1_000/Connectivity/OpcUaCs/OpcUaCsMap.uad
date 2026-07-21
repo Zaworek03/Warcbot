@@ -48,6 +48,9 @@
     <Task Name="GameStats">
       <Variable Name="EndGame" />
       <Variable Name="WinOrLose" />
+      <Variable Name="MoveCount" />
+      <Variable Name="DeadBlackPiece" />
+      <Variable Name="DeadWhitePiece" />
     </Task>
   </Module>
 </OpcUaSource>
