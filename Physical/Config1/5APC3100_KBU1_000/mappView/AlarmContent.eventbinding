@@ -21,9 +21,9 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_37">
-      <Source xsi:type="opcUa.Event" refId="::AlarmHisto:OpenExportDialog" event="ValueChanged" />
-      <EventHandler condition="newValue = TRUE">
+		<EventBinding id="EventBinding_69">
+			<Source xsi:type="opcUa.Event" refId="::AlarmHisto:OpenExportDialog" event="ValueChanged" />
+			<EventHandler condition="newValue = TRUE">
         <Sequence>
           <Step order="0">
             <Action>

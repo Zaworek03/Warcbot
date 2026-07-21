@@ -11,7 +11,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_34">
+		<EventBinding id="EventBinding_420">
       <Source xsi:type="clientSystem.Event" event="DialogClosed" />
       <EventHandler condition="dialogId = &quot;NewSaveDialog&quot;">
         <Sequence>

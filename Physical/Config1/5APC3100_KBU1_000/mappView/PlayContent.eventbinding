@@ -40522,7 +40522,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_37">
+		<EventBinding id="EventBinding_37">
       <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gGameRound" event="ValueChanged" />
       <Operand datatype="BOOL" name="StartValue">
         <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gStart">
