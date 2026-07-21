@@ -11,7 +11,8 @@ PROGRAM _INIT
 	gMoveCounter := 0;
 	
 	gTest := FALSE;
-
+	gHumanColor := FALSE;
+	
 END_PROGRAM
 
 

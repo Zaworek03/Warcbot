@@ -1,4 +1,5 @@
 VAR
+	gHumanColor : BOOL;
 	gTest : BOOL;
 	gMoveCounter : INT := 0;
 	gBoardBoard : ARRAY[1..8,1..8] OF PieceTypeEnum := [64(EMPTY)];
@@ -15,10 +16,10 @@ VAR
 	gPickPiece : ARRAY[1..8,1..8] OF BOOL; (*Klikniety przez gracza pionek*)
 	gEnableMove : ARRAY[1..8,1..8] OF BOOL; (*Mozliwe ruchy na szachownicy*)
 	gPickMove : ARRAY[1..8,1..8] OF BOOL; (*Wybrany ruch przez gracza*)
-	gBoardActual : ARRAY[1..8,1..8] OF INT; (*Aktualna plansza rozgrywki (0 puste pole, 1 biale, 2 czarne, 3 damka biale, 4 damka czarne)*)
+	gBoardActual : ARRAY[1..8,1..8] OF USINT; (*Aktualna plansza rozgrywki (0 puste pole, 1 biale, 2 czarne, 3 damka biale, 4 damka czarne)*)
 	gGameRound : BOOL; (*False ruch robota, True ruch czlowieka*)
 	gPlayerColor : BOOL; (*True - biale, False - czarne*)
-	gDifficultyLevel : INT; (*0 - Easy, 1 - Medium, 2 - Hard*)
+	gDifficultyLevel : USINT; (*0 - Easy, 1 - Medium, 2 - Hard*)
 	gStart : BOOL; (*True - rozpocznij nowa gre, False - nic*)
 	gEnablePiece : ARRAY[1..8,1..8] OF BOOL; (*Pionki mozliwe do klikniecia podczas tury*)
 END_VAR

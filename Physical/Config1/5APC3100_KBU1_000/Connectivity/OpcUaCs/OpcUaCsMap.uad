@@ -24,6 +24,7 @@
       <Variable Name="gDifficultyLevel" />
       <Variable Name="gStart" />
       <Variable Name="gEnablePiece" RecursiveEnable="2" />
+      <Variable Name="gHumanColor" />
     </GlobalVariables>
     <Task Name="FixAxisDir">
       <Variable Name="AxisQ1Pos" />
