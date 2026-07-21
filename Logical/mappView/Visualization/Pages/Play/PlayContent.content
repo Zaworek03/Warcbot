@@ -82,10 +82,10 @@
     <Widget xsi:type="widgets.brease.Label" id="Row2Lb" top="610" left="0" width="40" height="95" zIndex="78" text="2" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="24px" style="Caption" />
     <Widget xsi:type="widgets.brease.Label" id="Row1Lb" top="705" left="0" width="40" height="95" zIndex="79" text="1" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="24px" style="Caption" />
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="40" left="840" width="579" height="279" zIndex="80" borderStyle="solid" borderWidth="4px" lineColor="rgba(255, 136, 0, 1)" backColor="rgba(255, 255, 255, 1)" style="Solid_Orange" />
-    <Widget xsi:type="widgets.brease.Button" id="NewGameBtn" top="340" left="840" width="130" zIndex="81" text="New Game" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="RulesBtn" top="340" left="990" width="130" zIndex="82" imageAlign="right" text="Rules" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="LoadGameBtn" top="340" left="1140" width="130" zIndex="83" text="Load Game" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="SaveGameBtn" top="340" left="1290" width="130" zIndex="84" text="Save Game" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="NewGameBtn" top="340" left="840" width="130" zIndex="81" text="$IAT/nowagra" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="RulesBtn" top="340" left="990" width="130" zIndex="82" imageAlign="right" text="$IAT/zasady" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="LoadGameBtn" top="340" left="1140" width="130" zIndex="83" text="$IAT/wczytanie" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="SaveGameBtn" top="340" left="1290" width="130" zIndex="84" text="$IAT/zapiszgre" style="Command" />
     <Widget xsi:type="widgets.brease.Image" id="Image1" top="400" left="940" width="400" height="420" zIndex="85" image="Media/happy-cat-cat.gif" borderWidth="0px" borderColor="rgba(51, 51, 51, 0)" imageColor="rgba(0, 0, 0, 0)" />
     <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveA1" top="705" left="40" width="85" height="85" zIndex="86" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />
     <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveE1" top="705" left="420" width="85" height="85" zIndex="87" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" />

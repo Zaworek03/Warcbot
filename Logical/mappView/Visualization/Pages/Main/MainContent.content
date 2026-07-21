@@ -2,10 +2,10 @@
 <Content id="MainContent" guid="b8c8886d-1ab1-49fb-864d-42a50411d2aa" height="840" width="1450" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Image" id="ImgRobot" top="20" left="780" width="660" height="799" zIndex="0" image="Media/RobotRysunek.png" />
-    <Widget xsi:type="widgets.brease.Label" id="TitleLb" top="40" left="40" width="700" height="100" zIndex="1" text="Warcbot" textAlign="center" fontSize="80px" bold="true" style="Title1" />
+    <Widget xsi:type="widgets.brease.Label" id="TitleLb" top="40" left="40" width="700" height="100" zIndex="1" text="Warcabot" textAlign="center" fontSize="80px" bold="true" style="Title1" />
     <Widget xsi:type="widgets.brease.Label" id="DescriptionLb1" top="140" left="80" width="660" height="180" zIndex="2" multiLine="true" text="$IAT/OpisProjektu1" wordWrap="true" textColor="rgba(0, 0, 0, 1)" textAlign="left top" fontSize="18px" />
     <Widget xsi:type="widgets.brease.Label" id="DescriptionLb2" top="320" left="80" width="660" height="160" zIndex="3" multiLine="true" text="$IAT/OpisProjektu2" wordWrap="true" textColor="rgba(0, 0, 0, 1)" textAlign="left top" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.Label" id="AuthorLb" top="480" left="80" zIndex="4" text="Autorzy:" bold="true" style="Title2" />
+    <Widget xsi:type="widgets.brease.Label" id="AuthorLb" top="480" left="80" zIndex="4" text="$IAT/autorzy" bold="true" style="Title2" />
     <Widget xsi:type="widgets.brease.Label" id="Label1" top="520" left="80" width="200" zIndex="5" text="- Bartosz Zawłocki" textColor="rgba(0, 0, 0, 1)" bold="true" italic="true" style="Title2" />
     <Widget xsi:type="widgets.brease.Label" id="Label2" top="560" left="80" width="200" zIndex="6" text="- Andrzej Działak" textColor="rgba(0, 0, 0, 1)" bold="true" italic="true" style="Title2" />
     <Widget xsi:type="widgets.brease.Label" id="Label3" top="600" left="80" width="200" zIndex="7" text="- Mateusz Skrzypinski" textColor="rgba(0, 0, 0, 1)" bold="true" italic="true" style="Title2" />
