@@ -31,6 +31,7 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	// TRZEBA ZROBIÆ POPRAWNY EXIT
+	// TRZEBA ZROBIÆ SYNCHRONIZACJE
 	ExecuteImpulse := RTrigExecute.Q;
 	RTrigExecute.CLK := gMotionInterface.Execute;
 	
@@ -152,7 +153,7 @@ PROGRAM _CYCLIC
 				gMotionInterface.Busy := TRUE;
 			END_IF;
 		
-			IF NOT STMotionBusy THEN
+			IF NOT STMotionBusy AND NOT Robot.CommandBusy THEN
 				gMotionInterface.Busy := FALSE;
 				RobotState := ROBOT_HOMED;
 				Robot.MoveProgram := FALSE;
@@ -166,6 +167,8 @@ PROGRAM _CYCLIC
 END_PROGRAM
 
 PROGRAM _EXIT
+	mcGroupHome.Execute := FALSE;
+	mcGroupHome();
 
 END_PROGRAM
 
