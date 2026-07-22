@@ -10,11 +10,6 @@
   <Module Name="&lt;Default&gt;">
     <GlobalVariables Name="Global Variables">
       <Variable Name="gTest" />
-      <Variable Name="gGraStart" />
-      <Variable Name="gJakiKolor" />
-      <Variable Name="gTrudnosc" />
-      <Variable Name="gWyborPionkaBoard" />
-      <Variable Name="gBoard" />
       <Variable Name="gPickPiece" RecursiveEnable="2" />
       <Variable Name="gEnableMove" RecursiveEnable="2" />
       <Variable Name="gPickMove" RecursiveEnable="2" />
@@ -24,7 +19,6 @@
       <Variable Name="gDifficultyLevel" />
       <Variable Name="gStart" />
       <Variable Name="gEnablePiece" RecursiveEnable="2" />
-      <Variable Name="gHumanColor" />
     </GlobalVariables>
     <Task Name="FixAxisDir">
       <Variable Name="AxisQ1Pos" />
