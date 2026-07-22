@@ -1,5 +1,7 @@
 VAR
-	BoardConverted : ARRAY[1..8,1..8] OF USINT; (*Przekonwertowana tablica gdzie pokazywany jest tylko kolor, 1 - bialy, 2 - czarny, 0 -brak*)
+	OUT : BOOL;
 	j : USINT;
 	i : USINT;
+	Vision : VisionEnum;
+	Match : BOOL;
 END_VAR

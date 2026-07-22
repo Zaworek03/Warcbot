@@ -1,5 +1,8 @@
 
 TYPE
+	AlarmEnum : 	STRUCT 
+		InncorrectBoard : BOOL;
+	END_STRUCT;
 	StepEnum : 
 		(
 		Idle,

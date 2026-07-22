@@ -1,4 +1,5 @@
 VAR
+	gAlarm : AlarmEnum;
 	gGame : USINT;
 	gTest : BOOL;
 	gMoveCounter : INT := 0;
