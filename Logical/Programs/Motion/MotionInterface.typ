@@ -2,7 +2,7 @@
 TYPE
 	MotionInterfaceType : 	STRUCT 
 		RequestManualMode : BOOL;
-		StartPos : McPosType;
+		StartPos : McPosType; (*Sk¹d przenieœæ pionek*)
 		EndPos : McPosType;
 		WhitePilePos : McPosType; (*Pozycja 1szego miejsca na stosie, reszta jest juz obliczana przez program*)
 		BlackPilePos : McPosType; (*Pozycja 1szego miejsca na stosie, reszta jest juz obliczana przez program*)

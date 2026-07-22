@@ -7,10 +7,10 @@ VAR
 	ExecuteImpulse : BOOL;
 END_VAR
 VAR CONSTANT
-	WhitePileXOffs : REAL := 60;
-	BlackPileXOffs : REAL := -60;
-	PileZOffs : REAL := 30;
-	PileHeight : USINT := 3;
+	WhitePileXOffs : REAL := -50;
+	BlackPileXOffs : REAL := 50;
+	PileZOffs : REAL := 26;
+	PileHeight : USINT := 4;
 END_VAR
 VAR
 	PileCalculatedOffs : McPosType;
@@ -41,4 +41,7 @@ VAR
 END_VAR
 VAR CONSTANT
 	STMotionDefaultOrient : McOrientType := (Angle1:=0,Angle2:=180,Angle3:=0);
+END_VAR
+VAR
+	STMotionBusy : BOOL := FALSE;
 END_VAR

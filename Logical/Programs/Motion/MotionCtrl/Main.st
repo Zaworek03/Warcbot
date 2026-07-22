@@ -14,6 +14,8 @@ PROGRAM _INIT
 		mcGroupHome.Position[i] := AxisPos[i];
 	END_FOR;
 	
+	RobotPar.ProgramName := 'move.st';
+	
 	Robot.MpLink := ADR(gAxesGroup_Racer3_1);
 	Robot.Enable := 1;
 	Robot.ErrorReset := 0;
@@ -28,7 +30,7 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	
+	// TRZEBA ZROBIÆ POPRAWNY EXIT
 	ExecuteImpulse := RTrigExecute.Q;
 	RTrigExecute.CLK := gMotionInterface.Execute;
 	
@@ -43,7 +45,7 @@ PROGRAM _CYCLIC
 			mcGroupHome.Execute := TRUE;
 			IF mcGroupHome.Done THEN
 				RobotState := ROBOT_HOMED;
-				mcGroupHome.Execute := TRUE;
+				mcGroupHome.Execute := FALSE;
 			END_IF;
 			
 			mcGroupHome();
@@ -130,16 +132,32 @@ PROGRAM _CYCLIC
 						PileCalculatedOffs.X := WhitePileXOffs*USINT_TO_REAL(WhitePileCnt/PileHeight);
 						PileCalculatedOffs.Y := 0;
 						PileCalculatedOffs.Z := PileZOffs*USINT_TO_REAL(WhitePileCnt MOD PileHeight);
-						STMotionEndPoint.Pos := gMotionInterface.EndPos + PileCalculatedOffs;
+						
+						STMotionEndPoint.Pos.X := gMotionInterface.EndPos.X + PileCalculatedOffs.X;
+						STMotionEndPoint.Pos.Y := gMotionInterface.EndPos.Y + PileCalculatedOffs.Y;
+						STMotionEndPoint.Pos.Z := gMotionInterface.EndPos.Z + PileCalculatedOffs.Z;
 					DISCARD_BLACK:
 						PileCalculatedOffs.X := BlackPileXOffs*USINT_TO_REAL(BlackPileCnt/PileHeight);
 						PileCalculatedOffs.Y := 0;
 						PileCalculatedOffs.Z := PileZOffs*USINT_TO_REAL(BlackPileCnt MOD PileHeight);
-						STMotionEndPoint.Pos := gMotionInterface.EndPos + PileCalculatedOffs;
+						
+						STMotionEndPoint.Pos.X := gMotionInterface.EndPos.X + PileCalculatedOffs.X;
+						STMotionEndPoint.Pos.Y := gMotionInterface.EndPos.Y + PileCalculatedOffs.Y;
+						STMotionEndPoint.Pos.Z := gMotionInterface.EndPos.Z + PileCalculatedOffs.Z;
 				END_CASE;
 				
+				Robot.MoveProgram := TRUE;
 				STMotionEndPoint.Orient := STMotionDefaultOrient;
+				
+				gMotionInterface.Busy := TRUE;
 			END_IF;
+		
+			IF NOT STMotionBusy THEN
+				gMotionInterface.Busy := FALSE;
+				RobotState := ROBOT_HOMED;
+				Robot.MoveProgram := FALSE;
+			END_IF;
+		
 				
 		END_CASE;
 	

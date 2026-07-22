@@ -2,35 +2,48 @@ VAR {AT 'MotionCtrl'}
     StartPoint {ACCESS 'STMotionStartPoint'}: McPointType;
     EndPoint {ACCESS 'STMotionEndPoint'}: McPointType;
     HomePoint {ACCESS 'STMotionHomePoint'}: McPointType;
+    Busy {ACCESS 'STMotionBusy'}: BOOL;
 END_VAR
 
-VAR {AT PLC}
-    doMagnet : BOOL;
-    MagnetStatus : BOOL;
-END_VAR
+//VAR {AT PLC}
+//    doMagnet : BOOL;
+//    MagnetStatus : BOOL;
+//END_VAR
 
 VAR
     Offs : McPosType := (Z:=20);
+    
+    StartPointOffs : McPointType;
+    EndPointOffs : McPointType;
 END_VAR
 
 PROGRAM _MAIN
+    Busy := TRUE;
     Feedrate(5000);
 
-    MoveJ(StartPoint + Offs);
+    StartPointOffs := StartPoint;
+    StartPointOffs.Pos.Z := StartPointOffs.Pos.Z + Offs.Z;
+    EndPointOffs := EndPoint;
+    EndPointOffs.Pos.Z := EndPointOffs.Pos.Z + Offs.Z;
+
+    MoveJ(StartPointOffs);
     MoveL(StartPoint);
     WaitALAP();
-    doMagnet := TRUE;
-    WaitUntil(MagnetStatus);
-    MoveL(StartPoint + Offs);
+    //doMagnet := TRUE;
+    //WaitUntil(MagnetStatus);
+    MoveL(StartPointOffs); // zapytac sie czy tutaj da sie dac StartPoint + Offs, dla krotszego kodu
     
     MoveJ(HomePoint);
 
-    MoveJ(EndPoint + Offs);
+    MoveJ(EndPointOffs);
     MoveL(EndPoint);
     WaitALAP();
-    doMagnet := FALSE;
-    WaitUntil(NOT MagnetStatus);
-    MoveL(EndPoint + Offs);
+    //doMagnet := FALSE;
+    //WaitUntil(NOT MagnetStatus);
+    MoveL(EndPointOffs);
 
     MoveJ(HomePoint);
+
+    WaitALAP();
+    Busy := FALSE;
 END_PROGRAM
