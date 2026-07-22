@@ -23,6 +23,15 @@
     <Connector Name="IF4">
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
       <Parameter ID="ActivateDevice" Value="1" />
+      <Parameter ID="Mode" Value="DHCPServer" />
+      <Parameter ID="InternetAddress" Value="192.168.1.11" />
+      <Parameter ID="SubnetMask" Value="255.255.255.0" />
+      <Group ID="Lease1" />
+      <Parameter ID="LeaseName1" Value="Test" />
+      <Parameter ID="LeaseStartAddress1" Value="192.168.1.12" />
+      <Parameter ID="LeaseStopAddress1" Value="192.168.1.15" />
+      <Parameter ID="LeaseSubnetMask1" Value="255.255.255.0" />
+      <Parameter ID="ActivateSnmp" Value="2" />
     </Connector>
     <Connector Name="IF5">
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />

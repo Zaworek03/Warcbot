@@ -1,18 +1,6 @@
 VAR
-	gHumanColor : BOOL;
-	gTest : BOOL;
-	gMoveCounter : INT := 0;
-	gBoardBoard : ARRAY[1..8,1..8] OF PieceTypeEnum := [64(EMPTY)];
-	gBoardPosition : ARRAY[1..8,1..8] OF PositionStruct;
-	gCurrentMove : MoveStruct;
-	gVisionBoard : ARRAY[1..8,1..8] OF PieceTypeEnum;
-	gGraStart : BOOL;
-	gTrudnosc : USINT;
-	gWyborPionkaBoard : ARRAY[0..7,0..7] OF USINT;
-	gBoard : ARRAY[0..7,0..7] OF USINT;
-	gJakiKolor : BOOL;
-	bStartMove : BOOL;
-	gPiece : PieceTypeEnum;
+	gAlarm : AlarmEnum;
+	gGame : USINT;
 	gPickPiece : ARRAY[1..8,1..8] OF BOOL; (*Klikniety przez gracza pionek*)
 	gEnableMove : ARRAY[1..8,1..8] OF BOOL; (*Mozliwe ruchy na szachownicy*)
 	gPickMove : ARRAY[1..8,1..8] OF BOOL; (*Wybrany ruch przez gracza*)
@@ -22,4 +10,6 @@ VAR
 	gDifficultyLevel : USINT; (*0 - Easy, 1 - Medium, 2 - Hard*)
 	gStart : BOOL; (*True - rozpocznij nowa gre, False - nic*)
 	gEnablePiece : ARRAY[1..8,1..8] OF BOOL; (*Pionki mozliwe do klikniecia podczas tury*)
+	gESTOP : BOOL; (*Sygnal z sterownika Safety*)
+	gStep : StepEnum; (*Maszyna stanow robota*)
 END_VAR
