@@ -4,8 +4,7 @@
   <Objects>
     <Object Type="File">MotionInterface.typ</Object>
     <Object Type="File">MotionInterface.var</Object>
-    <Object Type="File" Description="Local data types" Private="true">Types.typ</Object>
-    <Object Type="File" Description="Local variables" Private="true">Variables.var</Object>
+    <Object Type="File" Description="Local variables" Private="true">Robot.var</Object>
     <Object Type="Program" Language="IEC">MotionCtrl</Object>
     <Object Type="Program" Language="IEC">FixAxisDir</Object>
   </Objects>

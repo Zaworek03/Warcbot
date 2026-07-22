@@ -15,4 +15,6 @@ VAR_CONFIG
 	::Program2:gCameraCtrl.Pieces[1].PositionY AT %ID."VSS112Q22.042P-000".PositionY_Out_101;
 	::Program2:gCameraCtrl.Pieces[1].Area AT %ID."VSS112Q22.042P-000".Area_Out_101;
 	::Program2:gCameraCtrl.Pieces[1].Score AT %IB."VSS112Q22.042P-000".Score_Out_101;
+	Cyclic#1.::doMagnet AT %QX."X20DO9322".DigitalOutput05;
+	Cyclic#1.::MagnetStatus AT %IX."X20DO9322".StatusDigitalOutput05;
 END_VAR
