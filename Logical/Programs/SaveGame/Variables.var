@@ -16,4 +16,5 @@ VAR
 	CurrentFileName : STRING[80];
 	IndexOOR : BOOL;
 	NIndexOOR : BOOL;
+	indexold : UINT := 0;
 END_VAR

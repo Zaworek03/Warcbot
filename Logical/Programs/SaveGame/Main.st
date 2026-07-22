@@ -2,6 +2,7 @@
 PROGRAM _INIT
 	(* Insert code here *)
 	DirCreate_0(enable := TRUE, pDevice := ADR('USER'), pName := ADR('SavedGames'));
+	DirCreate_0(enable := FALSE);
 	
 	MpRecipeXml_0(MpLink := ADR(MpLinkgRecipeSR), Enable := TRUE, DeviceName := ADR('SG'), FileName := ADR('Save'));
 	MpRecipeRegPar_0(MpLink := ADR(MpLinkgRecipeSR), Enable := TRUE, PVName := ADR('SaveGame:Save'));
@@ -31,10 +32,15 @@ PROGRAM _CYCLIC
 	ELSE
 		IndexOOR := FALSE;
 		NIndexOOR := TRUE;
-	END_IF
+	END_IF;
 	
 	IF UIConnect.Status = mpRECIPE_UI_STATUS_IDLE THEN
 
+		IF indexold <> UIConnect.Recipe.List.SelectedIndex THEN
+			UIConnect.Recipe.Load := TRUE;
+			indexold := UIConnect.Recipe.List.SelectedIndex;
+		END_IF;
+		
 		IF NewSave AND NOT IndexOOR THEN
 			Saved := FALSE;
 			InvSavFileName := FALSE;
@@ -53,10 +59,11 @@ PROGRAM _CYCLIC
 		END_IF;
 	
 		IF Load THEN
-			UIConnect.Recipe.Load := TRUE;
 			(* To mo¿e popsuæ albo zrobiæ lepiej *)
-			gBoardActual := Save.BoardActual;
-			Load := FALSE;
+			IF UIConnect.Status = mpRECIPE_UI_STATUS_IDLE THEN
+				gBoardActual := Save.BoardActual;
+				Load := FALSE;
+			END_IF;
 		END_IF;
 	
 		IF DeleteSave THEN

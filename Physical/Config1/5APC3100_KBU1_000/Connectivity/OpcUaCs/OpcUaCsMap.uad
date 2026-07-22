@@ -42,6 +42,7 @@
             <Variable Name="SelectedIndex" />
             <Variable Name="LastModified" />
           </Variable>
+          <Variable Name="Refresh" />
         </Variable>
       </Variable>
       <Variable Name="SaveFileName" />

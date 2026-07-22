@@ -60,7 +60,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-	<EventBinding id="EventBinding_34">
+    <EventBinding id="EventBinding_34">
       <Source xsi:type="opcUa.Event" refId="::GameStats:EndGame" event="ValueChanged" />
       <Operand datatype="BOOL" name="WinNLose">
         <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::GameStats:WinOrLose">
@@ -219,11 +219,22 @@
     <EventBinding id="PlayContent.SaveGameBtn.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="PlayContent" widgetRefId="SaveGameBtn" event="Click" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="clientSystem.Action">
-            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="SavGameDialog" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="SavGameDialog" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::SaveGame:UIConnect.Recipe.Refresh">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
   </Bindings>
