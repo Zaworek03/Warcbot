@@ -9,7 +9,6 @@
   </Aliases>
   <Module Name="&lt;Default&gt;">
     <GlobalVariables Name="Global Variables">
-      <Variable Name="gTest" />
       <Variable Name="gPickPiece" RecursiveEnable="2" />
       <Variable Name="gEnableMove" RecursiveEnable="2" />
       <Variable Name="gPickMove" RecursiveEnable="2" />
@@ -19,6 +18,7 @@
       <Variable Name="gDifficultyLevel" />
       <Variable Name="gStart" />
       <Variable Name="gEnablePiece" RecursiveEnable="2" />
+      <Variable Name="gESTOP" />
     </GlobalVariables>
     <Task Name="FixAxisDir">
       <Variable Name="AxisQ1Pos" />

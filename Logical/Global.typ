@@ -9,23 +9,11 @@ TYPE
 		RobotMove,
 		CheckVision
 		);
-	PieceTypeEnum : 
-		(
-		EMPTY,
-		BLACK_KING,
-		BLACK,
-		WHITE_KING,
-		WHITE
-		);
-	PositionStruct : 	STRUCT 
-		Z : REAL;
-		Y : REAL;
-		X : REAL;
-	END_STRUCT;
-	MoveStruct : 	STRUCT 
-		TO_COLUMN : INT;
-		TO_ROW : INT;
-		FROM_COLUMN : INT;
-		FROM_ROW : INT;
+	GameEnum : 	STRUCT 
+		BoardActual : ARRAY[1..8,1..8]OF USINT;
+		gPickPiece : ARRAY[1..8,1..8]OF BOOL;
+		gEnableMove : ARRAY[1..8,1..8]OF BOOL;
+		gPickMove : ARRAY[1..8,1..8]OF BOOL;
+		gEnablePiece : ARRAY[1..8,1..8]OF BOOL;
 	END_STRUCT;
 END_TYPE
