@@ -1,0 +1,10 @@
+VAR
+	Robot : MpRoboArm6Axis;
+	RobotPar : MpRoboArm6AxisParType;
+END_VAR
+(*Parametry Home*)
+VAR
+	AxisPos : ARRAY[0..5] OF REAL := [2(0),-90,0,90,0];
+	doMagnet : BOOL;
+	MagnetStatus : BOOL;
+END_VAR

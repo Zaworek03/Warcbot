@@ -1,0 +1,47 @@
+VAR
+	i : USINT;
+	mcGroupHome : MC_BR_GroupHome_15;
+	RTrigExecute : r_trig;
+	WhitePileCnt : USINT;
+	BlackPileCnt : USINT;
+	ExecuteImpulse : BOOL;
+END_VAR
+VAR CONSTANT
+	WhitePileXOffs : REAL := -50;
+	BlackPileXOffs : REAL := 50;
+	PileZOffs : REAL := 26;
+	PileHeight : USINT := 4;
+END_VAR
+VAR
+	PileCalculatedOffs : McPosType;
+	RobotState : RobotStateType;
+END_VAR
+(*Jog Cartesian*)
+VAR
+	JogXPos : BOOL;
+	JogXNeg : BOOL;
+	JogYPos : BOOL;
+	JogYNeg : BOOL;
+	JogZPos : BOOL;
+	JogZNeg : BOOL;
+	JogCartesianSpeed : REAL;
+END_VAR
+(*Jog Joint*)
+VAR
+	JogJointPos : BOOL;
+	JogJointNeg : BOOL;
+	SelJoint : USINT;
+	JogJointSpeed : REAL;
+END_VAR
+(*Zmienne dla ST Motion*)
+VAR
+	STMotionStartPoint : McPointType;
+	STMotionEndPoint : McPointType;
+	STMotionHomePoint : McPointType := (Pos:=(X:=400,Y:=0,Z:=500),Orient:=(Angle1:=0,Angle2:=180,Angle3:=0));
+END_VAR
+VAR CONSTANT
+	STMotionDefaultOrient : McOrientType := (Angle1:=0,Angle2:=180,Angle3:=0);
+END_VAR
+VAR
+	STMotionBusy : BOOL := FALSE;
+END_VAR
