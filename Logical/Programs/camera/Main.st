@@ -14,6 +14,8 @@ PROGRAM _INIT
 	gCameraCtrl.Calibration.BottomLeftY := 97484;
 	gCameraCtrl.Calibration.BottomRightX := 119386;
 	gCameraCtrl.Calibration.BottomRightY := 98658;
+	
+	gCameraCtrl.BoardReady := FALSE;
 
 END_PROGRAM
 
@@ -89,7 +91,8 @@ PROGRAM _CYCLIC
 		END_IF;
 			
 	END_FOR;
-		
+	
+	gCameraCtrl.BoardReady := TRUE;		
 
 	IF gCameraCtrl.Status.ProcessingError <> 0 THEN
 
