@@ -1,11 +1,12 @@
-
 TYPE
-	CameraCommandType : 	STRUCT 
+
+	CameraCommandType : STRUCT
 		Enable : BOOL;
 		AcquireImage : BOOL;
 		SearchAcquisitionSettings : BOOL;
 	END_STRUCT;
-	BoardCalibrationType : 	STRUCT 
+
+	BoardCalibrationType : STRUCT
 		BottomRightY : DINT;
 		BottomRightX : DINT;
 		BottomLeftY : DINT;
@@ -15,7 +16,8 @@ TYPE
 		TopLeftY : DINT;
 		TopLeftX : DINT;
 	END_STRUCT;
-	CameraParameterType : 	STRUCT 
+
+	CameraParameterType : STRUCT
 		FlashColor : USINT;
 		FlashSegment : USINT;
 		SetFocus : UINT;
@@ -23,14 +25,16 @@ TYPE
 		NumSearchMax : USINT;
 		ScoreMin : USINT;
 	END_STRUCT;
-	CameraStatusType : 	STRUCT 
+
+	CameraStatusType : STRUCT
 		AcquisitionReady : BOOL;
 		ProcessingActive : BOOL;
 		ProcessingError : UINT;
 		ReadFocus : UINT;
 		ReadExposureTime : UDINT;
 	END_STRUCT;
-	DetectedPieceType : 	STRUCT 
+
+	DetectedPieceType : STRUCT
 		PositionX : DINT;
 		PositionY : DINT;
 		Area : UDINT;
@@ -40,12 +44,17 @@ TYPE
 		Column : USINT;
 		Row : USINT;
 	END_STRUCT;
-	CameraControlType : 	STRUCT 
+
+	CameraBoardType : ARRAY[1..8, 1..8] OF USINT;
+	
+	CameraControlType : STRUCT
 		Cmd : CameraCommandType;
 		Parameters : CameraParameterType;
 		Status : CameraStatusType;
 		NumResults : USINT;
-		Pieces : ARRAY[1..24]OF DetectedPieceType;
+		Pieces : ARRAY[1..24] OF DetectedPieceType;
 		Calibration : BoardCalibrationType;
+		Board : CameraBoardType;
 	END_STRUCT;
+
 END_TYPE

@@ -3,6 +3,10 @@ VAR
 	boardWidth : DINT;
 	i : USINT;
 	gCameraCtrl : CameraControlType;
+	columnIndex : USINT;
+	rowIndex : USINT;
+	cellStepY : DINT;
+	cellStepX : DINT;
 	relativeY : DINT;
 	relativeX : DINT;
 END_VAR
