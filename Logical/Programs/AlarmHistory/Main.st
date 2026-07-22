@@ -1,16 +1,17 @@
 
 PROGRAM _INIT
-	(* Insert code here *)
+	(* Stworzenie folderu i w³¹czenie Function Bloku MpAlarmXHistory *)
 	DirCreate_0(enable := TRUE, pDevice := ADR('USER'), pName := ADR('AlarmHistory'));
+	DirCreate_0(enable := FALSE);
 	
 	MpAlarmXHistory_0(MpLink := ADR(MpLinkgAlarmXHistory), Enable := TRUE, DeviceName := ADR('AH'), FileName := ADR('Alarm_history'));
 	 
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	(* Insert code here *)
 	MpAlarmXHistory_0();
 	
+	(* Jeœli MpAlarmXHistory nic nie robi, a przycisk export klikniêty -> wyexportuj i otwórz okno dialogowe *)
 	IF AHExport AND NOT MpAlarmXHistory_0.CommandBusy THEN
 		MpAlarmXHistory_0.Export := TRUE;
 		IF MpAlarmXHistory_0.CommandDone THEN
@@ -23,7 +24,7 @@ PROGRAM _CYCLIC
 END_PROGRAM
 
 PROGRAM _EXIT
-	(* Insert code here *)
+	(* Wy³acz MpAlarmXHistory *)
 	MpAlarmXHistory_0(Enable := FALSE);
 	
 END_PROGRAM

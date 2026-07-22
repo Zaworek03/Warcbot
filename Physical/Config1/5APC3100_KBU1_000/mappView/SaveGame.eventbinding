@@ -1,104 +1,104 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EventBindingSet id="SaveGame" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<Bindings>
-		<EventBinding id="SaveContent.BtnNewSave.Click">
-			<Source xsi:type="widgets.brease.Button.Event" contentRefId="SaveContent" widgetRefId="BtnNewSave" event="Click" />
-			<EventHandler>
-				<Action>
-					<Target xsi:type="clientSystem.Action">
-						<Method xsi:type="clientSystem.Action.OpenDialog" dialogId="NewSaveDialog" />
-					</Target>
-				</Action>
-			</EventHandler>
-			<EventHandler>
-				<Action>
-					<Target xsi:type="opcUa.NodeAction" refId="::SaveGame:NSDialogOpen">
-						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-					</Target>
-				</Action>
-			</EventHandler>
-		</EventBinding>
-		<EventBinding id="SaveContent.BtnLoad.Click">
-			<Source xsi:type="widgets.brease.Button.Event" contentRefId="SaveContent" widgetRefId="BtnLoad" event="Click" />
-			<EventHandler>
-				<Action>
-					<Target xsi:type="opcUa.NodeAction" refId="::SaveGame:Load">
-						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-					</Target>
-				</Action>
-			</EventHandler>
-		</EventBinding>
-		<EventBinding id="SaveContent.BtnDelete.Click">
-			<Source xsi:type="widgets.brease.Button.Event" contentRefId="SaveContent" widgetRefId="BtnDelete" event="Click" />
-			<EventHandler>
-				<Action>
-					<Target xsi:type="clientSystem.Action">
-						<Method xsi:type="clientSystem.Action.OpenDialog" dialogId="DeleteConfDialog" />
-					</Target>
-				</Action>
-			</EventHandler>
-		</EventBinding>
-		<EventBinding id="NewSaveContent.BtnSave.Click">
-			<Source xsi:type="widgets.brease.Button.Event" contentRefId="NewSaveContent" widgetRefId="BtnSave" event="Click" />
-			<EventHandler>
-				<Action>
-					<Target xsi:type="opcUa.NodeAction" refId="::SaveGame:NewSave">
-						<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-					</Target>
-				</Action>
-			</EventHandler>
-		</EventBinding>
-		<EventBinding id="EventBinding_420">
-			<Source xsi:type="clientSystem.Event" event="DialogClosed" />
-			<EventHandler condition="dialogId = &quot;NewSaveDialog&quot;">
-				<Sequence>
-					<Step order="0">
-						<Action>
-							<Target xsi:type="opcUa.NodeAction" refId="::SaveGame:NSDialogOpen">
-								<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-							</Target>
-						</Action>
-					</Step>
-					<Step order="1">
-						<Action>
-							<Target xsi:type="opcUa.NodeAction" refId="::SaveGame:SaveFileName">
-								<Method xsi:type="opcUa.NodeAction.SetValueString" value="" />
-							</Target>
-						</Action>
-					</Step>
-				</Sequence>
-			</EventHandler>
-		</EventBinding>
-		<EventBinding id="DeleteConfContent.BtnDelete.Click">
-			<Source xsi:type="widgets.brease.Button.Event" contentRefId="DeleteConfContent" widgetRefId="BtnDelete" event="Click" />
-			<EventHandler>
-				<Sequence>
-					<Step order="0">
-						<Action>
-							<Target xsi:type="opcUa.NodeAction" refId="::SaveGame:DeleteSave">
-								<Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-							</Target>
-						</Action>
-					</Step>
-					<Step order="1">
-						<Action>
-							<Target xsi:type="clientSystem.Action">
-								<Method xsi:type="clientSystem.Action.CloseDialog" dialogId="DeleteConfDialog" />
-							</Target>
-						</Action>
-					</Step>
-				</Sequence>
-			</EventHandler>
-		</EventBinding>
-		<EventBinding id="DeleteConfContent.BtnCancel.Click">
-			<Source xsi:type="widgets.brease.Button.Event" contentRefId="DeleteConfContent" widgetRefId="BtnCancel" event="Click" />
-			<EventHandler>
-				<Action>
-					<Target xsi:type="clientSystem.Action">
-						<Method xsi:type="clientSystem.Action.CloseDialog" dialogId="DeleteConfDialog" />
-					</Target>
-				</Action>
-			</EventHandler>
-		</EventBinding>
-	</Bindings>
+  <Bindings>
+    <EventBinding id="SaveContent.BtnNewSave.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="SaveContent" widgetRefId="BtnNewSave" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="NewSaveDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::SaveGame:NSDialogOpen">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="SaveContent.BtnLoad.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="SaveContent" widgetRefId="BtnLoad" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::SaveGame:Load">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="SaveContent.BtnDelete.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="SaveContent" widgetRefId="BtnDelete" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="DeleteConfDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="NewSaveContent.BtnSave.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="NewSaveContent" widgetRefId="BtnSave" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::SaveGame:NewSave">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_420">
+      <Source xsi:type="clientSystem.Event" event="DialogClosed" />
+      <EventHandler condition="dialogId = &quot;NewSaveDialog&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::SaveGame:NSDialogOpen">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::SaveGame:SaveFileName">
+                <Method xsi:type="opcUa.NodeAction.SetValueString" value="" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DeleteConfContent.BtnDelete.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DeleteConfContent" widgetRefId="BtnDelete" event="Click" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::SaveGame:DeleteSave">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.CloseDialog" dialogId="DeleteConfDialog" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DeleteConfContent.BtnCancel.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DeleteConfContent" widgetRefId="BtnCancel" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.CloseDialog" dialogId="DeleteConfDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
 </EventBindingSet>

@@ -1,19 +1,20 @@
 VAR
-	Load : BOOL;
-	DeleteSave : BOOL;
+	Load : BOOL := FALSE; (*Zmienna czy przycisk Save zosta³ klikniêty*)
+	DeleteSave : BOOL := FALSE; (*Zmienna czy przycisk Delete zosta³ klikniêty*)
 	MpRecipeXml_0 : MpRecipeXml;
 	MpRecipeRegPar_0 : MpRecipeRegPar;
 	MpRecipeUI_0 : MpRecipeUI; (*MpRecipeUI for UI Connection to the ice cream machine*)
-	UIConnect : MpRecipeUIConnectType; (*UI Connection - contains the parameters needed for the connection*)
-	Save : Save_type;
-	SaveFileName : STRING[80];
-	NewSave : BOOL := FALSE;
-	DirCreate_0 : DirCreate;
-	FB_ValidateFileName_0 : FB_ValidateFileName;
-	InvSavFileName : BOOL := FALSE;
-	Saved : BOOL;
-	NSDialogOpen : BOOL;
-	CurrentFileName : STRING[80];
-	IndexOOR : BOOL;
-	NIndexOOR : BOOL;
+	UIConnect : MpRecipeUIConnectType; (*UI Connection - interfejs do mprecipe*)
+	Save : Save_type; (*Zmienna do której s¹ zapisywane i z której s¹ odczytywane dane*)
+	SaveFileName : STRING[80]; (*Zmienna do przechowywania wpisanej nazwy pliku*)
+	NewSave : BOOL := FALSE; (*Zmienna czy przycisk New save zosta³ klikniêty*)
+	DirCreate_0 : DirCreate; (*Function Blok do tworzenia folderu*)
+	FB_ValidateFileName_0 : FB_ValidateFileName; (*Function Blok do sprawdzania czy nazwa pliku jest poprawna*)
+	InvSavFileName : BOOL := FALSE; (*Zmienna do komunukacji o niepoprawnej nazwie*)
+	Saved : BOOL := FALSE; (*Zmienna do komunikacji o pomyœlnym zapisaniu pliku*)
+	NSDialogOpen : BOOL := FALSE; (*Marker o otworzeniu okna New Save*)
+	CurrentFileName : STRING[80]; (*Nazwa aktualnie wybranego pliku*)
+	IndexOOR : BOOL; (*Marker o zape³nieniu listy (max 20 plików)*)
+	NIndexOOR : BOOL; (*Negacja Markera IndexOOR*)
+	indexold : UINT := 0; (*Zmienna do sprawdzania czy nast¹pi³a zmiana wybranego indeksu*)
 END_VAR
