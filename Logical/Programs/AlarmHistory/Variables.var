@@ -1,7 +1,7 @@
 VAR
-	AlarmTest : INT := 0;
-	MpAlarmXHistory_0 : MpAlarmXHistory;
-	AHExport : BOOL := FALSE;
-	DirCreate_0 : DirCreate;
-	OpenExportDialog : BOOL;
+	AlarmTest : INT := 0; (*Testowa zmienna do testowania alarmów*)
+	MpAlarmXHistory_0 : MpAlarmXHistory; (*Function blok MpAlarmXHistory*)
+	AHExport : BOOL := FALSE; (*Zmienna czy przycisk export zosta³ klikniêty*)
+	DirCreate_0 : DirCreate; (*Function Blok tworz¹cy folder*)
+	OpenExportDialog : BOOL := FALSE; (*Zmienna, która otwiera okienko z inf o exporcie*)
 END_VAR
