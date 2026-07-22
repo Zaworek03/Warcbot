@@ -44,6 +44,12 @@
           </Variable>
           <Variable Name="Refresh" />
         </Variable>
+        <Variable Name="MessageBox">
+          <Variable Name="ErrorNumber" />
+          <Variable Name="Confirm" />
+          <Variable Name="Cancel" />
+          <Variable Name="LayerStatus" />
+        </Variable>
       </Variable>
       <Variable Name="SaveFileName" />
       <Variable Name="NewSave" />

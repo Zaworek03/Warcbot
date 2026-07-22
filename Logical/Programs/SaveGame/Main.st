@@ -54,6 +54,7 @@ PROGRAM _CYCLIC
 			InvSavFileName := FALSE;
 			FB_ValidateFileName_0(sUserInput := SaveFileName);
 			IF FB_ValidateFileName_0.bIsValid THEN
+				Save.BoardActual := gBoardActual;
 				UIConnect.New.FileName := FB_ValidateFileName_0.sValidName;
 				UIConnect.New.Create := TRUE;
 				SaveFileName := '';
