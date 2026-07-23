@@ -24,5 +24,6 @@
     <Object Type="File">SaveGame.eventbinding</Object>
     <Object Type="Package">CheckersEventBindings</Object>
     <Object Type="File">RecipeUIErrorContent.eventbinding</Object>
+    <Object Type="File">AlramInncorrectRobotMoveContent.eventbinding</Object>
   </Objects>
 </Package>

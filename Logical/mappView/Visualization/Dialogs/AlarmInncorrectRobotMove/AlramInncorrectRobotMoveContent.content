@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="AlramInncorrectRobotMoveContent" guid="04b9201c-daf7-4597-a042-84d2ab8fdd75" height="150" width="300" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="Title" top="15" left="0" width="300" zIndex="0" text="Uwaga!" textAlign="center bottom" bold="true" style="Title2" />
+    <Widget xsi:type="widgets.brease.Label" id="Description" top="45" left="20" width="260" height="40" zIndex="1" multiLine="true" text="Robot zle odlozyl pionek, popraw po nim" wordWrap="true" textColor="rgba(0, 0, 0, 1)" textAlign="left top" />
+    <Widget xsi:type="widgets.brease.Button" id="BackBtn" top="100" left="160" width="120" zIndex="2" text="Poddaj gre" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="CorrectBtn" top="100" left="20" width="120" zIndex="3" text="Poprawiona" style="Command" />
+  </Widgets>
+</Content>

@@ -17,5 +17,6 @@
     <Object Type="Package">DeleteConfDialog</Object>
     <Object Type="Package">AHExportDialog</Object>
     <Object Type="Package">RecipeUIErrorDialog</Object>
+    <Object Type="Package">AlarmInncorrectRobotMove</Object>
   </Objects>
 </Package>

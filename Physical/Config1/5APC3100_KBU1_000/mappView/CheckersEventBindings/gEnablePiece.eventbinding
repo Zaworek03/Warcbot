@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EventBindingSet id="gEnablePiece" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Bindings>
-		<EventBinding id="EventBinding_1">
+		<EventBinding id="EnablePieceA1">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[1,1]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -26,7 +26,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_3">
+		<EventBinding id="EnablePieceC1">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[1,3]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -51,7 +51,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_4">
+		<EventBinding id="EnablePieceE1">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[1,5]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -76,7 +76,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_5">
+		<EventBinding id="EnablePieceG1">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[1,7]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -101,7 +101,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_7">
+		<EventBinding id="EnablePieceB2">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[2,2]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -126,7 +126,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_6">
+		<EventBinding id="EnablePieceD2">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[2,4]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -151,7 +151,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_8">
+		<EventBinding id="EnablePieceF2">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[2,6]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -176,7 +176,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_9">
+		<EventBinding id="EnablePieceH2">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[2,8]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -201,7 +201,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_10">
+		<EventBinding id="EnablePieceA3">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[3,1]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -226,7 +226,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_11">
+		<EventBinding id="EnablePieceC3">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[3,3]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -251,7 +251,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_12">
+		<EventBinding id="EnablePieceE3">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[3,5]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -276,7 +276,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_13">
+		<EventBinding id="EnablePieceG3">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[3,7]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -301,7 +301,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_14">
+		<EventBinding id="EnablePieceB4">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[4,2]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -326,7 +326,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_15">
+		<EventBinding id="EnablePieceD4">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[4,4]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -351,7 +351,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_16">
+		<EventBinding id="EnablePieceF4">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[4,6]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -376,7 +376,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_17">
+		<EventBinding id="EnablePieceH4">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[4,8]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -401,7 +401,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_18">
+		<EventBinding id="EnablePieceA5">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[5,1]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -426,7 +426,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_19">
+		<EventBinding id="EnablePieceC5">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[5,3]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -451,7 +451,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_20">
+		<EventBinding id="EnablePieceE5">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[5,5]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -476,7 +476,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_21">
+		<EventBinding id="EnablePieceG5">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[5,7]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -501,7 +501,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_22">
+		<EventBinding id="EnablePieceB6">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[6,2]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -526,7 +526,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_23">
+		<EventBinding id="EnablePieceD6">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[6,4]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -551,7 +551,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_24">
+		<EventBinding id="EnablePieceF6">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[6,6]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -576,7 +576,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_25">
+		<EventBinding id="EnablePieceH6">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[6,8]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -601,7 +601,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_26">
+		<EventBinding id="EnablePieceA7">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[7,1]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -626,7 +626,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_27">
+		<EventBinding id="EnablePieceC7">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[7,3]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -651,7 +651,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_28">
+		<EventBinding id="EnablePieceE7">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[7,5]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -676,7 +676,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_29">
+		<EventBinding id="EnablePieceG7">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[7,7]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -701,7 +701,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_30">
+		<EventBinding id="EnablePieceB8">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[8,2]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -726,7 +726,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_31">
+		<EventBinding id="EnablePieceD8">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[8,4]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -751,7 +751,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_32">
+		<EventBinding id="EnablePieceF8">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[8,6]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>
@@ -776,7 +776,7 @@
 				</Sequence>
 			</EventHandler>
 		</EventBinding>
-		<EventBinding id="EventBinding_33">
+		<EventBinding id="EnablePieceH8">
 			<Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gEnablePiece[8,8]" event="ValueChanged" />
 			<EventHandler condition="newValue = TRUE">
 				<Sequence>

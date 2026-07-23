@@ -20,6 +20,7 @@ TYPE
 		InncorrectBoard1, (*Alarm ze nie udalo sie ulozyc planszy do gry*)
 		RobotMove, (*Ruch robota przestawiajacy pionki*)
 		PhotoCheck2, (*Drugie zdjecie sprawdzajace poprawnosci odlozenia pionkow*)
-		InncorrectBoard2 (*Alarm ze robot nie odniosl pionka we wlasciwe miejce *)
+		InncorrectBoard2, (*Alarm ze robot nie odniosl pionka we wlasciwe miejce *)
+		Idle (*Czekanie na start = 1*)
 		);
 END_TYPE
