@@ -38,6 +38,7 @@
     <EventBindingsSet refId="ClickWhiteK" />
     <EventBindingsSet refId="ClickBlackK" />
     <EventBindingsSet refId="RecipeUIErrorContent" />
+    <EventBindingsSet refId="gEnablePiece" />
   </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>
