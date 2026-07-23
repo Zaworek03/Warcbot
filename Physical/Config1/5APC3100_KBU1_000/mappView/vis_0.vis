@@ -46,7 +46,7 @@
   <Dialogs>
     <Dialog refId="NewGameDialog" />
     <Dialog refId="RulesDialog" />
-    <Dialog refId="LoginDialog" />
+		<Dialog refId="LoginDialog" />
     <Dialog refId="WinDialog" />
     <Dialog refId="LoseDialog" />
     <Dialog refId="InvalidPiece" />
