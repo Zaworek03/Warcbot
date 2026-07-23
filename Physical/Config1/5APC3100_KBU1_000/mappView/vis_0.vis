@@ -38,6 +38,9 @@
     <EventBindingsSet refId="ClickBlackK" />
     <EventBindingsSet refId="RecipeUIErrorContent" />
     <EventBindingsSet refId="LoadConfContent" />
+    <EventBindingsSet refId="AlramInncorrectRobotMoveContent" />
+    <EventBindingsSet refId="gEnablePiece" />
+    <EventBindingsSet refId="AlarmInncorrectBoardContent" />
   </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>
@@ -56,6 +59,8 @@
     <Dialog refId="AHExportDialog" />
     <Dialog refId="RecipeUIErrorDialog" />
     <Dialog refId="LoadConfDialog" />
+    <Dialog refId="AlarmInncorrectRobotMove" />
+    <Dialog refId="AlarmInncorrectBoard" />
   </Dialogs>
   <Contents>
     <Content refId="TopContent" />
@@ -81,6 +86,8 @@
     <Content refId="AHExportContent" />
     <Content refId="RecipeUIErrorContent" />
     <Content refId="LoadConfContent" />
+    <Content refId="AlramInncorrectRobotMoveContent" />
+    <Content refId="AlarmInncorrectBoardContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

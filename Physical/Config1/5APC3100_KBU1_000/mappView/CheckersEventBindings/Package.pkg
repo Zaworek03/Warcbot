@@ -9,5 +9,6 @@
     <Object Type="File">ClickBlack.eventbinding</Object>
     <Object Type="File">ClickWhiteK.eventbinding</Object>
     <Object Type="File">ClickBlackK.eventbinding</Object>
+    <Object Type="File">gEnablePiece.eventbinding</Object>
   </Objects>
 </Package>

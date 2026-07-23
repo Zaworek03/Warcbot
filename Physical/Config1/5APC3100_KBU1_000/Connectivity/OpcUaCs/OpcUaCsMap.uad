@@ -19,6 +19,8 @@
       <Variable Name="gStart" />
       <Variable Name="gEnablePiece" RecursiveEnable="2" />
       <Variable Name="gESTOP" />
+      <Variable Name="gAlarm" RecursiveEnable="2" />
+      <Variable Name="gStep" />
     </GlobalVariables>
     <Task Name="FixAxisDir">
       <Variable Name="AxisQ1Pos" />

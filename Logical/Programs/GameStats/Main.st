@@ -12,6 +12,7 @@ PROGRAM _INIT
 	i;
 	whiteOnBoard;
 	blackOnBoard;
+	gEnablePiece;
 
 	gBoardLast := gBoardActual;
 	firstScan := TRUE;
