@@ -14,8 +14,6 @@ PROGRAM _INIT
 		mcGroupHome.Position[i] := AxisPos[i];
 	END_FOR;
 	
-	RobotPar.ProgramName := 'move.st';
-	
 	Robot.MpLink := ADR(gAxesGroup_Racer3_1);
 	Robot.Enable := 1;
 	Robot.ErrorReset := 0;
@@ -30,10 +28,6 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	// TRZEBA ZROBIÆ POPRAWNY EXIT
-	// TRZEBA ZROBIÆ SYNCHRONIZACJE
-	ExecuteImpulse := RTrigExecute.Q;
-	RTrigExecute.CLK := gMotionInterface.Execute;
 	
 	CASE RobotState OF
 		ROBOT_ENABLED:
@@ -46,7 +40,7 @@ PROGRAM _CYCLIC
 			mcGroupHome.Execute := TRUE;
 			IF mcGroupHome.Done THEN
 				RobotState := ROBOT_HOMED;
-				mcGroupHome.Execute := FALSE;
+				mcGroupHome.Execute := TRUE;
 			END_IF;
 			
 			mcGroupHome();
@@ -54,8 +48,6 @@ PROGRAM _CYCLIC
 		ROBOT_HOMED:
 			IF gMotionInterface.RequestManualMode THEN
 				RobotState := ROBOT_MANUAL;
-			ELSIF gMotionInterface.Execute THEN
-				RobotState := ROBOT_EXECUTE;
 			END_IF;
 			
 		ROBOT_MANUAL:
@@ -67,20 +59,8 @@ PROGRAM _CYCLIC
 			RobotPar.Jog.Velocity[4] := 0;
 			RobotPar.Jog.Velocity[5] := 0;
 			Robot.Jog := FALSE;
-			
-			JogJointPos := gMotionInterface.Manual.Joint.JogPos;
-			JogJointNeg := gMotionInterface.Manual.Joint.JogNeg;
-			JogJointSpeed := gMotionInterface.Manual.Joint.Speed;
-			SelJoint := gMotionInterface.Manual.Joint.SelJoint;
-			
-			JogXPos := gMotionInterface.Manual.Cartesian.JogXPos;
-			JogXNeg := gMotionInterface.Manual.Cartesian.JogXNeg;
-			JogYPos := gMotionInterface.Manual.Cartesian.JogYPos;
-			JogYNeg := gMotionInterface.Manual.Cartesian.JogYNeg;
-			JogZPos := gMotionInterface.Manual.Cartesian.JogZPos;
-			JogZNeg := gMotionInterface.Manual.Cartesian.JogZNeg;
-			JogCartesianSpeed := gMotionInterface.Manual.Cartesian.Speed;
-			
+		
+	
 			IF JogJointPos OR JogJointNeg THEN
 				// tryb JogJoint
 				RobotPar.Jog.CoordSystem := mcJACS;
@@ -119,56 +99,13 @@ PROGRAM _CYCLIC
 				END_IF;
 			
 			END_IF;		
-		ROBOT_EXECUTE:
 			
-			IF ExecuteImpulse THEN // impuls jest po to zeby nie dalo sie zmienic parametrow w czasie
-				STMotionStartPoint.Pos := gMotionInterface.StartPos;
-				STMotionStartPoint.Orient := STMotionDefaultOrient;
-				
-				// Ustalanie na jaka pozycje warcab ma byc odstawiony
-				CASE gMotionInterface.Command OF
-					MOVE_START_END:
-						STMotionEndPoint.Pos := gMotionInterface.EndPos;
-					DISCARD_WHITE:
-						PileCalculatedOffs.X := WhitePileXOffs*USINT_TO_REAL(WhitePileCnt/PileHeight);
-						PileCalculatedOffs.Y := 0;
-						PileCalculatedOffs.Z := PileZOffs*USINT_TO_REAL(WhitePileCnt MOD PileHeight);
-						
-						STMotionEndPoint.Pos.X := gMotionInterface.EndPos.X + PileCalculatedOffs.X;
-						STMotionEndPoint.Pos.Y := gMotionInterface.EndPos.Y + PileCalculatedOffs.Y;
-						STMotionEndPoint.Pos.Z := gMotionInterface.EndPos.Z + PileCalculatedOffs.Z;
-					DISCARD_BLACK:
-						PileCalculatedOffs.X := BlackPileXOffs*USINT_TO_REAL(BlackPileCnt/PileHeight);
-						PileCalculatedOffs.Y := 0;
-						PileCalculatedOffs.Z := PileZOffs*USINT_TO_REAL(BlackPileCnt MOD PileHeight);
-						
-						STMotionEndPoint.Pos.X := gMotionInterface.EndPos.X + PileCalculatedOffs.X;
-						STMotionEndPoint.Pos.Y := gMotionInterface.EndPos.Y + PileCalculatedOffs.Y;
-						STMotionEndPoint.Pos.Z := gMotionInterface.EndPos.Z + PileCalculatedOffs.Z;
-				END_CASE;
-				
-				Robot.MoveProgram := TRUE;
-				STMotionEndPoint.Orient := STMotionDefaultOrient;
-				
-				gMotionInterface.Busy := TRUE;
-			END_IF;
-		
-			IF NOT STMotionBusy AND NOT Robot.CommandBusy THEN
-				gMotionInterface.Busy := FALSE;
-				RobotState := ROBOT_HOMED;
-				Robot.MoveProgram := FALSE;
-			END_IF;
-		
-				
-		END_CASE;
+	END_CASE;
 	
-	RTrigExecute();
 	Robot();	
 END_PROGRAM
 
 PROGRAM _EXIT
-	mcGroupHome.Execute := FALSE;
-	mcGroupHome();
 
 END_PROGRAM
 

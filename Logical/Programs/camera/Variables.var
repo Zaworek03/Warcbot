@@ -1,8 +1,7 @@
 VAR
-	boardHeight : DINT;
-	boardWidth : DINT;
-	i : USINT;
+	bCameraAlarm : UINT;
+	bAcquisitionDone : BOOL;
+	bTrigger : BOOL;
+	bEnable : BOOL;
 	gCameraCtrl : CameraControlType;
-	relativeY : DINT;
-	relativeX : DINT;
 END_VAR

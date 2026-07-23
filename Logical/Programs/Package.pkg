@@ -3,11 +3,12 @@
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="Package">Motion</Object>
+    <Object Type="Program" Language="IEC">TestOpcua</Object>
+    <Object Type="Program" Language="IEC">PieceMovementProgram</Object>
     <Object Type="Program" Language="IEC">camera</Object>
     <Object Type="Program" Language="IEC">SaveGame</Object>
     <Object Type="Program" Language="IEC">AlarmHistory</Object>
     <Object Type="Program" Language="IEC">VisVariable</Object>
     <Object Type="Program" Language="IEC">GameStats</Object>
-    <Object Type="Program" Language="IEC">CheckVision</Object>
   </Objects>
 </Package>

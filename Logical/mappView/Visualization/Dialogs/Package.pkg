@@ -16,6 +16,5 @@
     <Object Type="Package">NewSaveDialog</Object>
     <Object Type="Package">DeleteConfDialog</Object>
     <Object Type="Package">AHExportDialog</Object>
-    <Object Type="Package">RecipeUIErrorDialog</Object>
   </Objects>
 </Package>

@@ -1,7 +1,0 @@
-VAR
-	OUT : BOOL;
-	j : USINT;
-	i : USINT;
-	Vision : VisionEnum;
-	Match : BOOL;
-END_VAR

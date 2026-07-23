@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="07/22/2026 09:36:19" />
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="07/21/2026 14:35:15" />
   </TimeStamps>
   <Modules>
     <Module Name="5APC3100_KBU1_000" Type="5APC3100.KBU1-000" X="182" Y="118" />
@@ -19,7 +19,7 @@
     <Module Name="X20BC0083" Type="X20BC0083" X="362" Y="142" />
     <Module Name="DriveQ1-Q3-Q5_Racer3_1" Type="8EI8X8MWT10.xxxx-1" X="504" Y="159" />
     <Module Name="DriveQ2-Q4-Q6_Racer3_1" Type="8EI8X8MWT10.xxxx-1" X="767" Y="159" />
-    <Module Name="8EAC0122.001-1" Type="8EAC0122.001-1" X="769.8" Y="197.5" />
+    <Module Name="8EAC0122.001-1" Type="8EAC0122.001-1" X="769.800049" Y="197.5" />
     <Module Name="VSS112Q22.042P-000" Type="VSS112Q22.042P-000" X="615" Y="159" />
   </Modules>
   <Links>

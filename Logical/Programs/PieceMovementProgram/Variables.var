@@ -1,0 +1,5 @@
+VAR
+	Piece : PieceTypeEnum;
+	instMovePiece : FB_MovePiece;
+	MoveLegal : BOOL;
+END_VAR

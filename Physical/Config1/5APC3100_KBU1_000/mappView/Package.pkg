@@ -23,6 +23,5 @@
     <Object Type="File">AbortGameContent.eventbinding</Object>
     <Object Type="File">SaveGame.eventbinding</Object>
     <Object Type="Package">CheckersEventBindings</Object>
-    <Object Type="File">RecipeUIErrorContent.eventbinding</Object>
   </Objects>
 </Package>

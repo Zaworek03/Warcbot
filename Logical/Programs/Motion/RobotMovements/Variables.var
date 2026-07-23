@@ -1,0 +1,5 @@
+VAR
+	col : INT;
+	row : INT;
+	instRobotMove : FB_MovePiece;
+END_VAR
