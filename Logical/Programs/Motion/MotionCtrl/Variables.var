@@ -43,5 +43,5 @@ VAR CONSTANT
 	STMotionDefaultOrient : McOrientType := (Angle1:=0,Angle2:=180,Angle3:=0);
 END_VAR
 VAR
-	STMotionBusy : BOOL := FALSE;
+	STMotionDone : BOOL := FALSE;
 END_VAR
