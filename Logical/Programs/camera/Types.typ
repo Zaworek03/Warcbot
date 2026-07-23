@@ -40,6 +40,7 @@ TYPE
 		Column : USINT;
 		Row : USINT;
 	END_STRUCT;
+	CameraBoardType :ARRAY[1..8,1..8]OF USINT;
 	CameraControlType : 	STRUCT 
 		Cmd : CameraCommandType;
 		Parameters : CameraParameterType;
@@ -47,5 +48,10 @@ TYPE
 		NumResults : USINT;
 		Pieces : ARRAY[1..24]OF DetectedPieceType;
 		Calibration : BoardCalibrationType;
+		Board : CameraBoardType;
+		BoardReady : BOOL;
+		BlackCount : USINT;
+		WhiteCount : USINT;
+		BoardDataValid : BOOL;
 	END_STRUCT;
 END_TYPE
