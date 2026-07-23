@@ -25,6 +25,9 @@
               <Property ID="Z" Value="305.94" />
             </Group>
             <Property ID="TranslationFromQ5ToQ6IsReadOnly" Value="1" />
+            <Group ID="TranslationFromQ6ToFlange">
+              <Property ID="Z" Value="40" />
+            </Group>
           </Group>
           <Group ID="Offsets">
             <Property ID="JointAxisIsReadOnly" Value="1" />
