@@ -55,6 +55,8 @@
       <Variable Name="CurrentFileName" />
       <Variable Name="IndexOOR" />
       <Variable Name="NIndexOOR" />
+      <Variable Name="LoadingDone" />
+      <Variable Name="PreLoad" />
     </Task>
     <Task Name="AlarmHisto">
       <Variable Name="AHExport" />

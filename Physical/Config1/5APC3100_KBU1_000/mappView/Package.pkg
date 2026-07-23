@@ -10,7 +10,6 @@
     <Object Type="File">PlayContent.binding</Object>
     <Object Type="File">TopContent.eventbinding</Object>
     <Object Type="File">SettingsContent.eventbinding</Object>
-    <Object Type="File">Login.eventbinding</Object>
     <Object Type="File">PlayContent.eventbinding</Object>
     <Object Type="File">NewGameContent.eventbinding</Object>
     <Object Type="File">RulesContent.eventbinding</Object>
@@ -24,5 +23,6 @@
     <Object Type="File">SaveGame.eventbinding</Object>
     <Object Type="Package">CheckersEventBindings</Object>
     <Object Type="File">RecipeUIErrorContent.eventbinding</Object>
+    <Object Type="File">LoadConfContent.eventbinding</Object>
   </Objects>
 </Package>

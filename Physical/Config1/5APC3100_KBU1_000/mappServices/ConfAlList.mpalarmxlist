@@ -54,11 +54,11 @@
             <Selector ID="LowLimitEnable" Value="Disabled" />
             <Selector ID="LowLowLimitEnable" Value="Disabled" />
             <Selector ID="HighLimitEnable" Value="Static">
-              <Property ID="Limit" Value="1" />
+              <Property ID="Limit" Value="5" />
               <Property ID="LimitText" />
             </Selector>
             <Selector ID="HighHighLimitEnable" Value="Static">
-              <Property ID="Limit" Value="2" />
+              <Property ID="Limit" Value="10" />
               <Property ID="LimitText" />
             </Selector>
             <Selector ID="Settings" Value="0">

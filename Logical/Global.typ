@@ -16,4 +16,9 @@ TYPE
 		gPickMove : ARRAY[1..8,1..8]OF BOOL;
 		gEnablePiece : ARRAY[1..8,1..8]OF BOOL;
 	END_STRUCT;
+	GameStatStruct : 	STRUCT 
+		MoveCount : INT;
+		MoveHistory : ARRAY[1..4]OF STRING[20];
+		Load : BOOL;
+	END_STRUCT;
 END_TYPE

@@ -41,5 +41,26 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBindingLogout">
+      <Source xsi:type="widgets.brease.Image.Event" contentRefId="TopContent" widgetRefId="LogoutImg" event="Click" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.Logout" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.Navigate" pageId="Main" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

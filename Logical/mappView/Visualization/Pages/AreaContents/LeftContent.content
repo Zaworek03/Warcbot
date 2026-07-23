@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="LeftContent" guid="587191ee-e71d-4ebd-9e1e-5f4084b75b77" height="840" width="150" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.NavigationBar" id="NavigationBar1" top="0" left="0" height="420" zIndex="0">
+    <Widget xsi:type="widgets.brease.NavigationBar" id="NavigationBar1" top="0" left="0" height="420" zIndex="0" childPositioning="relative">
       <Widgets>
-        <Widget xsi:type="widgets.brease.NavigationButton" id="MainBtn" top="15" left="15" width="120" height="45" zIndex="0" pageId="Main" text="Main" />
-        <Widget xsi:type="widgets.brease.NavigationButton" id="PlayBtn" top="80" left="15" width="120" height="40" zIndex="1" pageId="Play" text="Play" />
-        <Widget xsi:type="widgets.brease.NavigationButton" id="AlarmBtn" top="140" left="15" width="120" height="40" zIndex="2" pageId="Alarm" text="Alarm" />
-        <Widget xsi:type="widgets.brease.NavigationButton" id="ManualBtn" top="200" left="15" width="120" height="40" zIndex="3" pageId="Manual" text="Manual" />
-        <Widget xsi:type="widgets.brease.NavigationButton" id="LiveBtn" top="260" left="15" width="120" height="40" zIndex="4" pageId="Live" text="Live" />
-        <Widget xsi:type="widgets.brease.NavigationButton" id="SettingsBtn" top="320" left="15" width="120" height="40" zIndex="5" pageId="Settings" text="Settings" />
+        <Widget xsi:type="widgets.brease.NavigationButton" id="MainBtn" top="10" left="10" width="120" height="45" zIndex="0" pageId="Main" text="Main" margin="5px" />
+        <Widget xsi:type="widgets.brease.NavigationButton" id="PlayBtn" top="10" left="10" width="120" height="40" zIndex="1" pageId="Play" text="Play" margin="5px" />
+        <Widget xsi:type="widgets.brease.NavigationButton" id="AlarmBtn" top="10" left="10" width="120" height="40" zIndex="2" pageId="Alarm" text="Alarm" margin="5px" />
+        <Widget xsi:type="widgets.brease.NavigationButton" id="ManualBtn" top="10" left="10" width="120" height="40" zIndex="3" pageId="Manual" text="Manual" margin="5px" permissionOperate="['Administraotr', 'Service']" />
+        <Widget xsi:type="widgets.brease.NavigationButton" id="LiveBtn" top="10" left="10" width="120" height="40" zIndex="4" pageId="Live" text="Live" margin="5px" permissionView="['Administraotr', 'Operator', 'Service']" />
+        <Widget xsi:type="widgets.brease.NavigationButton" id="SettingsBtn" top="10" left="10" width="120" height="40" zIndex="5" pageId="Settings" text="Settings" margin="5px" permissionOperate="['Administraotr']" />
       </Widgets>
     </Widget>
   </Widgets>

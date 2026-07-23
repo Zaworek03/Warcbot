@@ -12,4 +12,5 @@ VAR
 	gEnablePiece : ARRAY[1..8,1..8] OF BOOL; (*Pionki mozliwe do klikniecia podczas tury*)
 	gESTOP : BOOL; (*Sygnal z sterownika Safety*)
 	gStep : StepEnum; (*Maszyna stanow robota*)
+	gGameStats : GameStatStruct; (*Statystyki gry*)
 END_VAR

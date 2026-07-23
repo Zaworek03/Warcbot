@@ -26,6 +26,12 @@ END_PROGRAM
 PROGRAM _CYCLIC
 
 	IF gStart THEN
+		IF gGameStats.Load THEN
+			MoveHistory := gGameStats.MoveHistory;
+			MoveCount := gGameStats.MoveCount;
+			gGameStats.Load := FALSE;
+		END_IF;
+		
 		whiteOnBoard := 0;
 		blackOnBoard := 0;
 
@@ -115,6 +121,9 @@ PROGRAM _CYCLIC
 				MoveHistory[1] := LastMove;
 
 				MoveCount := MoveCount + 1;
+				
+				gGameStats.MoveHistory := MoveHistory;
+				gGameStats.MoveCount := MoveCount;
 			END_IF;
 
 			gBoardLast := gBoardActual;
