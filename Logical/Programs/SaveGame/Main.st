@@ -30,22 +30,11 @@ PROGRAM _CYCLIC
 	CurrentFileName := UIConnect.Recipe.List.Names[UIConnect.Recipe.List.SelectedIndex];
 	
 	(* Sprawdzanie czy jest mniej plików ni¿ max *)
-	IF UIConnect.Recipe.List.MaxSelection >= 19 THEN
-		IndexOOR := TRUE;
-		NIndexOOR := FALSE;
-	ELSE
-		IndexOOR := FALSE;
-		NIndexOOR := TRUE;
-	END_IF;
+	IndexOOR := UIConnect.Recipe.List.MaxSelection >= 19;
+	NIndexOOR := UIConnect.Recipe.List.MaxSelection < 19;
 	
 	(* Zabezpieczenie przed ingerencj¹ w Function Blok podczas jego pracy *)
 	IF UIConnect.Status = mpRECIPE_UI_STATUS_IDLE THEN
-		
-		(* Jeœli zmiana indeksu, za³aduj plik do zmiennej z danymi *)
-		IF indexold <> UIConnect.Recipe.List.SelectedIndex THEN
-			UIConnect.Recipe.Load := TRUE;
-			indexold := UIConnect.Recipe.List.SelectedIndex;
-		END_IF;
 		
 		(* Jeœli przycisk New save klikniêty i jest mniej ni¿ max plików 
 		sprawdŸ nazwê i mo¿liwie stwórz nowy plik. Wyœwietl komunikaty *)
@@ -55,6 +44,9 @@ PROGRAM _CYCLIC
 			FB_ValidateFileName_0(sUserInput := SaveFileName);
 			IF FB_ValidateFileName_0.bIsValid THEN
 				Save.BoardActual := gBoardActual;
+				Save.PlayerColor := gPlayerColor;
+				Save.DifficultyLevel := gDifficultyLevel;
+				
 				UIConnect.New.FileName := FB_ValidateFileName_0.sValidName;
 				UIConnect.New.Create := TRUE;
 				SaveFileName := '';
@@ -67,12 +59,21 @@ PROGRAM _CYCLIC
 		
 		END_IF;
 		
+		(* £adowanie do zmiennej *)
+		IF PreLoad THEN
+			UIConnect.Recipe.Load := TRUE;
+			PreLoad := FALSE;
+		END_IF;
+		
 		(* Jeœli przycisk Load klikniêty przypisz zmienn¹ z danymi do zmiennej globalnej *)
 		IF Load THEN
-			IF UIConnect.Status = mpRECIPE_UI_STATUS_IDLE THEN
-				gBoardActual := Save.BoardActual;
-				Load := FALSE;
-			END_IF;
+			gBoardActual := Save.BoardActual;
+			gPlayerColor := Save.PlayerColor;
+			gDifficultyLevel := Save.DifficultyLevel;
+			LoadingDone := TRUE;
+				
+			gStart := TRUE;
+			Load := FALSE;
 		END_IF;
 		
 		(* Jeœli przycisk Delete klikniêty usuñ plik o wybranym indeksie *)
@@ -91,4 +92,3 @@ PROGRAM _EXIT
 	MpRecipeUI_0(Enable := FALSE);
 
 END_PROGRAM
-

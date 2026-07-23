@@ -21,11 +21,22 @@
     <EventBinding id="SaveContent.BtnLoad.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="SaveContent" widgetRefId="BtnLoad" event="Click" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::SaveGame:Load">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::SaveGame:PreLoad">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="LoadConfDialog" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="SaveContent.BtnDelete.Click">

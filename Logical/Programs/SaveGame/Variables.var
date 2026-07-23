@@ -16,5 +16,6 @@ VAR
 	CurrentFileName : STRING[80]; (*Nazwa aktualnie wybranego pliku*)
 	IndexOOR : BOOL; (*Marker o zape³nieniu listy (max 20 plików)*)
 	NIndexOOR : BOOL; (*Negacja Markera IndexOOR*)
-	indexold : UINT := 0; (*Zmienna do sprawdzania czy nast¹pi³a zmiana wybranego indeksu*)
+	LoadingDone : BOOL;
+	PreLoad : BOOL;
 END_VAR

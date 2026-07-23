@@ -46,7 +46,7 @@
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="warcabot_Config1" />
-	<Parameter ID="Simulation" Value="1" />
+    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
     <Parameter ID="TimerDevice" Value="5AC901.IPLK-00.IF1" />
     <Parameter ID="TaskClassIdleTime" Value="2000" />
@@ -64,6 +64,11 @@
     <Group ID="FileDevice4" />
     <Parameter ID="FileDeviceName4" Value="AH" />
     <Parameter ID="FileDevicePath4" Value="USER_PATH\AlarmHistory" />
+    <Parameter ID="ActivateFtpServer" Value="1" />
+    <Parameter ID="FtpAuthenticationType" Value="FtpRoles" />
+    <Group ID="FtpRole1" />
+    <Parameter ID="FtpRoleName1" Value="Administraotr" />
+    <Parameter ID="FTPRoleAccessRight1" Value="0" />
     <Parameter ID="ActivateWebServer" Value="1" />
     <Parameter ID="WebServerProtocol" Value="1" />
     <Parameter ID="ActivateSdm" Value="1" />

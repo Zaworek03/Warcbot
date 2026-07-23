@@ -38,6 +38,7 @@
     <EventBindingsSet refId="ClickWhiteK" />
     <EventBindingsSet refId="ClickBlackK" />
     <EventBindingsSet refId="RecipeUIErrorContent" />
+    <EventBindingsSet refId="LoadConfContent" />
   </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>
@@ -55,6 +56,7 @@
     <Dialog refId="DeleteConfDialog" />
     <Dialog refId="AHExportDialog" />
     <Dialog refId="RecipeUIErrorDialog" />
+    <Dialog refId="LoadConfDialog" />
   </Dialogs>
   <Contents>
     <Content refId="TopContent" />
@@ -79,6 +81,7 @@
     <Content refId="DeleteConfContent" />
     <Content refId="AHExportContent" />
     <Content refId="RecipeUIErrorContent" />
+    <Content refId="LoadConfContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

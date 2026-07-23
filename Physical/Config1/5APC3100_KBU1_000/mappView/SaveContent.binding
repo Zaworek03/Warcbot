@@ -45,5 +45,9 @@
 <Source xsi:type="opcUa" refId="::SaveGame:UIConnect.MessageBox.ErrorNumber" attribute="value" />
 <Target xsi:type="brease" contentRefId="RecipeUIErrorContent" widgetRefId="NumericOutput1" attribute="value" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::SaveGame:CurrentFileName" attribute="value" />
+<Target xsi:type="brease" contentRefId="LoadConfContent" widgetRefId="TextOutput1" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>
