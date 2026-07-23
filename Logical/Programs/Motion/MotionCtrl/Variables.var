@@ -14,7 +14,7 @@ VAR CONSTANT
 END_VAR
 VAR
 	PileCalculatedOffs : McPosType;
-	RobotState : RobotStateType;
+	RobotState : RobotStateType := ROBOT_ENABLED;
 END_VAR
 (*Jog Cartesian*)
 VAR
@@ -28,10 +28,20 @@ VAR
 END_VAR
 (*Jog Joint*)
 VAR
-	JogJointPos : BOOL;
-	JogJointNeg : BOOL;
-	SelJoint : USINT;
+	JogJointPos0 : BOOL;
+	JogJointPos1 : BOOL;
+	JogJointPos2 : BOOL;
+	JogJointPos3 : BOOL;
+	JogJointPos4 : BOOL;
+	JogJointPos5 : BOOL;
+	JogJointNeg0 : BOOL;
+	JogJointNeg1 : BOOL;
+	JogJointNeg2 : BOOL;
+	JogJointNeg3 : BOOL;
+	JogJointNeg4 : BOOL;
+	JogJointNeg5 : BOOL;
 	JogJointSpeed : REAL;
+	JogJointAny : BOOL;
 END_VAR
 (*Zmienne dla ST Motion*)
 VAR

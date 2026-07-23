@@ -4,18 +4,18 @@
     <Widget xsi:type="widgets.brease.Label" id="LabelKartezjanskiTytul" top="20" left="260" width="200" height="60" zIndex="3" text="CARTESIAN SYSTEM" backColor="rgba(255, 255, 255, 0)" style="Caption" />
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="0" left="0" width="725" zIndex="2" backColor="rgba(255, 218, 185, 1)" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonForward" top="160" left="180" width="140" height="80" zIndex="4" image="Media/SymbolLib/Arrow/ArrowUp.svg" style="Command" />
-    <Widget xsi:type="widgets.brease.Label" id="Label3" top="120" left="200" width="100" height="40" zIndex="5" text="FORWARD" style="Caption" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="120" left="200" width="100" height="40" zIndex="5" text="+Y" textAlign="center" style="Caption" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonLeft" top="260" left="20" width="140" height="80" zIndex="6" image="Media/SymbolLib/Arrow/ArrowLeft.svg" style="Command" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="220" left="60" width="60" height="40" zIndex="7" text="LEFT" style="Caption" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="220" left="60" width="60" height="40" zIndex="7" text="-X" textAlign="center" style="Caption" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="ButtonElektromagnes" top="260" left="180" width="140" height="80" zIndex="8" text="PICK/DROP" backColor="rgba(128, 255, 128, 1)" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonRight" top="260" left="340" width="140" height="80" zIndex="9" image="Media/SymbolLib/Arrow/ArrowRight.svg" style="Command" />
-    <Widget xsi:type="widgets.brease.Label" id="Label2" top="220" left="380" width="60" height="40" zIndex="10" text="RIGHT" style="Caption" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="220" left="380" width="60" height="40" zIndex="10" text="+X" textAlign="center" style="Caption" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonBackward" top="360" left="180" width="140" height="80" zIndex="11" image="Media/SymbolLib/Arrow/ArrowDown.svg" style="Command" />
-    <Widget xsi:type="widgets.brease.Label" id="Label4" top="440" left="200" width="100" height="40" zIndex="12" text="BACKWARD" style="Caption" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="440" left="200" width="100" height="40" zIndex="12" text="-Y" textAlign="center" style="Caption" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonUp" top="160" left="600" width="120" height="80" zIndex="13" image="Media/SymbolLib/Arrow/ArrowUp.svg" style="Operate" />
-    <Widget xsi:type="widgets.brease.Label" id="Label5" top="180" left="560" width="40" height="40" zIndex="14" text="UP " style="Caption" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="180" left="560" width="40" height="40" zIndex="14" text="+Z" textAlign="center" style="Caption" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonDown" top="300" left="600" width="120" height="80" zIndex="15" image="Media/SymbolLib/Arrow/ArrowDown.svg" style="Operate" />
-    <Widget xsi:type="widgets.brease.Label" id="Label6" top="320" left="540" width="60" height="40" zIndex="16" text="DOWN" style="Caption" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="320" left="540" width="60" height="40" zIndex="16" text="-Z" textAlign="center" style="Caption" />
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="100" left="0" width="725" height="380" zIndex="1" />
     <Widget xsi:type="widgets.brease.Label" id="Label7" top="500" left="320" height="40" zIndex="30" text="JOINTS" style="Caption" />
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="480" left="0" width="725" height="80" zIndex="17" backColor="rgba(255, 218, 185, 1)" />
@@ -60,5 +60,6 @@
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis4Minus" top="570" left="420" width="60" height="70" zIndex="56" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(224, 224, 224, 1)" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis5Minus" top="660" left="420" width="60" height="70" zIndex="57" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(224, 224, 224, 1)" />
     <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis6Minus" top="750" left="420" width="60" height="70" zIndex="58" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(224, 224, 224, 1)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonEnableManual" top="480" left="1160" width="219" height="60" zIndex="59" text="Enable Manual Mode" />
   </Widgets>
 </Content>

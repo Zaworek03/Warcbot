@@ -8,12 +8,12 @@
           <Group ID="Translation">
             <Property ID="X" Value="-215" />
             <Property ID="Y" Value="-490" />
-            <Property ID="Z" Value="10" />
+            <Property ID="Z" Value="0" />
           </Group>
           <Group ID="Dimension">
             <Property ID="X" Value="970" />
             <Property ID="Y" Value="980" />
-            <Property ID="Z" Value="690" />
+            <Property ID="Z" Value="750" />
           </Group>
         </Group>
       </Group>
