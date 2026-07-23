@@ -50,5 +50,8 @@ TYPE
 		Calibration : BoardCalibrationType;
 		Board : CameraBoardType;
 		BoardReady : BOOL;
+		BlackCount : USINT;
+		WhiteCount : USINT;
+		BoardDataValid : BOOL;
 	END_STRUCT;
 END_TYPE
