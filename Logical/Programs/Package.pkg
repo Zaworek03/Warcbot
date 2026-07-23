@@ -9,5 +9,6 @@
     <Object Type="Program" Language="IEC">VisVariable</Object>
     <Object Type="Program" Language="IEC">GameStats</Object>
     <Object Type="Program" Language="IEC">CheckVision</Object>
+    <Object Type="Program" Language="IEC">MainProgram</Object>
   </Objects>
 </Package>
