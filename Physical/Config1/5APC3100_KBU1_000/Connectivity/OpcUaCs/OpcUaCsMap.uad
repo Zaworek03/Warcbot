@@ -4,7 +4,20 @@
   <Aliases>
     <ACLAliases />
     <EURangeViolationAliases />
-    <EURangesAliases />
+    <EURangesAliases>
+      <EURanges Id="2">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">120</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="3">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">200</High>
+        </EURange>
+      </EURanges>
+    </EURangesAliases>
     <EngineeringUnitAliases>
       <EngineeringUnit Id="1" UnitId="17476" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="degree [unit of angle]" Symbol="°" />
       <EngineeringUnit Id="2" UnitId="5066068" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre" Symbol="mm" />
@@ -38,6 +51,7 @@
             <Variable Name="JogNeg3" />
             <Variable Name="JogNeg4" />
             <Variable Name="JogNeg5" />
+            <Variable Name="Speed" EURangesId="2" EngineeringUnitId="1" />
           </Variable>
           <Variable Name="Cartesian">
             <Variable Name="JogXPos" />
@@ -46,6 +60,7 @@
             <Variable Name="JogYNeg" />
             <Variable Name="JogZPos" />
             <Variable Name="JogZNeg" />
+            <Variable Name="Speed" EURangesId="3" EngineeringUnitId="2" />
           </Variable>
         </Variable>
       </Variable>
