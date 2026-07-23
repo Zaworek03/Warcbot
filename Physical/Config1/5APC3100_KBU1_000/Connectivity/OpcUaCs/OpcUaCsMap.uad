@@ -5,7 +5,10 @@
     <ACLAliases />
     <EURangeViolationAliases />
     <EURangesAliases />
-    <EngineeringUnitAliases />
+    <EngineeringUnitAliases>
+      <EngineeringUnit Id="1" UnitId="17476" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="degree [unit of angle]" Symbol="°" />
+      <EngineeringUnit Id="2" UnitId="5066068" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre" Symbol="mm" />
+    </EngineeringUnitAliases>
   </Aliases>
   <Module Name="&lt;Default&gt;">
     <GlobalVariables Name="Global Variables">
@@ -47,14 +50,6 @@
         </Variable>
       </Variable>
     </GlobalVariables>
-    <Task Name="FixAxisDir">
-      <Variable Name="AxisQ1Pos" />
-      <Variable Name="AxisQ3Pos" />
-      <Variable Name="AxisQ2Pos" />
-      <Variable Name="AxisQ4Pos" />
-      <Variable Name="AxisQ5Pos" />
-      <Variable Name="AxisQ6Pos" />
-    </Task>
     <Task Name="SaveGame">
       <Variable Name="UIConnect">
         <Variable Name="Recipe">
@@ -99,6 +94,17 @@
       <Variable Name="DeadBlackPiece" />
       <Variable Name="DeadWhitePiece" />
       <Variable Name="MoveHistory" RecursiveEnable="2" />
+    </Task>
+    <Task Name="PositionIn">
+      <Variable Name="AxisQ1Pos" EngineeringUnitId="1" />
+      <Variable Name="AxisQ2Pos" EngineeringUnitId="1" />
+      <Variable Name="AxisQ3Pos" EngineeringUnitId="1" />
+      <Variable Name="AxisQ4Pos" EngineeringUnitId="1" />
+      <Variable Name="AxisQ5Pos" EngineeringUnitId="1" />
+      <Variable Name="AxisQ6Pos" EngineeringUnitId="1" />
+      <Variable Name="X" EngineeringUnitId="2" />
+      <Variable Name="Y" EngineeringUnitId="2" />
+      <Variable Name="Z" EngineeringUnitId="2" />
     </Task>
   </Module>
 </OpcUaSource>

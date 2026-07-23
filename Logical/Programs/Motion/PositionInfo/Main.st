@@ -10,6 +10,10 @@ PROGRAM _CYCLIC
 	AxisQ4Pos := Robot.Info.JointAxisPosition[3];
 	AxisQ5Pos := Robot.Info.JointAxisPosition[4];
 	AxisQ6Pos := Robot.Info.JointAxisPosition[5];
+	
+	X := Robot.X;
+	Y := Robot.Y;
+	Z := Robot.Z;
 END_PROGRAM
 
 PROGRAM _EXIT

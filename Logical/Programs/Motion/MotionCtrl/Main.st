@@ -159,11 +159,11 @@ PROGRAM _CYCLIC
 					RobotPar.Jog.Velocity[2] := -JogCartesianSpeed;
 				END_IF;
 				
-				IF NOT gMotionInterface.RequestManualMode THEN
-					RobotState := ROBOT_HOMED;
-				END_IF;
-				
 			
+			END_IF;
+			
+			IF NOT gMotionInterface.RequestManualMode THEN
+				RobotState := ROBOT_HOMED;
 			END_IF;
 		ROBOT_EXECUTE:
 			

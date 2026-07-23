@@ -13,8 +13,8 @@ VAR CONSTANT
 	PileHeight : USINT := 4;
 END_VAR
 VAR
-	PileCalculatedOffs : McPosType;
 	RobotState : RobotStateType := ROBOT_ENABLED;
+	PileCalculatedOffs : McPosType;
 END_VAR
 (*Jog Cartesian*)
 VAR

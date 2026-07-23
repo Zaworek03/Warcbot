@@ -92,9 +92,53 @@
 			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Joint.JogNeg5" attribute="value" />
 			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonAxis6Minus" attribute="value" />
 		</Binding>
-	<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.RequestManualMode" attribute="value" />
-<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ToggleButtonEnableManual" attribute="value" />
-</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.RequestManualMode" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ToggleButtonEnableManual" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:AxisQ1Pos" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputAxis1" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:AxisQ2Pos" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputAxis2" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:AxisQ3Pos" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputAxis3" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:AxisQ4Pos" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputAxis4" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:AxisQ5Pos" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputAxis5" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:AxisQ6Pos" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputAxis6" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:X" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputX" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:Y" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputY" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:Z" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputZ" attribute="node" />
+		</Binding>
 </Bindings>
 </BindingsSet>

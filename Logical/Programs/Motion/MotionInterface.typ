@@ -20,6 +20,7 @@ TYPE
 	ManualType : 	STRUCT 
 		Joint : JogJointType;
 		Cartesian : JogCartesianType;
+		Info : ManualInfoType;
 	END_STRUCT;
 	JogJointType : 	STRUCT 
 		JogPos0 : BOOL;
@@ -44,5 +45,16 @@ TYPE
 		JogZPos : BOOL;
 		JogZNeg : BOOL;
 		Speed : REAL := 30;
+	END_STRUCT;
+	ManualInfoType : 	STRUCT 
+		Axis1Pos : REAL;
+		Axis2Pos : REAL;
+		Axis3Pos : REAL;
+		Axis4Pos : REAL;
+		Axis5Pos : REAL;
+		Axis6Pos : REAL;
+		X : REAL;
+		Y : REAL;
+		Z : REAL;
 	END_STRUCT;
 END_TYPE
