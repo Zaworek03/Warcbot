@@ -46,6 +46,8 @@ PROGRAM _CYCLIC
 				Save.BoardActual := gBoardActual;
 				Save.PlayerColor := gPlayerColor;
 				Save.DifficultyLevel := gDifficultyLevel;
+				Save.MoveHistory := gGameStats.MoveHistory;
+				Save.MoveCount := gGameStats.MoveCount;
 				
 				UIConnect.New.FileName := FB_ValidateFileName_0.sValidName;
 				UIConnect.New.Create := TRUE;
@@ -70,9 +72,12 @@ PROGRAM _CYCLIC
 			gBoardActual := Save.BoardActual;
 			gPlayerColor := Save.PlayerColor;
 			gDifficultyLevel := Save.DifficultyLevel;
+			gGameStats.MoveHistory := Save.MoveHistory;
+			gGameStats.MoveCount := Save.MoveCount;
+			
 			LoadingDone := TRUE;
-				
 			gStart := TRUE;
+			gGameStats.Load := TRUE;
 			Load := FALSE;
 		END_IF;
 		
