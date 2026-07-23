@@ -1,5 +1,7 @@
 PROGRAM _INIT
-
+	gBoardCamera;
+	gCameraEnd;
+	
 	gCameraCtrl.Cmd.Enable := TRUE;
 	gCameraCtrl.Cmd.AcquireImage := FALSE;
 	gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
@@ -33,10 +35,16 @@ END_PROGRAM
 
 
 PROGRAM _CYCLIC
-
+	IF gStep = PhotoCheck1 OR gStep = PhotoCheck2 THEN
+		gCameraCtrl.Cmd.AcquireImage := TRUE;
 	gCameraCtrl.BoardReady := FALSE;
 	gCameraCtrl.BoardDataValid := TRUE;
 
+		IF gCameraCtrl.Status.AcquisitionReady
+			AND NOT gCameraCtrl.Status.ProcessingActive
+			AND NOT gCameraCtrl.Cmd.AcquireImage THEN
+			gCameraCtrl.Cmd.AcquireImage := TRUE;
+		END_IF;
 
 	IF NOT gCameraCtrl.Cmd.Enable THEN
 
@@ -292,8 +300,19 @@ PROGRAM _CYCLIC
 		gCameraCtrl.BoardReady := FALSE;
 		gCameraCtrl.BoardDataValid := FALSE;
 
+		END_IF;
+		FOR i := 1 TO 8 DO
+			FOR j := 1 TO 8 DO
+				CASE gCameraCtrl.Board[i, j] OF
+					0:  gBoardCamera[i, j] := 0;
+					1:  gBoardCamera[i, j] := 1;
+					2:  gBoardCamera[i, j] := 2;
+				END_CASE;
+			END_FOR;
+		END_FOR;
+		gCameraCtrl.Cmd.AcquireImage := FALSE;
+		gCameraEnd := 1;
 	END_IF;
-
 END_PROGRAM
 
 

@@ -77,5 +77,8 @@
       <Variable Name="DeadWhitePiece" />
       <Variable Name="MoveHistory" RecursiveEnable="2" />
     </Task>
+    <Task Name="MainProgra">
+      <Variable Name="BoardGit" />
+    </Task>
   </Module>
 </OpcUaSource>

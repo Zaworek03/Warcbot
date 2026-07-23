@@ -1,8 +1,8 @@
-
 VAR
-
-END_VAR
-
-VAR CONSTANT
-
+	BoardConverted : ARRAY[1..8,1..8] OF USINT;
+	BoardGit : BOOL; (*Git ruch*)
+	Vision : USINT;
+	Match : BOOL;
+	j : USINT;
+	i : USINT;
 END_VAR

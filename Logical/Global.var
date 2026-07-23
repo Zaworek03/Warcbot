@@ -1,4 +1,6 @@
 VAR
+	gCameraEnd : BOOL;
+	gBoardCamera : ARRAY[1..8,1..8] OF USINT;
 	gAlarm : AlarmEnum;
 	gGame : USINT;
 	gPickPiece : ARRAY[1..8,1..8] OF BOOL; (*Klikniety przez gracza pionek*)

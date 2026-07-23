@@ -1,4 +1,5 @@
 VAR
+	j : USINT;
 	currentRightX : DINT;
 	currentBoardWidth : DINT;
 	currentLeftX : DINT;
