@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="AlarmInncorrectBoardContent" guid="abeedcd9-64c5-47e2-b5db-f017d9acc22f" height="150" width="300" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="Title" top="18" left="0" width="300" zIndex="0" text="Uwaga!" textAlign="center bottom" bold="true" style="Title2" />
+    <Widget xsi:type="widgets.brease.Label" id="Description" top="48" left="20" width="260" height="40" zIndex="1" multiLine="true" text="Robot zle ulozyl plansze popraw po nim by rozpoczac gre" wordWrap="true" textColor="rgba(0, 0, 0, 1)" textAlign="left top" />
+    <Widget xsi:type="widgets.brease.Button" id="BackBtn" top="103" left="160" width="120" zIndex="2" text="Poddaj gre" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="CorrectBtn" top="103" left="20" width="120" zIndex="3" text="Poprawiona" style="Command" />
+  </Widgets>
+</Content>

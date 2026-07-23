@@ -18,5 +18,6 @@
     <Object Type="Package">AHExportDialog</Object>
     <Object Type="Package">RecipeUIErrorDialog</Object>
     <Object Type="Package">AlarmInncorrectRobotMove</Object>
+    <Object Type="Package">AlarmInncorrectBoard</Object>
   </Objects>
 </Package>
