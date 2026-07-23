@@ -8,6 +8,7 @@
     <Object Type="File">SaveContent.binding</Object>
     <Object Type="File">AlarmContent.binding</Object>
     <Object Type="File">PlayContent.binding</Object>
+    <Object Type="File">ManualContent.binding</Object>
     <Object Type="File">TopContent.eventbinding</Object>
     <Object Type="File">SettingsContent.eventbinding</Object>
     <Object Type="File">PlayContent.eventbinding</Object>

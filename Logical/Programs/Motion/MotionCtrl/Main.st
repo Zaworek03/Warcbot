@@ -68,11 +68,20 @@ PROGRAM _CYCLIC
 			RobotPar.Jog.Velocity[5] := 0;
 			Robot.Jog := FALSE;
 			
-			JogJointPos := gMotionInterface.Manual.Joint.JogPos;
-			JogJointNeg := gMotionInterface.Manual.Joint.JogNeg;
+			JogJointPos0 := gMotionInterface.Manual.Joint.JogPos0;
+			JogJointPos1 := gMotionInterface.Manual.Joint.JogPos1;
+			JogJointPos2 := gMotionInterface.Manual.Joint.JogPos2;
+			JogJointPos3 := gMotionInterface.Manual.Joint.JogPos3;
+			JogJointPos4 := gMotionInterface.Manual.Joint.JogPos4;
+			JogJointPos5 := gMotionInterface.Manual.Joint.JogPos5;
+			JogJointNeg0 := gMotionInterface.Manual.Joint.JogNeg0;
+			JogJointNeg1 := gMotionInterface.Manual.Joint.JogNeg1;
+			JogJointNeg2 := gMotionInterface.Manual.Joint.JogNeg2;
+			JogJointNeg3 := gMotionInterface.Manual.Joint.JogNeg3;
+			JogJointNeg4 := gMotionInterface.Manual.Joint.JogNeg4;
+			JogJointNeg5 := gMotionInterface.Manual.Joint.JogNeg5;
 			JogJointSpeed := gMotionInterface.Manual.Joint.Speed;
-			SelJoint := gMotionInterface.Manual.Joint.SelJoint;
-			
+				
 			JogXPos := gMotionInterface.Manual.Cartesian.JogXPos;
 			JogXNeg := gMotionInterface.Manual.Cartesian.JogXNeg;
 			JogYPos := gMotionInterface.Manual.Cartesian.JogYPos;
@@ -81,16 +90,48 @@ PROGRAM _CYCLIC
 			JogZNeg := gMotionInterface.Manual.Cartesian.JogZNeg;
 			JogCartesianSpeed := gMotionInterface.Manual.Cartesian.Speed;
 			
-			IF JogJointPos OR JogJointNeg THEN
+			JogJointAny := JogJointPos0 OR JogJointNeg0
+			OR JogJointPos1 OR JogJointNeg1
+			OR JogJointPos2 OR JogJointNeg2
+			OR JogJointPos3 OR JogJointNeg3
+			OR JogJointPos4 OR JogJointNeg4
+			OR JogJointPos5 OR JogJointNeg5;
+			
+			IF JogJointAny THEN
 				// tryb JogJoint
 				RobotPar.Jog.CoordSystem := mcJACS;
-		
-				IF JogJointPos THEN
-					RobotPar.Jog.Velocity[SelJoint] := JogJointSpeed;
-				ELSIF JogJointNeg THEN
-					RobotPar.Jog.Velocity[SelJoint] := -JogJointSpeed;
-				END_IF;	
-
+				
+				IF JogJointPos0 THEN
+					RobotPar.Jog.Velocity[0] := JogJointSpeed;
+				ELSIF JogJointNeg0 THEN
+					RobotPar.Jog.Velocity[0] := -JogJointSpeed;
+				END_IF;
+				IF JogJointPos1 THEN
+					RobotPar.Jog.Velocity[1] := JogJointSpeed;
+				ELSIF JogJointNeg1 THEN
+					RobotPar.Jog.Velocity[1] := -JogJointSpeed;
+				END_IF;
+				IF JogJointPos2 THEN
+					RobotPar.Jog.Velocity[2] := JogJointSpeed;
+				ELSIF JogJointNeg2 THEN
+					RobotPar.Jog.Velocity[2] := -JogJointSpeed;
+				END_IF;
+				IF JogJointPos3 THEN
+					RobotPar.Jog.Velocity[3] := JogJointSpeed;
+				ELSIF JogJointNeg3 THEN
+					RobotPar.Jog.Velocity[3] := -JogJointSpeed;
+				END_IF;
+				IF JogJointPos4 THEN
+					RobotPar.Jog.Velocity[4] := JogJointSpeed;
+				ELSIF JogJointNeg4 THEN
+					RobotPar.Jog.Velocity[4] := -JogJointSpeed;
+				END_IF;
+				IF JogJointPos5 THEN
+					RobotPar.Jog.Velocity[5] := JogJointSpeed;
+				ELSIF JogJointNeg5 THEN
+					RobotPar.Jog.Velocity[5] := -JogJointSpeed;
+				END_IF;
+				
 				Robot.Jog := TRUE;
 			ELSE
 				// tryb JogCartesian
@@ -117,8 +158,13 @@ PROGRAM _CYCLIC
 				IF JogZNeg THEN
 					RobotPar.Jog.Velocity[2] := -JogCartesianSpeed;
 				END_IF;
+				
 			
-			END_IF;		
+			END_IF;
+			
+			IF NOT gMotionInterface.RequestManualMode THEN
+				RobotState := ROBOT_HOMED;
+			END_IF;
 		ROBOT_EXECUTE:
 			
 			IF ExecuteImpulse THEN // impuls jest po to zeby nie dalo sie zmienic parametrow w czasie
@@ -152,23 +198,21 @@ PROGRAM _CYCLIC
 				
 				gMotionInterface.Busy := TRUE;
 			END_IF;
-		
-			IF NOT STMotionBusy AND NOT Robot.CommandBusy THEN
+			
+			IF STMotionDone THEN
 				gMotionInterface.Busy := FALSE;
 				RobotState := ROBOT_HOMED;
 				Robot.MoveProgram := FALSE;
+				STMotionDone := FALSE;
 			END_IF;
 		
-				
-		END_CASE;
+	END_CASE;
 	
 	RTrigExecute();
 	Robot();	
 END_PROGRAM
 
 PROGRAM _EXIT
-	mcGroupHome.Execute := FALSE;
-	mcGroupHome();
-
+	
 END_PROGRAM
 

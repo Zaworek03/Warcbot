@@ -8,7 +8,7 @@
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
     <Task Name="Program2" Source="Programs.camera.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="FixAxisDir" Source="Programs.Motion.FixAxisDir.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="PositionIn" Source="Programs.Motion.PositionInfo.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="SaveGame" Source="Programs.SaveGame.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="AlarmHisto" Source="Programs.AlarmHistory.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="VisVariabl" Source="Programs.VisVariable.prg" Memory="UserROM" Language="IEC" Debugging="true" />

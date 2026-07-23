@@ -14,6 +14,7 @@
     <BindingsSet refId="SaveContent" />
     <BindingsSet refId="AlarmContent" />
     <BindingsSet refId="PlayContent" />
+    <BindingsSet refId="ManualContent" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="TopContent" />

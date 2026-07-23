@@ -2,8 +2,8 @@
 <?AutomationStudio FileVersion="4.9"?>
 <Program SubType="IEC" xmlns="http://br-automation.co.at/AS/Program">
   <Files>
-    <File Description="Local data types" Private="true">Types1.typ</File>
     <File Description="Init, cyclic, exit code">Main.st</File>
+    <File Description="Local data types" Private="true">Types1.typ</File>
     <File Private="true">Variables.var</File>
   </Files>
 </Program>

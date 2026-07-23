@@ -5,4 +5,7 @@ VAR
 	AxisQ4Pos : LREAL;
 	AxisQ5Pos : LREAL;
 	AxisQ6Pos : LREAL;
+	X : LREAL;
+	Y : LREAL;
+	Z : LREAL;
 END_VAR

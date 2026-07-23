@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<BindingsSet id="ManualContent" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<Bindings>
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Cartesian.JogYPos" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonForward" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Cartesian.JogYNeg" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonBackward" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Cartesian.JogXNeg" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonLeft" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Cartesian.JogXPos" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonRight" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Cartesian.JogZPos" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonUp" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Cartesian.JogZNeg" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonDown" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Joint.JogPos0" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonAxis1Plus" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Joint.JogPos1" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonAxis2Plus" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Joint.JogPos2" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonAxis3Plus" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Joint.JogPos3" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonAxis4Plus" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Joint.JogPos4" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonAxis5Plus" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Joint.JogPos5" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonAxis6Plus" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Joint.JogNeg0" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonAxis1Minus" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Joint.JogNeg1" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonAxis2Minus" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Joint.JogNeg2" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonAxis3Minus" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Joint.JogNeg3" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonAxis4Minus" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Joint.JogNeg4" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonAxis5Minus" attribute="value" />
+		</Binding>
+
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Joint.JogNeg5" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonAxis6Minus" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.RequestManualMode" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ToggleButtonEnableManual" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:AxisQ1Pos" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputAxis1" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:AxisQ2Pos" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputAxis2" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:AxisQ3Pos" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputAxis3" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:AxisQ4Pos" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputAxis4" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:AxisQ5Pos" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputAxis5" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:AxisQ6Pos" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputAxis6" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:X" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputX" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:Y" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputY" attribute="node" />
+		</Binding>
+
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::PositionIn:Z" attribute="node" />
+			<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericOutputZ" attribute="node" />
+		</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Joint.Speed" attribute="node" />
+<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericInputJointSpeed" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.Cartesian.Speed" attribute="node" />
+<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericInputCartesianSpeed" attribute="node" />
+</Binding>
+</Bindings>
+</BindingsSet>

@@ -2,7 +2,7 @@ VAR {AT 'MotionCtrl'}
     StartPoint {ACCESS 'STMotionStartPoint'}: McPointType;
     EndPoint {ACCESS 'STMotionEndPoint'}: McPointType;
     HomePoint {ACCESS 'STMotionHomePoint'}: McPointType;
-    Busy {ACCESS 'STMotionBusy'}: BOOL;
+    Done {ACCESS 'STMotionDone'}: BOOL;
 END_VAR
 
 //VAR {AT PLC}
@@ -18,7 +18,7 @@ VAR
 END_VAR
 
 PROGRAM _MAIN
-    Busy := TRUE;
+    Done := FALSE;
     Feedrate(5000);
 
     StartPointOffs := StartPoint;
@@ -28,7 +28,7 @@ PROGRAM _MAIN
 
     MoveJ(StartPointOffs);
     MoveL(StartPoint);
-    WaitALAP();
+    WaitEndMove();
     //doMagnet := TRUE;
     //WaitUntil(MagnetStatus);
     MoveL(StartPointOffs); // zapytac sie czy tutaj da sie dac StartPoint + Offs, dla krotszego kodu
@@ -37,13 +37,13 @@ PROGRAM _MAIN
 
     MoveJ(EndPointOffs);
     MoveL(EndPoint);
-    WaitALAP();
+    WaitEndMove();
     //doMagnet := FALSE;
     //WaitUntil(NOT MagnetStatus);
     MoveL(EndPointOffs);
 
     MoveJ(HomePoint);
 
-    WaitALAP();
-    Busy := FALSE;
+    WaitEndMove();
+    Done := TRUE;
 END_PROGRAM

@@ -46,6 +46,7 @@
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="warcabot_Config1" />
+    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
     <Parameter ID="TimerDevice" Value="5AC901.IPLK-00.IF1" />
     <Parameter ID="TaskClassIdleTime" Value="2000" />
@@ -74,9 +75,6 @@
     <Parameter ID="ActivateSdm" Value="1" />
     <Parameter ID="Authentication" Value="0" />
   </Module>
-  <Module Name="8EAC0122.001-1" Type="8EAC0122.001-1" Version="3.0.0.0">
-    <Connection Connector="SS" TargetModule="DriveQ2-Q4-Q6_Racer3_1" TargetConnector="SS1" />
-  </Module>
   <Module Name="DriveQ1-Q3-Q5_Racer3_1" Type="8EI8X8MWT10.xxxx-1" Version="2.4.0.0" NodeNumber="2">
     <Connection Connector="PLK1" TargetModule="X20BC0083" TargetConnector="PLK2">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
@@ -84,6 +82,9 @@
     <Connection Connector="PLK2" TargetModule="VSS112Q22.042P-000" TargetConnector="PLK1">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX41" Value="EnDat" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX42" Value="EnDat" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX43" Value="EnDat" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ1_Racer3_1" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="81818" />
     <Parameter ID="Output" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1000" />
@@ -125,6 +126,9 @@
     <Connection Connector="PLK1" TargetModule="VSS112Q22.042P-000" TargetConnector="PLK2">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX41" Value="EnDat" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX42" Value="EnDat" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX43" Value="EnDat" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ2_Racer3_1" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="80" />
     <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="360" />

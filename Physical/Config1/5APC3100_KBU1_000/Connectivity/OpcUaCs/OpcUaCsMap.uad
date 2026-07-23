@@ -4,8 +4,24 @@
   <Aliases>
     <ACLAliases />
     <EURangeViolationAliases />
-    <EURangesAliases />
-    <EngineeringUnitAliases />
+    <EURangesAliases>
+      <EURanges Id="2">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">120</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="3">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">200</High>
+        </EURange>
+      </EURanges>
+    </EURangesAliases>
+    <EngineeringUnitAliases>
+      <EngineeringUnit Id="1" UnitId="17476" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="degree [unit of angle]" Symbol="°" />
+      <EngineeringUnit Id="2" UnitId="5066068" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre" Symbol="mm" />
+    </EngineeringUnitAliases>
   </Aliases>
   <Module Name="&lt;Default&gt;">
     <GlobalVariables Name="Global Variables">
@@ -21,15 +37,36 @@
       <Variable Name="gESTOP" />
       <Variable Name="gAlarm" RecursiveEnable="2" />
       <Variable Name="gStep" />
+      <Variable Name="gMotionInterface">
+        <Variable Name="RequestManualMode" />
+        <Variable Name="Manual">
+          <Variable Name="Joint">
+            <Variable Name="JogPos0" />
+            <Variable Name="JogPos1" />
+            <Variable Name="JogPos2" />
+            <Variable Name="JogPos3" />
+            <Variable Name="JogPos4" />
+            <Variable Name="JogPos5" />
+            <Variable Name="JogNeg0" />
+            <Variable Name="JogNeg1" />
+            <Variable Name="JogNeg2" />
+            <Variable Name="JogNeg3" />
+            <Variable Name="JogNeg4" />
+            <Variable Name="JogNeg5" />
+            <Variable Name="Speed" EURangesId="2" EngineeringUnitId="1" />
+          </Variable>
+          <Variable Name="Cartesian">
+            <Variable Name="JogXPos" />
+            <Variable Name="JogXNeg" />
+            <Variable Name="JogYPos" />
+            <Variable Name="JogYNeg" />
+            <Variable Name="JogZPos" />
+            <Variable Name="JogZNeg" />
+            <Variable Name="Speed" EURangesId="3" EngineeringUnitId="2" />
+          </Variable>
+        </Variable>
+      </Variable>
     </GlobalVariables>
-    <Task Name="FixAxisDir">
-      <Variable Name="AxisQ1Pos" />
-      <Variable Name="AxisQ3Pos" />
-      <Variable Name="AxisQ2Pos" />
-      <Variable Name="AxisQ4Pos" />
-      <Variable Name="AxisQ5Pos" />
-      <Variable Name="AxisQ6Pos" />
-    </Task>
     <Task Name="SaveGame">
       <Variable Name="UIConnect">
         <Variable Name="Recipe">
@@ -79,6 +116,16 @@
     </Task>
     <Task Name="MainProgra">
       <Variable Name="BoardGit" />
+    <Task Name="PositionIn">
+      <Variable Name="AxisQ1Pos" EngineeringUnitId="1" />
+      <Variable Name="AxisQ2Pos" EngineeringUnitId="1" />
+      <Variable Name="AxisQ3Pos" EngineeringUnitId="1" />
+      <Variable Name="AxisQ4Pos" EngineeringUnitId="1" />
+      <Variable Name="AxisQ5Pos" EngineeringUnitId="1" />
+      <Variable Name="AxisQ6Pos" EngineeringUnitId="1" />
+      <Variable Name="X" EngineeringUnitId="2" />
+      <Variable Name="Y" EngineeringUnitId="2" />
+      <Variable Name="Z" EngineeringUnitId="2" />
     </Task>
   </Module>
 </OpcUaSource>

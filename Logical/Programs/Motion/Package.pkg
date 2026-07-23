@@ -6,6 +6,6 @@
     <Object Type="File">MotionInterface.var</Object>
     <Object Type="File" Description="Local variables">Robot.var</Object>
     <Object Type="Program" Language="IEC">MotionCtrl</Object>
-    <Object Type="Program" Language="IEC">FixAxisDir</Object>
+    <Object Type="Program" Language="IEC">PositionInfo</Object>
   </Objects>
 </Package>
