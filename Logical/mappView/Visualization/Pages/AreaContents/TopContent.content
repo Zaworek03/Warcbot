@@ -10,5 +10,10 @@
     <Widget xsi:type="widgets.brease.Image" id="UserImg" top="10" left="780" width="40" height="40" zIndex="6" image="Media/SymbolLib/User/User.svg" />
     <Widget xsi:type="widgets.brease.Button" id="LoginBtn" top="15" left="840" width="120" zIndex="8" text="$IAT/Button.LOGIN" permissionView="['Anonymus']" style="Operate" />
     <Widget xsi:type="widgets.brease.Image" id="LogoutImg" top="10" left="990" width="40" height="40" zIndex="7" image="Media/SymbolLib/User/Logout.svg" permissionView="['Administraotr', 'Operator', 'Service']" />
+    <Widget xsi:type="widgets.brease.AlarmLine" id="AlarmLine1" top="0" left="220" width="100" height="60" zIndex="9" borderStyle="none">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.AlarmLineItem" id="AlarmLineItem1" width="80" zIndex="0" columnType="state" />
+      </Widgets>
+    </Widget>
   </Widgets>
 </Content>

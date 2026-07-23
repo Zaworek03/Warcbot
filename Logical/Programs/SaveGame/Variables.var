@@ -16,6 +16,6 @@ VAR
 	CurrentFileName : STRING[80]; (*Nazwa aktualnie wybranego pliku*)
 	IndexOOR : BOOL; (*Marker o zape³nieniu listy (max 20 plików)*)
 	NIndexOOR : BOOL; (*Negacja Markera IndexOOR*)
-	LoadingDone : BOOL;
-	PreLoad : BOOL;
+	LoadingDone : BOOL; (*Marker dla silnika gry*)
+	PreLoad : BOOL; (*Zmienna czy przycisk Load (preLoead) zosta³ klikniêty*)
 END_VAR

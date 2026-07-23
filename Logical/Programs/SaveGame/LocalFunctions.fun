@@ -12,6 +12,6 @@
 		tempChar : BYTE; (*Zmienna do przechowywania akutalnie iterownaje litery*)
 	END_VAR
 	VAR CONSTANT
-		underscore : BYTE := 95; (*ASCII value for '_'*)
+		UNDERSCORE : BYTE := 95; (*ASCII value for '_'*)
 	END_VAR
 END_FUNCTION_BLOCK

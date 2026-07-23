@@ -18,7 +18,6 @@
   <EventBindingsSets>
     <EventBindingsSet refId="TopContent" />
     <EventBindingsSet refId="SettingsContent" />
-    <EventBindingsSet refId="Login" />
     <EventBindingsSet refId="PlayContent" />
     <EventBindingsSet refId="NewGameContent" />
     <EventBindingsSet refId="RulesContent" />

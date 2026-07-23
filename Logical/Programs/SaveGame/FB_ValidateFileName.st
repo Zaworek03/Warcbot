@@ -18,7 +18,7 @@ FUNCTION_BLOCK FB_ValidateFileName
 			// 2. CHECK: Use tempChar for all comparisons
 			IF tempChar = 32 THEN
 				// WRITE: Copy underscore back into the string at position i
-				brsmemcpy(ADR(sValidName) + i, ADR(underscore), 1);
+				brsmemcpy(ADR(sValidName) + i, ADR(UNDERSCORE), 1);
         
 			ELSIF tempChar = 92 OR tempChar = 47 OR // \ and /
 				tempChar = 58 OR tempChar = 42 OR // : and *
