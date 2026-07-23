@@ -30,7 +30,7 @@ PROGRAM _CYCLIC
 			InncorrectBoard2:
 				gAlarm.InncorrectRobotMove := 1;
 		
-			WinOrLose:
+			WinOrLoseState:
 		
 		
 		END_CASE
