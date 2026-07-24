@@ -15,4 +15,7 @@ VAR
 	gESTOP : BOOL; (*Sygnal z sterownika Safety*)
 	gStep : StepEnum; (*Maszyna stanow robota*)
 	gGameStats : GameStatStruct; (*Statystyki gry*)
+	gCameraEnd : BOOL;
+	gCameraTrigger : BOOL;
+	gBoardCamera : ARRAY[1..8,1..8] OF USINT;
 END_VAR
