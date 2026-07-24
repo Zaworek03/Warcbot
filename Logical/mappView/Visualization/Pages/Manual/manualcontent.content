@@ -65,5 +65,7 @@
     <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputJointSpeed" top="680" left="1280" zIndex="61" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" />
     <Widget xsi:type="widgets.brease.Label" id="LabelJointowySpeed" top="660" left="1080" width="200" height="60" zIndex="62" text="Jog Joint Speed" backColor="rgba(255, 255, 255, 0)" style="Caption" />
     <Widget xsi:type="widgets.brease.Label" id="LabelKartezjanskiSpeed" top="580" left="1080" width="200" height="60" zIndex="63" text="Jog Cartesian Speed" backColor="rgba(255, 255, 255, 0)" style="Caption" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonGoHome" top="740" left="1080" width="140" height="80" zIndex="64" text="Go Home" style="Command" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonRehome" top="740" left="1280" width="140" height="80" zIndex="65" text="Rehome" style="Command" />
   </Widgets>
 </Content>

@@ -1,5 +1,6 @@
 
 PROGRAM _INIT
+
 	gAxesGroup_Racer3_1;
 	gAxisQ1_Racer3_1;
 	gAxisQ2_Racer3_1;
@@ -9,10 +10,6 @@ PROGRAM _INIT
 	gAxisQ6_Racer3_1;
 	
 	mcGroupHome.AxesGroup := ADR(gAxesGroup_Racer3_1);
-	FOR i := 0 TO 5 DO
-		mcGroupHome.HomingMode[i] := mcHOMING_DIRECT;
-		mcGroupHome.Position[i] := AxisPos[i];
-	END_FOR;
 	
 	RobotPar.ProgramName := 'move.st';
 	
@@ -30,12 +27,19 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	// TRZEBA ZROBIÆ POPRAWNY EXIT
 	// TRZEBA ZROBIÆ SYNCHRONIZACJE
 	ExecuteImpulse := RTrigExecute.Q;
 	RTrigExecute.CLK := gMotionInterface.Execute;
 	
+	STMotionDoneImpulse := RTrigSTMotionDone.Q;
+	RTrigSTMotionDone.CLK := STMotionDone;
+	
 	CASE RobotState OF
+		ROBOT_DISABLED:
+			IF gMotionInterface.Enable THEN
+				RobotState := ROBOT_ENABLED;
+			END_IF;
+		
 		ROBOT_ENABLED:
 			Robot.Power := TRUE;
 			IF Robot.PowerOn THEN
@@ -43,13 +47,28 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		ROBOT_POWERED:
-			mcGroupHome.Execute := TRUE;
-			IF mcGroupHome.Done THEN
-				RobotState := ROBOT_HOMED;
-				mcGroupHome.Execute := FALSE;
+			
+			IF gMotionInterface.Manual.RequestRehomeRobot THEN
+				FOR i := 0 TO 5 DO
+					mcGroupHome.HomingMode[i] := mcHOMING_DIRECT;
+					mcGroupHome.Position[i] := AxisPos[i];
+				END_FOR;
+				IF Robot.IsHomed THEN
+					gMotionInterface.Manual.RequestRehomeRobot := FALSE;
+				END_IF;
+			ELSE
+				FOR i := 0 TO 5 DO
+					mcGroupHome.HomingMode[i] := mcHOMING_RESTORE_POSITION;
+					mcGroupHome.Position[i] := AxisPos[i];
+				END_FOR;
 			END_IF;
 			
-			mcGroupHome();
+			Robot.Home := TRUE;
+			
+			IF Robot.IsHomed THEN
+				RobotState := ROBOT_HOMED;
+				Robot.Home := FALSE;
+			END_IF;
 		
 		ROBOT_HOMED:
 			IF gMotionInterface.RequestManualMode THEN
@@ -60,6 +79,7 @@ PROGRAM _CYCLIC
 			
 		ROBOT_MANUAL:
 			// domyslnie
+			
 			RobotPar.Jog.Velocity[0] := 0;
 			RobotPar.Jog.Velocity[1] := 0;
 			RobotPar.Jog.Velocity[2] := 0;
@@ -133,12 +153,10 @@ PROGRAM _CYCLIC
 				END_IF;
 				
 				Robot.Jog := TRUE;
-			ELSE
+			ELSIF JogXPos OR JogXNeg OR JogYPos OR JogYNeg OR JogZPos OR JogZNeg THEN
 				// tryb JogCartesian
-				IF JogXPos OR JogXNeg OR JogYPos OR JogYNeg OR JogZPos OR JogZNeg THEN
-					RobotPar.Jog.CoordSystem := mcMCS; // lub inny
-					Robot.Jog := TRUE;
-				END_IF;
+				RobotPar.Jog.CoordSystem := mcMCS; // lub inny
+				Robot.Jog := TRUE;
 		
 				IF JogXPos THEN
 					RobotPar.Jog.Velocity[0] := JogCartesianSpeed;
@@ -158,13 +176,30 @@ PROGRAM _CYCLIC
 				IF JogZNeg THEN
 					RobotPar.Jog.Velocity[2] := -JogCartesianSpeed;
 				END_IF;
-				
 			
+			ELSIF gMotionInterface.Manual.RequestGoHome THEN
+				RobotPar.ProgramName := 'gohome.st';
+				Robot.MoveProgram := TRUE;
+				STMotionDone := FALSE;
+				gMotionInterface.Manual.RequestGoHome := FALSE;
 			END_IF;
 			
 			IF NOT gMotionInterface.RequestManualMode THEN
+				Robot.Jog := FALSE;
 				RobotState := ROBOT_HOMED;
 			END_IF;
+			
+			IF gMotionInterface.Manual.RequestRehomeRobot THEN
+				Robot.Jog := FALSE;
+				RobotState := ROBOT_ENABLED;
+			END_IF;
+			
+			IF STMotionDoneImpulse THEN
+				Robot.MoveProgram := FALSE;
+				Robot.Interrupt := TRUE;
+			END_IF;
+			
+			
 		ROBOT_EXECUTE:
 			
 			IF ExecuteImpulse THEN // impuls jest po to zeby nie dalo sie zmienic parametrow w czasie
@@ -193,6 +228,7 @@ PROGRAM _CYCLIC
 						STMotionEndPoint.Pos.Z := gMotionInterface.EndPos.Z + PileCalculatedOffs.Z;
 				END_CASE;
 				
+				RobotPar.ProgramName := 'move.st';
 				Robot.MoveProgram := TRUE;
 				STMotionEndPoint.Orient := STMotionDefaultOrient;
 				
@@ -208,6 +244,7 @@ PROGRAM _CYCLIC
 		
 	END_CASE;
 	
+	RTrigSTMotionDone();
 	RTrigExecute();
 	Robot();	
 END_PROGRAM

@@ -4,6 +4,9 @@ TYPE
 		EstopActive : BOOL; (*E stop zostal zalaczony*)
 		InncorrectRobotMove : BOOL; (*Zle przeniesienie pionka przez robota*)
 		InncorrectBoard : BOOL; (*Zla plansza do startu gry*)
+		RobotProgramNotLoaded : BOOL; (*Program (napisany w STMotion) nie istnieje w pamiêci USER robota*)
+		RobotWorkspaceViolation : BOOL; (*TCP robota znalaz³o siê poza dozwolonym obszarem - robot nie mo¿e kontynuowaæ ruchu w tym kierunku*)
+		RobotAxisViolation : BOOL; (*Robota przekroczy³ maksymaln¹ pozycjê k¹tow¹ w którejœ z osi*)
 	END_STRUCT;
 	GameEnum : 	STRUCT 
 		BoardActual : ARRAY[1..8,1..8]OF USINT;

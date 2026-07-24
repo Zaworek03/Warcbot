@@ -20,7 +20,7 @@
     <AutomationRuntime Version="6.7.6" />
     <Build GccVersion="11.3.0" />
     <DefaultTargetMemory Tasks="UserROM" />
-    <Transfer AddToUserPart="False" AllowDowngrade="False" AllowInitialTransfer="False" AllowPartitioning="False" ExecuteInitExitProgram="False" ForceInitialTransfer="False" IgnoreVersion="True" KeepNonVolatileMemory="False" PreserveVariableValues="True" ProjectConsistent="False" RebootDuringTransfer="False" TargetIdentificationType="Always" TryToBootInRunMode="False" UserFilesIgnoreDifference="True" />
+    <Transfer AddToUserPart="False" AllowDowngrade="False" AllowInitialTransfer="False" AllowPartitioning="False" ExecuteInitExitProgram="False" ForceInitialTransfer="False" IgnoreVersion="True" KeepNonVolatileMemory="False" PreserveVariableValues="True" ProjectConsistent="False" RebootDuringTransfer="True" TargetIdentificationType="Always" TryToBootInRunMode="False" UserFilesIgnoreDifference="True" />
     <OnlineConfiguration Name="5APC3100.KBU1-000" DeviceType="TCPIP" DeviceParameters="/IF=tcpip" ConnectionParameters="/COMT=2500 /AM=* /SDT=5 /IP=192.168.0.11 /PT=11169" Description="" />
   </Configuration>
 </Cpu>
