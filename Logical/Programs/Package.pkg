@@ -10,5 +10,7 @@
     <Object Type="Program" Language="IEC">GameStats</Object>
     <Object Type="Program" Language="IEC">CheckVision</Object>
     <Object Type="Program" Language="IEC">MainProgram</Object>
+    <Object Type="Program" Language="IEC">FolderMng</Object>
+    <Object Type="Program" Language="IEC">Alarms</Object>
   </Objects>
 </Package>

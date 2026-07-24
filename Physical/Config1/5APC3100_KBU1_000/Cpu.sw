@@ -15,6 +15,8 @@
     <Task Name="GameStats" Source="Programs.GameStats.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="CheckVisio" Source="Programs.CheckVision.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="MainProgra" Source="Programs.MainProgram.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="FolderMng" Source="Programs.FolderMng.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="Alarms" Source="Programs.Alarms.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />

@@ -105,6 +105,7 @@
         </Variable>
       </Variable>
       <Variable Name="OpenExportDialog" />
+      <Variable Name="AHClear" />
     </Task>
     <Task Name="GameStats">
       <Variable Name="EndGame" />
