@@ -1,5 +1,5 @@
 PROGRAM _INIT
-
+//DIDII
 	gCameraCtrl.Cmd.Enable := TRUE;
 	gCameraCtrl.Cmd.AcquireImage := FALSE;
 	gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
