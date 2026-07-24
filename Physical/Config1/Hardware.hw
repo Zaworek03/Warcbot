@@ -64,6 +64,9 @@
     <Group ID="FileDevice4" />
     <Parameter ID="FileDeviceName4" Value="AH" />
     <Parameter ID="FileDevicePath4" Value="USER_PATH\AlarmHistory" />
+    <Group ID="FileDevice5" />
+    <Parameter ID="FileDeviceName5" Value="AUDIT" />
+    <Parameter ID="FileDevicePath5" Value="USER_PATH\Audit" />
     <Parameter ID="ActivateFtpServer" Value="1" />
     <Parameter ID="FtpAuthenticationType" Value="FtpRoles" />
     <Group ID="FtpRole1" />

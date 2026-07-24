@@ -75,5 +75,205 @@
         <seg>Save game</seg>
       </tuv>
     </tu>
+    <tu tuid="Main">
+      <tuv xml:lang="pl">
+        <seg>Strona Główna</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Main</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Play">
+      <tuv xml:lang="pl">
+        <seg>Graj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Play</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm">
+      <tuv xml:lang="pl">
+        <seg>Alarm</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarm</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual">
+      <tuv xml:lang="pl">
+        <seg>Tryb Ręczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ustawienia">
+      <tuv xml:lang="pl">
+        <seg>Ustawienia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Settings</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Statystyki">
+      <tuv xml:lang="pl">
+        <seg>STATYSTYKI AKTUALNEJ GRY</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>CURRENT GAME STATS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Twoj_ruch">
+      <tuv xml:lang="pl">
+        <seg>Twoj ruch!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Your turn!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ruch_robot">
+      <tuv xml:lang="pl">
+        <seg>Aktualnie robot wykonuje ruch</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The robot is currently moving</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Wybrany_kolor">
+      <tuv xml:lang="pl">
+        <seg>Wybrany kolor:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Selected color:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Bialy">
+      <tuv xml:lang="pl">
+        <seg>Biały</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>White</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Czrany">
+      <tuv xml:lang="pl">
+        <seg>Czarny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Black</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ruchy">
+      <tuv xml:lang="pl">
+        <seg>Ilosc ruchow:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Number of moves:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Zbite_czarne">
+      <tuv xml:lang="pl">
+        <seg>Zbite czarne pionki:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Captured black pawns:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Zbite_biale">
+      <tuv xml:lang="pl">
+        <seg>Zbite białe pionki:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Captured white pawns:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ostatni_ruch">
+      <tuv xml:lang="pl">
+        <seg>Ostatnie ruchy:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Last moves:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="L_S_game">
+      <tuv xml:lang="pl">
+        <seg>Załaduj / Zapisz grę</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Load / Save game</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Koniec">
+      <tuv xml:lang="pl">
+        <seg>Porzuć grę</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Abort game</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Nowa">
+      <tuv xml:lang="pl">
+        <seg>Nowa gra</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>New Game</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Login">
+      <tuv xml:lang="pl">
+        <seg>Zalogowany jako:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logged in as:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Choose_color">
+      <tuv xml:lang="pl">
+        <seg>Wybierz kolor:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Choose colour:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Choose_mode">
+      <tuv xml:lang="pl">
+        <seg>Wybierz tryb:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Choose mode:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Łatwy">
+      <tuv xml:lang="pl">
+        <seg>Łatwy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Easy</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Średni">
+      <tuv xml:lang="pl">
+        <seg>Średni</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Medium</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ciężki">
+      <tuv xml:lang="pl">
+        <seg>Ciężki</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Hard</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Anuluj">
+      <tuv xml:lang="pl">
+        <seg>Anuluj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cancel</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

@@ -20,10 +20,15 @@
             <Widget xsi:type="widgets.brease.Button" id="BtnUserModify" top="570" left="760" width="160" zIndex="4" text="Modify User" permissionOperate="['Administraotr']" style="Command" />
           </Widgets>
         </Widget>
-        <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" zIndex="1" text="TabItem2">
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" zIndex="1" text="Audit">
           <Widgets>
-            <Widget xsi:type="widgets.brease.Button" id="Button1" top="410" left="220" zIndex="0" text="sv" />
-            <Widget xsi:type="widgets.brease.Button" id="Button2" top="410" left="360" zIndex="1" text="ld" />
+            <Widget xsi:type="widgets.brease.AuditList" id="AuditList1" top="10" left="0" width="1380" height="710" zIndex="0">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem1" zIndex="0" columnType="timestamp" text="Time" />
+                <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem2" width="980" zIndex="1" text="Opis" />
+                <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem3" zIndex="2" columnType="operator name" text="AuditListItem3" />
+              </Widgets>
+            </Widget>
           </Widgets>
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem3" left="0" zIndex="2" text="TabItem3">

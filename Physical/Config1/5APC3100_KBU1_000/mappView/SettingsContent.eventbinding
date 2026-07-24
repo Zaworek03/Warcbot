@@ -31,25 +31,5 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="SettingsContent.Button1.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="SettingsContent" widgetRefId="Button1" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::SaveGame:UIConnect.Recipe.Save">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="SettingsContent.Button2.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="SettingsContent" widgetRefId="Button2" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::SaveGame:UIConnect.Recipe.Load">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
   </Bindings>
 </EventBindingSet>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Content id="PlayContent" guid="d9f91fcc-c759-42a5-a648-686ca543609c" height="840" width="1450" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Rectangle" id="a8" top="40" left="40" width="95" height="95" zIndex="0" backColor="rgba(255, 222, 173, 1)" permissionOperate="['Administraotr', 'Operator', 'Service']" />

@@ -1,4 +1,5 @@
 VAR
+	MpAuditTrail_0 : MpAuditTrail;
 	BoardConverted : ARRAY[1..8,1..8] OF USINT;
 	BoardGit : BOOL; (*Git ruch*)
 	Vision : USINT;
