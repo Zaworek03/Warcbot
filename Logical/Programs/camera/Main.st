@@ -1,7 +1,5 @@
 PROGRAM _INIT
-	gBoardCamera;
-	gCameraEnd;
-	
+//DIDII
 	gCameraCtrl.Cmd.Enable := TRUE;
 	gCameraCtrl.Cmd.AcquireImage := FALSE;
 	gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
