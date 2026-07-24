@@ -3,7 +3,6 @@ VAR
 	currentBoardWidth : DINT;
 	currentLeftX : DINT;
 	boardHeight : DINT;
-	boardWidth : DINT;
 	i : USINT;
 	gCameraCtrl : CameraControlType;
 	PreviousProcessingActive : BOOL;

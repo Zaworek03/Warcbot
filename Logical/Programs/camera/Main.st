@@ -1,8 +1,12 @@
 PROGRAM _INIT
-//DIDII
+
 	gCameraCtrl.Cmd.Enable := TRUE;
 	gCameraCtrl.Cmd.AcquireImage := FALSE;
 	gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
+
+	gCameraCtrl.Parameters.ExposureTime := 20884;
+	gCameraCtrl.Parameters.SetFocus := 53073;
+	gCameraCtrl.Parameters.GainLevel := 4;
 
 	gCameraCtrl.Parameters.ScoreMin := 75;
 	gCameraCtrl.Parameters.NumSearchMax := 24;
@@ -27,6 +31,8 @@ PROGRAM _INIT
 	gCameraCtrl.WhiteCount := 0;
 	gCameraCtrl.BlackCount := 0;
 
+	gCameraEnd := FALSE;
+
 	PreviousProcessingActive := FALSE;
 
 END_PROGRAM
@@ -34,216 +40,179 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 
-	gCameraCtrl.BoardReady := FALSE;
-	gCameraCtrl.BoardDataValid := TRUE;
+	gCameraCtrl.Cmd.Enable := TRUE;
+	gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
 
-
-	IF NOT gCameraCtrl.Cmd.Enable THEN
-
+	IF NOT gCameraTrigger THEN
 		gCameraCtrl.Cmd.AcquireImage := FALSE;
+		gCameraCtrl.BoardReady := FALSE;
+		gCameraCtrl.BoardDataValid := FALSE;
+		gCameraEnd := FALSE;
+	END_IF;
 
+	IF gCameraTrigger
+		AND NOT gCameraEnd
+		AND gCameraCtrl.Cmd.Enable
+		AND gCameraCtrl.Status.AcquisitionReady
+		AND NOT gCameraCtrl.Status.ProcessingActive
+		AND (gCameraCtrl.Status.ProcessingError = 0) THEN
+		gCameraCtrl.Cmd.AcquireImage := TRUE;
 	END_IF;
 
 
-	IF gCameraCtrl.Cmd.AcquireImage
-		AND NOT gCameraCtrl.Status.AcquisitionReady THEN
-
+	IF gCameraCtrl.Status.ProcessingActive THEN
 		gCameraCtrl.Cmd.AcquireImage := FALSE;
-
 	END_IF;
 
 
-	boardHeight :=
-	(
-	(gCameraCtrl.Calibration.BottomLeftY
-	- gCameraCtrl.Calibration.TopLeftY)
-	+
-	(gCameraCtrl.Calibration.BottomRightY
-	- gCameraCtrl.Calibration.TopRightY)
-	) / 2;
+	IF gCameraTrigger
+		AND PreviousProcessingActive
+		AND NOT gCameraCtrl.Status.ProcessingActive THEN
+		gCameraCtrl.Cmd.AcquireImage := FALSE;
+		gCameraCtrl.BoardDataValid := TRUE;
+		gCameraCtrl.WhiteCount := 0;
+		gCameraCtrl.BlackCount := 0;
 
 
-	cellStepY := boardHeight / 7;
-
-
-	gCameraCtrl.WhiteCount := 0;
-	gCameraCtrl.BlackCount := 0;
-
-
-	FOR rowIndex := 1 TO 8 DO
-
-		FOR columnIndex := 1 TO 8 DO
-
-			gCameraCtrl.Board[rowIndex, columnIndex] := 0;
-
+		FOR rowIndex := 1 TO 8 DO
+			FOR columnIndex := 1 TO 8 DO
+				gCameraCtrl.Board[rowIndex, columnIndex] := 0;
+			END_FOR;
 		END_FOR;
 
-	END_FOR;
+
+		boardHeight := ((gCameraCtrl.Calibration.BottomLeftY- gCameraCtrl.Calibration.TopLeftY) +
+		(gCameraCtrl.Calibration.BottomRightY - gCameraCtrl.Calibration.TopRightY)) / 2;
 
 
-	FOR i := 1 TO 24 DO
-
-		gCameraCtrl.Pieces[i].Valid :=
-		(gCameraCtrl.NumResults >= i)
-		AND
-		(gCameraCtrl.Pieces[i].Score
-		>= gCameraCtrl.Parameters.ScoreMin);
-
-
-		IF gCameraCtrl.Pieces[i].Valid THEN
-
-			relativeY :=
-			gCameraCtrl.Pieces[i].PositionY
-			- gCameraCtrl.Calibration.TopLeftY;
+		IF boardHeight > 0 THEN
+			cellStepY := boardHeight / 7;
+		ELSE
+			cellStepY := 0;
+			gCameraCtrl.BoardDataValid := FALSE;
+		END_IF;
 
 
-			IF relativeY < -(cellStepY / 2)
-				OR relativeY > (boardHeight + (cellStepY / 2)) THEN
+		FOR i := 1 TO 24 DO
+			gCameraCtrl.Pieces[i].Valid := (gCameraCtrl.NumResults >= i)
+			AND
+			(gCameraCtrl.Pieces[i].Score >= gCameraCtrl.Parameters.ScoreMin);
 
-				gCameraCtrl.Pieces[i].Valid := FALSE;
-				gCameraCtrl.Pieces[i].Row := 0;
-				gCameraCtrl.Pieces[i].Column := 0;
-
-				gCameraCtrl.BoardDataValid := FALSE;
-
-			ELSE
-
-				currentLeftX :=
-				gCameraCtrl.Calibration.TopLeftX
-				+
-				(
-				(gCameraCtrl.Calibration.BottomLeftX
-				- gCameraCtrl.Calibration.TopLeftX)
-				* relativeY
-				) / boardHeight;
+			IF gCameraCtrl.Pieces[i].Valid
+				AND (cellStepY > 0) THEN
+				relativeY := gCameraCtrl.Pieces[i].PositionY - gCameraCtrl.Calibration.TopLeftY;
 
 
-				currentRightX :=
-				gCameraCtrl.Calibration.TopRightX
-				+
-				(
-				(gCameraCtrl.Calibration.BottomRightX
-				- gCameraCtrl.Calibration.TopRightX)
-				* relativeY
-				) / boardHeight;
-
-
-				currentBoardWidth :=
-				currentRightX - currentLeftX;
-
-
-				cellStepX :=
-				currentBoardWidth / 7;
-
-
-				relativeX :=
-				gCameraCtrl.Pieces[i].PositionX
-				- currentLeftX;
-
-
-				IF relativeX < -(cellStepX / 2)
-					OR relativeX >
-					(currentBoardWidth + (cellStepX / 2)) THEN
-
+				IF relativeY < -(cellStepY / 2)
+					OR relativeY > (boardHeight + (cellStepY / 2)) THEN
 					gCameraCtrl.Pieces[i].Valid := FALSE;
 					gCameraCtrl.Pieces[i].Row := 0;
 					gCameraCtrl.Pieces[i].Column := 0;
-
 					gCameraCtrl.BoardDataValid := FALSE;
-
 				ELSE
 
-					gCameraCtrl.Pieces[i].Column :=
-					DINT_TO_USINT(
-					(relativeX + (cellStepX / 2))
-					/ cellStepX
-					) + 1;
+					currentLeftX := gCameraCtrl.Calibration.TopLeftX + 
+					((gCameraCtrl.Calibration.BottomLeftX- gCameraCtrl.Calibration.TopLeftX) * relativeY) / boardHeight;
 
 
-					gCameraCtrl.Pieces[i].Row :=
-					9
-					-
-					(
-					DINT_TO_USINT(
-					(relativeY + (cellStepY / 2))
-					/ cellStepY
-					) + 1
-					);
+					currentRightX := gCameraCtrl.Calibration.TopRightX +
+					((gCameraCtrl.Calibration.BottomRightX - gCameraCtrl.Calibration.TopRightX) * relativeY) / boardHeight;
 
 
-					IF gCameraCtrl.Pieces[i].Column = 0
-						OR gCameraCtrl.Pieces[i].Column > 8 THEN
+					currentBoardWidth := currentRightX - currentLeftX;
 
-						gCameraCtrl.Pieces[i].Column := 0;
-						gCameraCtrl.Pieces[i].Row := 0;
+
+					IF currentBoardWidth > 0 THEN
+						cellStepX := currentBoardWidth / 7;
+					ELSE
+						cellStepX := 0;
 						gCameraCtrl.Pieces[i].Valid := FALSE;
-
 						gCameraCtrl.BoardDataValid := FALSE;
-
 					END_IF;
 
 
-					IF gCameraCtrl.Pieces[i].Row = 0
-						OR gCameraCtrl.Pieces[i].Row > 8 THEN
-
-						gCameraCtrl.Pieces[i].Row := 0;
-						gCameraCtrl.Pieces[i].Column := 0;
-						gCameraCtrl.Pieces[i].Valid := FALSE;
-
-						gCameraCtrl.BoardDataValid := FALSE;
-
-					END_IF;
+					IF gCameraCtrl.Pieces[i].Valid
+						AND (cellStepX > 0) THEN
+						relativeX := gCameraCtrl.Pieces[i].PositionX - currentLeftX;
 
 
-					IF gCameraCtrl.Pieces[i].Valid THEN
-
-						IF (gCameraCtrl.Pieces[i].ModelNumber <> 1)
-							AND
-							(gCameraCtrl.Pieces[i].ModelNumber <> 2) THEN
-
+						IF relativeX < -(cellStepX / 2)
+							OR relativeX > (currentBoardWidth + (cellStepX / 2)) THEN
 							gCameraCtrl.Pieces[i].Valid := FALSE;
 							gCameraCtrl.Pieces[i].Row := 0;
 							gCameraCtrl.Pieces[i].Column := 0;
-
 							gCameraCtrl.BoardDataValid := FALSE;
-
-						END_IF;
-
-					END_IF;
-
-
-					IF gCameraCtrl.Pieces[i].Valid THEN
-
-						IF gCameraCtrl.Board[
-							gCameraCtrl.Pieces[i].Row,
-							gCameraCtrl.Pieces[i].Column
-							] <> 0 THEN
-
-							gCameraCtrl.Pieces[i].Valid := FALSE;
-							gCameraCtrl.Pieces[i].Row := 0;
-							gCameraCtrl.Pieces[i].Column := 0;
-
-							gCameraCtrl.BoardDataValid := FALSE;
-
 						ELSE
-
-							gCameraCtrl.Board[
-							gCameraCtrl.Pieces[i].Row,
-							gCameraCtrl.Pieces[i].Column
-							] :=
-							gCameraCtrl.Pieces[i].ModelNumber;
+							gCameraCtrl.Pieces[i].Column := DINT_TO_USINT((relativeX + (cellStepX / 2)) / cellStepX) + 1;
+							gCameraCtrl.Pieces[i].Row := 9 - (DINT_TO_USINT((relativeY + (cellStepY / 2)) / cellStepY) + 1);
 
 
-							IF gCameraCtrl.Pieces[i].ModelNumber = 1 THEN
+							IF gCameraCtrl.Pieces[i].Column = 0
+								OR gCameraCtrl.Pieces[i].Column > 8 THEN
+								gCameraCtrl.Pieces[i].Column := 0;
+								gCameraCtrl.Pieces[i].Row := 0;
+								gCameraCtrl.Pieces[i].Valid := FALSE;
+								gCameraCtrl.BoardDataValid := FALSE;
+							END_IF;
 
-								gCameraCtrl.WhiteCount :=
-								gCameraCtrl.WhiteCount + 1;
 
-							ELSIF
-								gCameraCtrl.Pieces[i].ModelNumber = 2 THEN
+							IF gCameraCtrl.Pieces[i].Row = 0
+								OR gCameraCtrl.Pieces[i].Row > 8 THEN
+								gCameraCtrl.Pieces[i].Row := 0;
+								gCameraCtrl.Pieces[i].Column := 0;
+								gCameraCtrl.Pieces[i].Valid := FALSE;
+								gCameraCtrl.BoardDataValid := FALSE;
+							END_IF;
 
-								gCameraCtrl.BlackCount :=
-								gCameraCtrl.BlackCount + 1;
+
+							IF gCameraCtrl.Pieces[i].Valid THEN
+
+								IF (gCameraCtrl.Pieces[i].ModelNumber <> 1)
+									AND
+									(gCameraCtrl.Pieces[i].ModelNumber <> 2) THEN
+									gCameraCtrl.Pieces[i].Valid := FALSE;
+									gCameraCtrl.Pieces[i].Row := 0;
+									gCameraCtrl.Pieces[i].Column := 0;
+									gCameraCtrl.BoardDataValid := FALSE;
+								END_IF;
+
+							END_IF;
+
+
+							IF gCameraCtrl.Pieces[i].Valid THEN
+
+								IF gCameraCtrl.Board[
+									gCameraCtrl.Pieces[i].Row,
+									gCameraCtrl.Pieces[i].Column
+									] <> 0 THEN
+
+									gCameraCtrl.Pieces[i].Valid := FALSE;
+									gCameraCtrl.Pieces[i].Row := 0;
+									gCameraCtrl.Pieces[i].Column := 0;
+									gCameraCtrl.BoardDataValid := FALSE;
+								ELSE
+
+									gCameraCtrl.Board[
+									gCameraCtrl.Pieces[i].Row,
+									gCameraCtrl.Pieces[i].Column
+									] :=
+									gCameraCtrl.Pieces[i].ModelNumber;
+
+
+									IF gCameraCtrl.Pieces[i].ModelNumber = 1 THEN
+
+										gCameraCtrl.WhiteCount :=
+										gCameraCtrl.WhiteCount + 1;
+
+									ELSIF
+										gCameraCtrl.Pieces[i].ModelNumber = 2 THEN
+
+										gCameraCtrl.BlackCount :=
+										gCameraCtrl.BlackCount + 1;
+
+									END_IF;
+
+								END_IF;
 
 							END_IF;
 
@@ -253,45 +222,55 @@ PROGRAM _CYCLIC
 
 				END_IF;
 
+			ELSE
+
+				gCameraCtrl.Pieces[i].Valid := FALSE;
+				gCameraCtrl.Pieces[i].Row := 0;
+				gCameraCtrl.Pieces[i].Column := 0;
+
 			END_IF;
 
-		ELSE
-
-			gCameraCtrl.Pieces[i].Valid := FALSE;
-			gCameraCtrl.Pieces[i].Row := 0;
-			gCameraCtrl.Pieces[i].Column := 0;
-
-		END_IF;
-
-	END_FOR;
+		END_FOR;
 
 
-	IF PreviousProcessingActive
-		AND NOT gCameraCtrl.Status.ProcessingActive THEN
+		FOR rowIndex := 1 TO 8 DO
+			FOR columnIndex := 1 TO 8 DO
+				gBoardCamera[rowIndex, columnIndex] :=
+				gCameraCtrl.Board[rowIndex, columnIndex];
+			END_FOR;
+
+		END_FOR;
+
 
 		IF gCameraCtrl.Status.ProcessingError = 0 THEN
-
 			gCameraCtrl.BoardReady := TRUE;
-
+			gCameraEnd := TRUE;
 		ELSE
-
 			gCameraCtrl.BoardReady := FALSE;
 			gCameraCtrl.BoardDataValid := FALSE;
-
+			gCameraEnd := TRUE;
 		END_IF;
 
 	END_IF;
 
 
-	PreviousProcessingActive :=
-	gCameraCtrl.Status.ProcessingActive;
+	PreviousProcessingActive := gCameraCtrl.Status.ProcessingActive;
 
 
-	IF gCameraCtrl.Status.ProcessingError <> 0 THEN
-
+	IF gCameraTrigger
+		AND (gCameraCtrl.Status.ProcessingError <> 0) THEN
+		gCameraCtrl.Cmd.AcquireImage := FALSE;
 		gCameraCtrl.BoardReady := FALSE;
 		gCameraCtrl.BoardDataValid := FALSE;
+		gCameraEnd := TRUE;
+	END_IF;
 
+
+	IF NOT gCameraCtrl.Cmd.Enable THEN
+		gCameraCtrl.Cmd.AcquireImage := FALSE;
+		gCameraCtrl.BoardReady := FALSE;
+		gCameraCtrl.BoardDataValid := FALSE;
+		gCameraEnd := FALSE;
 	END_IF;
 
 END_PROGRAM
@@ -305,5 +284,9 @@ PROGRAM _EXIT
 
 	gCameraCtrl.BoardReady := FALSE;
 	gCameraCtrl.BoardDataValid := FALSE;
+
+	gCameraEnd := FALSE;
+
+	PreviousProcessingActive := FALSE;
 
 END_PROGRAM

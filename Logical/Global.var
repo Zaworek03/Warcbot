@@ -22,4 +22,7 @@ VAR
 	gDifficultyLevel : USINT; (*0 - Easy, 1 - Medium, 2 - Hard*)
 	gStart : BOOL; (*True - rozpocznij nowa gre, False - nic*)
 	gEnablePiece : ARRAY[1..8,1..8] OF BOOL; (*Pionki mozliwe do klikniecia podczas tury*)
+	gCameraEnd : BOOL;
+	gCameraTrigger : BOOL;
+	gBoardCamera : ARRAY[1..8,1..8] OF USINT;
 END_VAR
