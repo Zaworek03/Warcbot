@@ -115,5 +115,109 @@
         <seg>Settings</seg>
       </tuv>
     </tu>
+    <tu tuid="Statystyki">
+      <tuv xml:lang="pl">
+        <seg>STATYSTYKI AKTUALNEJ GRY</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>CURRENT GAME STATS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Twoj_ruch">
+      <tuv xml:lang="pl">
+        <seg>Twoj ruch!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Your turn!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ruch_robot">
+      <tuv xml:lang="pl">
+        <seg>Aktualnie robot wykonuje ruch</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The robot is currently moving</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Wybrany_kolor">
+      <tuv xml:lang="pl">
+        <seg>Wybrany kolor:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Selected color:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Bialy">
+      <tuv xml:lang="pl">
+        <seg>Biały</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>White</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Czrany">
+      <tuv xml:lang="pl">
+        <seg>Czarny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Black</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ruchy">
+      <tuv xml:lang="pl">
+        <seg>Ilosc ruchow:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Number of moves:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Zbite_czarne">
+      <tuv xml:lang="pl">
+        <seg>Zbite czarne pionki:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Captured black pawns:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Zbite_biale">
+      <tuv xml:lang="pl">
+        <seg>Zbite białe pionki:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Captured white pawns:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ostatni_ruch">
+      <tuv xml:lang="pl">
+        <seg>Ostatnie ruchy:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Last moves:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="L_S_game">
+      <tuv xml:lang="pl">
+        <seg>Załaduj / Zapisz grę</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Load / Save game</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Koniec">
+      <tuv xml:lang="pl">
+        <seg>Porzuć grę</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Abort game</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Nowa">
+      <tuv xml:lang="pl">
+        <seg>Nowa gra</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>New Game</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

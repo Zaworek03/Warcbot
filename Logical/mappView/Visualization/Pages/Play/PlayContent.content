@@ -82,9 +82,9 @@
     <Widget xsi:type="widgets.brease.Label" id="Row2Lb" top="610" left="0" width="40" height="95" zIndex="78" text="2" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="24px" style="Caption" />
     <Widget xsi:type="widgets.brease.Label" id="Row1Lb" top="705" left="0" width="40" height="95" zIndex="79" text="1" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontSize="24px" style="Caption" />
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="120" left="840" width="580" height="210" zIndex="80" borderStyle="solid" borderWidth="4px" lineColor="rgba(255, 136, 0, 1)" backColor="rgba(255, 255, 255, 1)" style="Solid_Orange" />
-    <Widget xsi:type="widgets.brease.Button" id="NewGameBtn" top="340" left="840" width="130" zIndex="81" text="New Game" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="RulesBtn" top="340" left="990" width="130" zIndex="82" imageAlign="right" text="Rules" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="SaveGameBtn" top="340" left="1140" width="280" zIndex="83" text="Load / Save Game" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="NewGameBtn" top="340" left="840" width="130" zIndex="81" text="$IAT/Nowa" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="RulesBtn" top="340" left="990" width="130" zIndex="82" imageAlign="right" text="$IAT/zasady" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="SaveGameBtn" top="340" left="1140" width="280" zIndex="83" text="$IAT/L_S_game" style="Command" />
     <Widget xsi:type="widgets.brease.Image" id="Image1" top="400" left="940" width="400" height="420" zIndex="84" image="Media/happy-cat-cat.gif" borderWidth="0px" borderColor="rgba(51, 51, 51, 0)" imageColor="rgba(0, 0, 0, 0)" />
     <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveA1" top="705" left="40" width="85" height="85" zIndex="85" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" visible="false" />
     <Widget xsi:type="widgets.brease.Rectangle" id="EnableMoveE1" top="705" left="420" width="85" height="85" zIndex="86" borderStyle="none" backColor="rgba(0, 255, 0, 1)" margin="5px" visible="false" />
@@ -278,16 +278,16 @@
     <Widget xsi:type="widgets.brease.Ellipse" id="WhiteKingC1" top="705" left="230" width="85" height="85" zIndex="274" borderWidth="5px" lineColor="rgba(255, 255, 0, 1)" backColor="rgba(255, 255, 255, 1)" margin="5px" visible="false" />
     <Widget xsi:type="widgets.brease.Ellipse" id="WhiteKingE1" top="705" left="420" width="85" height="85" zIndex="275" borderWidth="5px" lineColor="rgba(255, 255, 0, 1)" backColor="rgba(255, 255, 255, 1)" margin="5px" visible="false" />
     <Widget xsi:type="widgets.brease.Ellipse" id="WhiteKingG1" top="705" left="610" width="85" height="85" zIndex="276" borderWidth="5px" lineColor="rgba(255, 255, 0, 1)" backColor="rgba(255, 255, 255, 1)" margin="5px" visible="false" />
-    <Widget xsi:type="widgets.brease.Label" id="MoveRobotLb" top="120" left="880" width="500" zIndex="277" text="Aktualnie robot wykonuje ruch" textAlign="center" bold="true" style="Title2" visible="false" />
-    <Widget xsi:type="widgets.brease.Label" id="MoveHumanLb" top="120" left="880" width="500" zIndex="278" text="Twoj ruch!" textAlign="center" bold="true" style="Title2" visible="false" />
-    <Widget xsi:type="widgets.brease.Label" id="ChooseColorLb" top="160" left="860" width="140" zIndex="279" text="Wybrany kolor:" fontSize="16px" />
-    <Widget xsi:type="widgets.brease.Label" id="MoveCntLb" top="200" left="860" width="140" zIndex="280" text="Ilosc ruchow:" fontSize="16px" />
-    <Widget xsi:type="widgets.brease.Label" id="LastMovesLb" top="160" left="1180" width="100" zIndex="281" text="Ostatnie ruchy" />
-    <Widget xsi:type="widgets.brease.Label" id="BlackDeadPieceLb" top="240" left="860" width="180" zIndex="282" text="Ilosc zbitych czarnych:" fontSize="16px" />
-    <Widget xsi:type="widgets.brease.Label" id="WhiteDeadPieceLb" top="280" left="860" width="180" zIndex="283" text="Ilosc zbitych bialych:" fontSize="16px" />
-    <Widget xsi:type="widgets.brease.Label" id="StatsTitleLb" top="40" left="880" width="499" height="70" zIndex="284" autoScroll="true" text="STATYSTYKI AKTUALNEJ GRY" textAlign="center" fontSize="30px" bold="true" style="Title2" />
-    <Widget xsi:type="widgets.brease.Label" id="BlackLb" top="160" left="1040" zIndex="285" text="Black" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" visible="false" />
-    <Widget xsi:type="widgets.brease.Label" id="WhiteLb" top="160" left="1040" zIndex="286" text="White" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" visible="false" />
+    <Widget xsi:type="widgets.brease.Label" id="MoveRobotLb" top="120" left="880" width="500" zIndex="277" text="$IAT/Ruch_robot" textAlign="center" bold="true" style="Title2" visible="false" />
+    <Widget xsi:type="widgets.brease.Label" id="MoveHumanLb" top="120" left="880" width="500" zIndex="278" text="$IAT/Twoj_ruch" textAlign="center" bold="true" style="Title2" visible="false" />
+    <Widget xsi:type="widgets.brease.Label" id="ChooseColorLb" top="160" left="860" width="140" zIndex="279" text="$IAT/Wybrany_kolor" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.Label" id="MoveCntLb" top="200" left="860" width="140" zIndex="280" text="$IAT/Ruchy" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.Label" id="LastMovesLb" top="160" left="1180" width="100" zIndex="281" text="$IAT/Ostatni_ruch" />
+    <Widget xsi:type="widgets.brease.Label" id="BlackDeadPieceLb" top="240" left="860" width="180" zIndex="282" text="$IAT/Zbite_czarne" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.Label" id="WhiteDeadPieceLb" top="280" left="860" width="180" zIndex="283" text="$IAT/Zbite_biale" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.Label" id="StatsTitleLb" top="40" left="880" width="499" height="70" zIndex="284" autoScroll="true" text="$IAT/Statystyki" textAlign="center" fontSize="30px" bold="true" style="Title2" />
+    <Widget xsi:type="widgets.brease.Label" id="BlackLb" top="160" left="1040" zIndex="285" text="$IAT/Czrany" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" visible="false" />
+    <Widget xsi:type="widgets.brease.Label" id="WhiteLb" top="160" left="1040" zIndex="286" text="$IAT/Bialy" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" visible="false" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="NumMovePlayer" top="200" left="1020" zIndex="287" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="999" textColor="rgba(0, 0, 0, 1)" textAlign="left" fontSize="18px" enable="false" style="FavoriteWatch" visible="false" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="NumDeadBlackPiece" top="240" left="1020" zIndex="288" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="999" textColor="rgba(0, 0, 0, 1)" textAlign="left" fontSize="18px" enable="false" style="FavoriteWatch" visible="false" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="NumDeadWhitePiece" top="280" left="1020" zIndex="289" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="999" textColor="rgba(0, 0, 0, 1)" textAlign="left" fontSize="18px" enable="false" style="FavoriteWatch" visible="false" />
@@ -295,6 +295,6 @@
     <Widget xsi:type="widgets.brease.TextOutput" id="HistoryMove2" top="200" left="1280" zIndex="291" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" style="Output" visible="false" />
     <Widget xsi:type="widgets.brease.TextOutput" id="HistoryMove3" top="240" left="1280" zIndex="292" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" style="Output" visible="false" />
     <Widget xsi:type="widgets.brease.TextOutput" id="HistoryMove4" top="280" left="1280" zIndex="293" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" style="Output" visible="false" />
-    <Widget xsi:type="widgets.brease.Button" id="AbortGameBtn" top="340" left="840" width="130" zIndex="294" text="Abort Game" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="AbortGameBtn" top="340" left="840" width="130" zIndex="294" text="$IAT/Koniec" style="Command" />
   </Widgets>
 </Content>
