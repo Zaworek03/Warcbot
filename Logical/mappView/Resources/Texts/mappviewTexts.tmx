@@ -219,5 +219,61 @@
         <seg>New Game</seg>
       </tuv>
     </tu>
+    <tu tuid="Login">
+      <tuv xml:lang="pl">
+        <seg>Zalogowany jako:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logged in as:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Choose_color">
+      <tuv xml:lang="pl">
+        <seg>Wybierz kolor:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Choose colour:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Choose_mode">
+      <tuv xml:lang="pl">
+        <seg>Wybierz tryb:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Choose mode:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Łatwy">
+      <tuv xml:lang="pl">
+        <seg>Łatwy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Easy</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Średni">
+      <tuv xml:lang="pl">
+        <seg>Średni</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Medium</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ciężki">
+      <tuv xml:lang="pl">
+        <seg>Ciężki</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Hard</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Anuluj">
+      <tuv xml:lang="pl">
+        <seg>Anuluj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cancel</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
