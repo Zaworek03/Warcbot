@@ -14,6 +14,12 @@ PROGRAM _INIT
 	i;
 	j;
 	
+	MpAuditTrail_0.Enable := TRUE; 
+	MpAuditTrail_0.MpLink := ADR(gAuditTrail); 
+	MpAuditTrail_0.DeviceName := ADR('AUDIT'); 
+	MpAuditTrail_0.FileName := ADR('AuditList'); 
+	
+	
 	 
 END_PROGRAM
 
