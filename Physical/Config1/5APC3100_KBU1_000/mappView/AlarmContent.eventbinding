@@ -21,9 +21,9 @@
         </Action>
       </EventHandler>
     </EventBinding>
-		<EventBinding id="EventBinding_69">
-			<Source xsi:type="opcUa.Event" refId="::AlarmHisto:OpenExportDialog" event="ValueChanged" />
-			<EventHandler condition="newValue = TRUE">
+    <EventBinding id="EventBinding_69">
+      <Source xsi:type="opcUa.Event" refId="::AlarmHisto:OpenExportDialog" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
         <Sequence>
           <Step order="0">
             <Action>
@@ -51,16 +51,26 @@
           </Target>
         </Action>
       </EventHandler>
-		</EventBinding>
-		<EventBinding id="AHExportContent.BtnOk.Click">
-			<Source xsi:type="widgets.brease.Button.Event" contentRefId="AHExportContent" widgetRefId="BtnOk" event="Click" />
-			<EventHandler>
-				<Action>
-					<Target xsi:type="clientSystem.Action">
-						<Method xsi:type="clientSystem.Action.CloseDialog" dialogId="AHExportDialog" />
-					</Target>
-				</Action>
-			</EventHandler>
-		</EventBinding>
+    </EventBinding>
+    <EventBinding id="AHExportContent.BtnOk.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AHExportContent" widgetRefId="BtnOk" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.CloseDialog" dialogId="AHExportDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AlarmContent.BtnClear.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AlarmContent" widgetRefId="BtnClear" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AlarmHisto:AHClear">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

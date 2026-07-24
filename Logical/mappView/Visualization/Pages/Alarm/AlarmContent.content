@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="AlarmContent" guid="20d23c73-8060-4918-8f8a-07ad2e77e919" height="840" width="1450" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.TabControl" id="TabControl1" top="40" left="40" width="1380" height="759" zIndex="0">
+    <Widget xsi:type="widgets.brease.TabControl" id="TabControl1" top="40" left="40" width="1380" height="759" zIndex="0" permissionOperate="['Administraotr', 'Operator', 'Service']">
       <Widgets>
-        <Widget xsi:type="widgets.brease.TabItem" id="TabItemAlarmList" left="0" width="150" zIndex="0" text="Alarm List">
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItemAlarmList" left="0" width="150" zIndex="0" text="Alarm List" permissionOperate="['Administraotr', 'Operator', 'Service']">
           <Widgets>
-            <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList1" top="10" left="0" width="1380" height="630" zIndex="0">
+            <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList1" top="10" left="0" width="1380" height="630" zIndex="0" permissionOperate="['Administraotr', 'Operator', 'Service']">
               <Widgets>
                 <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListTime" width="280" zIndex="0" columnType="timestamp" text="Time" />
                 <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListMessage" width="520" zIndex="1" text="Message" />
@@ -14,13 +14,13 @@
                 <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListAInfo" width="320" zIndex="4" columnType="additionalInfo1" text="Additional Info" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.Button" id="AckAllBtn" top="670" left="220" width="180" height="40" zIndex="1" text="Aknowladge all" style="Command" />
-            <Widget xsi:type="widgets.brease.Button" id="AckBtn" top="670" left="0" width="180" height="40" zIndex="2" text="Acknowladge" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="AckAllBtn" top="670" left="220" width="180" height="40" zIndex="1" text="Aknowladge all" permissionOperate="['Administraotr', 'Operator', 'Service']" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="AckBtn" top="670" left="0" width="180" height="40" zIndex="2" text="Acknowladge" permissionOperate="['Administraotr', 'Operator', 'Service']" style="Command" />
           </Widgets>
         </Widget>
-        <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" width="150" zIndex="1" text="Alarm History">
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" width="150" zIndex="1" text="Alarm History" permissionOperate="['Administraotr', 'Operator', 'Service']">
           <Widgets>
-            <Widget xsi:type="widgets.brease.AlarmHistory" id="AlarmHistory1" top="10" left="0" width="1380" height="630" zIndex="0">
+            <Widget xsi:type="widgets.brease.AlarmHistory" id="AlarmHistory1" top="10" left="0" width="1380" height="630" zIndex="0" permissionOperate="['Administraotr', 'Operator', 'Service']">
               <Widgets>
                 <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryTime" width="280" zIndex="0" columnType="timestamp" text="Time" />
                 <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryMessage" width="460" zIndex="1" text="Message" />
@@ -30,7 +30,8 @@
                 <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryAInfo" width="280" zIndex="5" columnType="additionalInfo1" text="Additional info" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.Button" id="BtnExport" top="670" left="1200" width="180" height="40" zIndex="1" text="Export" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnExport" top="670" left="1200" width="180" height="40" zIndex="1" text="Export" permissionOperate="['Administraotr', 'Service']" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnClear" top="670" left="1000" width="180" height="40" zIndex="2" text="Clear" permissionOperate="['Administraotr', 'Service']" style="Command" />
           </Widgets>
         </Widget>
       </Widgets>

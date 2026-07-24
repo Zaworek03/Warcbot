@@ -20,6 +20,13 @@ PROGRAM _CYCLIC
 			AHExport := FALSE;
 		END_IF;
 	END_IF;
+	
+	IF AHClear AND NOT MpAlarmXHistory_0.CommandBusy THEN
+		MpAlarmXHistory_0.Clear := TRUE;
+		IF MpAlarmXHistory_0.CommandDone THEN
+			AHClear := FALSE;
+		END_IF;
+	END_IF;
 	 
 END_PROGRAM
 

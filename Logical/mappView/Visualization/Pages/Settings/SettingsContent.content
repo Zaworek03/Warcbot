@@ -6,7 +6,7 @@
         <Widget xsi:type="widgets.brease.TabItem" id="TabItemUsers" left="0" width="200" zIndex="0" text="User menegment">
           <Widgets>
             <Widget xsi:type="widgets.brease.Login" id="Login" top="230" left="60" zIndex="0" />
-            <Widget xsi:type="widgets.brease.UserList" id="UserList" top="110" left="400" width="960" height="430" zIndex="1">
+            <Widget xsi:type="widgets.brease.UserList" id="UserList" top="110" left="400" width="960" height="430" zIndex="1" permissionOperate="['Administraotr']">
               <Widgets>
                 <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemFName" width="280" zIndex="0" columnType="FullName" text="Full Name" />
                 <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemDate" width="260" zIndex="1" columnType="LastLogin" text="Last Login" />
@@ -15,9 +15,9 @@
                 <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemAdmin" width="120" zIndex="4" columnType="IsAdmin" text="Admin" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.Button" id="BtnUserAdd" top="570" left="400" width="160" zIndex="2" text="Add User" style="Command" />
-            <Widget xsi:type="widgets.brease.Button" id="BtnUserRemove" top="570" left="580" width="160" zIndex="3" text="Remove User" style="Command" />
-            <Widget xsi:type="widgets.brease.Button" id="BtnUserModify" top="570" left="760" width="160" zIndex="4" text="Modify User" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserAdd" top="570" left="400" width="160" zIndex="2" text="Add User" permissionOperate="['Administraotr']" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserRemove" top="570" left="580" width="160" zIndex="3" text="Remove User" permissionOperate="['Administraotr']" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserModify" top="570" left="760" width="160" zIndex="4" text="Modify User" permissionOperate="['Administraotr']" style="Command" />
           </Widgets>
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" zIndex="1" text="TabItem2">
