@@ -116,6 +116,7 @@
     </Task>
     <Task Name="MainProgra">
       <Variable Name="BoardGit" />
+    </Task>
     <Task Name="PositionIn">
       <Variable Name="AxisQ1Pos" EngineeringUnitId="1" />
       <Variable Name="AxisQ2Pos" EngineeringUnitId="1" />

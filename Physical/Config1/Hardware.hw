@@ -65,7 +65,6 @@
     <Parameter ID="FileDeviceName4" Value="AH" />
     <Parameter ID="FileDevicePath4" Value="USER_PATH\AlarmHistory" />
     <Parameter ID="ActivateFtpServer" Value="1" />
-    <Parameter ID="FTPProtocol" Value="1" />
     <Parameter ID="FtpAuthenticationType" Value="FtpRoles" />
     <Group ID="FtpRole1" />
     <Parameter ID="FtpRoleName1" Value="Administraotr" />
