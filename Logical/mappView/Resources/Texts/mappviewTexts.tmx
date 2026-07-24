@@ -75,5 +75,45 @@
         <seg>Save game</seg>
       </tuv>
     </tu>
+    <tu tuid="Main">
+      <tuv xml:lang="pl">
+        <seg>Strona Główna</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Main</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Play">
+      <tuv xml:lang="pl">
+        <seg>Graj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Play</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarm">
+      <tuv xml:lang="pl">
+        <seg>Alarm</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarm</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual">
+      <tuv xml:lang="pl">
+        <seg>Tryb Ręczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ustawienia">
+      <tuv xml:lang="pl">
+        <seg>Ustawienia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Settings</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
