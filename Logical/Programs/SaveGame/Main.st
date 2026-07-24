@@ -1,9 +1,5 @@
 
 PROGRAM _INIT
-	(* Tworzenie folderu *)
-	DirCreate_0(enable := TRUE, pDevice := ADR('USER'), pName := ADR('SavedGames'));
-	DirCreate_0(enable := FALSE);
-	
 	(* W³¹czenie Bloków Funkcyjnych MpRecipe *)
 	MpRecipeXml_0(MpLink := ADR(MpLinkgRecipeSR), Enable := TRUE, DeviceName := ADR('SG'), FileName := ADR('Save'));
 	MpRecipeRegPar_0(MpLink := ADR(MpLinkgRecipeSR), Enable := TRUE, PVName := ADR('SaveGame:Save'));

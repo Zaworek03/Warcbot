@@ -4,6 +4,8 @@ TYPE
 		EstopActive : BOOL; (*E stop zostal zalaczony*)
 		InncorrectRobotMove : BOOL; (*Zle przeniesienie pionka przez robota*)
 		InncorrectBoard : BOOL; (*Zla plansza do startu gry*)
+		FolderError : USINT;
+		MissingSTMotionProgram : USINT; (*Brakuje programu ST Motion*)
 	END_STRUCT;
 	GameEnum : 	STRUCT 
 		BoardActual : ARRAY[1..8,1..8]OF USINT;
