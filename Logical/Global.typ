@@ -6,6 +6,9 @@ TYPE
 		InncorrectBoard : BOOL; (*Zla plansza do startu gry*)
 		FolderError : USINT;
 		MissingSTMotionProgram : USINT; (*Brakuje programu ST Motion*)
+		RobotProgramNotLoaded : BOOL; (*Program (napisany w STMotion) nie istnieje w pami�ci USER robota*)
+		RobotWorkspaceViolation : BOOL; (*TCP robota znalaz�o si� poza dozwolonym obszarem - robot nie mo�e kontynuowa� ruchu w tym kierunku*)
+		RobotAxisViolation : BOOL; (*Robota przekroczy� maksymaln� pozycj� k�tow� w kt�rej� z osi*)
 	END_STRUCT;
 	GameEnum : 	STRUCT 
 		BoardActual : ARRAY[1..8,1..8]OF USINT;
