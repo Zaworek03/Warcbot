@@ -75,71 +75,33 @@
         <seg>Save game</seg>
       </tuv>
     </tu>
-    <tu tuid="Main">
-      <tuv xml:lang="pl">
-        <seg>Strona Główna</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Main</seg>
-      </tuv>
-    </tu>
-    <tu tuid="Play">
-      <tuv xml:lang="pl">
-        <seg>Graj</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Play</seg>
-      </tuv>
-    </tu>
-    <tu tuid="Alarm">
-      <tuv xml:lang="pl">
-        <seg>Alarm</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Alarm</seg>
-      </tuv>
-    </tu>
-    <tu tuid="Manual">
-      <tuv xml:lang="pl">
-        <seg>Tryb Ręczny</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Manual</seg>
-      </tuv>
-    </tu>
-    <tu tuid="Ustawienia">
-      <tuv xml:lang="pl">
-        <seg>Ustawienia</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Settings</seg>
-      </tuv>
-    </tu>
-    <tu tuid="Statystyki">
+    <tu tuid="statystyki">
       <tuv xml:lang="pl">
         <seg>STATYSTYKI AKTUALNEJ GRY</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>CURRENT GAME STATS</seg>
+        <seg>CURRENT GAME STATISTICS
+</seg>
       </tuv>
     </tu>
-    <tu tuid="Twoj_ruch">
+    <tu tuid="ruch_czlowieka">
       <tuv xml:lang="pl">
-        <seg>Twoj ruch!</seg>
+        <seg>Twój ruch!</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Your turn!</seg>
+        <seg>Your move!</seg>
       </tuv>
     </tu>
-    <tu tuid="Ruch_robot">
+    <tu tuid="ruch_robota">
       <tuv xml:lang="pl">
-        <seg>Aktualnie robot wykonuje ruch</seg>
+        <seg>Aktualnie robot wykonuje ruch!</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>The robot is currently moving</seg>
+        <seg>The robot is currently making a move!
+</seg>
       </tuv>
     </tu>
-    <tu tuid="Wybrany_kolor">
+    <tu tuid="wybrany_kolor">
       <tuv xml:lang="pl">
         <seg>Wybrany kolor:</seg>
       </tuv>
@@ -147,7 +109,7 @@
         <seg>Selected color:</seg>
       </tuv>
     </tu>
-    <tu tuid="Bialy">
+    <tu tuid="bialy_kolor">
       <tuv xml:lang="pl">
         <seg>Biały</seg>
       </tuv>
@@ -155,7 +117,7 @@
         <seg>White</seg>
       </tuv>
     </tu>
-    <tu tuid="Czrany">
+    <tu tuid="czarny_kolor">
       <tuv xml:lang="pl">
         <seg>Czarny</seg>
       </tuv>
@@ -163,111 +125,96 @@
         <seg>Black</seg>
       </tuv>
     </tu>
-    <tu tuid="Ruchy">
+    <tu tuid="ilosc_ruchow">
       <tuv xml:lang="pl">
-        <seg>Ilosc ruchow:</seg>
+        <seg>Ilość wykonanych ruchów:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Number of moves:</seg>
+        <seg>Number of moves made:</seg>
       </tuv>
     </tu>
-    <tu tuid="Zbite_czarne">
+    <tu tuid="zbite_czarne">
       <tuv xml:lang="pl">
-        <seg>Zbite czarne pionki:</seg>
+        <seg>Ilość zbitych czarnych:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Captured black pawns:</seg>
+        <seg>Number of blacks captured:</seg>
       </tuv>
     </tu>
-    <tu tuid="Zbite_biale">
+    <tu tuid="zbite_białe">
       <tuv xml:lang="pl">
-        <seg>Zbite białe pionki:</seg>
+        <seg>Ilość zbitych białych:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Captured white pawns:</seg>
+        <seg>Number of whites captured:</seg>
       </tuv>
     </tu>
-    <tu tuid="Ostatni_ruch">
+    <tu tuid="ostatnie_ruchy">
       <tuv xml:lang="pl">
-        <seg>Ostatnie ruchy:</seg>
+        <seg>Lista ostatnich ruchów:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Last moves:</seg>
+        <seg>List of recent moves:</seg>
       </tuv>
     </tu>
-    <tu tuid="L_S_game">
+    <tu tuid="przerwanie_gry">
       <tuv xml:lang="pl">
-        <seg>Załaduj / Zapisz grę</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Load / Save game</seg>
-      </tuv>
-    </tu>
-    <tu tuid="Koniec">
-      <tuv xml:lang="pl">
-        <seg>Porzuć grę</seg>
+        <seg>Przerwij grę</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>Abort game</seg>
       </tuv>
     </tu>
-    <tu tuid="Nowa">
+    <tu tuid="zasady_gry">
+      <tuv xml:lang="pl">
+        <seg>Zasady gry</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Rules of the game</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zaladuj_zapisz">
+      <tuv xml:lang="pl">
+        <seg>Załaduj grę / Zapisz grę</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>
+Load game / Save game</seg>
+      </tuv>
+    </tu>
+    <tu tuid="nowa_gra">
       <tuv xml:lang="pl">
         <seg>Nowa gra</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>New Game</seg>
+        <seg>New game</seg>
       </tuv>
     </tu>
-    <tu tuid="Login">
+    <tu tuid="uwaga">
       <tuv xml:lang="pl">
-        <seg>Zalogowany jako:</seg>
+        <seg>Uwaga!</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Logged in as:</seg>
+        <seg>Attention!</seg>
       </tuv>
     </tu>
-    <tu tuid="Choose_color">
+    <tu tuid="zapytanie_zakoncz">
       <tuv xml:lang="pl">
-        <seg>Wybierz kolor:</seg>
+        <seg>Czy na pewno chcesz zakończyć grę?</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Choose colour:</seg>
+        <seg>Are you sure you want to end the game?</seg>
       </tuv>
     </tu>
-    <tu tuid="Choose_mode">
+    <tu tuid="zakoncz">
       <tuv xml:lang="pl">
-        <seg>Wybierz tryb:</seg>
+        <seg>Zakończ</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Choose mode:</seg>
+        <seg>Finish</seg>
       </tuv>
     </tu>
-    <tu tuid="Łatwy">
-      <tuv xml:lang="pl">
-        <seg>Łatwy</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Easy</seg>
-      </tuv>
-    </tu>
-    <tu tuid="Średni">
-      <tuv xml:lang="pl">
-        <seg>Średni</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Medium</seg>
-      </tuv>
-    </tu>
-    <tu tuid="Ciężki">
-      <tuv xml:lang="pl">
-        <seg>Ciężki</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Hard</seg>
-      </tuv>
-    </tu>
-    <tu tuid="Anuluj">
+    <tu tuid="anuluj">
       <tuv xml:lang="pl">
         <seg>Anuluj</seg>
       </tuv>
@@ -275,5 +222,126 @@
         <seg>Cancel</seg>
       </tuv>
     </tu>
+    <tu tuid="wybor_koloru">
+      <tuv xml:lang="pl">
+        <seg>Wybierz kolor</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Choose a color</seg>
+      </tuv>
+    </tu>
+    <tu tuid="wybor_trybu">
+      <tuv xml:lang="pl">
+        <seg>Wybierz tryb</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Choose Mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="latwy">
+      <tuv xml:lang="pl">
+        <seg>Łatwy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Easy</seg>
+      </tuv>
+    </tu>
+    <tu tuid="sredni">
+      <tuv xml:lang="pl">
+        <seg>Średni</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Medium</seg>
+      </tuv>
+    </tu>
+    <tu tuid="trudny">
+      <tuv xml:lang="pl">
+        <seg>Trudny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Hard</seg>
+      </tuv>
+    </tu>
+    <tu tuid="start">
+      <tuv xml:lang="pl">
+        <seg>Rozpocznij</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Start</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zasady_1">
+      <tuv xml:lang="pl">
+        <seg>W warcaby gra dwóch graczy na ciemnych polach planszy. Jeden z nich gra ciemnymi figurami i wykonuje ruch jako pierwszy, po czym gracze wykonują swoje ruchy.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Checkers is played by two players on the dark squares of the board. One player uses dark pieces and moves first, then players take turns.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zasady_2">
+      <tuv xml:lang="pl">
+        <seg>Pionki przesuwają się po przekątnej o jedno pole do przodu, na puste pole. Jeśli pionek przeciwnika znajduje się na sąsiednim polu po przekątnej, a pole za nim jest puste, pionek musi zostać zbity, przeskakując nad nim. Zbity pionek zostaje usunięty z planszy.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Pieces move diagonally forward by one square to an empty space. If an opponent's piece is on the adjacent diagonal square and the square behind it is empty, the piece must be captured by jumping over it. The captured piece is removed from the board.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zasady_3">
+      <tuv xml:lang="pl">
+        <seg>Jeśli możliwe jest wielokrotne bicie, należy je wykonać zgodnie z obowiązującymi zasadami. Gracz przegrywa, jeśli nie ma już żadnych pionków lub nie może wykonać prawidłowego ruchu.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>If multiple captures are possible, they must be made according to the rules being used. A player loses if they have no pieces left or cannot make a legal move.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="powrot">
+      <tuv xml:lang="pl">
+        <seg>Wróć</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Back</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ponowny_zapis">
+      <tuv xml:lang="pl">
+        <seg>Zapisz ponownie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>New save</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ladowanie">
+      <tuv xml:lang="pl">
+        <seg>Załaduj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Load</seg>
+      </tuv>
+    </tu>
+    <tu tuid="kasowanie">
+      <tuv xml:lang="pl">
+        <seg>Skasuj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Delete</seg>
+      </tuv>
+    </tu>
+    <tu tuid="nazwa_pliku">
+      <tuv xml:lang="pl">
+        <seg>Nazwa pliku</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>File name</seg>
+      </tuv>
+    </tu>
+    <tu tuid="data_modyfikacji">
+      <tuv xml:lang="pl">
+        <seg>Data modyfikacji</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Modification date</seg>
+      </tuv>
+    </tu>
+    <tu tuid="puste_pole" />
   </body>
 </tmx>
