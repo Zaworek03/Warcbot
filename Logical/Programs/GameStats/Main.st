@@ -21,13 +21,6 @@ PROGRAM _INIT
 	LastMove := '';
 	MoveCount := 0;
 
-	(* --- AUDIT: konfiguracja trailu --- *)
-	MpAuditTrail_0.Enable     := TRUE;
-	MpAuditTrail_0.MpLink     := ADR(gAuditTrail);
-	MpAuditTrail_0.DeviceName := ADR('CF');
-	MpAuditTrail_0.FileName   := ADR('MyEventList');
-	MpAuditTrail_0();
-
 END_PROGRAM
 
 
@@ -166,8 +159,6 @@ PROGRAM _CYCLIC
 		firstScan := TRUE;
 		gBoardLast := gBoardActual;
 	END_IF
-
-	MpAuditTrail_0();   (* AUDIT: wolanie cykliczne *)
 
 END_PROGRAM
 

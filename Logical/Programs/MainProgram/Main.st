@@ -18,10 +18,12 @@ PROGRAM _INIT
 	MpAuditTrail_0.MpLink := ADR(gAuditTrail); 
 	MpAuditTrail_0.DeviceName := ADR('AUDIT'); 
 	MpAuditTrail_0.FileName := ADR('AuditList'); 
+	MpAuditTrail_0();
 	
 END_PROGRAM
 
 PROGRAM _CYCLIC
+	MpAuditTrail_0();
 	
 	IF TRUE THEN
 		CASE gStep OF

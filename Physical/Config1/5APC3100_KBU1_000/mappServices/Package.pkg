@@ -8,5 +8,6 @@
     <Object Type="File">ConfAlHist.mpalarmxhistory</Object>
     <Object Type="File">SaveRecipe.mprecipexml</Object>
     <Object Type="File">AuditTrial.mpaudittrail</Object>
+    <Object Type="File">Report.mpreportcore</Object>
   </Objects>
 </Package>
