@@ -698,5 +698,173 @@ Load game / Save game</seg>
         <seg>Jog joint speed</seg>
       </tuv>
     </tu>
+    <tu tuid="users">
+      <tuv xml:lang="pl">
+        <seg>Zarządzanie użytkownikami</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>User management</seg>
+      </tuv>
+    </tu>
+    <tu tuid="element_2">
+      <tuv xml:lang="pl">
+        <seg>Element  tabeli nr 2</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Table item 2</seg>
+      </tuv>
+    </tu>
+    <tu tuid="element_3">
+      <tuv xml:lang="pl">
+        <seg>Element tabeli nr 3</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Table item 3</seg>
+      </tuv>
+    </tu>
+    <tu tuid="nazwa_uzytkownika">
+      <tuv xml:lang="pl">
+        <seg>Nazwa użytkownika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Username</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ostatnie_logowanie">
+      <tuv xml:lang="pl">
+        <seg>Ostatnie logowanie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Last login</seg>
+      </tuv>
+    </tu>
+    <tu tuid="role">
+      <tuv xml:lang="pl">
+        <seg>Role</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Roles</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zablokowani">
+      <tuv xml:lang="pl">
+        <seg>Zablokowani</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Locked</seg>
+      </tuv>
+    </tu>
+    <tu tuid="administrator">
+      <tuv xml:lang="pl">
+        <seg>Administrator</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Admin</seg>
+      </tuv>
+    </tu>
+    <tu tuid="haslo">
+      <tuv xml:lang="pl">
+        <seg>Hasło</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Password</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zaloguj">
+      <tuv xml:lang="pl">
+        <seg>Zaloguj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Login</seg>
+      </tuv>
+    </tu>
+    <tu tuid="dodaj_uzytkownika">
+      <tuv xml:lang="pl">
+        <seg>Dodaj użytkownika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Add user</seg>
+      </tuv>
+    </tu>
+    <tu tuid="usun_uzytkownika">
+      <tuv xml:lang="pl">
+        <seg>Usuń użytkownika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Remove user</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zmodyfikuj_uzytkownika">
+      <tuv xml:lang="pl">
+        <seg>Zmodyfikuj użytkownika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Modify user</seg>
+      </tuv>
+    </tu>
+    <tu tuid="sv">
+      <tuv xml:lang="pl">
+        <seg>sv</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>sv</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Id">
+      <tuv xml:lang="pl">
+        <seg>Id</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Id</seg>
+      </tuv>
+    </tu>
+    <tu tuid="nieudane_logowanie">
+      <tuv xml:lang="pl">
+        <seg>Logowanie nieudane</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Login failed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="udane_logowanie">
+      <tuv xml:lang="pl">
+        <seg>Zalogowano pomyślnie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Login successfull</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zmiana_użytkownika">
+      <tuv xml:lang="pl">
+        <seg>Użytkownik zmienił się na:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>User changed to: </seg>
+      </tuv>
+    </tu>
+    <tu tuid="info_o_wygranym">
+      <tuv xml:lang="pl">
+        <seg>Informacja o zwycięzcy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Information about the winner</seg>
+      </tuv>
+    </tu>
+    <tu tuid="gratulacje">
+      <tuv xml:lang="pl">
+        <seg>Gratulacje!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Congratulations!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="info_gratulacje">
+      <tuv xml:lang="pl">
+        <seg>Wygrałeś partię warcabów z robotem! Bądź dumny z osiągniętego sukcesu!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>You won a game of checkers against a robot! Be proud of your achievement!</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
