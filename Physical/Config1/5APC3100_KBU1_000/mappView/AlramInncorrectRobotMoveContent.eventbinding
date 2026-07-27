@@ -12,13 +12,6 @@
               </Target>
             </Action>
           </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gStep">
-                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="5" />
-              </Target>
-            </Action>
-          </Step>
           <Step order="2">
             <Action>
               <Target xsi:type="clientSystem.Action">
