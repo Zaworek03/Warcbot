@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="NewSaveContent" guid="3bbef6ae-4d7f-4341-bc1c-bec7ba4f1beb" height="300" width="500" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.TextInput" id="TextInFileName" top="120" left="80" width="340" height="40" zIndex="0" placeholder="NewSave" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelFileName" top="80" left="80" width="340" zIndex="1" text="File name" textAlign="center" style="Caption" />
-    <Widget xsi:type="widgets.brease.Button" id="BtnSave" top="240" left="340" width="140" height="40" zIndex="2" text="Save" style="Command" />
+    <Widget xsi:type="widgets.brease.TextInput" id="TextInFileName" top="120" left="80" width="340" height="40" zIndex="0" placeholder="$IAT/ponowny_zapis" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelFileName" top="80" left="80" width="340" zIndex="1" text="$IAT/nazwa_pliku" textAlign="center" style="Caption" />
+    <Widget xsi:type="widgets.brease.Button" id="BtnSave" top="240" left="340" width="140" height="40" zIndex="2" text="$IAT/zapisz" style="Command" />
     <Widget xsi:type="widgets.brease.Label" id="SaveSucces" top="180" left="80" width="340" zIndex="3" text="File saved succesully" textColor="rgba(50, 205, 50, 1)" visible="false" />
-    <Widget xsi:type="widgets.brease.Label" id="SaveFail" top="180" left="80" width="340" zIndex="4" text="Save failed, try different name" textColor="rgba(255, 0, 0, 1)" visible="false" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="200" left="80" width="340" zIndex="5" text="Too many saves, delete some to make new ones" textColor="rgba(255, 0, 0, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Label" id="SaveFail" top="180" left="80" width="340" zIndex="4" text="$IAT/inna_nazwa" textColor="rgba(255, 0, 0, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="200" left="80" width="340" zIndex="5" text="$IAT/tego_juz_za_wiele" textColor="rgba(255, 0, 0, 1)" visible="false" />
   </Widgets>
 </Content>
