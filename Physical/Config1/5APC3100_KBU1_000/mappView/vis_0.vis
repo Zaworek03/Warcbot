@@ -5,7 +5,7 @@
     <Page refId="Main" />
     <Page refId="Play" />
     <Page refId="Alarm" />
-    <Page refId="Manual" />
+		<Page refId="Manual" />
     <Page refId="Live" />
     <Page refId="Settings" />
   </Pages>

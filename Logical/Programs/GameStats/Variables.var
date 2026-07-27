@@ -20,4 +20,9 @@ VAR
 	pChar : REFERENCE TO USINT; (*wskaznik do budowy stringu*)
 	LastMove : STRING[20]; (*ostatni wykryty ruch*)
 	MoveHistory : ARRAY[1..4] OF STRING[20]; (*[1] najnowszy, [4] najstarszy*)
+	MpAuditTrail_0 : MpAuditTrail;
+	auditTmp   : STRING[80];
+	MessageVar : WSTRING[100];
+	TypeVar    : WSTRING[100];
+	CommentVar : WSTRING[100];
 END_VAR

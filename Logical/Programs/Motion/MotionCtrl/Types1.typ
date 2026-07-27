@@ -2,6 +2,7 @@
 TYPE
 	RobotStateType : 
 		(
+		ROBOT_DISABLED,
 		ROBOT_ENABLED,
 		ROBOT_POWERED,
 		ROBOT_HOMED,

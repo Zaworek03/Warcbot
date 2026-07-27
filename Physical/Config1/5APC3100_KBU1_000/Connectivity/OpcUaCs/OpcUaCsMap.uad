@@ -64,6 +64,8 @@
             <Variable Name="JogZNeg" />
             <Variable Name="Speed" EURangesId="3" EngineeringUnitId="2" />
           </Variable>
+          <Variable Name="RequestRehomeRobot" />
+          <Variable Name="RequestGoHome" />
         </Variable>
       </Variable>
     </GlobalVariables>

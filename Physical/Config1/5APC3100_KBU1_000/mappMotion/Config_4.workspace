@@ -7,12 +7,12 @@
         <Group ID="Cuboid[1]">
           <Group ID="Translation">
             <Property ID="X" Value="-215" />
-            <Property ID="Y" Value="-490" />
+            <Property ID="Y" Value="-476" />
             <Property ID="Z" Value="0" />
           </Group>
           <Group ID="Dimension">
             <Property ID="X" Value="970" />
-            <Property ID="Y" Value="980" />
+            <Property ID="Y" Value="952" />
             <Property ID="Z" Value="750" />
           </Group>
         </Group>
@@ -29,7 +29,7 @@
           <Group ID="Dimension">
             <Property ID="X" Value="370" />
             <Property ID="Y" Value="765" />
-            <Property ID="Z" Value="215" />
+            <Property ID="Z" Value="228" />
           </Group>
         </Group>
       </Group>

@@ -1,7 +1,5 @@
-
-
-
 PROGRAM _INIT
+
 	WinOrLose;
 	EndGame;
 	gPlayerColor;
@@ -22,7 +20,16 @@ PROGRAM _INIT
 	MoveHistory[4] := '';
 	LastMove := '';
 	MoveCount := 0;
+
+	(* --- AUDIT: konfiguracja trailu --- *)
+	MpAuditTrail_0.Enable     := TRUE;
+	MpAuditTrail_0.MpLink     := ADR(gAuditTrail);
+	MpAuditTrail_0.DeviceName := ADR('CF');
+	MpAuditTrail_0.FileName   := ADR('MyEventList');
+	MpAuditTrail_0();
+
 END_PROGRAM
+
 
 PROGRAM _CYCLIC
 
@@ -32,7 +39,7 @@ PROGRAM _CYCLIC
 			MoveCount := gGameStats.MoveCount;
 			gGameStats.Load := FALSE;
 		END_IF;
-		
+
 		whiteOnBoard := 0;
 		blackOnBoard := 0;
 
@@ -70,7 +77,7 @@ PROGRAM _CYCLIC
 					END_IF;
 				END_FOR;
 			END_FOR;
-			
+
 			IF toRow <> 0 THEN
 				FOR i := 1 TO 8 DO
 					FOR j := 1 TO 8 DO
@@ -122,7 +129,22 @@ PROGRAM _CYCLIC
 				MoveHistory[1] := LastMove;
 
 				MoveCount := MoveCount + 1;
-				
+
+				(* --- AUDIT: kto wykonal ruch i dokad --- *)
+				IF movedColor = gPlayerColor THEN
+					brsstrcpy(ADR(auditTmp), ADR('Gracz wykonal ruch: '));
+				ELSE
+					brsstrcpy(ADR(auditTmp), ADR('Robot wykonal ruch: '));
+				END_IF;
+				brsstrcat(ADR(auditTmp), ADR(LastMove));
+
+				MessageVar := STRING_TO_WSTRING(auditTmp);
+				TypeVar    := "GameMove";
+				CommentVar := "";
+
+				MpAuditCustomEvent(gAuditTrail, TypeVar, MessageVar, CommentVar);
+				(* --- koniec AUDIT --- *)
+
 				gGameStats.MoveHistory := MoveHistory;
 				gGameStats.MoveCount := MoveCount;
 			END_IF;
@@ -130,7 +152,7 @@ PROGRAM _CYCLIC
 			gBoardLast := gBoardActual;
 		END_IF;
 
-		ELSE
+	ELSE
 		DeadWhitePiece := 0;
 		DeadBlackPiece := 0;
 		whiteOnBoard := 0;
@@ -145,9 +167,12 @@ PROGRAM _CYCLIC
 		gBoardLast := gBoardActual;
 	END_IF
 
+	MpAuditTrail_0();   (* AUDIT: wolanie cykliczne *)
+
 END_PROGRAM
 
+
 PROGRAM _EXIT
-	(* Insert code here *)
+    (* Insert code here *)
 
 END_PROGRAM

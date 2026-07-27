@@ -22,6 +22,7 @@ TYPE
 		ExposureTime : UDINT;
 		NumSearchMax : USINT;
 		ScoreMin : USINT;
+		GainLevel : USINT;
 	END_STRUCT;
 	CameraStatusType : 	STRUCT 
 		AcquisitionReady : BOOL;
@@ -29,6 +30,7 @@ TYPE
 		ProcessingError : UINT;
 		ReadFocus : UINT;
 		ReadExposureTime : UDINT;
+		ReadGainLevel : USINT;
 	END_STRUCT;
 	DetectedPieceType : 	STRUCT 
 		PositionX : DINT;

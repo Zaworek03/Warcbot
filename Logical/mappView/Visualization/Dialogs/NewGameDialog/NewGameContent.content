@@ -3,20 +3,20 @@
   <Widgets>
     <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="60" left="40" height="160" zIndex="0">
       <Widgets>
-        <Widget xsi:type="widgets.brease.ToggleButton" id="BlackToggleBtn" top="0" left="0" width="200" height="75" zIndex="0" text="Black" style="Command" />
-        <Widget xsi:type="widgets.brease.ToggleButton" id="WhiteToggleBtn" top="85" left="0" width="200" height="75" zIndex="1" text="White" style="Command" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="BlackToggleBtn" top="0" left="0" width="200" height="75" zIndex="0" text="$IAT/czarny_kolor" style="Command" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="WhiteToggleBtn" top="85" left="0" width="200" height="75" zIndex="1" text="$IAT/bialy_kolor" style="Command" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar2" top="60" left="260" height="160" zIndex="1">
       <Widgets>
-        <Widget xsi:type="widgets.brease.ToggleButton" id="EasyModeToggleBtn" top="0" left="0" width="200" height="40" zIndex="0" text="Easy" style="Command" />
-        <Widget xsi:type="widgets.brease.ToggleButton" id="HardModeToggleBtn" top="120" left="0" width="200" height="40" zIndex="1" text="Hard" style="Command" />
-        <Widget xsi:type="widgets.brease.ToggleButton" id="MediumModeToggleBtn" top="60" left="0" width="200" height="40" zIndex="2" text="Medium" style="Command" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="EasyModeToggleBtn" top="0" left="0" width="200" height="40" zIndex="0" text="$IAT/latwy" style="Command" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="HardModeToggleBtn" top="120" left="0" width="200" height="40" zIndex="1" text="$IAT/trudny" style="Command" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="MediumModeToggleBtn" top="60" left="0" width="200" height="40" zIndex="2" text="$IAT/sredni" style="Command" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Label" id="ChooseModeLb" top="20" left="260" width="200" zIndex="2" text="Choose mode:" textColor="rgba(0, 0, 0, 1)" textAlign="center" bold="true" style="Title2" />
-    <Widget xsi:type="widgets.brease.Label" id="ChooseColourLb" top="20" left="40" width="200" zIndex="3" text="Choose colour:" textColor="rgba(0, 0, 0, 1)" textAlign="center" bold="true" style="Title2" />
-    <Widget xsi:type="widgets.brease.Button" id="CancelBtn" top="240" left="140" zIndex="4" text="Cancel" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="StartBtn" top="240" left="260" zIndex="5" text="Start" style="Command" />
+    <Widget xsi:type="widgets.brease.Label" id="ChooseModeLb" top="20" left="260" width="200" zIndex="2" text="$IAT/wybor_trybu" textColor="rgba(0, 0, 0, 1)" textAlign="center" bold="true" style="Title2" />
+    <Widget xsi:type="widgets.brease.Label" id="ChooseColourLb" top="20" left="40" width="200" zIndex="3" text="$IAT/wybor_koloru" textColor="rgba(0, 0, 0, 1)" textAlign="center" bold="true" style="Title2" />
+    <Widget xsi:type="widgets.brease.Button" id="CancelBtn" top="240" left="140" zIndex="4" text="$IAT/anuluj" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="StartBtn" top="240" left="260" zIndex="5" text="$IAT/start" style="Command" />
   </Widgets>
 </Content>
