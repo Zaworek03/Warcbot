@@ -12,4 +12,5 @@ VAR RETAIN
 	AxisRestorePos3 : {REDUND_UNREPLICABLE} McAcpAxRestorePosType;
 	AxisRestorePos4 : {REDUND_UNREPLICABLE} McAcpAxRestorePosType;
 	AxisRestorePos5 : {REDUND_UNREPLICABLE} McAcpAxRestorePosType;
+	RestorPosReady : BOOL;
 END_VAR

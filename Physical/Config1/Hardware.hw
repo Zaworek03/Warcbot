@@ -101,7 +101,7 @@
     <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0.0008" />
     <Parameter ID="FeedForward" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode" Value="CyclicValueFromAxesGroup" />
     <Parameter ID="Mode" Location="DriveConfiguration/Channel[1]/RealAxis/Homing" Value="RestorePosition" />
-    <Parameter ID="RestorePositionVariable" Location="DriveConfiguration/Channel[1]/RealAxis/Homing" Value="::MotionCtrl:AxisRestorePos0" />
+    <Parameter ID="RestorePositionVariable" Location="DriveConfiguration/Channel[1]/RealAxis/Homing" Value="::AxisRestorePos0" />
     <Parameter ID="PositionError" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="1" />
     <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[1]/RealAxis" Value="Used" />
     <Parameter ID="JerkTime" Location="DriveConfiguration/Channel[1]/RealAxis/JerkFilter" Value="0.01" />
@@ -114,7 +114,7 @@
     <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0.0008" />
     <Parameter ID="FeedForward" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode" Value="CyclicValueFromAxesGroup" />
     <Parameter ID="Mode" Location="DriveConfiguration/Channel[2]/RealAxis/Homing" Value="RestorePosition" />
-    <Parameter ID="RestorePositionVariable" Location="DriveConfiguration/Channel[2]/RealAxis/Homing" Value="::MotionCtrl:AxisRestorePos2" />
+    <Parameter ID="RestorePositionVariable" Location="DriveConfiguration/Channel[2]/RealAxis/Homing" Value="::AxisRestorePos2" />
     <Parameter ID="PositionError" Location="DriveConfiguration/Channel[2]/RealAxis/MovementErrorLimits" Value="1" />
     <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[2]/RealAxis" Value="Used" />
     <Parameter ID="JerkTime" Location="DriveConfiguration/Channel[2]/RealAxis/JerkFilter" Value="0.01" />
@@ -129,7 +129,7 @@
     <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="0.0008" />
     <Parameter ID="FeedForward" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode" Value="CyclicValueFromAxesGroup" />
     <Parameter ID="Mode" Location="DriveConfiguration/Channel[3]/RealAxis/Homing" Value="RestorePosition" />
-    <Parameter ID="RestorePositionVariable" Location="DriveConfiguration/Channel[3]/RealAxis/Homing" Value="::MotionCtrl:AxisRestorePos4" />
+    <Parameter ID="RestorePositionVariable" Location="DriveConfiguration/Channel[3]/RealAxis/Homing" Value="::AxisRestorePos4" />
     <Parameter ID="PositionError" Location="DriveConfiguration/Channel[3]/RealAxis/MovementErrorLimits" Value="1" />
     <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[3]/RealAxis" Value="Used" />
     <Parameter ID="JerkTime" Location="DriveConfiguration/Channel[3]/RealAxis/JerkFilter" Value="0.01" />
@@ -149,7 +149,7 @@
     <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0.0008" />
     <Parameter ID="FeedForward" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode" Value="CyclicValueFromAxesGroup" />
     <Parameter ID="Mode" Location="DriveConfiguration/Channel[1]/RealAxis/Homing" Value="RestorePosition" />
-    <Parameter ID="RestorePositionVariable" Location="DriveConfiguration/Channel[1]/RealAxis/Homing" Value="::MotionCtrl:AxisRestorePos1" />
+    <Parameter ID="RestorePositionVariable" Location="DriveConfiguration/Channel[1]/RealAxis/Homing" Value="::AxisRestorePos1" />
     <Parameter ID="PositionError" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="1" />
     <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[1]/RealAxis" Value="Used" />
     <Parameter ID="JerkTime" Location="DriveConfiguration/Channel[1]/RealAxis/JerkFilter" Value="0.01" />
@@ -163,7 +163,7 @@
     <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0.0008" />
     <Parameter ID="FeedForward" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode" Value="CyclicValueFromAxesGroup" />
     <Parameter ID="Mode" Location="DriveConfiguration/Channel[2]/RealAxis/Homing" Value="RestorePosition" />
-    <Parameter ID="RestorePositionVariable" Location="DriveConfiguration/Channel[2]/RealAxis/Homing" Value="::MotionCtrl:AxisRestorePos3" />
+    <Parameter ID="RestorePositionVariable" Location="DriveConfiguration/Channel[2]/RealAxis/Homing" Value="::AxisRestorePos3" />
     <Parameter ID="PositionError" Location="DriveConfiguration/Channel[2]/RealAxis/MovementErrorLimits" Value="1" />
     <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[2]/RealAxis" Value="Used" />
     <Parameter ID="JerkTime" Location="DriveConfiguration/Channel[2]/RealAxis/JerkFilter" Value="0.01" />
@@ -177,7 +177,7 @@
     <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="0.0008" />
     <Parameter ID="FeedForward" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode" Value="CyclicValueFromAxesGroup" />
     <Parameter ID="Mode" Location="DriveConfiguration/Channel[3]/RealAxis/Homing" Value="RestorePosition" />
-    <Parameter ID="RestorePositionVariable" Location="DriveConfiguration/Channel[3]/RealAxis/Homing" Value="::MotionCtrl:AxisRestorePos5" />
+    <Parameter ID="RestorePositionVariable" Location="DriveConfiguration/Channel[3]/RealAxis/Homing" Value="::AxisRestorePos5" />
     <Parameter ID="PositionError" Location="DriveConfiguration/Channel[3]/RealAxis/MovementErrorLimits" Value="1" />
     <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[3]/RealAxis" Value="Used" />
     <Parameter ID="JerkTime" Location="DriveConfiguration/Channel[3]/RealAxis/JerkFilter" Value="0.01" />

@@ -40,7 +40,7 @@ VAR
 	JogJointPos1 : BOOL;
 	PileCalculatedOffs : McPosType;
 	JogYPos : BOOL;
-	RobotState : RobotStateType;
+	RobotState : RobotStateType := ROBOT_DISABLED;
 	JogJointPos5 : BOOL;
 	RTrigExecute : r_trig;
 	RTrigSTMotionDone : r_trig;

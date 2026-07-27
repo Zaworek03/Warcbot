@@ -11,8 +11,6 @@ PROGRAM _INIT
 	
 	mcGroupHome.AxesGroup := ADR(gAxesGroup_Racer3_1);
 	
-	RobotPar.ProgramName := 'move.st';
-	
 	Robot.MpLink := ADR(gAxesGroup_Racer3_1);
 	Robot.Enable := 1;
 	Robot.ErrorReset := 0;
@@ -47,27 +45,31 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		ROBOT_POWERED:
-			
-			IF gMotionInterface.Manual.RequestRehomeRobot THEN
-				FOR i := 0 TO 5 DO
-					mcGroupHome.HomingMode[i] := mcHOMING_DIRECT;
-					mcGroupHome.Position[i] := AxisPos[i];
-				END_FOR;
-				IF Robot.IsHomed THEN
-					gMotionInterface.Manual.RequestRehomeRobot := FALSE;
-				END_IF;
-			ELSE
+			// Bazowanie Restore Position
+			IF (NOT gMotionInterface.Manual.RequestRehomeRobot)
+				AND RestorPosReady THEN
 				FOR i := 0 TO 5 DO
 					mcGroupHome.HomingMode[i] := mcHOMING_RESTORE_POSITION;
 					mcGroupHome.Position[i] := AxisPos[i];
 				END_FOR;
-			END_IF;
-			
-			Robot.Home := TRUE;
-			
-			IF Robot.IsHomed THEN
-				RobotState := ROBOT_HOMED;
-				Robot.Home := FALSE;
+				mcGroupHome.Execute := TRUE;
+				IF mcGroupHome.Done THEN
+					RobotState := ROBOT_HOMED;
+					mcGroupHome.Execute := FALSE;
+				END_IF;
+			// Bazowanie Homing Direct
+			ELSE
+				FOR i := 0 TO 5 DO
+					mcGroupHome.HomingMode[i] := mcHOMING_DIRECT;
+					mcGroupHome.Position[i] := AxisPos[i];
+				END_FOR;
+				mcGroupHome.Execute := TRUE;
+				IF mcGroupHome.Done THEN
+					RobotState := ROBOT_HOMED;
+					gMotionInterface.Manual.RequestRehomeRobot := FALSE;
+					RestorPosReady := TRUE;
+					mcGroupHome.Execute := FALSE;
+				END_IF;
 			END_IF;
 		
 		ROBOT_HOMED:
@@ -246,7 +248,8 @@ PROGRAM _CYCLIC
 	
 	RTrigSTMotionDone();
 	RTrigExecute();
-	Robot();	
+	mcGroupHome();
+	Robot();
 END_PROGRAM
 
 PROGRAM _EXIT
