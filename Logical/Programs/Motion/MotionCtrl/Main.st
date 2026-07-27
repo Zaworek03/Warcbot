@@ -41,41 +41,49 @@ PROGRAM _CYCLIC
 		ROBOT_ENABLED:
 			Robot.Power := TRUE;
 			IF Robot.PowerOn THEN
-				RobotState := ROBOT_POWERED;
+				RobotState := ROBOT_HOMING_SELECT;
 			END_IF;
 			
-		ROBOT_POWERED:
+		ROBOT_HOMING_SELECT:
 			// Bazowanie Restore Position
-			IF (NOT gMotionInterface.Manual.RequestRehomeRobot)
-				AND RestorPosReady THEN
-				FOR i := 0 TO 5 DO
-					mcGroupHome.HomingMode[i] := mcHOMING_RESTORE_POSITION;
-					mcGroupHome.Position[i] := AxisPos[i];
-				END_FOR;
-				mcGroupHome.Execute := TRUE;
-				IF mcGroupHome.Done THEN
-					RobotState := ROBOT_HOMED;
-					mcGroupHome.Execute := FALSE;
-				END_IF;
+			IF RestorePosReady THEN
+				RobotState := ROBOT_HOMING_RESTORE;
 			// Bazowanie Homing Direct
 			ELSE
-				FOR i := 0 TO 5 DO
-					mcGroupHome.HomingMode[i] := mcHOMING_DIRECT;
-					mcGroupHome.Position[i] := AxisPos[i];
-				END_FOR;
-				mcGroupHome.Execute := TRUE;
-				IF mcGroupHome.Done THEN
-					RobotState := ROBOT_HOMED;
-					gMotionInterface.Manual.RequestRehomeRobot := FALSE;
-					RestorPosReady := TRUE;
-					mcGroupHome.Execute := FALSE;
-				END_IF;
+				gAlarm.RobotRestorePosFail := TRUE;
+				RobotState := ROBOT_HOMING_DIRECT;
 			END_IF;
 		
+		ROBOT_HOMING_DIRECT:
+			FOR i := 0 TO 5 DO
+				mcGroupHome.HomingMode[i] := mcHOMING_DIRECT;
+				mcGroupHome.Position[i] := AxisPos[i];
+			END_FOR;
+			mcGroupHome.Execute := TRUE;
+			IF mcGroupHome.Done THEN
+				RobotState := ROBOT_HOMED;
+				gMotionInterface.Manual.RequestRehomeRobot := FALSE;
+				RestorePosReady := TRUE;
+				mcGroupHome.Execute := FALSE;
+			END_IF;
+			
+		ROBOT_HOMING_RESTORE:
+			FOR i := 0 TO 5 DO
+				mcGroupHome.HomingMode[i] := mcHOMING_RESTORE_POSITION;
+				mcGroupHome.Position[i] := AxisPos[i];
+			END_FOR;
+			mcGroupHome.Execute := TRUE;
+			IF mcGroupHome.Done THEN
+				RobotState := ROBOT_HOMED;
+				mcGroupHome.Execute := FALSE;
+			END_IF;
+			
 		ROBOT_HOMED:
+			
+			gMotionInterface.Done := FALSE;
 			IF gMotionInterface.RequestManualMode THEN
 				RobotState := ROBOT_MANUAL;
-			ELSIF gMotionInterface.Execute THEN
+			ELSIF ExecuteImpulse  THEN
 				RobotState := ROBOT_EXECUTE;
 			END_IF;
 			
@@ -183,6 +191,7 @@ PROGRAM _CYCLIC
 				RobotPar.ProgramName := 'gohome.st';
 				Robot.MoveProgram := TRUE;
 				STMotionDone := FALSE;
+				RobotState := ROBOT_GO_HOME;
 				gMotionInterface.Manual.RequestGoHome := FALSE;
 			END_IF;
 			
@@ -193,7 +202,7 @@ PROGRAM _CYCLIC
 			
 			IF gMotionInterface.Manual.RequestRehomeRobot THEN
 				Robot.Jog := FALSE;
-				RobotState := ROBOT_ENABLED;
+				RobotState := ROBOT_HOMING_DIRECT;
 			END_IF;
 			
 			IF STMotionDoneImpulse THEN
@@ -201,49 +210,63 @@ PROGRAM _CYCLIC
 				Robot.Interrupt := TRUE;
 			END_IF;
 			
+		ROBOT_GO_HOME:
+			IF STMotionDone THEN
+				RobotState := ROBOT_MANUAL;
+			END_IF;
 			
 		ROBOT_EXECUTE:
 			
-			IF ExecuteImpulse THEN // impuls jest po to zeby nie dalo sie zmienic parametrow w czasie
-				STMotionStartPoint.Pos := gMotionInterface.StartPos;
-				STMotionStartPoint.Orient := STMotionDefaultOrient;
-				
-				// Ustalanie na jaka pozycje warcab ma byc odstawiony
-				CASE gMotionInterface.Command OF
-					MOVE_START_END:
-						STMotionEndPoint.Pos := gMotionInterface.EndPos;
-					DISCARD_WHITE:
-						PileCalculatedOffs.X := WhitePileXOffs*USINT_TO_REAL(WhitePileCnt/PileHeight);
-						PileCalculatedOffs.Y := 0;
-						PileCalculatedOffs.Z := PileZOffs*USINT_TO_REAL(WhitePileCnt MOD PileHeight);
-						
-						STMotionEndPoint.Pos.X := gMotionInterface.EndPos.X + PileCalculatedOffs.X;
-						STMotionEndPoint.Pos.Y := gMotionInterface.EndPos.Y + PileCalculatedOffs.Y;
-						STMotionEndPoint.Pos.Z := gMotionInterface.EndPos.Z + PileCalculatedOffs.Z;
-					DISCARD_BLACK:
-						PileCalculatedOffs.X := BlackPileXOffs*USINT_TO_REAL(BlackPileCnt/PileHeight);
-						PileCalculatedOffs.Y := 0;
-						PileCalculatedOffs.Z := PileZOffs*USINT_TO_REAL(BlackPileCnt MOD PileHeight);
-						
-						STMotionEndPoint.Pos.X := gMotionInterface.EndPos.X + PileCalculatedOffs.X;
-						STMotionEndPoint.Pos.Y := gMotionInterface.EndPos.Y + PileCalculatedOffs.Y;
-						STMotionEndPoint.Pos.Z := gMotionInterface.EndPos.Z + PileCalculatedOffs.Z;
-				END_CASE;
-				
-				RobotPar.ProgramName := 'move.st';
-				Robot.MoveProgram := TRUE;
-				STMotionEndPoint.Orient := STMotionDefaultOrient;
-				
-				gMotionInterface.Busy := TRUE;
-			END_IF;
+		STMotionStartPoint.Pos := gMotionInterface.StartPos;
+		STMotionStartPoint.Orient := STMotionDefaultOrient;
 			
-			IF STMotionDone THEN
+			// Ustalanie na jaka pozycje warcab ma byc odstawiony
+			CASE gMotionInterface.Command OF
+				MOVE_START_END:
+					STMotionEndPoint.Pos := gMotionInterface.EndPos;
+				DISCARD_WHITE:
+					PileCalculatedOffs.X := WhitePileXOffs * USINT_TO_REAL(WhitePileCnt/PileHeight);
+					PileCalculatedOffs.Y := 0;
+					PileCalculatedOffs.Z := PileZOffs * USINT_TO_REAL(WhitePileCnt MOD PileHeight);
+					
+					STMotionEndPoint.Pos.X := gMotionInterface.EndPos.X + PileCalculatedOffs.X;
+					STMotionEndPoint.Pos.Y := gMotionInterface.EndPos.Y + PileCalculatedOffs.Y;
+					STMotionEndPoint.Pos.Z := gMotionInterface.EndPos.Z + PileCalculatedOffs.Z;
+				DISCARD_BLACK:
+					PileCalculatedOffs.X := BlackPileXOffs * USINT_TO_REAL(BlackPileCnt/PileHeight);
+					PileCalculatedOffs.Y := 0;
+					PileCalculatedOffs.Z := PileZOffs * USINT_TO_REAL(BlackPileCnt MOD PileHeight);
+					
+					STMotionEndPoint.Pos.X := gMotionInterface.EndPos.X + PileCalculatedOffs.X;
+					STMotionEndPoint.Pos.Y := gMotionInterface.EndPos.Y + PileCalculatedOffs.Y;
+					STMotionEndPoint.Pos.Z := gMotionInterface.EndPos.Z + PileCalculatedOffs.Z;
+			END_CASE;
+			
+			// rozpoczecie pracy programu
+			RobotPar.ProgramName := 'move.st';
+			Robot.MoveProgram := TRUE;
+			STMotionEndPoint.Orient := STMotionDefaultOrient;
+			
+			gMotionInterface.Busy := TRUE;
+			RobotState := ROBOT_MOVING;
+		
+		ROBOT_MOVING:
+			IF NOT STMotionDone THEN
 				gMotionInterface.Busy := FALSE;
-				RobotState := ROBOT_HOMED;
 				Robot.MoveProgram := FALSE;
 				STMotionDone := FALSE;
+				gMotionInterface.Done := TRUE;
+				RobotState := ROBOT_MOVE_DONE;
+				Robot.Interrupt := TRUE;
 			END_IF;
 		
+		ROBOT_MOVE_DONE:
+			IF NOT gMotionInterface.Execute THEN
+				gMotionInterface.Done := FALSE;
+				Robot.Interrupt := FALSE;
+				RobotState := ROBOT_HOMED;
+			END_IF;
+			
 	END_CASE;
 	
 	RTrigSTMotionDone();
