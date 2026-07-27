@@ -36,7 +36,6 @@
       <Variable Name="gEnablePiece" RecursiveEnable="2" />
       <Variable Name="gESTOP" />
       <Variable Name="gAlarm" RecursiveEnable="2" />
-      <Variable Name="gStep" />
       <Variable Name="gMotionInterface">
         <Variable Name="RequestManualMode" />
         <Variable Name="Manual">
@@ -68,6 +67,7 @@
           <Variable Name="RequestGoHome" />
         </Variable>
       </Variable>
+      <Variable Name="gStep" />
     </GlobalVariables>
     <Task Name="SaveGame">
       <Variable Name="UIConnect">
@@ -119,6 +119,7 @@
     </Task>
     <Task Name="MainProgra">
       <Variable Name="BoardGit" />
+      <Variable Name="RobotMoveMarker" />
     </Task>
     <Task Name="PositionIn">
       <Variable Name="AxisQ1Pos" EngineeringUnitId="1" />

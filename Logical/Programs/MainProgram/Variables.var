@@ -7,3 +7,10 @@ VAR
 	j : USINT;
 	i : USINT;
 END_VAR
+VAR CONSTANT
+	BoardSpaces : USINT := 8;
+	Convert : ARRAY[0..4] OF INT := [0,1,2,1,2];
+END_VAR
+VAR
+	RobotMoveMarker : BOOL;
+END_VAR
