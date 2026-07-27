@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="LoginContent" guid="8bdfd541-a181-4fa9-93a1-406aa07d5749" height="300" width="500" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Login" id="Login1" top="80" left="100" height="120" zIndex="0" />
+    <Widget xsi:type="widgets.brease.Login" id="Login1" top="80" left="100" height="120" zIndex="0" autFailMessage="$IAT/nieudane_logowanie" buttonLabel="$IAT/zaloguj" passwordLabel="$IAT/haslo" setUserSuccessMessage="$IAT/udane_logowanie" userChangedMessage="$IAT/zmiana_użytkownika" userLabel="$IAT/nazwa_uzytkownika" />
   </Widgets>
 </Content>
