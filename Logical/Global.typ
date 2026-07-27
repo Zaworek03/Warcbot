@@ -9,6 +9,7 @@ TYPE
 		RobotProgramNotLoaded : BOOL; (*Program (napisany w STMotion) nie istnieje w pamiï¿½ci USER robota*)
 		RobotWorkspaceViolation : BOOL; (*TCP robota znalazï¿½o siï¿½ poza dozwolonym obszarem - robot nie moï¿½e kontynuowaï¿½ ruchu w tym kierunku*)
 		RobotAxisViolation : BOOL; (*Robota przekroczyï¿½ maksymalnï¿½ pozycjï¿½ kï¿½towï¿½ w ktï¿½rejï¿½ z osi*)
+		RobotRestorePosFail : BOOL; (*Nie uda³o siê wykonaæ bazowania za pomoc¹ restore pos podczas uruchamiania robota*)
 	END_STRUCT;
 	GameEnum : 	STRUCT 
 		BoardActual : ARRAY[1..8,1..8]OF USINT;

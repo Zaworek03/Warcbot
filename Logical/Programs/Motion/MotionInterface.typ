@@ -39,6 +39,7 @@ TYPE
 		Command : RobotCommandType; (*Przesuniêcie warcaba ze StartPos na EndPos*)
 		Execute : BOOL; (*Najlepiej podac impuls*)
 		Busy : BOOL;
+		Done : BOOL;
 		Manual : ManualType;
 		Enable : BOOL;
 	END_STRUCT;
