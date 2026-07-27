@@ -10,13 +10,6 @@ TYPE
 		RobotWorkspaceViolation : BOOL; (*TCP robota znalaz�o si� poza dozwolonym obszarem - robot nie mo�e kontynuowa� ruchu w tym kierunku*)
 		RobotAxisViolation : BOOL; (*Robota przekroczy� maksymaln� pozycj� k�tow� w kt�rej� z osi*)
 	END_STRUCT;
-	GameEnum : 	STRUCT 
-		BoardActual : ARRAY[1..8,1..8]OF USINT;
-		gPickPiece : ARRAY[1..8,1..8]OF BOOL;
-		gEnableMove : ARRAY[1..8,1..8]OF BOOL;
-		gPickMove : ARRAY[1..8,1..8]OF BOOL;
-		gEnablePiece : ARRAY[1..8,1..8]OF BOOL;
-	END_STRUCT;
 	GameStatStruct : 	STRUCT 
 		MoveCount : INT;
 		MoveHistory : ARRAY[1..4]OF STRING[20];

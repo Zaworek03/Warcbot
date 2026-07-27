@@ -14,7 +14,9 @@
       </Group>
       <Group ID="FileDeviceWhitelist" />
       <Group ID="DiagnosticPageConf">
-        <Selector ID="DiagnosticPageSelection" Value="1" />
+        <Selector ID="DiagnosticPageSelection" Value="2">
+          <Property ID="DiagnosticPageRole[1]" Value="Administraotr" />
+        </Selector>
       </Group>
       <Selector ID="Deployment" Value="DeploymentPLC" />
     </Group>

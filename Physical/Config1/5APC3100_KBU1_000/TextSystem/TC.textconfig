@@ -12,6 +12,8 @@
     </Group>
     <Group ID="TargetFiles">
       <Property ID="TargetFile[1]" Value="mappView.Resources.Texts.mappviewTexts.tmx" />
+      <Property ID="TargetFile[2]" Value="Libraries.MpAudit.TxtEvent.tmx" />
+      <Property ID="TargetFile[3]" Value="mappView.Resources.Texts.LocalizableTexts.tmx" />
     </Group>
   </Element>
 </Configuration>
