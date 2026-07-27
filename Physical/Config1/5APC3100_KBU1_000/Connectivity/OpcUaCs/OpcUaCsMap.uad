@@ -5,16 +5,16 @@
     <ACLAliases />
     <EURangeViolationAliases />
     <EURangesAliases>
-      <EURanges Id="2">
-        <EURange>
-          <Low ValueProvider="Const">0</Low>
-          <High ValueProvider="Const">120</High>
-        </EURange>
-      </EURanges>
       <EURanges Id="3">
         <EURange>
           <Low ValueProvider="Const">0</Low>
-          <High ValueProvider="Const">200</High>
+          <High ValueProvider="Const">50</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="4">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">12</High>
         </EURange>
       </EURanges>
     </EURangesAliases>
@@ -53,7 +53,7 @@
             <Variable Name="JogNeg3" />
             <Variable Name="JogNeg4" />
             <Variable Name="JogNeg5" />
-            <Variable Name="Speed" EURangesId="2" EngineeringUnitId="1" />
+            <Variable Name="Speed" EURangesId="4" EngineeringUnitId="1" />
           </Variable>
           <Variable Name="Cartesian">
             <Variable Name="JogXPos" />
