@@ -1,62 +1,63 @@
+(* Sterowanie robotem i homing *)
 VAR
-	STMotionDone : BOOL := FALSE;
-END_VAR
-VAR CONSTANT
-	BlackPileXOffs : REAL := 50;
-	PileZOffs : REAL := 26;
-	PileHeight : USINT := 4;
-END_VAR
-VAR
+	RobotState : RobotStateType := ROBOT_DISABLED;
+	mcGroupHome : MC_BR_GroupHome_15;
 	AxisPos : ARRAY[0..5] OF REAL := [2(0),-90,3(0)];
+	i : USINT;
 END_VAR
-VAR CONSTANT
-	WhitePileXOffs : REAL := -50;
-END_VAR
+(* Wymiana danych z ST Motion *)
 VAR
+	STMotionStartPoint : McPointType;
+	STMotionEndPoint : McPointType;
 	STMotionHomePoint : McPointType := (Pos:=(X:=400,Y:=0,Z:=500),Orient:=(Angle1:=0,Angle2:=180,Angle3:=0));
+	STMotionDone : BOOL := FALSE;
 END_VAR
 VAR CONSTANT
 	STMotionDefaultOrient : McOrientType := (Angle1:=0,Angle2:=180,Angle3:=0);
 END_VAR
+(* Synchronizacja PLC ze ST Motion *)
 VAR
-	JogJointNeg0 : BOOL;
-	JogJointNeg3 : BOOL;
-	JogJointNeg2 : BOOL;
-	JogZNeg : BOOL;
-	JogJointNeg1 : BOOL;
-	ExecuteImpulse : BOOL;
-	JogJointPos3 : BOOL;
-	JogJointAny : BOOL;
-	i : USINT;
-	JogJointNeg5 : BOOL;
-	BlackPileCnt : USINT;
-	JogJointNeg4 : BOOL;
-END_VAR
-(*Zmienne dla ST Motion*)
-(*Jog Cartesian*)
-VAR
-	STMotionStartPoint : McPointType;
-	mcGroupHome : MC_BR_GroupHome_15;
-	JogJointPos1 : BOOL;
-	PileCalculatedOffs : McPosType;
-	JogYPos : BOOL;
-	RobotState : RobotStateType := ROBOT_DISABLED;
-	JogJointPos5 : BOOL;
 	RTrigExecute : r_trig;
+	ExecuteImpulse : BOOL;
 	RTrigSTMotionDone : r_trig;
-	JogYNeg : BOOL;
 	STMotionDoneImpulse : BOOL;
-	STMotionEndPoint : McPointType;
-	JogXPos : BOOL;
-	WhitePileCnt : USINT;
-	JogJointSpeed : REAL;
-	JogZPos : BOOL;
-	JogCartesianSpeed : REAL;
-	JogJointPos4 : BOOL;
-	JogXNeg : BOOL;
-	JogJointPos2 : BOOL;
 END_VAR
-(*Jog Joint*)
+(* Obs³uga stosów warcabów *)
+VAR CONSTANT
+	BlackPileXOffs : REAL := 50;
+	WhitePileXOffs : REAL := -50;
+	PileZOffs : REAL := 26;
+	PileHeight : USINT := 4;
+END_VAR
+VAR
+	BlackPileCnt : USINT;
+	WhitePileCnt : USINT;
+	PileCalculatedOffs : McPosType;
+END_VAR
+(* Rêczne sterowanie kartezjañskie *)
+VAR
+	JogXPos : BOOL;
+	JogXNeg : BOOL;
+	JogYPos : BOOL;
+	JogYNeg : BOOL;
+	JogZPos : BOOL;
+	JogZNeg : BOOL;
+	JogCartesianSpeed : REAL;
+END_VAR
+(* Rêczne sterowanie osiami robota *)
 VAR
 	JogJointPos0 : BOOL;
+	JogJointNeg0 : BOOL;
+	JogJointPos1 : BOOL;
+	JogJointNeg1 : BOOL;
+	JogJointPos2 : BOOL;
+	JogJointNeg2 : BOOL;
+	JogJointPos3 : BOOL;
+	JogJointNeg3 : BOOL;
+	JogJointPos4 : BOOL;
+	JogJointNeg4 : BOOL;
+	JogJointPos5 : BOOL;
+	JogJointNeg5 : BOOL;
+	JogJointAny : BOOL;
+	JogJointSpeed : REAL;
 END_VAR
