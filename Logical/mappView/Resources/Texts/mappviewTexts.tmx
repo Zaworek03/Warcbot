@@ -576,5 +576,127 @@ Load game / Save game</seg>
         <seg>Settings</seg>
       </tuv>
     </tu>
+    <tu tuid="kartezjanski">
+      <tuv xml:lang="pl">
+        <seg>SYSTEM KARTEZJAŃSKI</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>CARTESIAN SYSTEM</seg>
+      </tuv>
+    </tu>
+    <tu tuid="chwytanie">
+      <tuv xml:lang="pl">
+        <seg>CHWYĆ/ODŁÓŻ</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>PICK/DROP</seg>
+      </tuv>
+    </tu>
+    <tu tuid="przegubowy">
+      <tuv xml:lang="pl">
+        <seg>RUCHY PRZEGUBOWE</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>JOINTS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="os_1">
+      <tuv xml:lang="pl">
+        <seg>OŚ 1</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>AXIS 1</seg>
+      </tuv>
+    </tu>
+    <tu tuid="os_2">
+      <tuv xml:lang="pl">
+        <seg>OŚ 2</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>AXIS 2</seg>
+      </tuv>
+    </tu>
+    <tu tuid="os_3">
+      <tuv xml:lang="pl">
+        <seg>OŚ 3</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>AXIS 3</seg>
+      </tuv>
+    </tu>
+    <tu tuid="os_4">
+      <tuv xml:lang="pl">
+        <seg>OŚ 4</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>AXIS 4</seg>
+      </tuv>
+    </tu>
+    <tu tuid="os_5">
+      <tuv xml:lang="pl">
+        <seg>OŚ 5</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>AXIS 5</seg>
+      </tuv>
+    </tu>
+    <tu tuid="os_6">
+      <tuv xml:lang="pl">
+        <seg>OŚ 6</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>AXIS 6</seg>
+      </tuv>
+    </tu>
+    <tu tuid="pozycje">
+      <tuv xml:lang="pl">
+        <seg>POZYCJE</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>POSITIONS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="polozenia_katowe">
+      <tuv xml:lang="pl">
+        <seg>Położenia kątowe poszczególnych osi</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Angular positions of individual axes</seg>
+      </tuv>
+    </tu>
+    <tu tuid="polozenia_kartezjanskie">
+      <tuv xml:lang="pl">
+        <seg>Położenia kartezjańskie poszczególnych osi</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cartesian positions of individual axes</seg>
+      </tuv>
+    </tu>
+    <tu tuid="tryb_reczny">
+      <tuv xml:lang="pl">
+        <seg>Włącz tryb ręczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Enable manual mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="predkosc_kartezjanska">
+      <tuv xml:lang="pl">
+        <seg>Prędkość w układzie kartezjańskim
+</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Jog cartesian speed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="predkosc_katowa">
+      <tuv xml:lang="pl">
+        <seg>Prędkość w przestrzeni złącz
+</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Jog joint speed</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
