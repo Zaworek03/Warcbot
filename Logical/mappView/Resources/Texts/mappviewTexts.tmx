@@ -487,5 +487,94 @@ Load game / Save game</seg>
         <seg>Acknowledge all</seg>
       </tuv>
     </tu>
+    <tu tuid="eksport_alarmow">
+      <tuv xml:lang="pl">
+        <seg>Historia alarmów została wyeksportowana jako:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarm history has been exported as:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="blad">
+      <tuv xml:lang="pl">
+        <seg>Wystąpił błąd</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Error occured</seg>
+      </tuv>
+    </tu>
+    <tu tuid="eksportowanie_alarmow">
+      <tuv xml:lang="pl">
+        <seg>Eksport historii alarmów</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Export alarm history</seg>
+      </tuv>
+    </tu>
+    <tu tuid="bledny_ruch">
+      <tuv xml:lang="pl">
+        <seg>Błędny ruch robota</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Incorrect robot movement
+</seg>
+      </tuv>
+    </tu>
+    <tu tuid="bledna_plansza">
+      <tuv xml:lang="pl">
+        <seg>Błędne ułożenie planszy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Incorrect board arrangement</seg>
+      </tuv>
+    </tu>
+    <tu tuid="main">
+      <tuv xml:lang="pl">
+        <seg>Start</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Main</seg>
+      </tuv>
+    </tu>
+    <tu tuid="play">
+      <tuv xml:lang="pl">
+        <seg>Graj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Play</seg>
+      </tuv>
+    </tu>
+    <tu tuid="alarm">
+      <tuv xml:lang="pl">
+        <seg>Alarmy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarm</seg>
+      </tuv>
+    </tu>
+    <tu tuid="manual">
+      <tuv xml:lang="pl">
+        <seg>Robot</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual</seg>
+      </tuv>
+    </tu>
+    <tu tuid="live">
+      <tuv xml:lang="pl">
+        <seg>Kamera</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Live</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ustawienia">
+      <tuv xml:lang="pl">
+        <seg>Ustawienia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Settings</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
