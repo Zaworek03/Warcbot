@@ -12,17 +12,17 @@ PROGRAM _INIT
 	gCameraCtrl.Parameters.NumSearchMax := 24;
 
 
-	gCameraCtrl.Calibration.TopLeftX := 31054;
-	gCameraCtrl.Calibration.TopLeftY := 8435;
+	gCameraCtrl.Calibration.TopLeftX := 41745;
+	gCameraCtrl.Calibration.TopLeftY := 11431;
 
-	gCameraCtrl.Calibration.TopRightX := 118132;
-	gCameraCtrl.Calibration.TopRightY := 9073;
+	gCameraCtrl.Calibration.TopRightX := 123472;
+	gCameraCtrl.Calibration.TopRightY := 13321;
 
-	gCameraCtrl.Calibration.BottomLeftX := 29851;
-	gCameraCtrl.Calibration.BottomLeftY := 94668;
+	gCameraCtrl.Calibration.BottomLeftX := 41129;
+	gCameraCtrl.Calibration.BottomLeftY := 91297;
 
-	gCameraCtrl.Calibration.BottomRightX := 117414;
-	gCameraCtrl.Calibration.BottomRightY := 96517;
+	gCameraCtrl.Calibration.BottomRightX := 119855;
+	gCameraCtrl.Calibration.BottomRightY := 91554;
 
 
 	gCameraCtrl.BoardReady := FALSE;
