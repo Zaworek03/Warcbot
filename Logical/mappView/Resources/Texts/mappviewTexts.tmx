@@ -342,6 +342,529 @@ Load game / Save game</seg>
         <seg>Modification date</seg>
       </tuv>
     </tu>
-    <tu tuid="puste_pole" />
+    <tu tuid="czas">
+      <tuv xml:lang="pl">
+        <seg>Czas</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Time
+</seg>
+      </tuv>
+    </tu>
+    <tu tuid="info">
+      <tuv xml:lang="pl">
+        <seg>Wiadomość</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Message</seg>
+      </tuv>
+    </tu>
+    <tu tuid="kod">
+      <tuv xml:lang="pl">
+        <seg>Kod</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Code</seg>
+      </tuv>
+    </tu>
+    <tu tuid="stary_stan">
+      <tuv xml:lang="pl">
+        <seg>Stary stan</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Old state</seg>
+      </tuv>
+    </tu>
+    <tu tuid="nowy_stan">
+      <tuv xml:lang="pl">
+        <seg>Nowy stan</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>New state</seg>
+      </tuv>
+    </tu>
+    <tu tuid="dodatkowe_info">
+      <tuv xml:lang="pl">
+        <seg>Informacje dodatkowe</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Additional info</seg>
+      </tuv>
+    </tu>
+    <tu tuid="stan">
+      <tuv xml:lang="pl">
+        <seg>Stan</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>State</seg>
+      </tuv>
+    </tu>
+    <tu tuid="nastepny">
+      <tuv xml:lang="pl">
+        <seg>Następny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Next</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zla_plansza">
+      <tuv xml:lang="pl">
+        <seg>Robot źle ułożył planszę! Popraw ją ręcznie, aby rozpocząć grę.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The robot placed the board incorrectly! Correct it manually to start the game.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="poprawiono">
+      <tuv xml:lang="pl">
+        <seg>Poprawiono</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Corrected</seg>
+      </tuv>
+    </tu>
+    <tu tuid="poddanie">
+      <tuv xml:lang="pl">
+        <seg>Poddaj grę</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Give up the game</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zly_pionek">
+      <tuv xml:lang="pl">
+        <seg>Robot źle ułożył pionka! Popraw pionek ręcznie, aby kontynuować grę.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The robot placed a piece incorrectly! Correct the piece manually to continue playing.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="poprzedni">
+      <tuv xml:lang="pl">
+        <seg>Poprzedni</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Previous</seg>
+      </tuv>
+    </tu>
+    <tu tuid="eksport">
+      <tuv xml:lang="pl">
+        <seg>Eksport</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Export</seg>
+      </tuv>
+    </tu>
+    <tu tuid="historia_alarmow">
+      <tuv xml:lang="pl">
+        <seg>Historia alarmów</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarm history</seg>
+      </tuv>
+    </tu>
+    <tu tuid="lista_alarmow">
+      <tuv xml:lang="pl">
+        <seg>Lista alarmów</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarm list</seg>
+      </tuv>
+    </tu>
+    <tu tuid="potwierdz">
+      <tuv xml:lang="pl">
+        <seg>Potwierdź </seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Acknowledge</seg>
+      </tuv>
+    </tu>
+    <tu tuid="potwierdz_wszystkie">
+      <tuv xml:lang="pl">
+        <seg>Potwierdź wszystko</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Acknowledge all</seg>
+      </tuv>
+    </tu>
+    <tu tuid="eksport_alarmow">
+      <tuv xml:lang="pl">
+        <seg>Historia alarmów została wyeksportowana jako:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarm history has been exported as:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="blad">
+      <tuv xml:lang="pl">
+        <seg>Wystąpił błąd</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Error occured</seg>
+      </tuv>
+    </tu>
+    <tu tuid="eksportowanie_alarmow">
+      <tuv xml:lang="pl">
+        <seg>Eksport historii alarmów</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Export alarm history</seg>
+      </tuv>
+    </tu>
+    <tu tuid="bledny_ruch">
+      <tuv xml:lang="pl">
+        <seg>Błędny ruch robota</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Incorrect robot movement
+</seg>
+      </tuv>
+    </tu>
+    <tu tuid="bledna_plansza">
+      <tuv xml:lang="pl">
+        <seg>Błędne ułożenie planszy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Incorrect board arrangement</seg>
+      </tuv>
+    </tu>
+    <tu tuid="main">
+      <tuv xml:lang="pl">
+        <seg>Start</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Main</seg>
+      </tuv>
+    </tu>
+    <tu tuid="play">
+      <tuv xml:lang="pl">
+        <seg>Graj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Play</seg>
+      </tuv>
+    </tu>
+    <tu tuid="alarm">
+      <tuv xml:lang="pl">
+        <seg>Alarmy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarm</seg>
+      </tuv>
+    </tu>
+    <tu tuid="manual">
+      <tuv xml:lang="pl">
+        <seg>Robot</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual</seg>
+      </tuv>
+    </tu>
+    <tu tuid="live">
+      <tuv xml:lang="pl">
+        <seg>Kamera</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Live</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ustawienia">
+      <tuv xml:lang="pl">
+        <seg>Ustawienia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Settings</seg>
+      </tuv>
+    </tu>
+    <tu tuid="kartezjanski">
+      <tuv xml:lang="pl">
+        <seg>SYSTEM KARTEZJAŃSKI</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>CARTESIAN SYSTEM</seg>
+      </tuv>
+    </tu>
+    <tu tuid="chwytanie">
+      <tuv xml:lang="pl">
+        <seg>CHWYĆ/ODŁÓŻ</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>PICK/DROP</seg>
+      </tuv>
+    </tu>
+    <tu tuid="przegubowy">
+      <tuv xml:lang="pl">
+        <seg>RUCHY PRZEGUBOWE</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>JOINTS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="os_1">
+      <tuv xml:lang="pl">
+        <seg>OŚ 1</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>AXIS 1</seg>
+      </tuv>
+    </tu>
+    <tu tuid="os_2">
+      <tuv xml:lang="pl">
+        <seg>OŚ 2</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>AXIS 2</seg>
+      </tuv>
+    </tu>
+    <tu tuid="os_3">
+      <tuv xml:lang="pl">
+        <seg>OŚ 3</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>AXIS 3</seg>
+      </tuv>
+    </tu>
+    <tu tuid="os_4">
+      <tuv xml:lang="pl">
+        <seg>OŚ 4</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>AXIS 4</seg>
+      </tuv>
+    </tu>
+    <tu tuid="os_5">
+      <tuv xml:lang="pl">
+        <seg>OŚ 5</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>AXIS 5</seg>
+      </tuv>
+    </tu>
+    <tu tuid="os_6">
+      <tuv xml:lang="pl">
+        <seg>OŚ 6</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>AXIS 6</seg>
+      </tuv>
+    </tu>
+    <tu tuid="pozycje">
+      <tuv xml:lang="pl">
+        <seg>POZYCJE</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>POSITIONS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="polozenia_katowe">
+      <tuv xml:lang="pl">
+        <seg>Położenia kątowe poszczególnych osi</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Angular positions of individual axes</seg>
+      </tuv>
+    </tu>
+    <tu tuid="polozenia_kartezjanskie">
+      <tuv xml:lang="pl">
+        <seg>Położenia kartezjańskie poszczególnych osi</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cartesian positions of individual axes</seg>
+      </tuv>
+    </tu>
+    <tu tuid="tryb_reczny">
+      <tuv xml:lang="pl">
+        <seg>Włącz tryb ręczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Enable manual mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="predkosc_kartezjanska">
+      <tuv xml:lang="pl">
+        <seg>Prędkość w układzie kartezjańskim
+</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Jog cartesian speed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="predkosc_katowa">
+      <tuv xml:lang="pl">
+        <seg>Prędkość w przestrzeni złącz
+</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Jog joint speed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="users">
+      <tuv xml:lang="pl">
+        <seg>Zarządzanie użytkownikami</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>User management</seg>
+      </tuv>
+    </tu>
+    <tu tuid="element_2">
+      <tuv xml:lang="pl">
+        <seg>Element  tabeli nr 2</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Table item 2</seg>
+      </tuv>
+    </tu>
+    <tu tuid="element_3">
+      <tuv xml:lang="pl">
+        <seg>Element tabeli nr 3</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Table item 3</seg>
+      </tuv>
+    </tu>
+    <tu tuid="nazwa_uzytkownika">
+      <tuv xml:lang="pl">
+        <seg>Nazwa użytkownika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Username</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ostatnie_logowanie">
+      <tuv xml:lang="pl">
+        <seg>Ostatnie logowanie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Last login</seg>
+      </tuv>
+    </tu>
+    <tu tuid="role">
+      <tuv xml:lang="pl">
+        <seg>Role</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Roles</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zablokowani">
+      <tuv xml:lang="pl">
+        <seg>Zablokowani</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Locked</seg>
+      </tuv>
+    </tu>
+    <tu tuid="administrator">
+      <tuv xml:lang="pl">
+        <seg>Administrator</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Admin</seg>
+      </tuv>
+    </tu>
+    <tu tuid="haslo">
+      <tuv xml:lang="pl">
+        <seg>Hasło</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Password</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zaloguj">
+      <tuv xml:lang="pl">
+        <seg>Zaloguj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Login</seg>
+      </tuv>
+    </tu>
+    <tu tuid="dodaj_uzytkownika">
+      <tuv xml:lang="pl">
+        <seg>Dodaj użytkownika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Add user</seg>
+      </tuv>
+    </tu>
+    <tu tuid="usun_uzytkownika">
+      <tuv xml:lang="pl">
+        <seg>Usuń użytkownika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Remove user</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zmodyfikuj_uzytkownika">
+      <tuv xml:lang="pl">
+        <seg>Zmodyfikuj użytkownika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Modify user</seg>
+      </tuv>
+    </tu>
+    <tu tuid="sv">
+      <tuv xml:lang="pl">
+        <seg>sv</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>sv</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Id">
+      <tuv xml:lang="pl">
+        <seg>Id</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Id</seg>
+      </tuv>
+    </tu>
+    <tu tuid="nieudane_logowanie">
+      <tuv xml:lang="pl">
+        <seg>Logowanie nieudane</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Login failed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="udane_logowanie">
+      <tuv xml:lang="pl">
+        <seg>Zalogowano pomyślnie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Login successfull</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zmiana_użytkownika">
+      <tuv xml:lang="pl">
+        <seg>Użytkownik zmienił się na:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>User changed to: </seg>
+      </tuv>
+    </tu>
+    <tu tuid="info_o_wygranym">
+      <tuv xml:lang="pl">
+        <seg>Informacja o zwycięzcy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Information about the winner</seg>
+      </tuv>
+    </tu>
+    <tu tuid="gratulacje">
+      <tuv xml:lang="pl">
+        <seg>Gratulacje!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Congratulations!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="info_gratulacje">
+      <tuv xml:lang="pl">
+        <seg>Wygrałeś partię warcabów z robotem! Bądź dumny z osiągniętego sukcesu!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>You won a game of checkers against a robot! Be proud of your achievement!</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
