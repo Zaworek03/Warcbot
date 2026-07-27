@@ -342,6 +342,150 @@ Load game / Save game</seg>
         <seg>Modification date</seg>
       </tuv>
     </tu>
-    <tu tuid="puste_pole" />
+    <tu tuid="czas">
+      <tuv xml:lang="pl">
+        <seg>Czas</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Time
+</seg>
+      </tuv>
+    </tu>
+    <tu tuid="info">
+      <tuv xml:lang="pl">
+        <seg>Wiadomość</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Message</seg>
+      </tuv>
+    </tu>
+    <tu tuid="kod">
+      <tuv xml:lang="pl">
+        <seg>Kod</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Code</seg>
+      </tuv>
+    </tu>
+    <tu tuid="stary_stan">
+      <tuv xml:lang="pl">
+        <seg>Stary stan</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Old state</seg>
+      </tuv>
+    </tu>
+    <tu tuid="nowy_stan">
+      <tuv xml:lang="pl">
+        <seg>Nowy stan</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>New state</seg>
+      </tuv>
+    </tu>
+    <tu tuid="dodatkowe_info">
+      <tuv xml:lang="pl">
+        <seg>Informacje dodatkowe</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Additional info</seg>
+      </tuv>
+    </tu>
+    <tu tuid="stan">
+      <tuv xml:lang="pl">
+        <seg>Stan</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>State</seg>
+      </tuv>
+    </tu>
+    <tu tuid="nastepny">
+      <tuv xml:lang="pl">
+        <seg>Następny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Next</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zla_plansza">
+      <tuv xml:lang="pl">
+        <seg>Robot źle ułożył planszę! Popraw ją ręcznie, aby rozpocząć grę.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The robot placed the board incorrectly! Correct it manually to start the game.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="poprawiono">
+      <tuv xml:lang="pl">
+        <seg>Poprawiono</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Corrected</seg>
+      </tuv>
+    </tu>
+    <tu tuid="poddanie">
+      <tuv xml:lang="pl">
+        <seg>Poddaj grę</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Give up the game</seg>
+      </tuv>
+    </tu>
+    <tu tuid="zly_pionek">
+      <tuv xml:lang="pl">
+        <seg>Robot źle ułożył pionka! Popraw pionek ręcznie, aby kontynuować grę.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The robot placed a piece incorrectly! Correct the piece manually to continue playing.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="poprzedni">
+      <tuv xml:lang="pl">
+        <seg>Poprzedni</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Previous</seg>
+      </tuv>
+    </tu>
+    <tu tuid="eksport">
+      <tuv xml:lang="pl">
+        <seg>Eksport</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Export</seg>
+      </tuv>
+    </tu>
+    <tu tuid="historia_alarmow">
+      <tuv xml:lang="pl">
+        <seg>Historia alarmów</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarm history</seg>
+      </tuv>
+    </tu>
+    <tu tuid="lista_alarmow">
+      <tuv xml:lang="pl">
+        <seg>Lista alarmów</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarm list</seg>
+      </tuv>
+    </tu>
+    <tu tuid="potwierdz">
+      <tuv xml:lang="pl">
+        <seg>Potwierdź </seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Acknowledge</seg>
+      </tuv>
+    </tu>
+    <tu tuid="potwierdz_wszystkie">
+      <tuv xml:lang="pl">
+        <seg>Potwierdź wszystko</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Acknowledge all</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
