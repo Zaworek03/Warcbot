@@ -66,8 +66,10 @@
           <Variable Name="RequestRehomeRobot" />
           <Variable Name="RequestGoHome" />
         </Variable>
+        <Variable Name="Enable" />
       </Variable>
       <Variable Name="gStep" />
+      <Variable Name="doMagnet" />
     </GlobalVariables>
     <Task Name="SaveGame">
       <Variable Name="UIConnect">
