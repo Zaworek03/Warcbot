@@ -1,0 +1,5 @@
+VAR
+	MoveStep : RobotMoveEnum := Idle;
+	Doing : BOOL;
+	COORD_POSITION : ARRAY[1..8,1..8] OF McPosType;
+END_VAR

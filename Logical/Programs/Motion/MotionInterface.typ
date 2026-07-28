@@ -49,4 +49,15 @@ TYPE
 		DISCARD_WHITE, (*Przesuniecie ze StartPos na stos bialych*)
 		DISCARD_BLACK (*Przesuniecie ze StartPos na stos czarnych*)
 		);
+	RobotMoveVarType : 	STRUCT 
+		DiscardColorWhite : BOOL;
+		Capture : BOOL;
+		StartPoint : IndexPointType;
+		EndPoint : IndexPointType;
+		DiscardPoint : IndexPointType;
+	END_STRUCT;
+	IndexPointType : 	STRUCT 
+		x : USINT;
+		y : USINT;
+	END_STRUCT;
 END_TYPE

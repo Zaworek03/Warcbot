@@ -93,6 +93,11 @@ PROGRAM _CYCLIC
 			END_IF;
 
 			IF toRow <> 0 AND fromRow <> 0 THEN
+				
+				gRobotMoveVar.StartPoint.x := fromCol;
+				gRobotMoveVar.StartPoint.y := fromRow;
+				gRobotMoveVar.EndPoint.x := toCol;
+				gRobotMoveVar.EndPoint.y := toRow;
 
 				pChar ACCESS ADR(LastMove);
 				pChar := 64 + fromCol;
@@ -103,6 +108,9 @@ PROGRAM _CYCLIC
 				pChar ACCESS ADR(LastMove) + 2;
 				IF capCount > 0 THEN
 					pChar := 120;
+					gRobotMoveVar.Capture := TRUE;
+					gRobotMoveVar.DiscardPoint.x := (fromCol+toCol)/2;
+					gRobotMoveVar.DiscardPoint.y := (fromRow+toRow)/2;
 				ELSE
 					pChar := 45;
 				END_IF;
