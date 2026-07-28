@@ -2,7 +2,7 @@
 <Content id="AHExportContent" guid="9a324e41-9831-4fff-abe0-f2dc0ded3ec6" height="200" width="400" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Label" id="LabelExport" top="40" left="20" width="360" zIndex="0" text="$IAT/eksport_alarmow" textAlign="center" style="Caption" />
-    <Widget xsi:type="widgets.brease.Button" id="BtnOk" top="150" left="280" zIndex="1" text="Ok" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="BtnOk" top="150" left="280" zIndex="1" text="$IAT/powrot" style="Command" />
     <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput1" top="80" left="60" width="280" zIndex="2" value="$IAT/blad" textAlign="center" style="Output" />
   </Widgets>
 </Content>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="DeleteConfDialog" layoutRefId="layoutOK" displayName="Confirm delete" textAlign="left">
+<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="DeleteConfDialog" layoutRefId="layoutOK" displayName="$IAT/potwierdzenie_usuniecia" textAlign="left">
   <Assignments>
     <Assignment type="Content" baseContentRefId="DeleteConfContent" areaRefId="areaMain" />
   </Assignments>

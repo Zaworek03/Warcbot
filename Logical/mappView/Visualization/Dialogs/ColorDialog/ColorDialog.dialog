@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="ColorDialog" layoutRefId="LayoutWinNLose">
+<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="ColorDialog" layoutRefId="LayoutWinNLose" displayName="$IAT/info_o_zlym_wyborze">
   <Assignments>
     <Assignment type="Content" baseContentRefId="ColorContent" areaRefId="WinOrLoseArea" />
   </Assignments>

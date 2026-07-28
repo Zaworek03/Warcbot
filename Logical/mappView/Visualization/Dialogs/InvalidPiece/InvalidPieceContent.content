@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="InvalidPieceContent" guid="4621c9c6-c08d-4844-bdc0-da5a23bb95c0" height="150" width="300" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Label" id="Title" top="15" left="0" width="300" zIndex="0" text="Uwaga!" textAlign="center bottom" bold="true" style="Title2" />
-    <Widget xsi:type="widgets.brease.Label" id="Description" top="45" left="20" width="260" height="40" zIndex="1" multiLine="true" text="Nie mozesz aktualnie ruszyc tym pionkiem" wordWrap="true" textColor="rgba(0, 0, 0, 1)" textAlign="left top" />
-    <Widget xsi:type="widgets.brease.Button" id="BackBtn" top="105" left="100" zIndex="2" text="wroc" style="Command" />
+    <Widget xsi:type="widgets.brease.Label" id="Title" top="15" left="0" width="300" zIndex="0" text="$IAT/uwaga" textAlign="center bottom" bold="true" style="Title2" />
+    <Widget xsi:type="widgets.brease.Label" id="Description" top="45" left="20" width="260" height="40" zIndex="1" multiLine="true" text="$IAT/wybierz_inny_pionek" wordWrap="true" textColor="rgba(0, 0, 0, 1)" textAlign="left top" />
+    <Widget xsi:type="widgets.brease.Button" id="BackBtn" top="105" left="100" zIndex="2" text="$IAT/powrot" style="Command" />
   </Widgets>
 </Content>
