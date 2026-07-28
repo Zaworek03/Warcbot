@@ -5,10 +5,9 @@ VAR {AT 'MotionCtrl'}
     Done {ACCESS 'STMotionDone'}: BOOL;
 END_VAR
 
-//VAR {AT PLC}
-//    doMagnet : BOOL;
-//    MagnetStatus : BOOL;
-//END_VAR
+VAR {AT PLC}
+    doMagnet : BOOL;
+END_VAR
 
 VAR
     Offs : McPosType := (Z:=20);
@@ -27,18 +26,22 @@ PROGRAM _MAIN
     EndPointOffs.Pos.Z := EndPointOffs.Pos.Z + Offs.Z;
 
     MoveJ(StartPointOffs);
+    Feedrate(500);
     MoveL(StartPoint);
+    Feedrate(5000);
     WaitEndMove();
-    //doMagnet := TRUE;
+    doMagnet := TRUE;
     //WaitUntil(MagnetStatus);
     MoveL(StartPointOffs); // zapytac sie czy tutaj da sie dac StartPoint + Offs, dla krotszego kodu
     
-    MoveJ(HomePoint);
+    //MoveJ(HomePoint);
 
     MoveJ(EndPointOffs);
+    Feedrate(500);
     MoveL(EndPoint);
+    Feedrate(5000);
     WaitEndMove();
-    //doMagnet := FALSE;
+    doMagnet := FALSE;
     //WaitUntil(NOT MagnetStatus);
     MoveL(EndPointOffs);
 

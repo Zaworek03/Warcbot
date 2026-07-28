@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="RulesDialog" layoutRefId="LayoutDialogPlay" displayName="$IAT/zasady_gry " textAlign="left" showCloseButton="true">
+<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="RulesDialog" layoutRefId="LayoutLogin" displayName="$IAT/zasady_gry " textAlign="left" showCloseButton="true">
   <Assignments>
-    <Assignment type="Content" baseContentRefId="RulesContent" areaRefId="AreaContent" />
+    <Assignment type="Content" baseContentRefId="RulesContent" areaRefId="areaLogin" />
   </Assignments>
 </ddef:Dialog>

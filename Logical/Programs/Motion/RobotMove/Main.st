@@ -11,7 +11,7 @@ PROGRAM _CYCLIC
 				MoveStep := MoveExecute;
 				
 			MoveExecute:
-				IF gMotionInterface.Execute = FALSE THEN
+				IF gMotionInterface.Ready THEN
 					gMotionInterface.RequestManualMode := FALSE;
 					gMotionInterface.Command := MOVE_START_END;
 					gMotionInterface.StartPos := COORD_POSITION[gRobotMoveVar.StartPoint.x,gRobotMoveVar.StartPoint.y];
@@ -32,7 +32,7 @@ PROGRAM _CYCLIC
 				END_IF;
 			
 			DiscardExecute:
-				IF gMotionInterface.Execute = FALSE THEN
+				IF gMotionInterface.Ready THEN
 					gMotionInterface.RequestManualMode := FALSE;
 					IF gRobotMoveVar.DiscardColorWhite THEN
 						gMotionInterface.Command := DISCARD_WHITE;

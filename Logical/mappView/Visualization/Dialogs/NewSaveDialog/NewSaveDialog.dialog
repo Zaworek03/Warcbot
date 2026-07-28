@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="NewSaveDialog" layoutRefId="LayoutDialogPlay" displayName="New save file" textAlign="left">
+<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="NewSaveDialog" layoutRefId="LayoutLogin" displayName="$IAT/nowy_plik_zapisu" textAlign="left">
   <Assignments>
-    <Assignment type="Content" baseContentRefId="NewSaveContent" areaRefId="AreaContent" />
+    <Assignment type="Content" baseContentRefId="NewSaveContent" areaRefId="areaLogin" />
   </Assignments>
 </ddef:Dialog>

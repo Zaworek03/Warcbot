@@ -37,6 +37,7 @@ TYPE
 		WhitePilePos : McPosType; (*Pozycja 1szego miejsca na stosie, reszta jest juz obliczana przez program*)
 		BlackPilePos : McPosType; (*Pozycja 1szego miejsca na stosie, reszta jest juz obliczana przez program*)
 		Command : RobotCommandType; (*Przesuniêcie warcaba ze StartPos na EndPos*)
+		Ready : BOOL;
 		Execute : BOOL; (*Najlepiej podac impuls*)
 		Busy : BOOL;
 		Done : BOOL;

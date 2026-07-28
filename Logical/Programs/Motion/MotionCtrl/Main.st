@@ -1,5 +1,6 @@
 
 PROGRAM _INIT
+	doMagnet;
 
 	gAxesGroup_Racer3_1;
 	gAxisQ1_Racer3_1;
@@ -32,10 +33,13 @@ PROGRAM _CYCLIC
 	STMotionDoneImpulse := RTrigSTMotionDone.Q;
 	RTrigSTMotionDone.CLK := STMotionDone;
 	
+	gMotionInterface.Ready := FALSE;
+	
 	CASE RobotState OF
 		ROBOT_DISABLED:
 			IF gMotionInterface.Enable THEN
 				RobotState := ROBOT_ENABLED;
+				Robot.ErrorReset := 0;
 			END_IF;
 		
 		ROBOT_ENABLED:
@@ -79,6 +83,8 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		ROBOT_HOMED:
+			
+			gMotionInterface.Ready := TRUE;
 			
 			gMotionInterface.Done := FALSE;
 			IF gMotionInterface.RequestManualMode THEN
@@ -244,14 +250,16 @@ PROGRAM _CYCLIC
 			
 			// rozpoczecie pracy programu
 			RobotPar.ProgramName := 'move.st';
+			Robot.Interrupt := FALSE;
 			Robot.MoveProgram := TRUE;
 			STMotionEndPoint.Orient := STMotionDefaultOrient;
 			
+			STMotionDone := FALSE;
 			gMotionInterface.Busy := TRUE;
 			RobotState := ROBOT_MOVING;
 		
 		ROBOT_MOVING:
-			IF NOT STMotionDone THEN
+			IF STMotionDone THEN
 				gMotionInterface.Busy := FALSE;
 				Robot.MoveProgram := FALSE;
 				STMotionDone := FALSE;
@@ -268,6 +276,17 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 	END_CASE;
+	
+	IF NOT gMotionInterface.Enable THEN
+		gMotionInterface.Busy := 0;
+		RobotState := ROBOT_DISABLED;
+		Robot.ErrorReset := 1;
+		Robot.Power := 0;
+		mcGroupHome.Execute := 0;
+		Robot.Jog := 0;
+		Robot.MoveProgram := 0;
+		Robot.Interrupt := 1;
+	END_IF;
 	
 	RTrigSTMotionDone();
 	RTrigExecute();

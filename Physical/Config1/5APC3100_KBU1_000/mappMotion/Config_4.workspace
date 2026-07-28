@@ -23,13 +23,13 @@
         <Group ID="Cuboid[1]">
           <Property ID="ID" Value="1" />
           <Group ID="Translation">
-            <Property ID="X" Value="340" />
+            <Property ID="X" Value="180" />
             <Property ID="Y" Value="-400" />
           </Group>
           <Group ID="Dimension">
             <Property ID="X" Value="370" />
             <Property ID="Y" Value="765" />
-            <Property ID="Z" Value="225" />
+            <Property ID="Z" Value="217" />
           </Group>
         </Group>
       </Group>

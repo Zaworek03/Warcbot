@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="LoadConfDialog" layoutRefId="layoutOK" displayName="Confirm load" textAlign="left">
+<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="LoadConfDialog" layoutRefId="layoutOK" displayName="$IAT/potwierdzenia_ladowania" textAlign="left">
   <Assignments>
     <Assignment type="Content" baseContentRefId="LoadConfContent" areaRefId="areaMain" />
   </Assignments>

@@ -240,26 +240,26 @@ Load game / Save game</seg>
     </tu>
     <tu tuid="latwy">
       <tuv xml:lang="pl">
-        <seg>Łatwy</seg>
+        <seg>Wyzwanie</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Easy</seg>
+        <seg>Challenge</seg>
       </tuv>
     </tu>
     <tu tuid="sredni">
       <tuv xml:lang="pl">
-        <seg>Średni</seg>
+        <seg>Pot i łzy</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Medium</seg>
+        <seg>Blood, Sweat &amp; Tears</seg>
       </tuv>
     </tu>
     <tu tuid="trudny">
       <tuv xml:lang="pl">
-        <seg>Trudny</seg>
+        <seg>Powodzenia...</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Hard</seg>
+        <seg>Good Luck...</seg>
       </tuv>
     </tu>
     <tu tuid="start">
@@ -304,7 +304,7 @@ Load game / Save game</seg>
     </tu>
     <tu tuid="ponowny_zapis">
       <tuv xml:lang="pl">
-        <seg>Zapisz ponownie</seg>
+        <seg>Nowy zapis</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>New save</seg>
@@ -864,6 +864,190 @@ Load game / Save game</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>You won a game of checkers against a robot! Be proud of your achievement!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="kondolencje">
+      <tuv xml:lang="pl">
+        <seg>Moje kondolencje!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>My condolences!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="info_kondolencje">
+      <tuv xml:lang="pl">
+        <seg>Przegrałeś partię warcabów z robotem! Następnym razem bardziej się postaraj lub zmniejsz poziom trudności!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>You lost a game of checkers to a robot! Next time, try harder or lower the difficulty!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="tym_pionkiem_nie">
+      <tuv xml:lang="pl">
+        <seg>Brak możliwości ruchu wybranym pionkiem</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>No possibility to move the selected piecie</seg>
+      </tuv>
+    </tu>
+    <tu tuid="wybierz_inny_pionek">
+      <tuv xml:lang="pl">
+        <seg>Aktualnie nie możesz ruszyć się wybranym pionkiem.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>You cannot currently move the selected piece.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="tura_robota">
+      <tuv xml:lang="pl">
+        <seg>Poczekaj na swoją turę. Aktualnie to robot wykonuje ruch.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Wait for your turn. Currently, the robot is making the move.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="inny_pionek">
+      <tuv xml:lang="pl">
+        <seg>Wybranym pionkiem steruje robot. Do wykonania ruchu wybierz swojego pionka.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The selected piece is controlled by the robot. Select your piece to make a move.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="inna_nazwa">
+      <tuv xml:lang="pl">
+        <seg>Nie udało się zapisać, spróbuj użyć innej nazwy.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Save failed, try different name.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="tego_juz_za_wiele">
+      <tuv xml:lang="pl">
+        <seg>Zbyt wiele zapisów, usuń niektóre, aby utworzyć nowe. </seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Too many saves, delete some to make new ones. </seg>
+      </tuv>
+    </tu>
+    <tu tuid="zapisz">
+      <tuv xml:lang="pl">
+        <seg>Zapisz</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Save</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ale_czy_na_pewo">
+      <tuv xml:lang="pl">
+        <seg>Czy na pewno chcesz usunąć ten zapisany plik?</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Are you sure you want to delete this save file?</seg>
+      </tuv>
+    </tu>
+    <tu tuid="nr_bledy">
+      <tuv xml:lang="pl">
+        <seg>Numer błędu:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Error number:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="musze_sie_upewnic">
+      <tuv xml:lang="pl">
+        <seg>Czy na pewno chcesz załadować ten plik zapisu?</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Are you sure you want to load this save file?</seg>
+      </tuv>
+    </tu>
+    <tu tuid="info_o_przegranym">
+      <tuv xml:lang="pl">
+        <seg>Informacja o przegranym</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Information about the loser</seg>
+      </tuv>
+    </tu>
+    <tu tuid="info_o_pionku">
+      <tuv xml:lang="pl">
+        <seg>Informacja o wyborze niewłaściwego pionka</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Information about selecting the wrong pawn</seg>
+      </tuv>
+    </tu>
+    <tu tuid="info_o_ruchu">
+      <tuv xml:lang="pl">
+        <seg>Informacja o niemożności wykonania wskazanego ruchu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Information about the impossibility of performing the indicated move</seg>
+      </tuv>
+    </tu>
+    <tu tuid="info_o_zlym_wyborze">
+      <tuv xml:lang="pl">
+        <seg>Informacja o wyborze niewłaściwego pionka</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Information about selecting the wrong pawn</seg>
+      </tuv>
+    </tu>
+    <tu tuid="nowy_plik_zapisu">
+      <tuv xml:lang="pl">
+        <seg>Nowy plik zapisu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>New save file</seg>
+      </tuv>
+    </tu>
+    <tu tuid="potwierdzenie_usuniecia">
+      <tuv xml:lang="pl">
+        <seg>Potwierdzenie usunięcia pliku</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>File deletion confirmation</seg>
+      </tuv>
+    </tu>
+    <tu tuid="cos_sie_popieprzylo">
+      <tuv xml:lang="pl">
+        <seg>Komunikat o wystąpieniu błędu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Error message</seg>
+      </tuv>
+    </tu>
+    <tu tuid="potwierdzenia_ladowania">
+      <tuv xml:lang="pl">
+        <seg>Potwierdzenie ładowania pliku</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>File load confirmation</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Rozgrzewka">
+      <tuv xml:lang="pl">
+        <seg>Rozgrzewka</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Easy Going</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Bez_stresu">
+      <tuv xml:lang="pl">
+        <seg>Bez Stresu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>No Stress</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Login">
+      <tuv xml:lang="pl">
+        <seg>Zalogowano jako:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logged in as:</seg>
       </tuv>
     </tu>
   </body>

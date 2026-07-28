@@ -7,7 +7,6 @@
     <Object Type="Package">Play</Object>
     <Object Type="Package">Alarm</Object>
     <Object Type="Package">Manual</Object>
-    <Object Type="Package">Live</Object>
     <Object Type="Package">Settings</Object>
   </Objects>
 </Package>

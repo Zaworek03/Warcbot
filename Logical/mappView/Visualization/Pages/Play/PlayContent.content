@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="PlayContent" guid="d9f91fcc-c759-42a5-a648-686ca543609c" height="840" width="1450" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Rectangle" id="a8" top="40" left="40" width="95" height="95" zIndex="0" backColor="rgba(255, 222, 173, 1)" />
@@ -282,7 +282,7 @@
     <Widget xsi:type="widgets.brease.Label" id="MoveHumanLb" top="120" left="840" width="579" zIndex="278" text="$IAT/ruch_czlowieka" textAlign="center" bold="true" style="Title2" visible="false" />
     <Widget xsi:type="widgets.brease.Label" id="ChooseColorLb" top="160" left="860" width="240" zIndex="279" text="$IAT/wybrany_kolor" fontSize="16px" />
     <Widget xsi:type="widgets.brease.Label" id="MoveCntLb" top="200" left="860" width="260" zIndex="280" text="$IAT/ilosc_ruchow" fontSize="16px" />
-    <Widget xsi:type="widgets.brease.Label" id="LastMovesLb" top="160" left="1160" width="280" zIndex="281" text="$IAT/ostatnie_ruchy" />
+    <Widget xsi:type="widgets.brease.Label" id="LastMovesLb" top="160" left="1140" width="280" zIndex="281" text="$IAT/ostatnie_ruchy" fontSize="16px" />
     <Widget xsi:type="widgets.brease.Label" id="BlackDeadPieceLb" top="240" left="860" width="240" zIndex="282" text="$IAT/zbite_czarne" fontSize="16px" />
     <Widget xsi:type="widgets.brease.Label" id="WhiteDeadPieceLb" top="280" left="860" width="280" zIndex="283" text="$IAT/zbite_białe" fontSize="16px" />
     <Widget xsi:type="widgets.brease.Label" id="StatsTitleLb" top="40" left="880" width="499" height="70" zIndex="284" autoScroll="true" text="$IAT/statystyki" textAlign="center" fontSize="30px" bold="true" style="Title2" />

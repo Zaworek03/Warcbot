@@ -156,5 +156,13 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.RequestRehomeRobot" attribute="value" />
 <Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonRehome" attribute="value" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Enable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ToggleButtonToggleRobot" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:doMagnet" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonElektromagnes" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>
