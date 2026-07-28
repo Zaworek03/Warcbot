@@ -304,7 +304,7 @@ Load game / Save game</seg>
     </tu>
     <tu tuid="ponowny_zapis">
       <tuv xml:lang="pl">
-        <seg>Zapisz ponownie</seg>
+        <seg>Nowy zapis</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>New save</seg>
@@ -1040,6 +1040,14 @@ Load game / Save game</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>No Stress</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Login">
+      <tuv xml:lang="pl">
+        <seg>Zalogowano jako:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logged in as:</seg>
       </tuv>
     </tu>
   </body>
