@@ -6,14 +6,9 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	IF gStep = RobotMove THEN
-		Doing := TRUE;
 		CASE MoveStep OF
 			IdleRM:
-				IF Doing THEN
-					MoveStep := MoveExecute;
-				ELSE
-					gStep := PhotoCheck;
-				END_IF;
+				MoveStep := MoveExecute;
 				
 			MoveExecute:
 				IF gMotionInterface.Execute = FALSE THEN
@@ -31,8 +26,8 @@ PROGRAM _CYCLIC
 					IF gRobotMoveVar.Capture THEN
 						MoveStep := DiscardExecute;
 					ELSE
-						Doing := FALSE;
 						MoveStep := IdleRM;
+						gStep := PhotoCheck;
 					END_IF;
 				END_IF;
 			
@@ -52,8 +47,8 @@ PROGRAM _CYCLIC
 			DiscardBusy:
 				IF gMotionInterface.Done THEN
 					gMotionInterface.Execute := FALSE;
-					Doing := FALSE;
 					MoveStep := IdleRM;
+					gStep := PhotoCheck;
 				END_IF;
 		END_CASE;
 	END_IF;
