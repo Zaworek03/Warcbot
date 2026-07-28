@@ -33,6 +33,8 @@ PROGRAM _CYCLIC
 	STMotionDoneImpulse := RTrigSTMotionDone.Q;
 	RTrigSTMotionDone.CLK := STMotionDone;
 	
+	gMotionInterface.Ready := FALSE;
+	
 	CASE RobotState OF
 		ROBOT_DISABLED:
 			IF gMotionInterface.Enable THEN
@@ -81,6 +83,8 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		ROBOT_HOMED:
+			
+			gMotionInterface.Ready := TRUE;
 			
 			gMotionInterface.Done := FALSE;
 			IF gMotionInterface.RequestManualMode THEN
@@ -274,6 +278,7 @@ PROGRAM _CYCLIC
 	END_CASE;
 	
 	IF NOT gMotionInterface.Enable THEN
+		gMotionInterface.Busy := 0;
 		RobotState := ROBOT_DISABLED;
 		Robot.ErrorReset := 1;
 		Robot.Power := 0;
