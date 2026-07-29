@@ -30,8 +30,8 @@
                 <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryAInfo" width="280" zIndex="5" columnType="additionalInfo1" text="$IAT/dodatkowe_info" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.Button" id="BtnExport" top="670" left="1200" width="180" height="40" zIndex="1" text="Export" style="Command" />
-            <Widget xsi:type="widgets.brease.Button" id="BtnClear" top="670" left="1000" width="180" height="40" zIndex="2" text="Clear" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnExport" top="670" left="1200" width="180" height="40" zIndex="1" text="$IAT/eksport" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnClear" top="670" left="1000" width="180" height="40" zIndex="2" text="$IAT/wyczysc" style="Command" />
           </Widgets>
         </Widget>
       </Widgets>
