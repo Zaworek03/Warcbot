@@ -6,6 +6,13 @@ PROGRAM _INIT
 	AxisRestorePos3;
 	AxisRestorePos4;
 	AxisRestorePos5;
+	
+	GetCoordSystemIdent.Execute := TRUE;
+	GetCoordSystemIdent.CoordSystemName := 'gUserFrame';
+	
+	GetCoordSystemIdent();
+	
+	CoordSystemIdent := GetCoordSystemIdent.Ident;
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -16,9 +23,19 @@ PROGRAM _CYCLIC
 	AxisQ5Pos := Robot.Info.JointAxisPosition[4];
 	AxisQ6Pos := -Robot.Info.JointAxisPosition[5];
 	
-	X := Robot.X;
-	Y := Robot.Y;
-	Z := Robot.Z;
+//	X := Robot.X;
+//	Y := Robot.Y;
+	//	Z := Robot.Z;
+	
+	
+	
+	ReadActualPosition.AxesGroup := ADR(gAxesGroup_Racer3_1);
+	ReadActualPosition.Enable := TRUE;
+	ReadActualPosition.CoordSystem := CoordSystemIdent;
+	
+	X := ReadActualPosition.Position[0];
+	Y := ReadActualPosition.Position[1];
+	Z := ReadActualPosition.Position[2];
 	
 	gAlarm.RobotWorkspaceViolation := 0;
 	gAlarm.RobotAxisViolation := 0;
@@ -32,6 +49,9 @@ PROGRAM _CYCLIC
 		OR WorkspaceMonitor.WorkspaceStatus = mcPATHGEN_WS_JOINTAXES_VIOLATION THEN
 		gAlarm.RobotAxisViolation := 1;
 	END_IF;
+	
+	GetCoordSystemIdent();
+	ReadActualPosition();
 	
 END_PROGRAM
 
