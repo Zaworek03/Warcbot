@@ -10,6 +10,8 @@ PROGRAM _INIT
 	gAxisQ5_Racer3_1;
 	gAxisQ6_Racer3_1;
 	
+	STMotionHomePoint;
+	
 	mcGroupHome.AxesGroup := ADR(gAxesGroup_Racer3_1);
 	
 	Robot.MpLink := ADR(gAxesGroup_Racer3_1);
