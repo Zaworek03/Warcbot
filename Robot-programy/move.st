@@ -31,7 +31,7 @@ PROGRAM _MAIN
     Feedrate(5000);
     WaitEndMove();
     doMagnet := TRUE;
-    //WaitUntil(MagnetStatus);
+    WaitTime(1);
     MoveL(StartPointOffs); // zapytac sie czy tutaj da sie dac StartPoint + Offs, dla krotszego kodu
     
     //MoveJ(HomePoint);
@@ -42,7 +42,7 @@ PROGRAM _MAIN
     Feedrate(5000);
     WaitEndMove();
     doMagnet := FALSE;
-    //WaitUntil(NOT MagnetStatus);
+    WaitTime(1);
     MoveL(EndPointOffs);
 
     MoveJ(HomePoint);
