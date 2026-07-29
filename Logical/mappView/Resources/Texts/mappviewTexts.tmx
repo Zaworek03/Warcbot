@@ -554,7 +554,7 @@ Load game / Save game</seg>
     </tu>
     <tu tuid="manual">
       <tuv xml:lang="pl">
-        <seg>Manulany</seg>
+        <seg>Manualny</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>Manual</seg>
