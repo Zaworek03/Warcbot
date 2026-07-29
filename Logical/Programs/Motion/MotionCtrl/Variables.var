@@ -16,6 +16,10 @@ END_VAR
 VAR CONSTANT
 	STMotionDefaultOrient : McOrientType := (Angle1:=0,Angle2:=180,Angle3:=0);
 END_VAR
+VAR
+	STMotionHighFeedrate : LREAL := 5000;
+	STMotionLowFeedrate : LREAL := 500;
+END_VAR
 (* Synchronizacja PLC ze ST Motion *)
 VAR
 	RTrigExecute : r_trig;

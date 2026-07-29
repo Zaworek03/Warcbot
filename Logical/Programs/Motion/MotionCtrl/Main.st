@@ -184,7 +184,7 @@ PROGRAM _CYCLIC
 				END_IF;
 				IF JogXNeg THEN
 					RobotPar.Jog.Velocity[0] := -JogCartesianSpeed;
-				END_IF;
+					END_IF;
 				IF JogYPos THEN
 					RobotPar.Jog.Velocity[1] := JogCartesianSpeed;
 				END_IF;
@@ -202,6 +202,7 @@ PROGRAM _CYCLIC
 				RobotPar.ProgramName := 'gohome.st';
 				Robot.MoveProgram := TRUE;
 				STMotionDone := FALSE;
+				STMotionLowFeedrate := gMotionInterface.Feedrate.Low;
 				PauseWorkspaceMonitoring.Enable := TRUE;
 				RobotState := ROBOT_GO_HOME;
 				gMotionInterface.Manual.RequestGoHome := FALSE;
@@ -230,8 +231,11 @@ PROGRAM _CYCLIC
 			
 		ROBOT_EXECUTE:
 			
-		STMotionStartPoint.Pos := gMotionInterface.StartPos;
-		STMotionStartPoint.Orient := STMotionDefaultOrient;
+			STMotionHighFeedrate := gMotionInterface.Feedrate.High;
+			STMotionLowFeedrate := gMotionInterface.Feedrate.Low;
+			
+			STMotionStartPoint.Pos := gMotionInterface.StartPos;
+			STMotionStartPoint.Orient := STMotionDefaultOrient;
 			
 			// Ustalanie na jaka pozycje warcab ma byc odstawiony
 			CASE gMotionInterface.Command OF

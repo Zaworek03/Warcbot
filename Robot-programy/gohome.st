@@ -1,5 +1,6 @@
 VAR {AT 'MotionCtrl'}
     Done {ACCESS 'STMotionDone'}: BOOL;
+    LowFeedrate {ACCESS 'STMotionLowFeedrate'}: LREAL;
 END_VAR
 
 VAR
@@ -8,7 +9,7 @@ END_VAR
 
 PROGRAM _MAIN
     Done := FALSE;
-    Feedrate(500);
+    Feedrate(LowFeedrate);
 
     MoveA(Home);
     WaitEndMove();
