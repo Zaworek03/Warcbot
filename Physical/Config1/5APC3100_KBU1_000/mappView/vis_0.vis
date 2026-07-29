@@ -7,8 +7,7 @@
     <Page refId="Alarm" />
     <Page refId="Manual" />
     <Page refId="Settings" />
-    <Page refId="Live" />
-  </Pages>
+	</Pages>
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="SaveContent" />
@@ -87,9 +86,8 @@
     <Content refId="RecipeUIErrorContent" />
     <Content refId="LoadConfContent" />
     <Content refId="AlramInncorrectRobotMoveContent" />
-    <Content refId="AlarmInncorrectBoardContent" />
-    <Content refId="LiveContent" />
-  </Contents>
+		<Content refId="AlarmInncorrectBoardContent" />
+	</Contents>
   <SnippetsSets />
   <VariablesSets />
   <ExpressionsSets />
