@@ -6,6 +6,7 @@ TYPE
 		MoveExecute,
 		MoveBusy,
 		DiscardExecute,
-		DiscardBusy
+		DiscardBusy,
+		EndRM
 		);
 END_TYPE

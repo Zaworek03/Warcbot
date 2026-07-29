@@ -5,14 +5,13 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	IF gStep = RobotMove THEN
+	IF gStep = RobotMove AND gRobotMoveVar.RTRMove THEN
 		CASE MoveStep OF
 			IdleRM:
 				MoveStep := MoveExecute;
 				
 			MoveExecute:
-				IF gMotionInterface.Execute = FALSE THEN
-					gMotionInterface.RequestManualMode := FALSE;
+				IF gMotionInterface.Ready THEN
 					gMotionInterface.Command := MOVE_START_END;
 					gMotionInterface.StartPos := COORD_POSITION[gRobotMoveVar.StartPoint.x,gRobotMoveVar.StartPoint.y];
 					gMotionInterface.EndPos := COORD_POSITION[gRobotMoveVar.EndPoint.x,gRobotMoveVar.EndPoint.y];
@@ -26,14 +25,12 @@ PROGRAM _CYCLIC
 					IF gRobotMoveVar.Capture THEN
 						MoveStep := DiscardExecute;
 					ELSE
-						MoveStep := IdleRM;
-						gStep := PhotoCheck;
+						MoveStep := EndRM;
 					END_IF;
 				END_IF;
 			
 			DiscardExecute:
-				IF gMotionInterface.Execute = FALSE THEN
-					gMotionInterface.RequestManualMode := FALSE;
+				IF gMotionInterface.Ready THEN
 					IF gRobotMoveVar.DiscardColorWhite THEN
 						gMotionInterface.Command := DISCARD_WHITE;
 					ELSE
@@ -47,9 +44,13 @@ PROGRAM _CYCLIC
 			DiscardBusy:
 				IF gMotionInterface.Done THEN
 					gMotionInterface.Execute := FALSE;
-					MoveStep := IdleRM;
-					gStep := PhotoCheck;
+					MoveStep := EndRM;
 				END_IF;
+			
+			EndRM:
+				MoveStep := IdleRM;
+				gStep := PhotoCheck;
+				gRobotMoveVar.RTRMove := FALSE;
 		END_CASE;
 	END_IF;
 	 
