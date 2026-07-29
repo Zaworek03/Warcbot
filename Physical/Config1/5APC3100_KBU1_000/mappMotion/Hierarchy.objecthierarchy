@@ -10,6 +10,11 @@
         <Selector ID="Type">
           <Property ID="AxesGroupRef" Value="gAxesGroup_Racer3_1" />
         </Selector>
+        <Group ID="Object[1]">
+          <Selector ID="Type" Value="StandardFrame">
+            <Property ID="Name" Value="gUserFrame" />
+          </Selector>
+        </Group>
       </Group>
     </Group>
   </Element>

@@ -280,6 +280,7 @@ PROGRAM _CYCLIC
 	IF NOT gMotionInterface.Enable THEN
 		gMotionInterface.Busy := 0;
 		RobotState := ROBOT_DISABLED;
+		gMotionInterface.Execute := 0;
 		Robot.ErrorReset := 1;
 		Robot.Power := 0;
 		mcGroupHome.Execute := 0;
