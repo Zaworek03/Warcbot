@@ -4,6 +4,7 @@ VAR
 	mcGroupHome : MC_BR_GroupHome_15;
 	AxisPos : ARRAY[0..5] OF REAL := [2(0),-90,3(0)];
 	i : USINT;
+	PauseWorkspaceMonitoring : MC_BR_PauseWorkspaceMonitoring;
 END_VAR
 (* Wymiana danych z ST Motion *)
 VAR

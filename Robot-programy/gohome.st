@@ -8,7 +8,7 @@ END_VAR
 
 PROGRAM _MAIN
     Done := FALSE;
-    Feedrate(5000);
+    Feedrate(500);
 
     MoveA(Home);
     WaitEndMove();
