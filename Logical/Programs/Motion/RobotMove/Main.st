@@ -1,6 +1,13 @@
 
 PROGRAM _INIT
 	(* Insert code here *)
+	gMotionInterface.BlackPilePos.X := 395.4;
+	gMotionInterface.BlackPilePos.Y := -293;
+	gMotionInterface.BlackPilePos.Z := 286.4;
+	
+	gMotionInterface.WhitePilePos.X := 395.4;
+	gMotionInterface.WhitePilePos.Y := -293;
+	gMotionInterface.WhitePilePos.Z := 286.4;
 	 
 END_PROGRAM
 

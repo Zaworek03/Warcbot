@@ -114,6 +114,7 @@ PROGRAM _CYCLIC
 					gRobotMoveVar.DiscardPoint.y := (fromRow+toRow)/2;
 				ELSE
 					pChar := 45;
+					gRobotMoveVar.Capture := FALSE;
 				END_IF;
 
 				pChar ACCESS ADR(LastMove) + 3;

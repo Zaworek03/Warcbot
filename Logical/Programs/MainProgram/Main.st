@@ -64,7 +64,9 @@ PROGRAM _CYCLIC
 				(* Patrz RobotMove::Main.st *);
 			
 			ErrorState:
+				gMotionInterface.Enable := FALSE;
 				IF gAlarm.InncorrectBoard = FALSE THEN
+					gMotionInterface.Enable := TRUE;
 					gStep := PhotoCheck;
 				END_IF;
 			
