@@ -14,8 +14,8 @@
           <Selector ID="Type" Value="StandardFrame">
             <Property ID="Name" Value="gUserFrame" />
             <Group ID="Translation">
-              <Property ID="X" Value="547" />
-              <Property ID="Y" Value="-175" />
+              <Property ID="X" Value="506" />
+              <Property ID="Y" Value="-185" />
               <Property ID="Z" Value="215" />
             </Group>
             <Group ID="Orientation">
