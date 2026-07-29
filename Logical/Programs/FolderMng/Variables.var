@@ -1,0 +1,8 @@
+VAR
+	step : UINT := 10;
+	strPath : STRING;
+    
+	(* FUBs *)
+	fbDirCreate : DirCreate;
+	fbDirInfo : DirInfo;
+END_VAR

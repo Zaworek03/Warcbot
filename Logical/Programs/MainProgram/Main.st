@@ -1,6 +1,6 @@
 
 PROGRAM _INIT
-	gStep := 7;
+	gStep := Idle;
 	gAlarm;
 	gESTOP;
 	gStart;
@@ -9,77 +9,71 @@ PROGRAM _INIT
 	BoardGit := FALSE;
 	Match;
 	gCameraEnd;
-	Vision;
+	RobotMoveMarker;
 	
 	i;
 	j;
 	
-	 
+	MpAuditTrail_0.Enable := TRUE; 
+	MpAuditTrail_0.MpLink := ADR(gAuditTrail); 
+	MpAuditTrail_0.DeviceName := ADR('AUDIT'); 
+	MpAuditTrail_0.FileName := ADR('AuditList'); 
+	MpAuditTrail_0();
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
+	MpAuditTrail_0();
 	
-	IF gESTOP THEN
+	IF TRUE THEN
 		CASE gStep OF
 			Idle:
 				IF gStart THEN
-					gStep := PhotoCheck1;
+					gStep := PhotoCheck;
 				END_IF
 				
-			PhotoCheck1:
-				CASE Vision OF
-					0:
-						IF gCameraEnd THEN
-							FOR i := 1 TO 8 DO
-								FOR j := 1 TO 8 DO
-									CASE gBoardActual[i, j] OF
-										1:  BoardConverted[i, j] := 1;
-										2:  BoardConverted[i, j] := 2;
-										3:  BoardConverted[i, j] := 1;
-										4:  BoardConverted[i, j] := 2;
-									END_CASE;
-								END_FOR;
-							END_FOR;
-							Vision := 1;
-						END_IF;
-
-					1:
-						Match := TRUE;
-						FOR i := 1 TO 8 DO
-							FOR j := 1 TO 8 DO
-								IF BoardConverted[i, j] <> gBoardCamera[i, j] THEN
-									Match := FALSE;
-								END_IF;
-							END_FOR;
+			PhotoCheck:
+				gCameraTrigger := TRUE;
+				IF gCameraEnd THEN
+					gCameraTrigger := FALSE;
+					Match := TRUE;
+					FOR i := 1 TO BoardSpaces DO
+						FOR j := 1 TO BoardSpaces DO
+							(* Odwrócenie planszy do góry nogami, aby odczyt z kamry by³ zgodny z widokiem ze stania na wprost robota *)
+							IF Convert[gBoardActual[BoardSpaces + 1 - i, BoardSpaces + 1 - j]] <> gBoardCamera[i, j] THEN
+								Match := FALSE;
+							END_IF;
 						END_FOR;
-
-						IF Match THEN
-							BoardGit := TRUE;
-							gStep := RobotMove;
-							Vision := 0;
-						ELSE
-							gStep := CountPiece;
-							Vision := 0;
-						END_IF;
-
-				END_CASE;
-			CountPiece: ;
+					END_FOR;
+					IF Match THEN
+						BoardGit := TRUE;
+						gStep := GameMove;
+					ELSE
+						gAlarm.InncorrectBoard := TRUE;
+						gStep := ErrorState;
+					END_IF;
+				END_IF;
+					
+			GameMove:
+				IF RobotMoveMarker THEN
+					gStep := RobotMove;
+					RobotMoveMarker := FALSE;
+				END_IF;
+					
+			RobotMove:
+				(* Patrz RobotMove::Main.st *);
 			
-			ArrangeBoard: ;
+			ErrorState:
+				IF gAlarm.InncorrectBoard = FALSE THEN
+					gStep := PhotoCheck;
+				END_IF;
 			
-			InncorrectBoard1:
-				gAlarm.InncorrectBoard := 1;
-			RobotMove: ;
-			
-			PhotoCheck2: ;
-			
-			InncorrectBoard2:
-				gAlarm.InncorrectRobotMove := 1;
-		
-			WinOrLoseState: ;
-		
+			EndState:
+				;
 		
 		END_CASE
+	ELSE
+		;	
 	END_IF
 	 
 END_PROGRAM

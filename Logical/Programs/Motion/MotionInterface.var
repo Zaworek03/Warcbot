@@ -1,3 +1,4 @@
 VAR
+	gRobotMoveVar : RobotMoveVarType;
 	gMotionInterface : MotionInterfaceType;
 END_VAR

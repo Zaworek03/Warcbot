@@ -7,5 +7,6 @@
     <Object Type="File" Description="Local variables">Robot.var</Object>
     <Object Type="Program" Language="IEC">MotionCtrl</Object>
     <Object Type="Program" Language="IEC">PositionInfo</Object>
+    <Object Type="Program" Language="IEC">RobotMove</Object>
   </Objects>
 </Package>

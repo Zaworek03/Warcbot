@@ -82,5 +82,25 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="NewGameContent.EasyModeToggleBtn1.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="NewGameContent" widgetRefId="EasyModeToggleBtn1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gDifficultyLevel">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="3" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="NewGameContent.EasyModeToggleBtn2.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="NewGameContent" widgetRefId="EasyModeToggleBtn2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gDifficultyLevel">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="4" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

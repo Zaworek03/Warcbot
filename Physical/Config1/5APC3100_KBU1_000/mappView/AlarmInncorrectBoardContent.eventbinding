@@ -12,13 +12,6 @@
               </Target>
             </Action>
           </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gStep">
-                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
-              </Target>
-            </Action>
-          </Step>
           <Step order="2">
             <Action>
               <Target xsi:type="clientSystem.Action">
@@ -44,13 +37,6 @@
             <Action>
               <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gStart">
                 <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="2">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gStep">
-                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="7" />
               </Target>
             </Action>
           </Step>

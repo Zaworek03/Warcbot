@@ -1,7 +1,16 @@
 VAR
 	Robot : MpRoboArm6Axis;
 	RobotPar : MpRoboArm6AxisParType;
-	AxisPos : ARRAY[0..5] OF REAL := [2(0),-90,0,90,0];
 	doMagnet : BOOL;
 	MagnetStatus : BOOL;
+	WorkspaceMonitor : McPathGenMonElemWorkspaceType;
+END_VAR
+VAR RETAIN
+	AxisRestorePos0 : {REDUND_UNREPLICABLE} McAcpAxRestorePosType;
+	AxisRestorePos1 : {REDUND_UNREPLICABLE} McAcpAxRestorePosType;
+	AxisRestorePos2 : {REDUND_UNREPLICABLE} McAcpAxRestorePosType;
+	AxisRestorePos3 : {REDUND_UNREPLICABLE} McAcpAxRestorePosType;
+	AxisRestorePos4 : {REDUND_UNREPLICABLE} McAcpAxRestorePosType;
+	AxisRestorePos5 : {REDUND_UNREPLICABLE} McAcpAxRestorePosType;
+	RestorePosReady : BOOL;
 END_VAR

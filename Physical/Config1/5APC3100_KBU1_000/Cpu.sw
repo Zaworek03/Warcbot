@@ -15,6 +15,9 @@
     <Task Name="GameStats" Source="Programs.GameStats.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="CheckVisio" Source="Programs.CheckVision.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="MainProgra" Source="Programs.MainProgram.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="FolderMng" Source="Programs.FolderMng.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="Alarms" Source="Programs.Alarms.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="RobotMove" Source="Programs.Motion.RobotMove.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
@@ -110,5 +113,7 @@
     <LibraryObject Name="ArUser" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsIoTrc" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="MpUserX" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpAudit" Source="Libraries.MpAudit.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpReport" Source="Libraries.MpReport.lby" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

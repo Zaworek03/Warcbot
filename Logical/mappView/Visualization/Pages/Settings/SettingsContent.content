@@ -15,15 +15,20 @@
                 <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemAdmin" width="180" zIndex="4" columnType="IsAdmin" text="$IAT/administrator" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.Button" id="BtnUserAdd" top="570" left="400" width="160" zIndex="2" text="$IAT/dodaj_uzytkownika" style="Command" />
-            <Widget xsi:type="widgets.brease.Button" id="BtnUserRemove" top="570" left="580" width="160" zIndex="3" text="$IAT/usun_uzytkownika" style="Command" />
-            <Widget xsi:type="widgets.brease.Button" id="BtnUserModify" top="570" left="760" width="240" zIndex="4" text="$IAT/zmodyfikuj_uzytkownika" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserAdd" top="570" left="400" width="160" zIndex="2" text="Add User" permissionOperate="['Administraotr']" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserRemove" top="570" left="580" width="160" zIndex="3" text="Remove User" permissionOperate="['Administraotr']" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserModify" top="570" left="760" width="160" zIndex="4" text="Modify User" permissionOperate="['Administraotr']" style="Command" />
           </Widgets>
         </Widget>
-        <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" width="150" zIndex="1" text="$IAT/element_2">
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" zIndex="1" text="Audit">
           <Widgets>
-            <Widget xsi:type="widgets.brease.Button" id="Button1" top="410" left="220" zIndex="0" text="$IAT/sv" />
-            <Widget xsi:type="widgets.brease.Button" id="Button2" top="410" left="360" zIndex="1" text="$IAT/Id" />
+            <Widget xsi:type="widgets.brease.AuditList" id="AuditList1" top="10" left="0" width="1380" height="710" zIndex="0">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem1" zIndex="0" columnType="timestamp" text="Time" />
+                <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem2" width="980" zIndex="1" text="Opis" />
+                <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem3" zIndex="2" columnType="operator name" text="AuditListItem3" />
+              </Widgets>
+            </Widget>
           </Widgets>
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem3" left="0" width="150" zIndex="2" text="$IAT/element_3">

@@ -1,8 +1,15 @@
 VAR
+	MpAuditTrail_0 : MpAuditTrail;
 	BoardConverted : ARRAY[1..8,1..8] OF USINT;
 	BoardGit : BOOL; (*Git ruch*)
-	Vision : USINT;
 	Match : BOOL;
 	j : USINT;
 	i : USINT;
+END_VAR
+VAR CONSTANT
+	BoardSpaces : USINT := 8;
+	Convert : ARRAY[0..4] OF USINT := [0,1,2,1,2];
+END_VAR
+VAR
+	RobotMoveMarker : BOOL;
 END_VAR

@@ -240,26 +240,26 @@ Load game / Save game</seg>
     </tu>
     <tu tuid="latwy">
       <tuv xml:lang="pl">
-        <seg>Łatwy</seg>
+        <seg>Wyzwanie</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Easy</seg>
+        <seg>Challenge</seg>
       </tuv>
     </tu>
     <tu tuid="sredni">
       <tuv xml:lang="pl">
-        <seg>Średni</seg>
+        <seg>Pot i łzy</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Medium</seg>
+        <seg>Blood, Sweat &amp; Tears</seg>
       </tuv>
     </tu>
     <tu tuid="trudny">
       <tuv xml:lang="pl">
-        <seg>Trudny</seg>
+        <seg>Powodzenia...</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Hard</seg>
+        <seg>Good Luck...</seg>
       </tuv>
     </tu>
     <tu tuid="start">
@@ -304,7 +304,7 @@ Load game / Save game</seg>
     </tu>
     <tu tuid="ponowny_zapis">
       <tuv xml:lang="pl">
-        <seg>Zapisz ponownie</seg>
+        <seg>Nowy zapis</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>New save</seg>
@@ -1024,6 +1024,30 @@ Load game / Save game</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>File load confirmation</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Rozgrzewka">
+      <tuv xml:lang="pl">
+        <seg>Rozgrzewka</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Easy Going</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Bez_stresu">
+      <tuv xml:lang="pl">
+        <seg>Bez Stresu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>No Stress</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Login">
+      <tuv xml:lang="pl">
+        <seg>Zalogowano jako:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logged in as:</seg>
       </tuv>
     </tu>
   </body>

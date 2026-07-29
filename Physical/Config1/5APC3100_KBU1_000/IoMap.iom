@@ -108,4 +108,8 @@ VAR_CONFIG
 	::Program2:gCameraCtrl.Pieces[24].PositionY AT %ID."VSS112Q22.042P-000".PositionY_Out_124;
 	Cyclic#1.::doMagnet AT %QX."X20DO9322".DigitalOutput05;
 	Cyclic#1.::MagnetStatus AT %IX."X20DO9322".StatusDigitalOutput05;
+	::Program2:gCameraCtrl.Parameters.ExposureTime AT %QD."VSS112Q22.042P-000".ExposureTime01;
+	::Program2:gCameraCtrl.Parameters.SetFocus AT %QW."VSS112Q22.042P-000".SetFocus;
+	::Program2:gCameraCtrl.Parameters.GainLevel AT %QB."VSS112Q22.042P-000".GainLevel;
+	::Program2:gCameraCtrl.Status.ReadGainLevel AT %IB."VSS112Q22.042P-000".ReadGainLevel;
 END_VAR

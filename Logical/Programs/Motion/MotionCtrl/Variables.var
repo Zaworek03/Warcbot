@@ -1,22 +1,40 @@
+(* Sterowanie robotem i homing *)
 VAR
-	i : USINT;
+	RobotState : RobotStateType := ROBOT_DISABLED;
 	mcGroupHome : MC_BR_GroupHome_15;
-	RTrigExecute : r_trig;
-	WhitePileCnt : USINT;
-	BlackPileCnt : USINT;
-	ExecuteImpulse : BOOL;
+	AxisPos : ARRAY[0..5] OF REAL := [2(0),-90,3(0)];
+	i : USINT;
+END_VAR
+(* Wymiana danych z ST Motion *)
+VAR
+	STMotionStartPoint : McPointType;
+	STMotionEndPoint : McPointType;
+	STMotionHomePoint : McPointType := (Pos:=(X:=400,Y:=0,Z:=500),Orient:=(Angle1:=0,Angle2:=180,Angle3:=0));
+	STMotionDone : BOOL := FALSE;
 END_VAR
 VAR CONSTANT
-	WhitePileXOffs : REAL := -50;
+	STMotionDefaultOrient : McOrientType := (Angle1:=0,Angle2:=180,Angle3:=0);
+END_VAR
+(* Synchronizacja PLC ze ST Motion *)
+VAR
+	RTrigExecute : r_trig;
+	ExecuteImpulse : BOOL;
+	RTrigSTMotionDone : r_trig;
+	STMotionDoneImpulse : BOOL;
+END_VAR
+(* Obs³uga stosów warcabów *)
+VAR CONSTANT
 	BlackPileXOffs : REAL := 50;
+	WhitePileXOffs : REAL := -50;
 	PileZOffs : REAL := 26;
 	PileHeight : USINT := 4;
 END_VAR
 VAR
-	RobotState : RobotStateType := ROBOT_ENABLED;
+	BlackPileCnt : USINT;
+	WhitePileCnt : USINT;
 	PileCalculatedOffs : McPosType;
 END_VAR
-(*Jog Cartesian*)
+(* Rêczne sterowanie kartezjañskie *)
 VAR
 	JogXPos : BOOL;
 	JogXNeg : BOOL;
@@ -26,32 +44,20 @@ VAR
 	JogZNeg : BOOL;
 	JogCartesianSpeed : REAL;
 END_VAR
-(*Jog Joint*)
+(* Rêczne sterowanie osiami robota *)
 VAR
 	JogJointPos0 : BOOL;
-	JogJointPos1 : BOOL;
-	JogJointPos2 : BOOL;
-	JogJointPos3 : BOOL;
-	JogJointPos4 : BOOL;
-	JogJointPos5 : BOOL;
 	JogJointNeg0 : BOOL;
+	JogJointPos1 : BOOL;
 	JogJointNeg1 : BOOL;
+	JogJointPos2 : BOOL;
 	JogJointNeg2 : BOOL;
+	JogJointPos3 : BOOL;
 	JogJointNeg3 : BOOL;
+	JogJointPos4 : BOOL;
 	JogJointNeg4 : BOOL;
+	JogJointPos5 : BOOL;
 	JogJointNeg5 : BOOL;
-	JogJointSpeed : REAL;
 	JogJointAny : BOOL;
-END_VAR
-(*Zmienne dla ST Motion*)
-VAR
-	STMotionStartPoint : McPointType;
-	STMotionEndPoint : McPointType;
-	STMotionHomePoint : McPointType := (Pos:=(X:=400,Y:=0,Z:=500),Orient:=(Angle1:=0,Angle2:=180,Angle3:=0));
-END_VAR
-VAR CONSTANT
-	STMotionDefaultOrient : McOrientType := (Angle1:=0,Angle2:=180,Angle3:=0);
-END_VAR
-VAR
-	STMotionDone : BOOL := FALSE;
+	JogJointSpeed : REAL;
 END_VAR

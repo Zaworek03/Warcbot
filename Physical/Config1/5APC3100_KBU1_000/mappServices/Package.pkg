@@ -7,5 +7,6 @@
     <Object Type="File">ConfAlList.mpalarmxlist</Object>
     <Object Type="File">ConfAlHist.mpalarmxhistory</Object>
     <Object Type="File">SaveRecipe.mprecipexml</Object>
+    <Object Type="File">AuditTrial.mpaudittrail</Object>
   </Objects>
 </Package>

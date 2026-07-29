@@ -40,4 +40,13 @@
       <Selector ID="SelfCollisionDetection" Value="Enabled" />
     </Selector>
   </Element>
+  <Element ID="Feature_Monitoring_Racer3_2" Type="axesgroupfeature">
+    <Selector ID="Type" Value="MonitoringElements">
+      <Group ID="SingleElements">
+        <Selector ID="SingleElement[1]" Value="WorkspaceMonitoring">
+          <Property ID="Level" Value="::WorkspaceMonitor" />
+        </Selector>
+      </Group>
+    </Selector>
+  </Element>
 </Configuration>
