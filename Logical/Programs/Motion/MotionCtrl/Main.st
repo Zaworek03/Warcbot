@@ -1,7 +1,7 @@
 
 PROGRAM _INIT
 	doMagnet;
-
+	
 	gAxesGroup_Racer3_1;
 	gAxisQ1_Racer3_1;
 	gAxisQ2_Racer3_1;
@@ -277,6 +277,10 @@ PROGRAM _CYCLIC
 			
 	END_CASE;
 	
+	IF NOT (RobotState = ROBOT_MANUAL OR RobotState = ROBOT_MOVING) THEN
+		doMagnet := FALSE;
+	END_IF;
+	
 	IF NOT gMotionInterface.Enable THEN
 		gMotionInterface.Busy := 0;
 		RobotState := ROBOT_DISABLED;
@@ -288,6 +292,8 @@ PROGRAM _CYCLIC
 		Robot.MoveProgram := 0;
 		Robot.Interrupt := 1;
 	END_IF;
+
+	gESTOP := Robot.Info.ReadyToPowerOn;
 	
 	RTrigSTMotionDone();
 	RTrigExecute();

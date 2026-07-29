@@ -29,6 +29,7 @@ TYPE
 		Cartesian : JogCartesianType;
 		RequestRehomeRobot : BOOL;
 		RequestGoHome : BOOL;
+		UsingUCS : BOOL;
 	END_STRUCT;
 	MotionInterfaceType : 	STRUCT 
 		RequestManualMode : BOOL;

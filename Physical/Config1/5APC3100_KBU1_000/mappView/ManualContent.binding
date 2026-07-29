@@ -164,5 +164,9 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:doMagnet" attribute="value" />
 <Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonElektromagnes" attribute="value" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.UsingUCS" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ToggleButtonUseUCS" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>
