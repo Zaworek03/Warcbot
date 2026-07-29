@@ -12,7 +12,9 @@ PROGRAM _INIT
 	
 	GetCoordSystemIdent();
 	
-	CoordSystemIdent := GetCoordSystemIdent.Ident;
+	ReadActualPosition.AxesGroup := ADR(gAxesGroup_Racer3_1);
+	ReadActualPosition.Enable := TRUE;
+	ReadActualPosition.CoordSystem := GetCoordSystemIdent.Ident;
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -23,20 +25,18 @@ PROGRAM _CYCLIC
 	AxisQ5Pos := Robot.Info.JointAxisPosition[4];
 	AxisQ6Pos := -Robot.Info.JointAxisPosition[5];
 	
-//	X := Robot.X;
-//	Y := Robot.Y;
-	//	Z := Robot.Z;
+	IF gMotionInterface.Manual.UsingUCS THEN
+		
+		X := ReadActualPosition.Position[0];
+		Y := ReadActualPosition.Position[1];
+		Z := ReadActualPosition.Position[2];
+	ELSE
+		X := Robot.X;
+		Y := Robot.Y;
+		Z := Robot.Z;
+	END_IF;
 	
-	
-	
-	ReadActualPosition.AxesGroup := ADR(gAxesGroup_Racer3_1);
-	ReadActualPosition.Enable := TRUE;
-	ReadActualPosition.CoordSystem := CoordSystemIdent;
-	
-	X := ReadActualPosition.Position[0];
-	Y := ReadActualPosition.Position[1];
-	Z := ReadActualPosition.Position[2];
-	
+		
 	gAlarm.RobotWorkspaceViolation := 0;
 	gAlarm.RobotAxisViolation := 0;
 	

@@ -65,6 +65,7 @@
           </Variable>
           <Variable Name="RequestRehomeRobot" />
           <Variable Name="RequestGoHome" />
+          <Variable Name="UsingUCS" />
         </Variable>
         <Variable Name="Enable" />
       </Variable>

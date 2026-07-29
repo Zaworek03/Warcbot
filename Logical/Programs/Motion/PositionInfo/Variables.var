@@ -9,6 +9,5 @@ VAR
 	Y : LREAL;
 	Z : LREAL;
 	GetCoordSystemIdent : MC_BR_GetCoordSystemIdent;
-	CoordSystemIdent : UDINT;
 	ReadActualPosition : MC_GroupReadActualPosition_15;
 END_VAR
