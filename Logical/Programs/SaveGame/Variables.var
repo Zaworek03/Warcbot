@@ -8,7 +8,6 @@ VAR
 	Save : Save_type; (*Zmienna do której s¹ zapisywane i z której s¹ odczytywane dane*)
 	SaveFileName : STRING[80]; (*Zmienna do przechowywania wpisanej nazwy pliku*)
 	NewSave : BOOL := FALSE; (*Zmienna czy przycisk New save zosta³ klikniêty*)
-	DirCreate_0 : DirCreate; (*Function Blok do tworzenia folderu*)
 	FB_ValidateFileName_0 : FB_ValidateFileName; (*Function Blok do sprawdzania czy nazwa pliku jest poprawna*)
 	InvSavFileName : BOOL := FALSE; (*Zmienna do komunukacji o niepoprawnej nazwie*)
 	Saved : BOOL := FALSE; (*Zmienna do komunikacji o pomyœlnym zapisaniu pliku*)

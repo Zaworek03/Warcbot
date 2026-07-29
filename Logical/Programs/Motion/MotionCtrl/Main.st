@@ -10,6 +10,8 @@ PROGRAM _INIT
 	gAxisQ5_Racer3_1;
 	gAxisQ6_Racer3_1;
 	
+	STMotionHomePoint;
+	
 	mcGroupHome.AxesGroup := ADR(gAxesGroup_Racer3_1);
 	
 	Robot.MpLink := ADR(gAxesGroup_Racer3_1);
@@ -22,6 +24,9 @@ PROGRAM _INIT
 	Robot();
 	
 	RobotState := ROBOT_ENABLED;
+	
+	PauseWorkspaceMonitoring.AxesGroup := ADR(gAxesGroup_Racer3_1);
+	PauseWorkspaceMonitoring.Enable := FALSE;
 	
 END_PROGRAM
 
@@ -179,7 +184,7 @@ PROGRAM _CYCLIC
 				END_IF;
 				IF JogXNeg THEN
 					RobotPar.Jog.Velocity[0] := -JogCartesianSpeed;
-				END_IF;
+					END_IF;
 				IF JogYPos THEN
 					RobotPar.Jog.Velocity[1] := JogCartesianSpeed;
 				END_IF;
@@ -197,6 +202,8 @@ PROGRAM _CYCLIC
 				RobotPar.ProgramName := 'gohome.st';
 				Robot.MoveProgram := TRUE;
 				STMotionDone := FALSE;
+				STMotionLowFeedrate := gMotionInterface.Feedrate.Low;
+				PauseWorkspaceMonitoring.Enable := TRUE;
 				RobotState := ROBOT_GO_HOME;
 				gMotionInterface.Manual.RequestGoHome := FALSE;
 			END_IF;
@@ -218,13 +225,17 @@ PROGRAM _CYCLIC
 			
 		ROBOT_GO_HOME:
 			IF STMotionDone THEN
+				PauseWorkspaceMonitoring.Enable := FALSE;
 				RobotState := ROBOT_MANUAL;
 			END_IF;
 			
 		ROBOT_EXECUTE:
 			
-		STMotionStartPoint.Pos := gMotionInterface.StartPos;
-		STMotionStartPoint.Orient := STMotionDefaultOrient;
+			STMotionHighFeedrate := gMotionInterface.Feedrate.High;
+			STMotionLowFeedrate := gMotionInterface.Feedrate.Low;
+			
+			STMotionStartPoint.Pos := gMotionInterface.StartPos;
+			STMotionStartPoint.Orient := STMotionDefaultOrient;
 			
 			// Ustalanie na jaka pozycje warcab ma byc odstawiony
 			CASE gMotionInterface.Command OF
@@ -295,6 +306,7 @@ PROGRAM _CYCLIC
 
 	gESTOP := Robot.Info.ReadyToPowerOn;
 	
+	PauseWorkspaceMonitoring();
 	RTrigSTMotionDone();
 	RTrigExecute();
 	mcGroupHome();
