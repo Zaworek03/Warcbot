@@ -7,6 +7,7 @@ END_VAR
 
 VAR {AT PLC}
     doMagnet : BOOL;
+    //UserFrame {ACCESS 'gUserFrame'}: McFrameType;
 END_VAR
 
 VAR
@@ -18,6 +19,7 @@ END_VAR
 
 PROGRAM _MAIN
     Done := FALSE;
+    SetPCS(OH::gUserFrame);
     Feedrate(5000);
 
     StartPointOffs := StartPoint;
@@ -45,6 +47,7 @@ PROGRAM _MAIN
     WaitTime(1);
     MoveL(EndPointOffs);
 
+    SetPCS(OH::MCS);
     MoveJ(HomePoint);
 
     WaitEndMove();

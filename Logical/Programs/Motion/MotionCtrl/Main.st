@@ -1,7 +1,7 @@
 
 PROGRAM _INIT
 	doMagnet;
-
+	
 	gAxesGroup_Racer3_1;
 	gAxisQ1_Racer3_1;
 	gAxisQ2_Racer3_1;
