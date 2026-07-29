@@ -23,10 +23,6 @@ VAR
 	transformationDen  : LREAL;
 	transformationB : LREAL;
 	transformationA : LREAL;
-	currentVectorY : LREAL;
-	currentVectorX  : LREAL;
-	referenceVectorY  : LREAL;
-	referenceVectorX  : LREAL;
 	marker4Found : BOOL;
 	marker3Found : BOOL;
 	marker4Y : DINT;

@@ -1,3 +1,4 @@
+
 FUNCTION CalculateTransformation : BOOL
 
 	VAR_INPUT

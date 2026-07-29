@@ -5,5 +5,6 @@
     <File Description="Exported data types">Types.typ</File>
     <File Description="Exported constants">Constants.var</File>
     <File Description="Exported functions and function blocks">CameraMath.fun</File>
+    <File>CalculateTransformation.st</File>
   </Files>
 </Library>
