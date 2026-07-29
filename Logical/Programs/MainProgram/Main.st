@@ -47,7 +47,7 @@ PROGRAM _CYCLIC
 					END_FOR;
 					IF Match THEN
 						BoardGit := TRUE;
-						gStep := RobotMove;
+						gStep := GameMove;
 					ELSE
 						gAlarm.InncorrectBoard := TRUE;
 						gStep := ErrorState;
@@ -55,10 +55,10 @@ PROGRAM _CYCLIC
 				END_IF;
 					
 			GameMove:
-				(* Zaczêcie -> synga³ do silnika bool TRUE bez resetu
-				   Zakoñczenie -> synga³ z silnika bool TRUE bez resetu
-				   Po odbieorze sygna³u zakoñczenia, tu reset obu zmiennych*)
-				;
+				IF RobotMoveMarker THEN
+					gStep := RobotMove;
+					RobotMoveMarker := FALSE;
+				END_IF;
 					
 			RobotMove:
 				(* Patrz RobotMove::Main.st *);
