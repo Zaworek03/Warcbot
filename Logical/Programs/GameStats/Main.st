@@ -98,6 +98,7 @@ PROGRAM _CYCLIC
 				gRobotMoveVar.StartPoint.y := fromRow;
 				gRobotMoveVar.EndPoint.x := toCol;
 				gRobotMoveVar.EndPoint.y := toRow;
+				gRobotMoveVar.RTRMove := TRUE;
 
 				pChar ACCESS ADR(LastMove);
 				pChar := 64 + fromCol;

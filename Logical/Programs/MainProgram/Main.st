@@ -39,6 +39,7 @@ PROGRAM _CYCLIC
 					Match := TRUE;
 					FOR i := 1 TO BoardSpaces DO
 						FOR j := 1 TO BoardSpaces DO
+							(* Odwrócenie planszy do góry nogami, aby odczyt z kamry by³ zgodny z widokiem ze stania na wprost robota *)
 							IF Convert[gBoardActual[BoardSpaces + 1 - i, BoardSpaces + 1 - j]] <> gBoardCamera[i, j] THEN
 								Match := FALSE;
 							END_IF;
@@ -46,17 +47,28 @@ PROGRAM _CYCLIC
 					END_FOR;
 					IF Match THEN
 						BoardGit := TRUE;
-						gStep := RobotMove;
+						gStep := GameMove;
 					ELSE
-						gAlarm.InncorrectBoard := 1;
-						gStep := Idle;
+						gAlarm.InncorrectBoard := TRUE;
+						gStep := ErrorState;
 					END_IF;
 				END_IF;
 					
 			GameMove:
-				;
+				IF RobotMoveMarker THEN
+					gStep := RobotMove;
+					RobotMoveMarker := FALSE;
+				END_IF;
 					
 			RobotMove:
+				(* Patrz RobotMove::Main.st *);
+			
+			ErrorState:
+				IF gAlarm.InncorrectBoard = FALSE THEN
+					gStep := PhotoCheck;
+				END_IF;
+			
+			EndState:
 				;
 		
 		END_CASE
