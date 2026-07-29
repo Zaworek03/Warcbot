@@ -5,9 +5,9 @@
     <Page refId="Main" />
     <Page refId="Play" />
     <Page refId="Alarm" />
-		<Page refId="Manual" />
-    <Page refId="Live" />
+    <Page refId="Manual" />
     <Page refId="Settings" />
+    <Page refId="Live" />
   </Pages>
   <Navigations />
   <BindingsSets>
@@ -47,7 +47,7 @@
   <Dialogs>
     <Dialog refId="NewGameDialog" />
     <Dialog refId="RulesDialog" />
-		<Dialog refId="LoginDialog" />
+    <Dialog refId="LoginDialog" />
     <Dialog refId="WinDialog" />
     <Dialog refId="LoseDialog" />
     <Dialog refId="InvalidPiece" />
@@ -69,7 +69,6 @@
     <Content refId="MainContent" />
     <Content refId="PlayContent" />
     <Content refId="AlarmContent" />
-    <Content refId="LiveContent" />
     <Content refId="SettingsContent" />
     <Content refId="LoginContent" />
     <Content refId="NewGameContent" />
@@ -89,6 +88,7 @@
     <Content refId="LoadConfContent" />
     <Content refId="AlramInncorrectRobotMoveContent" />
     <Content refId="AlarmInncorrectBoardContent" />
+    <Content refId="LiveContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
