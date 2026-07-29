@@ -93,7 +93,7 @@
       </Group>
       <Group ID="Reports">
         <Group ID="[0]">
-          <Property ID="Name" />
+          <Property ID="Name" Value="MyReport" />
           <Group ID="Settings">
             <Property ID="OwnerPassword" />
             <Property ID="UserPassword" />
@@ -102,7 +102,7 @@
             <Property ID="AllowEdit" Value="FALSE" />
           </Group>
           <Property ID="PageLayout" Value="Default" />
-          <Property ID="Header" />
+          <Property ID="Header" Value="ContentHeader" />
           <Property ID="Footer" />
           <Group ID="[0]">
             <Property ID="StartOnNewPage" Value="FALSE" />
@@ -110,6 +110,22 @@
               <Property ID="Text" />
               <Property ID="HorizontalAlign" Value="0" />
               <Property ID="TextStyle" />
+            </Group>
+            <Group ID="[0]">
+              <Property ID="Content" Value="ContentLine" />
+              <Property ID="Width" Value="100" />
+            </Group>
+          </Group>
+          <Group ID="[1]">
+            <Property ID="StartOnNewPage" Value="FALSE" />
+            <Group ID="Heading">
+              <Property ID="Text" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Property ID="TextStyle" />
+            </Group>
+            <Group ID="[0]">
+              <Property ID="Content" Value="ContentProductionLine" />
+              <Property ID="Width" Value="100" />
             </Group>
           </Group>
         </Group>
