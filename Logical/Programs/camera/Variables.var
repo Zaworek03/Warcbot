@@ -1,4 +1,7 @@
 VAR
+	marker4X  : DINT;
+	marker3Y : DINT;
+	marker3X : DINT;
 	j : USINT;
 	currentRightX : DINT;
 	currentBoardWidth : DINT;
@@ -13,4 +16,18 @@ VAR
 	cellStepX : DINT;
 	relativeY : DINT;
 	relativeX : DINT;
+	transformedY : LREAL;
+	transformedX : LREAL;
+	cornerRelativeY : LREAL;
+	cornerRelativeX  : LREAL;
+	transformationDen  : LREAL;
+	transformationB : LREAL;
+	transformationA : LREAL;
+	currentVectorY : LREAL;
+	currentVectorX  : LREAL;
+	referenceVectorY  : LREAL;
+	referenceVectorX  : LREAL;
+	marker4Found : BOOL;
+	marker3Found : BOOL;
+	marker4Y : DINT;
 END_VAR

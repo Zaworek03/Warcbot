@@ -14,6 +14,19 @@ TYPE
 		TopRightX : DINT;
 		TopLeftY : DINT;
 		TopLeftX : DINT;
+		MarkersValid : BOOL;
+		ReferenceMarker4Y : DINT;
+		ReferenceMarker4X : DINT;
+		ReferenceMarker3Y : DINT;
+		ReferenceMarker3X : DINT;
+		ReferenceBottomRightY : DINT;
+		ReferenceBottomRightX : DINT;
+		ReferenceBottomLeftY : DINT;
+		ReferenceBottomLeftX : DINT;
+		ReferenceTopRightY : DINT;
+		ReferenceTopRightX : DINT;
+		ReferenceTopLeftY : DINT;
+		ReferenceTopLeftX : DINT;
 	END_STRUCT;
 	CameraParameterType : 	STRUCT 
 		FlashColor : USINT;
@@ -35,7 +48,6 @@ TYPE
 	DetectedPieceType : 	STRUCT 
 		PositionX : DINT;
 		PositionY : DINT;
-		Area : UDINT;
 		Valid : BOOL;
 		Score : USINT;
 		ModelNumber : USINT;
@@ -48,7 +60,7 @@ TYPE
 		Parameters : CameraParameterType;
 		Status : CameraStatusType;
 		NumResults : USINT;
-		Pieces : ARRAY[1..24]OF DetectedPieceType;
+		Pieces : ARRAY[1..26]OF DetectedPieceType;
 		Calibration : BoardCalibrationType;
 		Board : CameraBoardType;
 		BoardReady : BOOL;
