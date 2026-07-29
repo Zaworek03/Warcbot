@@ -1107,5 +1107,13 @@ Load game / Save game</seg>
         <seg>Audit list item 3</seg>
       </tuv>
     </tu>
+    <tu tuid="raport_z_gry">
+      <tuv xml:lang="pl">
+        <seg>Raport z gry</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Game report</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

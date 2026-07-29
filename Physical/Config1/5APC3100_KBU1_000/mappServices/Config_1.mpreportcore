@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gReport" Type="mpreportcore">
+    <Group ID="mapp.Gen">
+      <Property ID="Enable" Value="TRUE" />
+      <Property ID="EnableCockpit" Value="FALSE" />
+      <Property ID="Parent" />
+    </Group>
+    <Group ID="MpReport">
+      <Group ID="Settings">
+        <Property ID="ResourceDeviceName" />
+        <Group ID="LanguageDependent">
+          <Group ID="[0]">
+            <Property ID="Language" Value="en" />
+            <Property ID="Font" Value="0" />
+            <Property ID="DateTimePattern" Value="%Y-%m-%d %H:%M:%S" />
+            <Property ID="PrecisionDateTimePattern" Value="%Y-%m-%d %H:%M:%S,%L" />
+          </Group>
+          <Group ID="[1]">
+            <Property ID="Language" Value="pl" />
+            <Property ID="Font" Value="0" />
+            <Property ID="DateTimePattern" Value="%Y-%m-%d %H:%M:%S" />
+            <Property ID="PrecisionDateTimePattern" Value="%Y-%m-%d %H:%M:%S,%L" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="PageLayouts">
+        <Group ID="[0]">
+          <Property ID="Name" Value="Default" />
+          <Property ID="PageFormat" Value="4" />
+          <Property ID="Orientation" Value="1" />
+          <Property ID="Margins" Value="1" />
+        </Group>
+      </Group>
+      <Group ID="Styles">
+        <Group ID="Text">
+          <Group ID="[0]">
+            <Property ID="Name" Value="Default" />
+            <Property ID="Style" Value="0" />
+            <Property ID="Size" Value="10" />
+            <Property ID="Color" Value="000000" />
+            <Property ID="Precision" Value="6" />
+          </Group>
+        </Group>
+        <Group ID="Table">
+          <Group ID="[0]">
+            <Property ID="Name" Value="Default" />
+            <Property ID="BorderWidth" Value="1" />
+            <Property ID="Color" Value="000000" />
+            <Property ID="Padding" Value="1" />
+            <Property ID="HeadRowOnNewPage" Value="FALSE" />
+          </Group>
+        </Group>
+        <Group ID="Line">
+          <Group ID="[0]">
+            <Property ID="Name" Value="Default" />
+            <Property ID="Width" Value="1" />
+            <Property ID="Color" Value="000000" />
+          </Group>
+        </Group>
+      </Group>
+      <Group ID="Tables">
+        <Selector ID="[0]" Value="ColumnsByRow">
+          <Property ID="Name" Value="ResultsTab" />
+          <Property ID="TableStyle" Value="Default" />
+          <Property ID="TextStyle" Value="Default" />
+        </Selector>
+      </Group>
+      <Group ID="Contents">
+        <Group ID="[0]">
+          <Property ID="Name" Value="ContentHeader" />
+          <Selector ID="[0]" Value="Text">
+            <Property ID="Text" Value="{$IAT/raport_z_gry}" />
+            <Property ID="HorizontalAlign" Value="0" />
+            <Property ID="NewLine" Value="TRUE" />
+            <Property ID="TextStyle" Value="Default" />
+          </Selector>
+        </Group>
+        <Group ID="[1]">
+          <Property ID="Name" Value="ContentLine" />
+          <Selector ID="[0]" Value="Line">
+            <Property ID="LineStyle" Value="Default" />
+          </Selector>
+        </Group>
+        <Group ID="[2]">
+          <Property ID="Name" Value="ContentProductionLine" />
+          <Selector ID="[0]" Value="Table">
+            <Property ID="Table" Value="ResultsTab" />
+            <Property ID="HorizontalAlign" Value="0" />
+          </Selector>
+        </Group>
+      </Group>
+      <Group ID="Reports">
+        <Group ID="[0]">
+          <Property ID="Name" Value="MyReport" />
+          <Group ID="Settings">
+            <Property ID="OwnerPassword" />
+            <Property ID="UserPassword" />
+            <Property ID="AllowPrint" Value="TRUE" />
+            <Property ID="AllowCopy" Value="FALSE" />
+            <Property ID="AllowEdit" Value="FALSE" />
+          </Group>
+          <Property ID="PageLayout" Value="Default" />
+          <Property ID="Header" Value="ContentHeader" />
+          <Property ID="Footer" />
+          <Group ID="[0]">
+            <Property ID="StartOnNewPage" Value="FALSE" />
+            <Group ID="Heading">
+              <Property ID="Text" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Property ID="TextStyle" />
+            </Group>
+            <Group ID="[0]">
+              <Property ID="Content" Value="ContentLine" />
+              <Property ID="Width" Value="100" />
+            </Group>
+          </Group>
+          <Group ID="[1]">
+            <Property ID="StartOnNewPage" Value="FALSE" />
+            <Group ID="Heading">
+              <Property ID="Text" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Property ID="TextStyle" />
+            </Group>
+            <Group ID="[0]">
+              <Property ID="Content" Value="ContentProductionLine" />
+              <Property ID="Width" Value="100" />
+            </Group>
+          </Group>
+        </Group>
+      </Group>
+    </Group>
+    <Selector ID="Alarms" Value="MpAlarmX">
+      <Group ID="mapp.AlarmX.Core.Configuration">
+        <Group ID="[0]">
+          <Property ID="Name" Value="GenerateFailed" />
+          <Property ID="Message" Value="{$BR/mapp/MpReportCore/Alarms/GenerateFailed}" />
+          <Property ID="Code" Value="0" />
+          <Property ID="Severity" Value="1" />
+          <Selector ID="Behavior" Value="EdgeAlarm">
+            <Property ID="AutoReset" Value="TRUE" />
+            <Property ID="Acknowledge" Value="1" />
+            <Property ID="Confirm" Value="0" />
+            <Property ID="MultipleInstances" Value="TRUE" />
+            <Property ID="ReactionWhilePending" Value="TRUE" />
+            <Property ID="Async" Value="FALSE" />
+            <Group ID="Recording">
+              <Property ID="InactiveToActive" Value="TRUE" />
+              <Property ID="ActiveToInactive" Value="FALSE" />
+              <Property ID="UnacknowledgedToAcknowledged" Value="TRUE" />
+              <Property ID="UnconfirmedToConfirmed" Value="TRUE" />
+            </Group>
+          </Selector>
+          <Property ID="Disable" Value="FALSE" />
+          <Property ID="AdditionalInformation1" />
+          <Property ID="AdditionalInformation2" />
+        </Group>
+      </Group>
+    </Selector>
+  </Element>
+</Configuration>

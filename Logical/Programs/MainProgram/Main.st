@@ -20,11 +20,19 @@ PROGRAM _INIT
 	MpAuditTrail_0.FileName := ADR('AuditList'); 
 	MpAuditTrail_0();
 	
+	MpReportCore_0.Enable := TRUE; 
+	MpReportCore_0.MpLink := ADR(gReport); 
+	MpReportCore_0.DeviceName := ADR('CF'); 
+	MpReportCore_0.FileName := ADR('GameReport'); 
+	MpReportCore_0.ReportID := ADR('MyReport'); 
+	MpReportCore_0.Language := ADR('en'); 
+	MpReportCore_0(); 
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
 	MpAuditTrail_0();
-	
+	MpReportCore_0(); 
 	IF TRUE THEN
 		CASE gStep OF
 			Idle:
