@@ -9,7 +9,7 @@ END_VAR
 VAR
 	STMotionStartPoint : McPointType;
 	STMotionEndPoint : McPointType;
-	STMotionHomePoint : McPointType := (Pos:=(X:=400,Y:=0,Z:=500),Orient:=(Angle1:=0,Angle2:=180,Angle3:=0));
+	STMotionHomePoint : McPointType := (Pos:=(X:=222,Y:=-228,Z:=565),Orient:=(Angle1:=0,Angle2:=180,Angle3:=0));
 	STMotionDone : BOOL := FALSE;
 END_VAR
 VAR CONSTANT
