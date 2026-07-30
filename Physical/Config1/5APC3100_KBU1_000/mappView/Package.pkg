@@ -27,5 +27,7 @@
     <Object Type="File">LoadConfContent.eventbinding</Object>
     <Object Type="File">AlramInncorrectRobotMoveContent.eventbinding</Object>
     <Object Type="File">AlarmInncorrectBoardContent.eventbinding</Object>
+    <Object Type="File">ManualContent.eventbinding</Object>
+    <Object Type="File">ReHomeDialog.eventbinding</Object>
   </Objects>
 </Package>
