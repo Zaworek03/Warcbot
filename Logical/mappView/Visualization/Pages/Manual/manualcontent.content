@@ -1,73 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ManualContent" guid="f6a9002a-47ef-4a97-a370-7a4e2a9daf77" height="840" width="1450" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Widgets>
-    <Widget xsi:type="widgets.brease.Label" id="LabelKartezjanskiTytul" top="20" left="260" width="200" height="60" zIndex="3" text="$IAT/kartezjanski" backColor="rgba(255, 255, 255, 0)" style="Caption" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="0" left="0" width="725" zIndex="2" backColor="rgba(255, 218, 185, 1)" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonForward" top="260" left="20" width="140" height="80" zIndex="4" image="Media/SymbolLib/Arrow/ArrowLeft.svg" style="Command" />
-    <Widget xsi:type="widgets.brease.Label" id="Label3" top="220" left="40" width="100" height="40" zIndex="5" text="+Y" textAlign="center" style="Caption" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonLeft" top="360" left="180" width="140" height="80" zIndex="6" image="Media/SymbolLib/Arrow/ArrowDown.svg" style="Command" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="440" left="220" width="60" height="40" zIndex="7" text="-X" textAlign="center" style="Caption" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="ButtonElektromagnes" top="260" left="180" width="140" height="80" zIndex="8" text="$IAT/chwytanie" backColor="rgba(128, 255, 128, 1)" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonRight" top="160" left="180" width="140" height="80" zIndex="9" image="Media/SymbolLib/Arrow/ArrowUp.svg" style="Command" />
-    <Widget xsi:type="widgets.brease.Label" id="Label2" top="120" left="220" width="60" height="40" zIndex="10" text="+X" textAlign="center" style="Caption" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonBackward" top="260" left="340" width="140" height="80" zIndex="11" image="Media/SymbolLib/Arrow/ArrowRight.svg" style="Command" />
-    <Widget xsi:type="widgets.brease.Label" id="Label4" top="220" left="360" width="100" height="40" zIndex="12" text="-Y" textAlign="center" style="Caption" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonUp" top="160" left="600" width="120" height="80" zIndex="13" image="Media/SymbolLib/Arrow/ArrowUp.svg" style="Operate" />
-    <Widget xsi:type="widgets.brease.Label" id="Label5" top="180" left="560" width="40" height="40" zIndex="14" text="+Z" textAlign="center" style="Caption" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonDown" top="300" left="600" width="120" height="80" zIndex="15" image="Media/SymbolLib/Arrow/ArrowDown.svg" style="Operate" />
-    <Widget xsi:type="widgets.brease.Label" id="Label6" top="320" left="540" width="60" height="40" zIndex="16" text="-Z" textAlign="center" style="Caption" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="100" left="0" width="725" height="380" zIndex="1" />
-    <Widget xsi:type="widgets.brease.Label" id="Label7" top="500" left="260" width="300" height="40" zIndex="30" text="$IAT/przegubowy" style="Caption" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="480" left="0" width="725" height="80" zIndex="17" backColor="rgba(255, 218, 185, 1)" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelAxis1" top="590" left="160" zIndex="18" text="$IAT/os_1" style="Caption" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis1Plus" top="570" left="240" width="60" height="70" zIndex="19" image="Media/SymbolLib/Arrow/ArrowUp.svg" backColor="rgba(224, 224, 224, 1)" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelAxis2" top="680" left="160" zIndex="20" text="$IAT/os_2" style="Caption" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelAxis3" top="770" left="160" zIndex="21" text="$IAT/os_3" style="Caption" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis2Plus" top="660" left="240" width="60" height="70" zIndex="22" image="Media/SymbolLib/Arrow/ArrowUp.svg" backColor="rgba(224, 224, 224, 1)" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis3Plus" top="750" left="240" width="60" height="70" zIndex="23" image="Media/SymbolLib/Arrow/ArrowUp.svg" backColor="rgba(224, 224, 224, 1)" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelAxis4" top="590" left="500" zIndex="24" text="$IAT/os_4" style="Caption" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelAxis5" top="680" left="500" zIndex="25" text="$IAT/os_5" style="Caption" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelAxis6" top="770" left="500" zIndex="26" text="$IAT/os_6" style="Caption" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis4Plus" top="570" left="580" width="60" height="70" zIndex="27" image="Media/SymbolLib/Arrow/ArrowUp.svg" backColor="rgba(224, 224, 224, 1)" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis5Plus" top="660" left="580" width="60" height="70" zIndex="28" image="Media/SymbolLib/Arrow/ArrowUp.svg" backColor="rgba(224, 224, 224, 1)" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis6Plus" top="750" left="580" width="60" height="70" zIndex="29" image="Media/SymbolLib/Arrow/ArrowUp.svg" backColor="rgba(224, 224, 224, 1)" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle4" top="560" left="0" width="725" height="280" zIndex="0" />
-    <Widget xsi:type="widgets.brease.Label" id="Label8" top="120" left="730" width="340" zIndex="31" text="$IAT/polozenia_katowe" style="Information" />
-    <Widget xsi:type="widgets.brease.Label" id="Label9" top="120" left="1080" width="360" zIndex="32" text="$IAT/polozenia_kartezjanskie" style="Description" />
-    <Widget xsi:type="widgets.brease.Label" id="Label10" top="200" left="760" zIndex="33" text="$IAT/os_1" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis1" top="200" left="860" width="160" zIndex="34" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-    <Widget xsi:type="widgets.brease.Label" id="Label11" top="300" left="760" zIndex="35" text="$IAT/os_2" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis2" top="300" left="860" width="160" zIndex="36" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-    <Widget xsi:type="widgets.brease.Label" id="Label12" top="400" left="760" zIndex="37" text="$IAT/os_3" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis3" top="400" left="860" width="160" zIndex="38" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-    <Widget xsi:type="widgets.brease.Label" id="Label13" top="500" left="760" zIndex="39" text="$IAT/os_4" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis4" top="500" left="860" width="160" zIndex="40" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-    <Widget xsi:type="widgets.brease.Label" id="Label14" top="600" left="760" zIndex="41" text="$IAT/os_5" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-    <Widget xsi:type="widgets.brease.Label" id="Label15" top="700" left="760" zIndex="42" text="$IAT/os_6" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis5" top="600" left="860" width="160" zIndex="43" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis6" top="700" left="860" width="160" zIndex="44" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-    <Widget xsi:type="widgets.brease.Label" id="Label16" top="200" left="1160" width="40" zIndex="45" text="X" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-    <Widget xsi:type="widgets.brease.Label" id="Label17" top="300" left="1160" width="40" zIndex="46" text="Y" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-    <Widget xsi:type="widgets.brease.Label" id="Label18" top="400" left="1160" width="40" zIndex="47" text="Z" textColor="rgba(0, 0, 0, 1)" style="Title1" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputX" top="200" left="1220" width="160" zIndex="48" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputY" top="300" left="1220" width="160" zIndex="49" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputZ" top="400" left="1220" width="160" zIndex="50" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
-    <Widget xsi:type="widgets.brease.Label" id="Label19" top="40" left="1060" width="100" zIndex="52" text="$IAT/pozycje" style="Caption" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle5" top="0" left="725" width="735" zIndex="51" backColor="rgba(255, 255, 224, 1)" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis1Minus" top="570" left="80" width="60" height="70" zIndex="53" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(224, 224, 224, 1)" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis2Minus" top="660" left="80" width="60" height="70" zIndex="54" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(224, 224, 224, 1)" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis3Minus" top="750" left="80" width="60" height="70" zIndex="55" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(224, 224, 224, 1)" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis4Minus" top="570" left="420" width="60" height="70" zIndex="56" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(224, 224, 224, 1)" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis5Minus" top="660" left="420" width="60" height="70" zIndex="57" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(224, 224, 224, 1)" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis6Minus" top="750" left="420" width="60" height="70" zIndex="58" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(224, 224, 224, 1)" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonEnableManual" top="480" left="1160" width="219" height="40" zIndex="59" text="Enable Manual Mode" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputCartesianSpeed" top="600" left="1280" zIndex="60" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputJointSpeed" top="680" left="1280" zIndex="61" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelJointowySpeed" top="660" left="1080" width="200" height="60" zIndex="62" text="Jog Joint Speed" backColor="rgba(255, 255, 255, 0)" style="Caption" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelKartezjanskiSpeed" top="580" left="1080" width="200" height="60" zIndex="63" text="Jog Cartesian Speed" backColor="rgba(255, 255, 255, 0)" style="Caption" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonGoHome" top="740" left="1080" width="140" height="80" zIndex="64" text="Go Home" style="Command" />
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonRehome" top="740" left="1280" width="140" height="80" zIndex="65" text="Rehome" style="Command" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonToggleRobot" top="740" left="820" width="198" height="78" zIndex="66" text="Toggle Robot" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonUseUCS" top="540" left="1160" width="219" height="40" zIndex="67" text="Display UCS" />
-  </Widgets>
+	<Widgets>
+		<Widget xsi:type="widgets.brease.Label" id="LabelKartezjanskiTytul" top="32" left="40" width="300" height="36" zIndex="3" text="$IAT/kartezjanski" textColor="rgba(255, 255, 255, 1)" backColor="rgba(255, 255, 255, 0)" style="Caption" />
+		<Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="20" left="20" width="680" height="56" zIndex="2" backColor="rgba(52, 73, 102, 1)" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonForward" top="226" left="40" width="100" height="78" zIndex="4" image="Media/SymbolLib/Arrow/ArrowLeft.svg" style="Command" backColor="rgba(223, 232, 243, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="Label3" top="196" left="40" width="100" height="28" zIndex="5" text="+Y" textAlign="center" style="Caption" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonLeft" top="314" left="150" width="120" height="78" zIndex="6" image="Media/SymbolLib/Arrow/ArrowDown.svg" style="Command" backColor="rgba(223, 232, 243, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="Label1" top="392" left="150" width="120" height="26" zIndex="7" text="-X" textAlign="center" style="Caption" />
+		<Widget xsi:type="widgets.brease.ToggleButton" id="ButtonElektromagnes" top="226" left="150" width="120" height="78" zIndex="8" text="$IAT/chwytanie" backColor="rgba(122, 199, 140, 1)" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonRight" top="128" left="150" width="120" height="78" zIndex="9" image="Media/SymbolLib/Arrow/ArrowUp.svg" style="Command" backColor="rgba(223, 232, 243, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="Label2" top="100" left="150" width="120" height="28" zIndex="10" text="+X" textAlign="center" style="Caption" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonBackward" top="226" left="280" width="100" height="78" zIndex="11" image="Media/SymbolLib/Arrow/ArrowRight.svg" style="Command" backColor="rgba(223, 232, 243, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="Label4" top="196" left="280" width="100" height="28" zIndex="12" text="-Y" textAlign="center" style="Caption" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonUp" top="140" left="500" width="120" height="96" zIndex="13" image="Media/SymbolLib/Arrow/ArrowUp.svg" style="Operate" backColor="rgba(205, 223, 210, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="Label5" top="110" left="490" width="140" height="28" zIndex="14" text="+Z" textAlign="center" style="Caption" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonDown" top="272" left="500" width="120" height="96" zIndex="15" image="Media/SymbolLib/Arrow/ArrowDown.svg" style="Operate" backColor="rgba(205, 223, 210, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="Label6" top="372" left="490" width="140" height="28" zIndex="16" text="-Z" textAlign="center" style="Caption" />
+		<Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="20" left="20" width="680" height="400" zIndex="1" backColor="rgba(255, 255, 255, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="Label7" top="452" left="40" width="300" height="36" zIndex="30" text="$IAT/przegubowy" textColor="rgba(255, 255, 255, 1)" style="Caption" />
+		<Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="440" left="20" width="680" height="56" zIndex="17" backColor="rgba(52, 73, 102, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="LabelAxis1" top="548" left="50" width="90" height="28" zIndex="18" text="$IAT/os_1" style="Caption" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis1Plus" top="530" left="232" width="72" height="72" zIndex="19" image="Media/SymbolLib/Arrow/ArrowUp.svg" backColor="rgba(210, 227, 246, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="LabelAxis2" top="640" left="50" width="90" height="28" zIndex="20" text="$IAT/os_2" style="Caption" />
+		<Widget xsi:type="widgets.brease.Label" id="LabelAxis3" top="732" left="50" width="90" height="28" zIndex="21" text="$IAT/os_3" style="Caption" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis2Plus" top="622" left="232" width="72" height="72" zIndex="22" image="Media/SymbolLib/Arrow/ArrowUp.svg" backColor="rgba(210, 227, 246, 1)" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis3Plus" top="714" left="232" width="72" height="72" zIndex="23" image="Media/SymbolLib/Arrow/ArrowUp.svg" backColor="rgba(210, 227, 246, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="LabelAxis4" top="548" left="390" width="90" height="28" zIndex="24" text="$IAT/os_4" style="Caption" />
+		<Widget xsi:type="widgets.brease.Label" id="LabelAxis5" top="640" left="390" width="90" height="28" zIndex="25" text="$IAT/os_5" style="Caption" />
+		<Widget xsi:type="widgets.brease.Label" id="LabelAxis6" top="732" left="390" width="90" height="28" zIndex="26" text="$IAT/os_6" style="Caption" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis4Plus" top="530" left="572" width="72" height="72" zIndex="27" image="Media/SymbolLib/Arrow/ArrowUp.svg" backColor="rgba(210, 227, 246, 1)" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis5Plus" top="622" left="572" width="72" height="72" zIndex="28" image="Media/SymbolLib/Arrow/ArrowUp.svg" backColor="rgba(210, 227, 246, 1)" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis6Plus" top="714" left="572" width="72" height="72" zIndex="29" image="Media/SymbolLib/Arrow/ArrowUp.svg" backColor="rgba(210, 227, 246, 1)" />
+		<Widget xsi:type="widgets.brease.Rectangle" id="Rectangle4" top="440" left="20" width="680" height="380" zIndex="0" backColor="rgba(255, 255, 255, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="Label8" top="96" left="740" width="340" height="30" zIndex="31" text="$IAT/polozenia_katowe" style="Information" />
+		<Widget xsi:type="widgets.brease.Label" id="Label9" top="96" left="1100" width="330" height="30" zIndex="32" text="$IAT/polozenia_kartezjanskie" style="Description" />
+		<Widget xsi:type="widgets.brease.Label" id="Label10" top="144" left="740" width="90" zIndex="33" text="$IAT/os_1" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis1" top="140" left="840" width="190" zIndex="34" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="Label11" top="204" left="740" width="90" zIndex="35" text="$IAT/os_2" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis2" top="200" left="840" width="190" zIndex="36" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="Label12" top="264" left="740" width="90" zIndex="37" text="$IAT/os_3" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis3" top="260" left="840" width="190" zIndex="38" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="Label13" top="324" left="740" width="90" zIndex="39" text="$IAT/os_4" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis4" top="320" left="840" width="190" zIndex="40" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="Label14" top="384" left="740" width="90" zIndex="41" text="$IAT/os_5" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+		<Widget xsi:type="widgets.brease.Label" id="Label15" top="444" left="740" width="90" zIndex="42" text="$IAT/os_6" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis5" top="380" left="840" width="190" zIndex="43" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputAxis6" top="440" left="840" width="190" zIndex="44" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="Label16" top="144" left="1100" width="40" zIndex="45" text="X" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+		<Widget xsi:type="widgets.brease.Label" id="Label17" top="214" left="1100" width="40" zIndex="46" text="Y" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+		<Widget xsi:type="widgets.brease.Label" id="Label18" top="284" left="1100" width="40" zIndex="47" text="Z" textColor="rgba(0, 0, 0, 1)" style="Title1" />
+		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputX" top="140" left="1160" width="200" zIndex="48" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputY" top="210" left="1160" width="200" zIndex="49" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+		<Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputZ" top="280" left="1160" width="200" zIndex="50" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" backColor="rgba(255, 228, 181, 1)" />
+		<Widget xsi:type="widgets.brease.Label" id="Label19" top="30" left="740" width="200" height="36" zIndex="52" text="$IAT/pozycje" textColor="rgba(255, 255, 255, 1)" style="Caption" />
+		<Widget xsi:type="widgets.brease.Rectangle" id="Rectangle5" top="20" left="720" width="710" height="56" zIndex="51" backColor="rgba(52, 73, 102, 1)" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis1Minus" top="530" left="150" width="72" height="72" zIndex="53" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(231, 235, 240, 1)" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis2Minus" top="622" left="150" width="72" height="72" zIndex="54" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(231, 235, 240, 1)" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis3Minus" top="714" left="150" width="72" height="72" zIndex="55" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(231, 235, 240, 1)" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis4Minus" top="530" left="490" width="72" height="72" zIndex="56" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(231, 235, 240, 1)" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis5Minus" top="622" left="490" width="72" height="72" zIndex="57" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(231, 235, 240, 1)" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonAxis6Minus" top="714" left="490" width="72" height="72" zIndex="58" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(231, 235, 240, 1)" />
+		<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonEnableManual" top="540" left="740" width="230" height="44" zIndex="59" text="Enable Manual Mode" backColor="rgba(210, 227, 246, 1)" />
+		<Widget xsi:type="widgets.brease.NumericInput" id="NumericInputCartesianSpeed" top="612" left="980" width="200" zIndex="60" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" />
+		<Widget xsi:type="widgets.brease.NumericInput" id="NumericInputJointSpeed" top="672" left="980" width="200" zIndex="61" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" />
+		<Widget xsi:type="widgets.brease.Label" id="LabelJointowySpeed" top="670" left="740" width="220" height="40" zIndex="62" text="Jog Joint Speed" backColor="rgba(255, 255, 255, 0)" style="Caption" />
+		<Widget xsi:type="widgets.brease.Label" id="LabelKartezjanskiSpeed" top="610" left="740" width="220" height="40" zIndex="63" text="Jog Cartesian Speed" backColor="rgba(255, 255, 255, 0)" style="Caption" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonGoHome" top="740" left="740" width="210" height="70" zIndex="64" text="Go Home" style="Command" backColor="rgba(122, 199, 140, 1)" />
+		<Widget xsi:type="widgets.brease.MomentaryPushButton" id="ButtonRehome" top="740" left="970" width="210" height="70" zIndex="65" text="Rehome" style="Command" backColor="rgba(255, 210, 128, 1)" />
+		<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonToggleRobot" top="540" left="990" width="200" height="44" zIndex="66" text="Toggle Robot" backColor="rgba(210, 227, 246, 1)" />
+		<Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonUseUCS" top="540" left="1210" width="210" height="44" zIndex="67" text="Display UCS" backColor="rgba(210, 227, 246, 1)" />
+	</Widgets>
 </Content>
