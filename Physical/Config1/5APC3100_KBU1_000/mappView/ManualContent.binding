@@ -152,10 +152,7 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.RequestGoHome" attribute="value" />
 <Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonGoHome" attribute="value" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.RequestRehomeRobot" attribute="value" />
-<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonRehome" attribute="value" />
-</Binding>
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Enable" attribute="value" />
 <Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ToggleButtonToggleRobot" attribute="value" />

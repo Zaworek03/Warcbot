@@ -14,8 +14,8 @@
                 <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListAInfo" width="320" zIndex="4" columnType="additionalInfo1" text="$IAT/dodatkowe_info" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.Button" id="AckAllBtn" top="670" left="220" width="180" height="40" zIndex="1" text="$IAT/potwierdz_wszystkie" style="Command" />
-            <Widget xsi:type="widgets.brease.Button" id="AckBtn" top="670" left="0" width="180" height="40" zIndex="2" text="$IAT/potwierdz" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="AckAllBtn" top="670" left="220" width="180" height="40" zIndex="1" text="$IAT/potwierdz_wszystkie" permissionOperate="['Administraotr', 'Service']" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="AckBtn" top="670" left="0" width="180" height="40" zIndex="2" text="$IAT/potwierdz" permissionOperate="['Administraotr', 'Service']" style="Command" />
           </Widgets>
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" width="150" zIndex="1" text="$IAT/historia_alarmow">
@@ -30,8 +30,8 @@
                 <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryAInfo" width="280" zIndex="5" columnType="additionalInfo1" text="$IAT/dodatkowe_info" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.Button" id="BtnExport" top="670" left="1200" width="180" height="40" zIndex="1" text="$IAT/eksport" style="Command" />
-            <Widget xsi:type="widgets.brease.Button" id="BtnClear" top="670" left="1000" width="180" height="40" zIndex="2" text="$IAT/wyczysc" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnExport" top="670" left="1200" width="180" height="40" zIndex="1" text="$IAT/eksport" permissionOperate="['Administraotr', 'Service']" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnClear" top="670" left="1000" width="180" height="40" zIndex="2" text="$IAT/wyczysc" permissionOperate="['Administraotr', 'Service']" style="Command" />
           </Widgets>
         </Widget>
       </Widgets>

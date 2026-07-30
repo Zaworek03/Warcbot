@@ -3,7 +3,7 @@
   <Widgets>
     <Widget xsi:type="widgets.brease.Label" id="Title" top="18" left="0" width="300" zIndex="0" text="$IAT/uwaga" textAlign="center bottom" bold="true" style="Title2" />
     <Widget xsi:type="widgets.brease.Label" id="Description" top="48" left="20" width="260" height="40" zIndex="1" multiLine="true" text="$IAT/zla_plansza" wordWrap="true" textColor="rgba(0, 0, 0, 1)" textAlign="left top" />
-    <Widget xsi:type="widgets.brease.Button" id="BackBtn" top="100" left="140" width="160" zIndex="2" text="$IAT/poddanie" style="Command" />
-    <Widget xsi:type="widgets.brease.Button" id="CorrectBtn" top="100" left="0" width="120" zIndex="3" text="$IAT/poprawiono" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="BackBtn" top="100" left="140" width="140" zIndex="2" text="$IAT/poddanie" fontSize="15px" style="Command" />
+    <Widget xsi:type="widgets.brease.Button" id="CorrectBtn" top="100" left="20" zIndex="3" text="$IAT/poprawiono" fontSize="15px" style="Command" />
   </Widgets>
 </Content>
