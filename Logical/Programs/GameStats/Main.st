@@ -112,6 +112,7 @@ PROGRAM _CYCLIC
 					gRobotMoveVar.Capture := TRUE;
 					gRobotMoveVar.DiscardPoint.x := (fromCol+toCol)/2;
 					gRobotMoveVar.DiscardPoint.y := (fromRow+toRow)/2;
+					gRobotMoveVar.DiscardColor := (movedColor) MOD 2 + 1;
 				ELSE
 					pChar := 45;
 					gRobotMoveVar.Capture := FALSE;

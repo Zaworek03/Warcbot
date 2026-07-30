@@ -11,7 +11,7 @@ TYPE
 		);
 	SetBoardInfoType : 	STRUCT 
 		Index : IndexPointType;
-		Color : BOOL; (*White = True; Black = False*)
+		Color : USINT; (*White = 1; Black = 2*)
 	END_STRUCT;
 	SetBoardEnum : 
 		(
@@ -19,4 +19,8 @@ TYPE
 		SetBoardExecute,
 		SetBoardBusy
 		);
+	CommandType : 	STRUCT 
+		EndPos : McPosType;
+		StartPos : McPosType;
+	END_STRUCT;
 END_TYPE

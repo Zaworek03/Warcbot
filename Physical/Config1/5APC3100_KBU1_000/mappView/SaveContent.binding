@@ -57,5 +57,17 @@
 <Source xsi:type="mapp" refId="gAuditTrail" attribute="link" />
 <Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="AuditList1" attribute="mpLink" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPlayerMove" attribute="value" />
+<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="AbortGameBtn" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPlayerMove" attribute="value" />
+<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="SaveGameBtn" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gStop" attribute="value" />
+<Target xsi:type="brease" contentRefId="SaveContent" widgetRefId="BtnLoad" attribute="enable" />
+</Binding>
 </Bindings>
 </BindingsSet>
