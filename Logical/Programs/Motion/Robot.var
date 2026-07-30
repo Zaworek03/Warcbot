@@ -2,7 +2,6 @@ VAR
 	Robot : MpRoboArm6Axis;
 	RobotPar : MpRoboArm6AxisParType;
 	doMagnet : BOOL;
-	MagnetStatus : BOOL;
 	WorkspaceMonitor : McPathGenMonElemWorkspaceType;
 END_VAR
 VAR RETAIN

@@ -1,7 +1,7 @@
 
 PROGRAM _INIT
 	doMagnet;
-
+	
 	gAxesGroup_Racer3_1;
 	gAxisQ1_Racer3_1;
 	gAxisQ2_Racer3_1;
@@ -9,6 +9,8 @@ PROGRAM _INIT
 	gAxisQ4_Racer3_1;
 	gAxisQ5_Racer3_1;
 	gAxisQ6_Racer3_1;
+	
+	STMotionHomePoint;
 	
 	mcGroupHome.AxesGroup := ADR(gAxesGroup_Racer3_1);
 	
@@ -23,6 +25,9 @@ PROGRAM _INIT
 	
 	RobotState := ROBOT_ENABLED;
 	
+	PauseWorkspaceMonitoring.AxesGroup := ADR(gAxesGroup_Racer3_1);
+	PauseWorkspaceMonitoring.Enable := FALSE;
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -34,9 +39,11 @@ PROGRAM _CYCLIC
 	RTrigSTMotionDone.CLK := STMotionDone;
 	
 	gMotionInterface.Ready := FALSE;
+	gMotionInterface.ReadyToPowerOn := FALSE;
 	
 	CASE RobotState OF
 		ROBOT_DISABLED:
+			gMotionInterface.ReadyToPowerOn := TRUE;
 			IF gMotionInterface.Enable THEN
 				RobotState := ROBOT_ENABLED;
 				Robot.ErrorReset := 0;
@@ -179,7 +186,7 @@ PROGRAM _CYCLIC
 				END_IF;
 				IF JogXNeg THEN
 					RobotPar.Jog.Velocity[0] := -JogCartesianSpeed;
-				END_IF;
+					END_IF;
 				IF JogYPos THEN
 					RobotPar.Jog.Velocity[1] := JogCartesianSpeed;
 				END_IF;
@@ -197,6 +204,8 @@ PROGRAM _CYCLIC
 				RobotPar.ProgramName := 'gohome.st';
 				Robot.MoveProgram := TRUE;
 				STMotionDone := FALSE;
+				STMotionLowFeedrate := gMotionInterface.Feedrate.Low;
+				PauseWorkspaceMonitoring.Enable := TRUE;
 				RobotState := ROBOT_GO_HOME;
 				gMotionInterface.Manual.RequestGoHome := FALSE;
 			END_IF;
@@ -218,13 +227,17 @@ PROGRAM _CYCLIC
 			
 		ROBOT_GO_HOME:
 			IF STMotionDone THEN
+				PauseWorkspaceMonitoring.Enable := FALSE;
 				RobotState := ROBOT_MANUAL;
 			END_IF;
 			
 		ROBOT_EXECUTE:
 			
-		STMotionStartPoint.Pos := gMotionInterface.StartPos;
-		STMotionStartPoint.Orient := STMotionDefaultOrient;
+			STMotionHighFeedrate := gMotionInterface.Feedrate.High;
+			STMotionLowFeedrate := gMotionInterface.Feedrate.Low;
+			
+			STMotionStartPoint.Pos := gMotionInterface.StartPos;
+			STMotionStartPoint.Orient := STMotionDefaultOrient;
 			
 			// Ustalanie na jaka pozycje warcab ma byc odstawiony
 			CASE gMotionInterface.Command OF
@@ -277,6 +290,10 @@ PROGRAM _CYCLIC
 			
 	END_CASE;
 	
+	IF NOT (RobotState = ROBOT_MANUAL OR RobotState = ROBOT_MOVING) THEN
+		doMagnet := FALSE;
+	END_IF;
+	
 	IF NOT gMotionInterface.Enable THEN
 		gMotionInterface.Busy := 0;
 		RobotState := ROBOT_DISABLED;
@@ -288,7 +305,10 @@ PROGRAM _CYCLIC
 		Robot.MoveProgram := 0;
 		Robot.Interrupt := 1;
 	END_IF;
+
+	gESTOP := Robot.Info.ReadyToPowerOn;
 	
+	PauseWorkspaceMonitoring();
 	RTrigSTMotionDone();
 	RTrigExecute();
 	mcGroupHome();

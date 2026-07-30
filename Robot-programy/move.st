@@ -3,10 +3,14 @@ VAR {AT 'MotionCtrl'}
     EndPoint {ACCESS 'STMotionEndPoint'}: McPointType;
     HomePoint {ACCESS 'STMotionHomePoint'}: McPointType;
     Done {ACCESS 'STMotionDone'}: BOOL;
+
+    HighFeedrate {ACCESS 'STMotionHighFeedrate'}: LREAL;
+    LowFeedrate {ACCESS 'STMotionLowFeedrate'}: LREAL;
 END_VAR
 
 VAR {AT PLC}
     doMagnet : BOOL;
+    UserFrame {ACCESS 'gUserFrame'}: McFrameType;
 END_VAR
 
 VAR
@@ -18,7 +22,8 @@ END_VAR
 
 PROGRAM _MAIN
     Done := FALSE;
-    Feedrate(5000);
+    //SetPCS(OH::gUserFrame);
+    Feedrate(HighFeedrate);
 
     StartPointOffs := StartPoint;
     StartPointOffs.Pos.Z := StartPointOffs.Pos.Z + Offs.Z;
@@ -26,25 +31,26 @@ PROGRAM _MAIN
     EndPointOffs.Pos.Z := EndPointOffs.Pos.Z + Offs.Z;
 
     MoveJ(StartPointOffs);
-    Feedrate(500);
+    Feedrate(LowFeedrate);
     MoveL(StartPoint);
-    Feedrate(5000);
     WaitEndMove();
     doMagnet := TRUE;
     WaitTime(1);
     MoveL(StartPointOffs); // zapytac sie czy tutaj da sie dac StartPoint + Offs, dla krotszego kodu
+    Feedrate(HighFeedrate);
     
     //MoveJ(HomePoint);
 
     MoveJ(EndPointOffs);
-    Feedrate(500);
+    Feedrate(LowFeedrate);
     MoveL(EndPoint);
-    Feedrate(5000);
     WaitEndMove();
     doMagnet := FALSE;
     WaitTime(1);
     MoveL(EndPointOffs);
+    Feedrate(HighFeedrate);
 
+    SetPCS(OH::MCS);
     MoveJ(HomePoint);
 
     WaitEndMove();

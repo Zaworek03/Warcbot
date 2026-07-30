@@ -29,6 +29,7 @@ TYPE
 		Cartesian : JogCartesianType;
 		RequestRehomeRobot : BOOL;
 		RequestGoHome : BOOL;
+		UsingUCS : BOOL;
 	END_STRUCT;
 	MotionInterfaceType : 	STRUCT 
 		RequestManualMode : BOOL;
@@ -36,8 +37,10 @@ TYPE
 		EndPos : McPosType;
 		WhitePilePos : McPosType; (*Pozycja 1szego miejsca na stosie, reszta jest juz obliczana przez program*)
 		BlackPilePos : McPosType; (*Pozycja 1szego miejsca na stosie, reszta jest juz obliczana przez program*)
+		Feedrate : RobotFeedrateType;
 		Command : RobotCommandType; (*Przesuniêcie warcaba ze StartPos na EndPos*)
 		Ready : BOOL;
+		ReadyToPowerOn : BOOL;
 		Execute : BOOL; (*Najlepiej podac impuls*)
 		Busy : BOOL;
 		Done : BOOL;
@@ -61,5 +64,9 @@ TYPE
 	IndexPointType : 	STRUCT 
 		x : USINT := 1;
 		y : USINT := 1;
+	END_STRUCT;
+	RobotFeedrateType : 	STRUCT 
+		High : LREAL := 5000;
+		Low : LREAL := 500;
 	END_STRUCT;
 END_TYPE

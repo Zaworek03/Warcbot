@@ -13,6 +13,19 @@
         <Group ID="Object[1]">
           <Selector ID="Type" Value="StandardFrame">
             <Property ID="Name" Value="gUserFrame" />
+            <Group ID="Translation">
+              <Property ID="X" Value="506" />
+              <Property ID="Y" Value="-185" />
+              <Property ID="Z" Value="215" />
+            </Group>
+            <Group ID="Orientation">
+              <Property ID="Angle3" Value="90" />
+            </Group>
+          </Selector>
+        </Group>
+        <Group ID="Object[2]">
+          <Selector ID="Type" Value="StandardFrame">
+            <Property ID="Name" Value="MCS" />
           </Selector>
         </Group>
       </Group>
