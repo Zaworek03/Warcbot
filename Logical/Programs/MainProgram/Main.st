@@ -9,14 +9,6 @@ PROGRAM _INIT
 	MpAuditTrail_0.FileName := ADR('AuditList'); 
 	MpAuditTrail_0();
 	
-	MpReportCore_0.Enable := TRUE; 
-	MpReportCore_0.MpLink := ADR(gReport); 
-	MpReportCore_0.DeviceName := ADR('CF'); 
-	MpReportCore_0.FileName := ADR('GameReport'); 
-	MpReportCore_0.ReportID := ADR('MyReport'); 
-	MpReportCore_0.Language := ADR('en'); 
-	MpReportCore_0(); 
-	
 	gMotionInterface.BlackPilePos.X := 395.4;
 	gMotionInterface.BlackPilePos.Y := -293;
 	gMotionInterface.BlackPilePos.Z := 286.4;
@@ -29,7 +21,6 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	MpAuditTrail_0();
-	MpReportCore_0();
 	
 	gStop := NOT gStart;
 
@@ -269,6 +260,5 @@ END_PROGRAM
 
 PROGRAM _EXIT
 	(* Insert code here *)
-	 
 END_PROGRAM
 

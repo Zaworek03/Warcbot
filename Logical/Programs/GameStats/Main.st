@@ -11,6 +11,9 @@ PROGRAM _INIT
 	whiteOnBoard;
 	blackOnBoard;
 	gEnablePiece;
+	sReport_Color; 
+	sReport_Difficulty;
+	sReport_Result;
 
 	gBoardLast := gBoardActual;
 	firstScan := TRUE;
@@ -20,12 +23,56 @@ PROGRAM _INIT
 	MoveHistory[4] := '';
 	LastMove := '';
 	MoveCount := 0;
+	
+	MpReportCore_0();
+	MpReportCore_0.Enable := TRUE; 
+	MpReportCore_0.MpLink := ADR(gReport); 
+	MpReportCore_0.DeviceName := ADR('CF'); 
+	MpReportCore_0.FileName := ADR('GameReport'); 
+	MpReportCore_0.ReportID := ADR('MyReport'); 
+	MpReportCore_0.Language := ADR('en');
 
 END_PROGRAM
 
 
 PROGRAM _CYCLIC
 
+	MpReportCore_0();
+	
+	(* --- MAPOWANIE DANYCH NA TEKSTY --- *)
+
+	(* Kolor *)
+	IF gPlayerColor THEN
+		sReport_Color := 'White';
+	ELSE
+		sReport_Color := 'Black';
+	END_IF;
+
+	(* Poziom trudnoœci *)
+	CASE gDifficultyLevel OF
+		4: sReport_Difficulty := 'No stress';
+		3: sReport_Difficulty := 'Easy going';
+		0: sReport_Difficulty := 'Challenge';
+		1: sReport_Difficulty := 'Blood, sweat & tears';
+		2: sReport_Difficulty := 'Good luck ...';
+		ELSE
+			sReport_Difficulty := 'Unknown';
+	END_CASE;
+
+	(* Wynik *)
+	IF WinOrLose THEN
+		sReport_Result := 'Victory';
+	ELSE
+		sReport_Result := 'Defeat';
+	END_IF;
+
+	(* --- STEROWANIE GENEROWANIEM RAPORTU --- *)
+	IF EndGame AND NOT MpReportCore_0.CommandBusy THEN
+		MpReportCore_0.Generate := TRUE;
+	ELSE
+		MpReportCore_0.Generate := FALSE;
+	END_IF;
+	
 	IF gStart THEN
 		IF gGameStats.Load THEN
 			MoveHistory := gGameStats.MoveHistory;

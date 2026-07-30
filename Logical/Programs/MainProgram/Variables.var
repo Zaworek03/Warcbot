@@ -24,4 +24,5 @@ VAR
 	MatchFound : BOOL := FALSE;
 	SetBoardStep : SetBoardEnum := SetBoardCommandGen;
 	SetBoardTrigger : BOOL := FALSE;
+	ReportLanguage : STRING[20] := 'en';
 END_VAR
