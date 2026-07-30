@@ -218,6 +218,7 @@ PROGRAM _CYCLIC
 			
 			IF gMotionInterface.Manual.RequestRehomeRobot THEN
 				gAlarm.RobotRestorePosFail := FALSE;
+				gMotionInterface.Manual.RequestRehomeRobot := FALSE;
 				
 				Robot.Jog := FALSE;
 				RobotState := ROBOT_HOMING_DIRECT;
