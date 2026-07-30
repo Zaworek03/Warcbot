@@ -30,5 +30,6 @@
     <Object Type="File">ManualContent.eventbinding</Object>
     <Object Type="File">ReHomeDialog.eventbinding</Object>
     <Object Type="File">SettingsContent.binding</Object>
+    <Object Type="File">RRPContent.eventbinding</Object>
   </Objects>
 </Package>

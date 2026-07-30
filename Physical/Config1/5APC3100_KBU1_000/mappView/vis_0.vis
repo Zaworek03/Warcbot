@@ -44,6 +44,7 @@
     <EventBindingsSet refId="AlarmInncorrectBoardContent" />
     <EventBindingsSet refId="ManualContent" />
     <EventBindingsSet refId="ReHomeDialog" />
+    <EventBindingsSet refId="RRPContent" />
   </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>
@@ -65,6 +66,7 @@
     <Dialog refId="AlarmInncorrectRobotMove" />
     <Dialog refId="AlarmInncorrectBoard" />
     <Dialog refId="ReHomeDialog" />
+    <Dialog refId="RRPDialog" />
   </Dialogs>
   <Contents>
     <Content refId="TopContent" />
@@ -92,6 +94,7 @@
     <Content refId="AlramInncorrectRobotMoveContent" />
     <Content refId="AlarmInncorrectBoardContent" />
     <Content refId="ReHomeDialog" />
+    <Content refId="RRPContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
