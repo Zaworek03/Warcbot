@@ -65,6 +65,114 @@
           <Property ID="Name" Value="ResultsTab" />
           <Property ID="TableStyle" Value="Default" />
           <Property ID="TextStyle" Value="Default" />
+          <Group ID="[0]">
+            <Property ID="MinimumHeight" Value="10" Description="0" />
+            <Selector ID="[0]" Value="TextId">
+              <Property ID="Source" Value="Selected color " />
+              <Property ID="Width" Value="25" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Selector ID="TextStyleReference" Value="InheritedTextStyle" />
+            </Selector>
+            <Selector ID="[1]" Value="ValueId">
+              <Selector ID="Value" Value="ProcessVariable">
+                <Property ID="ProcessVariable" Value="::GameStats:sReport_Color" />
+                <Property ID="UnitDisplay" Value="0" />
+              </Selector>
+              <Property ID="Width" Value="25" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Selector ID="TextStyleReference" Value="InheritedTextStyle" />
+            </Selector>
+          </Group>
+          <Group ID="[1]">
+            <Property ID="MinimumHeight" Value="10" />
+            <Selector ID="[0]" Value="TextId">
+              <Property ID="Source" Value="Chosen mode " />
+              <Property ID="Width" Value="25" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Selector ID="TextStyleReference" Value="InheritedTextStyle" />
+            </Selector>
+            <Selector ID="[1]" Value="ValueId">
+              <Selector ID="Value" Value="ProcessVariable">
+                <Property ID="ProcessVariable" Value="::GameStats:sReport_Difficulty" />
+                <Property ID="UnitDisplay" Value="0" />
+              </Selector>
+              <Property ID="Width" Value="25" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Selector ID="TextStyleReference" Value="InheritedTextStyle" />
+            </Selector>
+          </Group>
+          <Group ID="[2]">
+            <Property ID="MinimumHeight" Value="10" />
+            <Selector ID="[0]" Value="TextId">
+              <Property ID="Source" Value="Number of moves made" />
+              <Property ID="Width" Value="25" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Selector ID="TextStyleReference" Value="InheritedTextStyle" />
+            </Selector>
+            <Selector ID="[1]" Value="ValueId">
+              <Selector ID="Value" Value="ProcessVariable">
+                <Property ID="ProcessVariable" Value="::gGameStats.MoveCount" />
+                <Property ID="UnitDisplay" Value="0" />
+              </Selector>
+              <Property ID="Width" Value="25" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Selector ID="TextStyleReference" Value="InheritedTextStyle" />
+            </Selector>
+          </Group>
+          <Group ID="[3]">
+            <Property ID="MinimumHeight" Value="10" />
+            <Selector ID="[0]" Value="TextId">
+              <Property ID="Source" Value="Number o blacks captured" />
+              <Property ID="Width" Value="25" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Selector ID="TextStyleReference" Value="InheritedTextStyle" />
+            </Selector>
+            <Selector ID="[1]" Value="ValueId">
+              <Selector ID="Value" Value="ProcessVariable">
+                <Property ID="ProcessVariable" Value="::GameStats:DeadBlackPiece" />
+                <Property ID="UnitDisplay" Value="0" />
+              </Selector>
+              <Property ID="Width" Value="25" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Selector ID="TextStyleReference" Value="InheritedTextStyle" />
+            </Selector>
+          </Group>
+          <Group ID="[4]">
+            <Property ID="MinimumHeight" Value="10" />
+            <Selector ID="[0]" Value="TextId">
+              <Property ID="Source" Value="Number of white captured" />
+              <Property ID="Width" Value="25" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Selector ID="TextStyleReference" Value="InheritedTextStyle" />
+            </Selector>
+            <Selector ID="[1]" Value="ValueId">
+              <Selector ID="Value" Value="ProcessVariable">
+                <Property ID="ProcessVariable" Value="::GameStats:DeadWhitePiece" />
+                <Property ID="UnitDisplay" Value="0" />
+              </Selector>
+              <Property ID="Width" Value="25" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Selector ID="TextStyleReference" Value="InheritedTextStyle" />
+            </Selector>
+          </Group>
+          <Group ID="[5]">
+            <Property ID="MinimumHeight" Value="10" />
+            <Selector ID="[0]" Value="TextId">
+              <Property ID="Source" Value="Result of the game " />
+              <Property ID="Width" Value="25" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Selector ID="TextStyleReference" Value="InheritedTextStyle" />
+            </Selector>
+            <Selector ID="[1]" Value="ValueId">
+              <Selector ID="Value" Value="ProcessVariable">
+                <Property ID="ProcessVariable" Value="::GameStats:sReport_Result" />
+                <Property ID="UnitDisplay" Value="0" />
+              </Selector>
+              <Property ID="Width" Value="25" />
+              <Property ID="HorizontalAlign" Value="0" />
+              <Selector ID="TextStyleReference" Value="InheritedTextStyle" />
+            </Selector>
+          </Group>
         </Selector>
       </Group>
       <Group ID="Contents">
