@@ -165,5 +165,21 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gMotionInterface.Manual.UsingUCS" attribute="value" />
 <Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ToggleButtonUseUCS" attribute="value" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="brease" contentRefId="ManualContent" widgetRefId="ToggleButtonEnableManual" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericInputCartesianSpeed" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="brease" contentRefId="ManualContent" widgetRefId="ToggleButtonEnableManual" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonGoHome" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="brease" contentRefId="ManualContent" widgetRefId="ToggleButtonEnableManual" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="NumericInputJointSpeed" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="brease" contentRefId="ManualContent" widgetRefId="ToggleButtonEnableManual" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualContent" widgetRefId="ButtonRehome" attribute="enable" />
+</Binding>
 </Bindings>
 </BindingsSet>
