@@ -1,6 +1,5 @@
 VAR {AT 'MotionCtrl'}
     Done {ACCESS 'STMotionDone'}: BOOL;
-    LowFeedrate {ACCESS 'STMotionLowFeedrate'}: LREAL;
 END_VAR
 
 VAR
@@ -9,7 +8,8 @@ END_VAR
 
 PROGRAM _MAIN
     Done := FALSE;
-    Feedrate(LowFeedrate);
+    SetPCS(OH::MCS);
+    Feedrate(2500);
 
     MoveA(Home);
     WaitEndMove();

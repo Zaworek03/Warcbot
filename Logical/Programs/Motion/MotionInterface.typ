@@ -67,7 +67,7 @@ TYPE
 		y : USINT := 1;
 	END_STRUCT;
 	RobotFeedrateType : 	STRUCT 
-		High : LREAL := 5000;
+		High : LREAL := 10000;
 		Low : LREAL := 500;
 	END_STRUCT;
 END_TYPE

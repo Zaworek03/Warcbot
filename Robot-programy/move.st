@@ -8,7 +8,6 @@ END_VAR
 
 VAR {AT PLC}
     doMagnet : BOOL;
-    UserFrame {ACCESS 'gUserFrame'}: McFrameType;
 END
 
 PROGRAM _MAIN
