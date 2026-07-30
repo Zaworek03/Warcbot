@@ -31,7 +31,9 @@ END_VAR
 VAR CONSTANT
 	BlackPileXOffs : REAL := 50;
 	WhitePileXOffs : REAL := -50;
-	PileZOffs : REAL := 26;
+	BlackPileYOffs : REAL := 0.0;
+	WhitePileYOffs : REAL := 0.0;
+	PileZOffs : REAL := 0;
 	PileHeight : USINT := 4;
 END_VAR
 VAR

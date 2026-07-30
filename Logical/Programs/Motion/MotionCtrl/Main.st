@@ -211,11 +211,15 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 			IF NOT gMotionInterface.RequestManualMode THEN
+				gAlarm.RobotRestorePosFail := FALSE;
 				Robot.Jog := FALSE;
 				RobotState := ROBOT_HOMED;
 			END_IF;
 			
 			IF gMotionInterface.Manual.RequestRehomeRobot THEN
+				gAlarm.RobotRestorePosFail := FALSE;
+				gMotionInterface.Manual.RequestRehomeRobot := FALSE;
+				
 				Robot.Jog := FALSE;
 				RobotState := ROBOT_HOMING_DIRECT;
 			END_IF;
@@ -236,36 +240,44 @@ PROGRAM _CYCLIC
 			STMotionHighFeedrate := gMotionInterface.Feedrate.High;
 			STMotionLowFeedrate := gMotionInterface.Feedrate.Low;
 			
-			STMotionStartPoint.Pos := gMotionInterface.StartPos;
-			STMotionStartPoint.Orient := STMotionDefaultOrient;
 			
 			// Ustalanie na jaka pozycje warcab ma byc odstawiony
 			CASE gMotionInterface.Command OF
 				MOVE_START_END:
+					STMotionStartPoint.Pos := gMotionInterface.StartPos;
+					STMotionStartPoint.Orient := STMotionDefaultOrient;
 					STMotionEndPoint.Pos := gMotionInterface.EndPos;
+					STMotionEndPoint.Orient := STMotionDefaultOrient;
+					RobotPar.ProgramName := 'moveAB.st';
+				MOVE_HOME:
+					RobotPar.ProgramName := 'move.st';
 				DISCARD_WHITE:
 					PileCalculatedOffs.X := WhitePileXOffs * USINT_TO_REAL(WhitePileCnt/PileHeight);
-					PileCalculatedOffs.Y := 0;
-					PileCalculatedOffs.Z := PileZOffs * USINT_TO_REAL(WhitePileCnt MOD PileHeight);
+					PileCalculatedOffs.Y := WhitePileYOffs * USINT_TO_REAL(WhitePileCnt MOD PileHeight);
+					PileCalculatedOffs.Z := 0;
 					
 					STMotionEndPoint.Pos.X := gMotionInterface.WhitePilePos.X + PileCalculatedOffs.X;
 					STMotionEndPoint.Pos.Y := gMotionInterface.WhitePilePos.Y + PileCalculatedOffs.Y;
 					STMotionEndPoint.Pos.Z := gMotionInterface.WhitePilePos.Z + PileCalculatedOffs.Z;
+					STMotionEndPoint.Orient := STMotionDefaultOrient;
+					RobotPar.ProgramName := 'moveAB.st';
 				DISCARD_BLACK:
 					PileCalculatedOffs.X := BlackPileXOffs * USINT_TO_REAL(BlackPileCnt/PileHeight);
-					PileCalculatedOffs.Y := 0;
-					PileCalculatedOffs.Z := PileZOffs * USINT_TO_REAL(BlackPileCnt MOD PileHeight);
+					PileCalculatedOffs.Y := BlackPileYOffs * USINT_TO_REAL(BlackPileCnt MOD PileHeight);
+					PileCalculatedOffs.Z := 0;
 					
 					STMotionEndPoint.Pos.X := gMotionInterface.BlackPilePos.X + PileCalculatedOffs.X;
 					STMotionEndPoint.Pos.Y := gMotionInterface.BlackPilePos.Y + PileCalculatedOffs.Y;
 					STMotionEndPoint.Pos.Z := gMotionInterface.BlackPilePos.Z + PileCalculatedOffs.Z;
+					STMotionEndPoint.Orient := STMotionDefaultOrient;
+					RobotPar.ProgramName := 'moveAB.st';
 			END_CASE;
 			
 			// rozpoczecie pracy programu
-			RobotPar.ProgramName := 'move.st';
+			
 			Robot.Interrupt := FALSE;
 			Robot.MoveProgram := TRUE;
-			STMotionEndPoint.Orient := STMotionDefaultOrient;
+
 			
 			STMotionDone := FALSE;
 			gMotionInterface.Busy := TRUE;
