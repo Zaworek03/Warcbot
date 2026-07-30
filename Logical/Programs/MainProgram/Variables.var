@@ -13,6 +13,7 @@ VAR CONSTANT
 END_VAR
 VAR
 	RobotMoveMarker : BOOL;
+	MpReportCore_0 : MpReportCore;
 	PiecesToDiscard : ARRAY[0..11] OF SetBoardInfoType;
 	DiscardCount : USINT := 0;
 	PiecesToDraw : ARRAY[0..11] OF SetBoardInfoType;

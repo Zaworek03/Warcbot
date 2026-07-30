@@ -74,6 +74,9 @@
     <Group ID="FileDevice6" />
     <Parameter ID="FileDeviceName6" Value="REPORT" />
     <Parameter ID="FileDevicePath6" Value="USER_PATH\Report" />
+    <Group ID="FileDevice7" />
+    <Parameter ID="FileDeviceName7" Value="CF" />
+    <Parameter ID="FileDevicePath7" Value="USER_PATH" />
     <Parameter ID="ActivateFtpServer" Value="1" />
     <Parameter ID="FtpAuthenticationType" Value="FtpRoles" />
     <Group ID="FtpRole1" />

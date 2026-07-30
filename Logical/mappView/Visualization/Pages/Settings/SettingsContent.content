@@ -15,18 +15,18 @@
                 <Widget xsi:type="widgets.brease.UserListItem" id="UserListItemAdmin" width="180" zIndex="4" columnType="IsAdmin" text="$IAT/administrator" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.Button" id="BtnUserAdd" top="570" left="400" width="160" zIndex="2" text="Add User" permissionOperate="['Administraotr']" style="Command" />
-            <Widget xsi:type="widgets.brease.Button" id="BtnUserRemove" top="570" left="580" width="160" zIndex="3" text="Remove User" permissionOperate="['Administraotr']" style="Command" />
-            <Widget xsi:type="widgets.brease.Button" id="BtnUserModify" top="570" left="760" width="160" zIndex="4" text="Modify User" permissionOperate="['Administraotr']" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserAdd" top="570" left="400" width="160" zIndex="2" text="$IAT/dodaj_uzytkownika" permissionOperate="['Administraotr']" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserRemove" top="570" left="580" width="160" zIndex="3" text="$IAT/usun_uzytkownika" permissionOperate="['Administraotr']" style="Command" />
+            <Widget xsi:type="widgets.brease.Button" id="BtnUserModify" top="570" left="760" width="259" zIndex="4" text="$IAT/zmodyfikuj_uzytkownika" permissionOperate="['Administraotr']" style="Command" />
           </Widgets>
         </Widget>
-        <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" zIndex="1" text="Audit">
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" width="150" zIndex="1" text="$IAT/audit">
           <Widgets>
-            <Widget xsi:type="widgets.brease.AuditList" id="AuditList1" top="10" left="0" width="1380" height="710" zIndex="0">
+            <Widget xsi:type="widgets.brease.AuditList" id="AuditList1" top="10" left="0" width="1380" height="710" zIndex="0" nextText="$IAT/nastepny" previousText="$IAT/poprzedni">
               <Widgets>
-                <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem1" zIndex="0" columnType="timestamp" text="Time" />
-                <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem2" width="980" zIndex="1" text="Opis" />
-                <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem3" zIndex="2" columnType="operator name" text="AuditListItem3" />
+                <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem1" zIndex="0" columnType="timestamp" text="$IAT/czas" />
+                <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem2" width="780" zIndex="1" text="$IAT/opis" />
+                <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem3" width="400" zIndex="2" columnType="operator name" text="$IAT/audit_list_item_3" />
               </Widgets>
             </Widget>
           </Widgets>

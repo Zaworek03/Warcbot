@@ -554,7 +554,7 @@ Load game / Save game</seg>
     </tu>
     <tu tuid="manual">
       <tuv xml:lang="pl">
-        <seg>Robot</seg>
+        <seg>Manulany</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>Manual</seg>
@@ -1048,6 +1048,71 @@ Load game / Save game</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>Logged in as:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="wyczysc">
+      <tuv xml:lang="pl">
+        <seg>Wyczyść</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Clear
+</seg>
+      </tuv>
+    </tu>
+    <tu tuid="toggle">
+      <tuv xml:lang="pl">
+        <seg>Włącz / Wyłącz robota</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Toggle robot</seg>
+      </tuv>
+    </tu>
+    <tu tuid="go_home">
+      <tuv xml:lang="pl">
+        <seg>Jedź do pozycji bazowej</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Go home</seg>
+      </tuv>
+    </tu>
+    <tu tuid="rehome">
+      <tuv xml:lang="pl">
+        <seg>Wykonaj bazowanie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Rehome</seg>
+      </tuv>
+    </tu>
+    <tu tuid="audit">
+      <tuv xml:lang="pl">
+        <seg>Historia działań</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Audit</seg>
+      </tuv>
+    </tu>
+    <tu tuid="opis">
+      <tuv xml:lang="pl">
+        <seg>Opis</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Description</seg>
+      </tuv>
+    </tu>
+    <tu tuid="audit_list_item_3">
+      <tuv xml:lang="pl">
+        <seg>Element nr 3 historii działań</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Audit list item 3</seg>
+      </tuv>
+    </tu>
+    <tu tuid="raport_z_gry">
+      <tuv xml:lang="pl">
+        <seg>Raport z gry</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Game report</seg>
       </tuv>
     </tu>
   </body>

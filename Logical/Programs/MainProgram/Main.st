@@ -9,6 +9,14 @@ PROGRAM _INIT
 	MpAuditTrail_0.FileName := ADR('AuditList'); 
 	MpAuditTrail_0();
 	
+	MpReportCore_0.Enable := TRUE; 
+	MpReportCore_0.MpLink := ADR(gReport); 
+	MpReportCore_0.DeviceName := ADR('CF'); 
+	MpReportCore_0.FileName := ADR('GameReport'); 
+	MpReportCore_0.ReportID := ADR('MyReport'); 
+	MpReportCore_0.Language := ADR('en'); 
+	MpReportCore_0(); 
+	
 	gMotionInterface.BlackPilePos.X := 395.4;
 	gMotionInterface.BlackPilePos.Y := -293;
 	gMotionInterface.BlackPilePos.Z := 286.4;
@@ -21,6 +29,8 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	MpAuditTrail_0();
+	MpReportCore_0();
+	
 	gStop := NOT gStart;
 
 	IF gStart = FALSE THEN
@@ -45,7 +55,7 @@ PROGRAM _CYCLIC
 				DiscardCount := 0;
 				FOR i := 1 TO BOARD_SPACES DO
 					FOR j := 1 TO BOARD_SPACES DO
-						(* OdwrÛcenie planszy do gÛry nogami, aby odczyt z kamry by≥ zgodny z widokiem ze stania na wprost robota *)
+						(* OdwrÔøΩcenie planszy do gÔøΩry nogami, aby odczyt z kamry byÔøΩ zgodny z widokiem ze stania na wprost robota *)
 						SimBoardValue := CONVERT_BOARD[gBoardActual[BOARD_SPACES + 1 - i, BOARD_SPACES + 1 - j]];
 						CameraBoardValue := gBoardCamera[i, j];
 						
@@ -90,7 +100,7 @@ PROGRAM _CYCLIC
 			END_IF;
 					
 		GameMove:
-			(* GameMove -> wykonywany jest ruch warcabowy, gGameRound = TRUE -> ruch cz≥owieka *)
+			(* GameMove -> wykonywany jest ruch warcabowy, gGameRound = TRUE -> ruch czÔøΩowieka *)
 			gPlayerMove := gGameRound = TRUE;	
 			IF RobotMoveMarker AND gRobotMoveVar.RTRMove THEN
 				gPlayerMove := FALSE;
@@ -165,12 +175,12 @@ PROGRAM _CYCLIC
 		ResetRobotPos:
 			IF gESTOP THEN
 				IF (* Potwierdzenie resretu pozycji *)FALSE THEN
-					(* Dodaj program do resetu robota i powortu do pozycji, gdzie robot nie zas≥ania kamery *);
-					IF (* SkoÒczy≥ ruch *)FALSE THEN
+					(* Dodaj program do resetu robota i powortu do pozycji, gdzie robot nie zasÔøΩania kamery *);
+					IF (* SkoÔøΩczyÔøΩ ruch *)FALSE THEN
 						gStep := PhotoCheck;
 						(* reset stanu potwierdzenia *)
 					END_IF;
-				ELSIF (* anulowanie, dodaÊ info, øe podda grÍ *) FALSE THEN
+				ELSIF (* anulowanie, dodaÔøΩ info, ÔøΩe podda grÔøΩ *) FALSE THEN
 					gStart := FALSE;
 					(* reset stanu anulowania *)
 				END_IF;
@@ -194,23 +204,23 @@ PROGRAM _CYCLIC
                     
 								(* ZNALEZIONO DOPASOWANIE! *)
 								MatchFound := TRUE;
-								DrawHandled[j] := TRUE; (* Odznaczamy to miejsce, by nie uøyÊ go podwÛjnie *)
+								DrawHandled[j] := TRUE; (* Odznaczamy to miejsce, by nie uÔøΩyÔøΩ go podwÔøΩjnie *)
                     
-								(* >> ZADANIE: PRZENIEå BEZPOåREDNIO NA PLANSZY << 
+								(* >> ZADANIE: PRZENIEÔøΩ BEZPOÔøΩREDNIO NA PLANSZY << 
 								Zabierz z: PiecesToDiscard[i].Index
-								Od≥Ûø na : PiecesToDraw[j].Index
+								OdÔøΩÔøΩ na : PiecesToDraw[j].Index
 								*)
                     
-								EXIT; (* Przerywamy wewnÍtrznπ pÍtlÍ, szukamy dla kolejnego i *)
+								EXIT; (* Przerywamy wewnÔøΩtrznÔøΩ pÔøΩtlÔøΩ, szukamy dla kolejnego i *)
 							END_IF;
 						END_FOR;
             
-						(* Jeúli pÍtla siÍ skoÒczy≥a i nie znaleziono dopasowania koloru... *)
+						(* JeÔøΩli pÔøΩtla siÔøΩ skoÔøΩczyÔøΩa i nie znaleziono dopasowania koloru... *)
 						IF NOT MatchFound THEN
                 
-                (* >> ZADANIE: OD£”Ø DO MAGAZYNU << 
+                (* >> ZADANIE: ODÔøΩ”Ø DO MAGAZYNU << 
                    Zabierz z: PiecesToDiscard[i].Index
-                   Od≥Ûø do : Magazyn
+                   OdÔøΩÔøΩ do : Magazyn
                 *)
                 
 						END_IF;
@@ -218,17 +228,17 @@ PROGRAM _CYCLIC
 				END_IF;
 
 						(* =================================================================
-						KROK 2: Uzupe≥nianie pozosta≥ych miejsc, dla ktÛrych zabrak≥o klockÛw na planszy
+						KROK 2: UzupeÔøΩnianie pozostaÔøΩych miejsc, dla ktÔøΩrych zabrakÔøΩo klockÔøΩw na planszy
 						================================================================= *)
 				IF DrawCount > 0 THEN
 					FOR j := 0 TO (DrawCount - 1) DO
             
-						(* Bierzemy pod uwagÍ TYLKO te miejsca, ktÛrych nie odhaczyliúmy w Kroku 1 *)
+						(* Bierzemy pod uwagÔøΩ TYLKO te miejsca, ktÔøΩrych nie odhaczyliÔøΩmy w Kroku 1 *)
 						IF NOT DrawHandled[j] THEN
                 
-                (* >> ZADANIE: WEè Z MAGAZYNU << 
-                   Bierz z  : Magazyn (kolor okreúla PiecesToDraw[j].Color)
-                   Od≥Ûø na : PiecesToDraw[j].Index
+                (* >> ZADANIE: WEÔøΩ Z MAGAZYNU << 
+                   Bierz z  : Magazyn (kolor okreÔøΩla PiecesToDraw[j].Color)
+                   OdÔøΩÔøΩ na : PiecesToDraw[j].Index
                 *)
                 
 						END_IF;
