@@ -10,7 +10,7 @@ END_VAR
 VAR
 	STMotionStartPoint : McPointType;
 	STMotionEndPoint : McPointType;
-	STMotionHomePoint : McPointType := (Pos:=(X:=222,Y:=-228,Z:=565),Orient:=(Angle1:=0,Angle2:=180,Angle3:=0));
+	STMotionHomePoint : McPointType := (Pos:=(X:=290,Y:=-205,Z:=494),Orient:=(Angle1:=0,Angle2:=180,Angle3:=0));
 	STMotionDone : BOOL := FALSE;
 END_VAR
 VAR CONSTANT
@@ -27,7 +27,7 @@ VAR
 	RTrigSTMotionDone : r_trig;
 	STMotionDoneImpulse : BOOL;
 END_VAR
-(* Obs�uga stos�w warcab�w *)
+(* Obs³uga stosów warcabów *)
 VAR CONSTANT
 	BlackPileXOffs : REAL := 50;
 	WhitePileXOffs : REAL := -50;
@@ -39,7 +39,7 @@ VAR
 	WhitePileCnt : USINT;
 	PileCalculatedOffs : McPosType;
 END_VAR
-(* R�czne sterowanie kartezja�skie *)
+(* Rêczne sterowanie kartezjañskie *)
 VAR
 	JogXPos : BOOL;
 	JogXNeg : BOOL;
@@ -49,7 +49,7 @@ VAR
 	JogZNeg : BOOL;
 	JogCartesianSpeed : REAL;
 END_VAR
-(* R�czne sterowanie osiami robota *)
+(* Rêczne sterowanie osiami robota *)
 VAR
 	JogJointPos0 : BOOL;
 	JogJointNeg0 : BOOL;

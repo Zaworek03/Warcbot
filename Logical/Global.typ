@@ -30,6 +30,8 @@ TYPE
 		GameMove, (*Ruch warcabowy cz³owiek vs AI*)
 		RobotMove, (*Robot wykonuje fizyczny ruch*)
 		ErrorState,
-		EndState
+		ResetRobotPos,
+		SetBoard,
+		SetBoardPrep
 		);
 END_TYPE
