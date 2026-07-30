@@ -1,5 +1,5 @@
 VAR
-	marker4X  : DINT;
+	marker4X : DINT;
 	marker3Y : DINT;
 	marker3X : DINT;
 	j : USINT;
@@ -19,14 +19,16 @@ VAR
 	transformedY : LREAL;
 	transformedX : LREAL;
 	cornerRelativeY : LREAL;
-	cornerRelativeX  : LREAL;
-	transformationDen  : LREAL;
+	cornerRelativeX : LREAL;
+	transformationDen : LREAL;
 	transformationB : LREAL;
 	transformationA : LREAL;
+	PreviousAutoProcessingActive  : BOOL;
+	AutoSettingsStarted  : BOOL;
 	currentVectorY : LREAL;
-	currentVectorX  : LREAL;
-	referenceVectorY  : LREAL;
-	referenceVectorX  : LREAL;
+	currentVectorX : LREAL;
+	referenceVectorY : LREAL;
+	referenceVectorX : LREAL;
 	marker4Found : BOOL;
 	marker3Found : BOOL;
 	marker4Y : DINT;

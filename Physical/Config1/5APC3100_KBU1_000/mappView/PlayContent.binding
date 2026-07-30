@@ -57,5 +57,9 @@
 			<Source xsi:type="opcUa" refId="::GameStats:MoveHistory[4]" attribute="value" />
 			<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="HistoryMove4" attribute="value" />
 		</Binding>
-  </Bindings>
+  <Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gCameraAutoSettings" attribute="value" />
+<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="ToggleButton1" attribute="value" />
+</Binding>
+</Bindings>
 </BindingsSet>

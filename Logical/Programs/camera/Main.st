@@ -39,6 +39,11 @@ PROGRAM _INIT
 
 	gCameraEnd := FALSE;
 	PreviousProcessingActive := FALSE;
+	
+	gCameraAutoSettings := FALSE;
+	gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
+	AutoSettingsStarted := FALSE;
+	PreviousAutoProcessingActive := FALSE;
 
 END_PROGRAM
 
@@ -46,7 +51,55 @@ END_PROGRAM
 PROGRAM _CYCLIC
 
 	gCameraCtrl.Cmd.Enable := TRUE;
-	gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
+	
+	IF NOT gCameraAutoSettings
+		AND NOT AutoSettingsStarted THEN
+
+		gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
+
+	END_IF;
+
+
+	IF gCameraAutoSettings
+		AND NOT AutoSettingsStarted
+		AND NOT gCameraTrigger
+		AND gCameraCtrl.Status.AcquisitionReady
+		AND NOT gCameraCtrl.Status.ProcessingActive
+		AND (gCameraCtrl.Status.ProcessingError = 0) THEN
+
+		gCameraCtrl.Cmd.SearchAcquisitionSettings := TRUE;
+		AutoSettingsStarted := TRUE;
+
+	END_IF;
+
+
+	IF AutoSettingsStarted
+		AND gCameraCtrl.Status.ProcessingActive THEN
+
+		gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
+
+	END_IF;
+
+
+	IF AutoSettingsStarted
+		AND PreviousAutoProcessingActive
+		AND NOT gCameraCtrl.Status.ProcessingActive THEN
+
+		gCameraCtrl.Parameters.ExposureTime :=
+		gCameraCtrl.Status.ReadExposureTime;
+
+		gCameraCtrl.Parameters.GainLevel :=
+		gCameraCtrl.Status.ReadGainLevel;
+
+		gCameraAutoSettings := FALSE;
+		AutoSettingsStarted := FALSE;
+		gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
+
+	END_IF;
+
+
+	PreviousAutoProcessingActive :=
+	gCameraCtrl.Status.ProcessingActive;
 
 	IF NOT gCameraTrigger THEN
 		gCameraCtrl.Cmd.AcquireImage := FALSE;
@@ -57,6 +110,8 @@ PROGRAM _CYCLIC
 
 	IF gCameraTrigger
 		AND NOT gCameraEnd
+		AND NOT gCameraAutoSettings
+		AND NOT AutoSettingsStarted
 		AND gCameraCtrl.Status.AcquisitionReady
 		AND NOT gCameraCtrl.Status.ProcessingActive
 		AND (gCameraCtrl.Status.ProcessingError = 0) THEN
@@ -358,5 +413,11 @@ PROGRAM _EXIT
 
 	gCameraEnd := FALSE;
 	PreviousProcessingActive := FALSE;
+	gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
+
+	gCameraAutoSettings := FALSE;
+
+	AutoSettingsStarted := FALSE;
+	PreviousAutoProcessingActive := FALSE;
 
 END_PROGRAM

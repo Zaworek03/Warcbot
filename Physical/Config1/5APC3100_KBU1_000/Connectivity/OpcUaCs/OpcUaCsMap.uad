@@ -71,6 +71,7 @@
       </Variable>
       <Variable Name="gStep" />
       <Variable Name="doMagnet" />
+      <Variable Name="gCameraAutoSettings" />
     </GlobalVariables>
     <Task Name="SaveGame">
       <Variable Name="UIConnect">
