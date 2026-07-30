@@ -10,7 +10,7 @@ END_VAR
 
 VAR {AT PLC}
     doMagnet : BOOL;
-    //UserFrame {ACCESS 'gUserFrame'}: McFrameType;
+    UserFrame {ACCESS 'gUserFrame'}: McFrameType;
 END_VAR
 
 VAR
@@ -22,7 +22,7 @@ END_VAR
 
 PROGRAM _MAIN
     Done := FALSE;
-    SetPCS(OH::gUserFrame);
+    //SetPCS(OH::gUserFrame);
     Feedrate(HighFeedrate);
 
     StartPointOffs := StartPoint;

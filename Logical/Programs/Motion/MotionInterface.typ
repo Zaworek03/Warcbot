@@ -40,6 +40,7 @@ TYPE
 		Feedrate : RobotFeedrateType;
 		Command : RobotCommandType; (*Przesuniêcie warcaba ze StartPos na EndPos*)
 		Ready : BOOL;
+		ReadyToPowerOn : BOOL;
 		Execute : BOOL; (*Najlepiej podac impuls*)
 		Busy : BOOL;
 		Done : BOOL;

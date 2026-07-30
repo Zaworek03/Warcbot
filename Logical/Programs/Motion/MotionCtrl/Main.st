@@ -39,9 +39,11 @@ PROGRAM _CYCLIC
 	RTrigSTMotionDone.CLK := STMotionDone;
 	
 	gMotionInterface.Ready := FALSE;
+	gMotionInterface.ReadyToPowerOn := FALSE;
 	
 	CASE RobotState OF
 		ROBOT_DISABLED:
+			gMotionInterface.ReadyToPowerOn := TRUE;
 			IF gMotionInterface.Enable THEN
 				RobotState := ROBOT_ENABLED;
 				Robot.ErrorReset := 0;
