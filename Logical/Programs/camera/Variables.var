@@ -23,8 +23,6 @@ VAR
 	transformationDen : LREAL;
 	transformationB : LREAL;
 	transformationA : LREAL;
-	PreviousAutoProcessingActive  : BOOL;
-	AutoSettingsStarted  : BOOL;
 	currentVectorY : LREAL;
 	currentVectorX : LREAL;
 	referenceVectorY : LREAL;
@@ -32,4 +30,5 @@ VAR
 	marker4Found : BOOL;
 	marker3Found : BOOL;
 	marker4Y : DINT;
+	PreviousAutoProcessingActive : BOOL;
 END_VAR

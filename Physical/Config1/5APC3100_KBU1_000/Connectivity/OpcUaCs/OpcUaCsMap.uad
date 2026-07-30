@@ -71,7 +71,13 @@
       </Variable>
       <Variable Name="gStep" />
       <Variable Name="doMagnet" />
-      <Variable Name="gCameraAutoSettings" />
+      <Variable Name="gCameraGainLevel" />
+      <Variable Name="gCameraFocus" />
+      <Variable Name="gCameraExposureTime" />
+      <Variable Name="gCameraTrigger" />
+      <Variable Name="gCameraBlackCount" />
+      <Variable Name="gCameraWhiteCount" />
+      <Variable Name="gCameraNumResults" />
     </GlobalVariables>
     <Task Name="SaveGame">
       <Variable Name="UIConnect">

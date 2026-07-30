@@ -7,13 +7,14 @@
     <Page refId="Alarm" />
     <Page refId="Manual" />
     <Page refId="Settings" />
-	</Pages>
+  </Pages>
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="SaveContent" />
     <BindingsSet refId="AlarmContent" />
     <BindingsSet refId="PlayContent" />
     <BindingsSet refId="ManualContent" />
+    <BindingsSet refId="SettingsContent" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="TopContent" />
@@ -86,8 +87,8 @@
     <Content refId="RecipeUIErrorContent" />
     <Content refId="LoadConfContent" />
     <Content refId="AlramInncorrectRobotMoveContent" />
-		<Content refId="AlarmInncorrectBoardContent" />
-	</Contents>
+    <Content refId="AlarmInncorrectBoardContent" />
+  </Contents>
   <SnippetsSets />
   <VariablesSets />
   <ExpressionsSets />

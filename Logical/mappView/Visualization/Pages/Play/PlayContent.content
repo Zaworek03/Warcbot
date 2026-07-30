@@ -296,6 +296,6 @@
     <Widget xsi:type="widgets.brease.TextOutput" id="HistoryMove3" top="240" left="1280" zIndex="292" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" style="Output" visible="false" />
     <Widget xsi:type="widgets.brease.TextOutput" id="HistoryMove4" top="280" left="1280" zIndex="293" textColor="rgba(0, 0, 0, 1)" fontSize="18px" bold="true" style="Output" visible="false" />
     <Widget xsi:type="widgets.brease.Button" id="AbortGameBtn" top="340" left="840" width="130" zIndex="294" text="$IAT/przerwanie_gry" style="Command" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="500" left="820" zIndex="295" text="ToggleButton1" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput3" top="500" left="1340" zIndex="295" maxValue="65535" />
   </Widgets>
 </Content>

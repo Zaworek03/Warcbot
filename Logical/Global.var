@@ -1,5 +1,7 @@
 VAR
-	gCameraAutoSettings  : BOOL;
+	gCameraFocus : UINT := 53073;
+	gCameraGainLevel : USINT := 4;
+	gCameraExposureTime : UDINT := 20884;
 	gAlarm : AlarmEnum;
 	gGame : USINT;
 	gPickPiece : ARRAY[1..8,1..8] OF BOOL; (*Klikniety przez gracza pionek*)
@@ -19,4 +21,7 @@ VAR
 	gCameraEnd : BOOL;
 	gPlayerMove : BOOL;
 	gStop : BOOL := TRUE; (*Odwrotnoœæ gStart*)
+	gCameraNumResults : USINT;
+	gCameraBlackCount : USINT;
+	gCameraWhiteCount : USINT;
 END_VAR
