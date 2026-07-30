@@ -18,6 +18,7 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
+	
 	AxisQ1Pos := -Robot.Info.JointAxisPosition[0];
 	AxisQ2Pos := Robot.Info.JointAxisPosition[1];
 	AxisQ3Pos := -Robot.Info.JointAxisPosition[2];
@@ -48,6 +49,12 @@ PROGRAM _CYCLIC
 	IF WorkspaceMonitor.WorkspaceStatus = mcPATHGEN_WS_AXES_VIOLATION
 		OR WorkspaceMonitor.WorkspaceStatus = mcPATHGEN_WS_JOINTAXES_VIOLATION THEN
 		gAlarm.RobotAxisViolation := 1;
+	END_IF;
+	
+	IF NOT RestorePosReady THEN
+		gAlarm.RobotRestorePosFail := TRUE;
+	ELSE
+		gAlarm.RobotRestorePosFail := FALSE;
 	END_IF;
 	
 	GetCoordSystemIdent();

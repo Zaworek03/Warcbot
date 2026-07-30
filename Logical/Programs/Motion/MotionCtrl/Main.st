@@ -63,7 +63,6 @@ PROGRAM _CYCLIC
 				RobotState := ROBOT_HOMING_RESTORE;
 			// Bazowanie Homing Direct
 			ELSE
-				gAlarm.RobotRestorePosFail := TRUE;
 				RobotState := ROBOT_HOMING_DIRECT;
 			END_IF;
 		

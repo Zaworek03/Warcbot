@@ -65,6 +65,7 @@
     <Dialog refId="AlarmInncorrectRobotMove" />
     <Dialog refId="AlarmInncorrectBoard" />
     <Dialog refId="ReHomeDialog" />
+    <Dialog refId="RobotNotBasedDialog" />
   </Dialogs>
   <Contents>
     <Content refId="TopContent" />
@@ -92,6 +93,7 @@
     <Content refId="AlramInncorrectRobotMoveContent" />
     <Content refId="AlarmInncorrectBoardContent" />
     <Content refId="ReHomeDialog" />
+    <Content refId="RobotNotBasedContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

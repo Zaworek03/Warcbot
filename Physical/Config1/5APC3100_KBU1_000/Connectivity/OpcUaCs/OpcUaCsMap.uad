@@ -80,6 +80,7 @@
       <Variable Name="gCameraBlackCount" />
       <Variable Name="gCameraWhiteCount" />
       <Variable Name="gCameraNumResults" />
+      <Variable Name="RestorePosReady" />
     </GlobalVariables>
     <Task Name="SaveGame">
       <Variable Name="UIConnect">

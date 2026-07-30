@@ -1115,5 +1115,22 @@ Load game / Save game</seg>
         <seg>Game report</seg>
       </tuv>
     </tu>
+    <tu tuid="NoSavedAxisPosHeader">
+      <tuv xml:lang="pl">
+        <seg>Robot niezbazowany</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Robot not based</seg>
+      </tuv>
+    </tu>
+    <tu tuid="NoSavedAxisPosText">
+      <tuv xml:lang="pl">
+        <seg>Nie można uruchomić programu, ponieważ robot nie był w stanie wczytać zapisanej pozycji osi. Należy wejść w tryb manualny i ponownie zbazować robota.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The program cannot be started because the robot was unable to load the saved axis position. Switch to manual mode and rehome the robot
+.</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

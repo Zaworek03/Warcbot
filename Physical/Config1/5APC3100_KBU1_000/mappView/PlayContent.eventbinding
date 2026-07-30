@@ -42,10 +42,22 @@
     </EventBinding>
     <EventBinding id="PlayContent.NewGameBtn.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="PlayContent" widgetRefId="NewGameBtn" event="Click" />
-      <EventHandler>
+      <Operand datatype="BOOL" name="RobotOK">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:RestorePosReady">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="RobotOK">
         <Action>
           <Target xsi:type="clientSystem.Action">
             <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="NewGameDialog" headerText="New Game" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT RobotOK">
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="RobotNotBasedDialog" headerText="$IAT/NoSavedAxisPosHeader" />
           </Target>
         </Action>
       </EventHandler>
