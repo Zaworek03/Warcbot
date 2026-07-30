@@ -8,12 +8,14 @@ VAR
 	gGameRound : BOOL; (*False ruch robota, True ruch czlowieka*)
 	gPlayerColor : BOOL; (*True - biale, False - czarne*)
 	gDifficultyLevel : USINT; (*0 - Easy, 1 - Medium, 2 - Hard*)
-	gStart : BOOL; (*True - rozpocznij nowa gre, False - nic*)
+	gStart : BOOL := FALSE; (*True - rozpocznij nowa gre, False - nic*)
 	gEnablePiece : ARRAY[1..8,1..8] OF BOOL; (*Pionki mozliwe do klikniecia podczas tury*)
 	gESTOP : BOOL; (*Sygnal z sterownika Safety*)
-	gStep : StepEnum; (*Maszyna stanow robota*)
+	gStep : StepEnum := Idle; (*Maszyna stanow robota*)
 	gGameStats : GameStatStruct; (*Statystyki gry*)
 	gCameraTrigger : BOOL;
 	gBoardCamera : ARRAY[1..8,1..8] OF USINT;
 	gCameraEnd : BOOL;
+	gPlayerMove : BOOL;
+	gStop : BOOL := TRUE; (*Odwrotnoœæ gStart*)
 END_VAR

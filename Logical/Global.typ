@@ -28,6 +28,10 @@ TYPE
 		Idle, (*Czekanie na start = 1*)
 		PhotoCheck, (*Drugie zdjecie sprawdzajace poprawnosci odlozenia pionkow po ruchu*)
 		GameMove, (*Ruch warcabowy cz³owiek vs AI*)
-		RobotMove (*Robot wykonuje fizyczny ruch*)
+		RobotMove, (*Robot wykonuje fizyczny ruch*)
+		ErrorState,
+		ResetRobotPos,
+		SetBoard,
+		SetBoardPrep
 		);
 END_TYPE

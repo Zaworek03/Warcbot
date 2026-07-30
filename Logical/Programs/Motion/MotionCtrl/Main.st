@@ -248,17 +248,17 @@ PROGRAM _CYCLIC
 					PileCalculatedOffs.Y := 0;
 					PileCalculatedOffs.Z := PileZOffs * USINT_TO_REAL(WhitePileCnt MOD PileHeight);
 					
-					STMotionEndPoint.Pos.X := gMotionInterface.EndPos.X + PileCalculatedOffs.X;
-					STMotionEndPoint.Pos.Y := gMotionInterface.EndPos.Y + PileCalculatedOffs.Y;
-					STMotionEndPoint.Pos.Z := gMotionInterface.EndPos.Z + PileCalculatedOffs.Z;
+					STMotionEndPoint.Pos.X := gMotionInterface.WhitePilePos.X + PileCalculatedOffs.X;
+					STMotionEndPoint.Pos.Y := gMotionInterface.WhitePilePos.Y + PileCalculatedOffs.Y;
+					STMotionEndPoint.Pos.Z := gMotionInterface.WhitePilePos.Z + PileCalculatedOffs.Z;
 				DISCARD_BLACK:
 					PileCalculatedOffs.X := BlackPileXOffs * USINT_TO_REAL(BlackPileCnt/PileHeight);
 					PileCalculatedOffs.Y := 0;
 					PileCalculatedOffs.Z := PileZOffs * USINT_TO_REAL(BlackPileCnt MOD PileHeight);
 					
-					STMotionEndPoint.Pos.X := gMotionInterface.EndPos.X + PileCalculatedOffs.X;
-					STMotionEndPoint.Pos.Y := gMotionInterface.EndPos.Y + PileCalculatedOffs.Y;
-					STMotionEndPoint.Pos.Z := gMotionInterface.EndPos.Z + PileCalculatedOffs.Z;
+					STMotionEndPoint.Pos.X := gMotionInterface.BlackPilePos.X + PileCalculatedOffs.X;
+					STMotionEndPoint.Pos.Y := gMotionInterface.BlackPilePos.Y + PileCalculatedOffs.Y;
+					STMotionEndPoint.Pos.Z := gMotionInterface.BlackPilePos.Z + PileCalculatedOffs.Z;
 			END_CASE;
 			
 			// rozpoczecie pracy programu

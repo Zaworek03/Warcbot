@@ -54,15 +54,16 @@ TYPE
 		DISCARD_BLACK (*Przesuniecie ze StartPos na stos czarnych*)
 		);
 	RobotMoveVarType : 	STRUCT 
-		DiscardColorWhite : BOOL;
-		Capture : BOOL;
+		DiscardColorWhite : BOOL := FALSE;
+		Capture : BOOL := FALSE;
 		StartPoint : IndexPointType;
 		EndPoint : IndexPointType;
 		DiscardPoint : IndexPointType;
+		RTRMove : BOOL := FALSE; (*Ready to read move*)
 	END_STRUCT;
 	IndexPointType : 	STRUCT 
-		x : USINT;
-		y : USINT;
+		x : USINT := 1;
+		y : USINT := 1;
 	END_STRUCT;
 	RobotFeedrateType : 	STRUCT 
 		High : LREAL := 5000;

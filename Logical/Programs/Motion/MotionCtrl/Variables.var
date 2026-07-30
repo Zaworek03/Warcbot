@@ -27,7 +27,7 @@ VAR
 	RTrigSTMotionDone : r_trig;
 	STMotionDoneImpulse : BOOL;
 END_VAR
-(* Obs³uga stosów warcabów *)
+(* ObsÂ³uga stosÃ³w warcabÃ³w *)
 VAR CONSTANT
 	BlackPileXOffs : REAL := 50;
 	WhitePileXOffs : REAL := -50;
@@ -39,7 +39,7 @@ VAR
 	WhitePileCnt : USINT;
 	PileCalculatedOffs : McPosType;
 END_VAR
-(* Rêczne sterowanie kartezjañskie *)
+(* RÃªczne sterowanie kartezjaÃ±skie *)
 VAR
 	JogXPos : BOOL;
 	JogXNeg : BOOL;
@@ -49,7 +49,7 @@ VAR
 	JogZNeg : BOOL;
 	JogCartesianSpeed : REAL;
 END_VAR
-(* Rêczne sterowanie osiami robota *)
+(* RÃªczne sterowanie osiami robota *)
 VAR
 	JogJointPos0 : BOOL;
 	JogJointNeg0 : BOOL;
