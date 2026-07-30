@@ -119,4 +119,6 @@ VAR_CONFIG
 	::Program2:gCameraCtrl.Pieces[26].PositionX AT %ID."VSS112Q22.042P-000".PositionX_Out_126;
 	::Program2:gCameraCtrl.Pieces[25].PositionY AT %ID."VSS112Q22.042P-000".PositionY_Out_125;
 	::Program2:gCameraCtrl.Pieces[26].PositionY AT %ID."VSS112Q22.042P-000".PositionY_Out_126;
+	::Program2:gCameraCtrl.Parameters.FlashColor AT %QB."VSS112Q22.042P-000".FlashColor01;
+	::Program2:gCameraCtrl.Parameters.FlashSegment AT %QB."VSS112Q22.042P-000".FlashSegment01;
 END_VAR

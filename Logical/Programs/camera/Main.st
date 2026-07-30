@@ -7,6 +7,9 @@ PROGRAM _INIT
 	gCameraCtrl.Parameters.ExposureTime := 20884;
 	gCameraCtrl.Parameters.SetFocus := 53073;
 	gCameraCtrl.Parameters.GainLevel := 4;
+	gCameraCtrl.Parameters.FlashColor := 1;
+	gCameraCtrl.Parameters.FlashSegment := 1;
+	
 	gCameraCtrl.Parameters.ScoreMin := 75;
 	gCameraCtrl.Parameters.NumSearchMax := 26;
 
@@ -82,23 +85,44 @@ PROGRAM _CYCLIC
 		END_FOR;
 
 		FOR i := 1 TO 26 DO
-			IF (gCameraCtrl.NumResults >= i) THEN
-				
+			IF gCameraCtrl.NumResults >= i THEN
 
-				CASE gCameraCtrl.Pieces[i].ModelNumber OF
-					3:
-						IF gCameraCtrl.Pieces[i].Score >= 30 THEN
+				IF (gCameraCtrl.Pieces[i].ModelNumber = 3)
+					AND (gCameraCtrl.Pieces[i].Score >= 30) THEN
+
+					IF NOT marker3Found THEN
+
+						marker3X := gCameraCtrl.Pieces[i].PositionX;
+						marker3Y := gCameraCtrl.Pieces[i].PositionY;
+
+						marker4X := gCameraCtrl.Pieces[i].PositionX;
+						marker4Y := gCameraCtrl.Pieces[i].PositionY;
+
+						marker3Found := TRUE;
+
+					ELSE
+
+						IF gCameraCtrl.Pieces[i].PositionX < marker3X THEN
+
+							marker4X := marker3X;
+							marker4Y := marker3Y;
+
 							marker3X := gCameraCtrl.Pieces[i].PositionX;
 							marker3Y := gCameraCtrl.Pieces[i].PositionY;
-							marker3Found := TRUE;
-						END_IF;
-					4:
-						IF gCameraCtrl.Pieces[i].Score >= 30 THEN
+
+						ELSIF gCameraCtrl.Pieces[i].PositionX > marker4X THEN
+
 							marker4X := gCameraCtrl.Pieces[i].PositionX;
 							marker4Y := gCameraCtrl.Pieces[i].PositionY;
-							marker4Found := TRUE;
+
 						END_IF;
-				END_CASE;
+
+						marker4Found := TRUE;
+
+					END_IF;
+
+				END_IF;
+
 			END_IF;
 		END_FOR;
 
