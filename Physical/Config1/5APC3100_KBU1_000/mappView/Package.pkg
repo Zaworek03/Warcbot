@@ -29,5 +29,6 @@
     <Object Type="File">AlarmInncorrectBoardContent.eventbinding</Object>
     <Object Type="File">ManualContent.eventbinding</Object>
     <Object Type="File">ReHomeDialog.eventbinding</Object>
+    <Object Type="File">SettingsContent.binding</Object>
   </Objects>
 </Package>

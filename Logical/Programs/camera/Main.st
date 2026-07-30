@@ -4,11 +4,11 @@ PROGRAM _INIT
 	gCameraCtrl.Cmd.AcquireImage := FALSE;
 	gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
 
-	gCameraCtrl.Parameters.ExposureTime := 20884;
-	gCameraCtrl.Parameters.SetFocus := 53073;
-	gCameraCtrl.Parameters.GainLevel := 4;
-	gCameraCtrl.Parameters.FlashColor := 1;
-	gCameraCtrl.Parameters.FlashSegment := 1;
+	gCameraCtrl.Parameters.ExposureTime := gCameraExposureTime;
+	gCameraCtrl.Parameters.SetFocus := gCameraFocus;
+	gCameraCtrl.Parameters.GainLevel := gCameraGainLevel;
+	gCameraCtrl.Parameters.FlashColor := 0;
+	gCameraCtrl.Parameters.FlashSegment := 0;
 	
 	gCameraCtrl.Parameters.ScoreMin := 75;
 	gCameraCtrl.Parameters.NumSearchMax := 26;
@@ -47,7 +47,15 @@ PROGRAM _CYCLIC
 
 	gCameraCtrl.Cmd.Enable := TRUE;
 	gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
-
+	
+	gCameraCtrl.Parameters.ExposureTime := gCameraExposureTime;
+	gCameraCtrl.Parameters.SetFocus := gCameraFocus;
+	gCameraCtrl.Parameters.GainLevel := gCameraGainLevel;
+	
+	gCameraBlackCount := gCameraCtrl.BlackCount;
+	gCameraWhiteCount := gCameraCtrl.WhiteCount;
+	gCameraNumResults := gCameraCtrl.NumResults;
+	
 	IF NOT gCameraTrigger THEN
 		gCameraCtrl.Cmd.AcquireImage := FALSE;
 		gCameraCtrl.BoardReady := FALSE;
@@ -355,6 +363,7 @@ PROGRAM _EXIT
 
 	gCameraCtrl.BoardReady := FALSE;
 	gCameraCtrl.BoardDataValid := FALSE;
+	gCameraCtrl.Calibration.MarkersValid := FALSE;
 
 	gCameraEnd := FALSE;
 	PreviousProcessingActive := FALSE;
