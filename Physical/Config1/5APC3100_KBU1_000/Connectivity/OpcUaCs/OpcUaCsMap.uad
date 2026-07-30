@@ -71,6 +71,8 @@
       </Variable>
       <Variable Name="gStep" />
       <Variable Name="doMagnet" />
+      <Variable Name="gPlayerMove" />
+      <Variable Name="gStop" />
     </GlobalVariables>
     <Task Name="SaveGame">
       <Variable Name="UIConnect">
