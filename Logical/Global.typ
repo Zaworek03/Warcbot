@@ -4,7 +4,7 @@ TYPE
 		EstopActive : BOOL; (*E stop zostal zalaczony*)
 		InncorrectRobotMove : BOOL; (*Zle przeniesienie pionka przez robota*)
 		InncorrectBoard : BOOL; (*Zla plansza do startu gry*)
-		FolderError : USINT;
+		FolderError : USINT; (*blad folderu*)
 		MissingSTMotionProgram : USINT; (*Brakuje programu ST Motion*)
 		RobotProgramNotLoaded : BOOL; (*Program (napisany w STMotion) nie istnieje w pami�ci USER robota*)
 		RobotWorkspaceViolation : BOOL; (*TCP robota znalaz�o si� poza dozwolonym obszarem - robot nie mo�e kontynuowa� ruchu w tym kierunku*)

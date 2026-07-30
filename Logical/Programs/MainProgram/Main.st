@@ -9,14 +9,6 @@ PROGRAM _INIT
 	MpAuditTrail_0.FileName := ADR('AuditList'); 
 	MpAuditTrail_0();
 	
-	MpReportCore_0.Enable := TRUE; 
-	MpReportCore_0.MpLink := ADR(gReport); 
-	MpReportCore_0.DeviceName := ADR('CF'); 
-	MpReportCore_0.FileName := ADR('GameReport'); 
-	MpReportCore_0.ReportID := ADR('MyReport'); 
-	MpReportCore_0.Language := ADR('en'); 
-	MpReportCore_0(); 
-	
 	gMotionInterface.BlackPilePos.X := 395.4;
 	gMotionInterface.BlackPilePos.Y := -293;
 	gMotionInterface.BlackPilePos.Z := 286.4;
@@ -29,7 +21,6 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	MpAuditTrail_0();
-	MpReportCore_0();
 	
 	gStop := NOT gStart;
 
@@ -57,7 +48,7 @@ PROGRAM _CYCLIC
 				ColorCount[2] := 0;
 				FOR i := 1 TO BOARD_SPACES DO
 					FOR j := 1 TO BOARD_SPACES DO
-						(* Odwrócenie planszy do góry nogami, aby odczyt z kamry by³ zgodny z widokiem ze stania na wprost robota *)
+						(* Odwrï¿½cenie planszy do gï¿½ry nogami, aby odczyt z kamry byï¿½ zgodny z widokiem ze stania na wprost robota *)
 						SimBoardValue := CONVERT_BOARD[gBoardActual[BOARD_SPACES + 1 - i, BOARD_SPACES + 1 - j]];
 						CameraBoardValue := gBoardCamera[i, j];
 						
@@ -96,7 +87,7 @@ PROGRAM _CYCLIC
 			END_IF;
 					
 		GameMove:
-			(* GameMove -> wykonywany jest ruch warcabowy, gGameRound = TRUE -> ruch cz³owieka *)
+			(* GameMove -> wykonywany jest ruch warcabowy, gGameRound = TRUE -> ruch czï¿½owieka *)
 			gPlayerMove := gGameRound = TRUE;	
 			IF RobotMoveMarker AND gRobotMoveVar.RTRMove THEN
 				gPlayerMove := FALSE;
@@ -302,6 +293,5 @@ END_PROGRAM
 
 PROGRAM _EXIT
 	(* Insert code here *)
-	 
 END_PROGRAM
 

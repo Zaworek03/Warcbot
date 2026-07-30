@@ -21,8 +21,12 @@ VAR
 	LastMove : STRING[20]; (*ostatni wykryty ruch*)
 	MoveHistory : ARRAY[1..4] OF STRING[20]; (*[1] najnowszy, [4] najstarszy*)
 	MpAuditTrail_0 : MpAuditTrail;
-	auditTmp   : STRING[80];
+	auditTmp : STRING[80];
 	MessageVar : WSTRING[100];
-	TypeVar    : WSTRING[100];
+	TypeVar : WSTRING[100];
 	CommentVar : WSTRING[100];
+	MpReportCore_0 : MpReportCore;
+	sReport_Color     : STRING[20]; 
+	sReport_Difficulty: STRING[30];
+	sReport_Result    : STRING[20];
 END_VAR

@@ -20,5 +20,6 @@
     <Object Type="Package">LoadConfDialog</Object>
     <Object Type="Package">AlarmInncorrectRobotMove</Object>
     <Object Type="Package">AlarmInncorrectBoard</Object>
+    <Object Type="Package">ReHomeDialog</Object>
   </Objects>
 </Package>

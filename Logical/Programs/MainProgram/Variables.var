@@ -35,4 +35,5 @@ VAR
 	CommandCount : USINT := 0;
 	CommandList : ARRAY[0..23] OF CommandType;
 	CommandDoneCount : USINT := 0;
+	ReportLanguage : STRING[20] := 'en';
 END_VAR

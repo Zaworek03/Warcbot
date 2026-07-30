@@ -49,9 +49,10 @@ TYPE
 	END_STRUCT;
 	RobotCommandType : 
 		(
-		MOVE_START_END, (*Przesuniecie ze StartPos na EndPos*)
-		DISCARD_WHITE, (*Przesuniecie ze StartPos na stos bialych*)
-		DISCARD_BLACK (*Przesuniecie ze StartPos na stos czarnych*)
+		MOVE_HOME,
+		DISCARD_WHITE,
+		DISCARD_BLACK,
+		MOVE_START_END (*Przesuniecie ze StartPos na EndPos*)
 		);
 	RobotMoveVarType : 	STRUCT 
 		DiscardColor : USINT := 0;

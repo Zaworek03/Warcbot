@@ -7,13 +7,14 @@
     <Page refId="Alarm" />
     <Page refId="Manual" />
     <Page refId="Settings" />
-	</Pages>
+  </Pages>
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="SaveContent" />
     <BindingsSet refId="AlarmContent" />
     <BindingsSet refId="PlayContent" />
     <BindingsSet refId="ManualContent" />
+    <BindingsSet refId="SettingsContent" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="TopContent" />
@@ -41,6 +42,8 @@
     <EventBindingsSet refId="AlramInncorrectRobotMoveContent" />
     <EventBindingsSet refId="gEnablePiece" />
     <EventBindingsSet refId="AlarmInncorrectBoardContent" />
+    <EventBindingsSet refId="ManualContent" />
+    <EventBindingsSet refId="ReHomeDialog" />
   </EventBindingsSets>
   <EventScriptsSets />
   <Dialogs>
@@ -61,6 +64,7 @@
     <Dialog refId="LoadConfDialog" />
     <Dialog refId="AlarmInncorrectRobotMove" />
     <Dialog refId="AlarmInncorrectBoard" />
+    <Dialog refId="ReHomeDialog" />
   </Dialogs>
   <Contents>
     <Content refId="TopContent" />
@@ -86,8 +90,9 @@
     <Content refId="RecipeUIErrorContent" />
     <Content refId="LoadConfContent" />
     <Content refId="AlramInncorrectRobotMoveContent" />
-		<Content refId="AlarmInncorrectBoardContent" />
-	</Contents>
+    <Content refId="AlarmInncorrectBoardContent" />
+    <Content refId="ReHomeDialog" />
+  </Contents>
   <SnippetsSets />
   <VariablesSets />
   <ExpressionsSets />
