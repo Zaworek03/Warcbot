@@ -8,7 +8,7 @@ END_VAR
 
 VAR {AT PLC}
     doMagnet : BOOL;
-END
+END_VAR
 
 PROGRAM _MAIN
     Done := FALSE;
