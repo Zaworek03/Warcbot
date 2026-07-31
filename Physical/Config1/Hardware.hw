@@ -48,7 +48,6 @@
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="warcabot_Config1" />
-    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="RemMemDevice" Value="PCI.2.IPLK.SRAM" />
     <Parameter ID="RemMemSize" Value="1000" />
     <Parameter ID="PermanentPvSize" Value="500" />

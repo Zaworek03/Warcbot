@@ -235,7 +235,7 @@ PROGRAM _CYCLIC
 			(* Zerowanie tablic flag *)
 			FOR i := 1 TO 24 DO
 				DrawHandled[i] := FALSE;
-				DiscardHandled[i] := FALSE;
+				DiscardHandled[i]:= FALSE;
 			END_FOR;
 			
 			IF DrawCount > 0 OR DiscardCount > 0 THEN
