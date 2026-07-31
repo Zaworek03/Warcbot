@@ -228,53 +228,99 @@ PROGRAM _CYCLIC
 		SetBoardPrep:
 			SetBoardTrigger := FALSE;
 			
-			(* POPRAWNE WYLICZENIE: Skoro na planszy jest 'ColorCount', w buforze jest '12 - ColorCount' *)
+			(* Obliczanie aktualnego stanu bufora *)
 			BuforLastPieceIndex[1] := 12 - ColorCount[1];
 			BuforLastPieceIndex[2] := 12 - ColorCount[2];
+			
+			(* Zerowanie tablic flag *)
+			FOR i := 1 TO 24 DO
+				DrawHandled[i] := FALSE;
+				DiscardHandled[i] := FALSE;
+			END_FOR;
 			
 			IF DrawCount > 0 OR DiscardCount > 0 THEN
 				CommandCount := 0;
 				
-				(* KROK 1: Wszystko co b³êdne l¹duje najpierw w buforze (usuwamy nadmiar/z³e pionki z planszy) *)
+				(* KROK 1: Przesuniêcia bezpoœrednie z logik¹ antykolizyjn¹ *)
 				IF DiscardCount > 0 THEN
 					FOR i := 1 TO DiscardCount DO
-						CommandCount := CommandCount + 1;
-						CommandList[CommandCount].StartPos := COORD_POSITION[PiecesToDiscard[i].Index.x, PiecesToDiscard[i].Index.y];
-						
-						(* Zabezpieczenie przed przepe³nieniem bufora (max 12 pionków) *)
-						IF BuforLastPieceIndex[PiecesToDiscard[i].Color] < 12 THEN
-							BuforLastPieceIndex[PiecesToDiscard[i].Color] := BuforLastPieceIndex[PiecesToDiscard[i].Color] + 1;
+						IF NOT DiscardHandled[i] THEN
+							MatchFound := FALSE;
+							
+							(* Szukamy wolnego miejsca o TAKIM SAMYM KOLORZE na planszy *)
+							IF DrawCount > 0 THEN
+								FOR j := 1 TO DrawCount DO
+									IF NOT DrawHandled[j] AND (PiecesToDiscard[i].Color = PiecesToDraw[j].Color) THEN
+										MatchFound := TRUE;
+										
+										(* --- LOGIKA ANTYKOLIZYJNA --- *)
+										(* Sprawdzamy, czy na polu docelowym (PiecesToDraw[j]) fizycznie stoi jakiœ inny b³êdny pionek *)
+										FOR k := 1 TO DiscardCount DO
+											IF (NOT DiscardHandled[k]) AND 
+												(PiecesToDiscard[k].Index.x = PiecesToDraw[j].Index.x) AND 
+												(PiecesToDiscard[k].Index.y = PiecesToDraw[j].Index.y) THEN
+												
+												(* ZNALEZIONO KOLIZJÊ! Najpierw odk³adamy blokuj¹cy pionek do bufora *)
+												CommandCount := CommandCount + 1;
+												CommandList[CommandCount].StartPos := COORD_POSITION[PiecesToDiscard[k].Index.x, PiecesToDiscard[k].Index.y];
+												
+												IF BuforLastPieceIndex[PiecesToDiscard[k].Color] < 12 THEN
+													BuforLastPieceIndex[PiecesToDiscard[k].Color] := BuforLastPieceIndex[PiecesToDiscard[k].Color] + 1;
+												END_IF;
+												
+												CommandList[CommandCount].EndPos := BUFOR_POSITION[PiecesToDiscard[k].Color, BuforLastPieceIndex[PiecesToDiscard[k].Color]];
+												
+												(* Zaznaczamy, ¿e ten blokuj¹cy pionek zosta³ ju¿ obs³u¿ony *)
+												DiscardHandled[k] := TRUE; 
+											END_IF;
+										END_FOR;
+										(* ----------------------------- *)
+										
+										(* Teraz pole docelowe jest NA PEWNO puste. Robimy ruch bezpoœredni. *)
+										CommandCount := CommandCount + 1;
+										CommandList[CommandCount].StartPos := COORD_POSITION[PiecesToDiscard[i].Index.x, PiecesToDiscard[i].Index.y];
+										CommandList[CommandCount].EndPos := COORD_POSITION[PiecesToDraw[j].Index.x, PiecesToDraw[j].Index.y];
+										
+										(* Oznaczamy jako obs³u¿one *)
+										DiscardHandled[i] := TRUE;
+										DrawHandled[j] := TRUE;
+										EXIT; (* Przerywamy pêtlê szukaj¹c¹ pary dla tego pionka *)
+									END_IF;
+								END_FOR;
+							END_IF;
+							
+							(* Jeœli nie znaleŸliœmy miejsca na planszy dla tego pionka (MatchFound = FALSE) -> zrzucamy do bufora *)
+							IF NOT MatchFound THEN
+								CommandCount := CommandCount + 1;
+								CommandList[CommandCount].StartPos := COORD_POSITION[PiecesToDiscard[i].Index.x, PiecesToDiscard[i].Index.y];
+								
+								IF BuforLastPieceIndex[PiecesToDiscard[i].Color] < 12 THEN
+									BuforLastPieceIndex[PiecesToDiscard[i].Color] := BuforLastPieceIndex[PiecesToDiscard[i].Color] + 1;
+								END_IF;
+								
+								CommandList[CommandCount].EndPos := BUFOR_POSITION[PiecesToDiscard[i].Color, BuforLastPieceIndex[PiecesToDiscard[i].Color]];
+								DiscardHandled[i] := TRUE;
+							END_IF;
 						END_IF;
-						
-						CommandList[CommandCount].EndPos := BUFOR_POSITION[PiecesToDiscard[i].Color, BuforLastPieceIndex[PiecesToDiscard[i].Color]];
-						
-						(* Zapisujemy te¿ indeksy *)
-						CommandList[CommandCount].StartIndex := PiecesToDiscard[i].Index;
-						CommandList[CommandCount].EndIndex.x := PiecesToDiscard[i].Color + 10;
-						CommandList[CommandCount].EndIndex.y := BuforLastPieceIndex[PiecesToDiscard[i].Color];
 					END_FOR;
 				END_IF;
 
-				(* KROK 2: Uzupe³nianie brakuj¹cych miejsc na planszy z bufora *)
+				(* KROK 2: Uzupe³nianie brakuj¹cych miejsc (tych, które nie znalaz³y pary) z bufora *)
 				IF DrawCount > 0 THEN
 					FOR j := 1 TO DrawCount DO
-						CommandCount := CommandCount + 1;
-						
-						(* Zabezpieczenie przed pobraniem z pustego bufora *)
-						IF BuforLastPieceIndex[PiecesToDraw[j].Color] > 0 THEN
-							CommandList[CommandCount].StartPos := BUFOR_POSITION[PiecesToDraw[j].Color, BuforLastPieceIndex[PiecesToDraw[j].Color]];
-							BuforLastPieceIndex[PiecesToDraw[j].Color] := BuforLastPieceIndex[PiecesToDraw[j].Color] - 1;
-						ELSE
-							(* Awaryjnie pobieramy z pozycji 1, jeœli system myœli, ¿e bufor jest pusty *)
-							CommandList[CommandCount].StartPos := BUFOR_POSITION[PiecesToDraw[j].Color, 1]; 
+						IF NOT DrawHandled[j] THEN
+							CommandCount := CommandCount + 1;
+							
+							IF BuforLastPieceIndex[PiecesToDraw[j].Color] > 0 THEN
+								CommandList[CommandCount].StartPos := BUFOR_POSITION[PiecesToDraw[j].Color, BuforLastPieceIndex[PiecesToDraw[j].Color]];
+								BuforLastPieceIndex[PiecesToDraw[j].Color] := BuforLastPieceIndex[PiecesToDraw[j].Color] - 1;
+							ELSE
+								CommandList[CommandCount].StartPos := BUFOR_POSITION[PiecesToDraw[j].Color, 1];
+							END_IF;
+							
+							CommandList[CommandCount].EndPos := COORD_POSITION[PiecesToDraw[j].Index.x, PiecesToDraw[j].Index.y];
+							DrawHandled[j] := TRUE;
 						END_IF;
-						
-						CommandList[CommandCount].EndPos := COORD_POSITION[PiecesToDraw[j].Index.x, PiecesToDraw[j].Index.y];
-						
-						(* Zapisujemy indeksy *)
-						CommandList[CommandCount].StartIndex.x := PiecesToDraw[j].Color + 10;
-						CommandList[CommandCount].StartIndex.y := BuforLastPieceIndex[PiecesToDraw[j].Color] + 1;
-						CommandList[CommandCount].EndIndex := PiecesToDraw[j].Index;
 					END_FOR;
 				END_IF;
 				
