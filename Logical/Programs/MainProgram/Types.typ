@@ -26,5 +26,7 @@ TYPE
 	CommandType : 	STRUCT 
 		EndPos : McPosType;
 		StartPos : McPosType;
+		EndIndex : IndexPointType;
+		StartIndex : IndexPointType;
 	END_STRUCT;
 END_TYPE
