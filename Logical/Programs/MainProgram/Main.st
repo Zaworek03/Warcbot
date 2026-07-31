@@ -1,4 +1,3 @@
-
 PROGRAM _INIT
 	gStep := Idle;
 	BoardGit := FALSE;
@@ -8,21 +7,16 @@ PROGRAM _INIT
 	MpAuditTrail_0.DeviceName := ADR('AUDIT'); 
 	MpAuditTrail_0.FileName := ADR('AuditList'); 
 	MpAuditTrail_0();
-	
-	gMotionInterface.BlackPilePos.X := 395.4;
-	gMotionInterface.BlackPilePos.Y := -293;
-	gMotionInterface.BlackPilePos.Z := 286.4;
-	
-	gMotionInterface.WhitePilePos.X := 395.4;
-	gMotionInterface.WhitePilePos.Y := -293;
-	gMotionInterface.WhitePilePos.Z := 286.4;
-	
 END_PROGRAM
 
 PROGRAM _CYCLIC
 	MpAuditTrail_0();
 	
 	gStop := NOT gStart;
+	
+	IF gESTOP = FALSE THEN
+		gMotionInterface.Enable := FALSE;
+	END_IF;
 
 	IF gStart = FALSE THEN
 		gStep := Idle;
@@ -35,7 +29,10 @@ PROGRAM _CYCLIC
 			IF gStart THEN
 				SetBoardTrigger := TRUE;
 				gStep := ResetRobotPos;
-			END_IF
+				SetBoardStep := SetBoardBusy;
+				gMotionInterface.Enable := TRUE;
+				gMotionInterface.RequestManualMode := FALSE;
+			END_IF;
 				
 		PhotoCheck:
 			gCameraTrigger := TRUE;
@@ -46,11 +43,12 @@ PROGRAM _CYCLIC
 				DiscardCount := 0;
 				ColorCount[1] := 0;
 				ColorCount[2] := 0;
+				
 				FOR i := 1 TO BOARD_SPACES DO
 					FOR j := 1 TO BOARD_SPACES DO
-						(* Odwrï¿½cenie planszy do gï¿½ry nogami, aby odczyt z kamry byï¿½ zgodny z widokiem ze stania na wprost robota *)
-						SimBoardValue := CONVERT_BOARD[gBoardActual[BOARD_SPACES + 1 - i, BOARD_SPACES + 1 - j]];
-						CameraBoardValue := gBoardCamera[i, j];
+						(* Odwrócenie planszy do góry nogami, aby odczyt z kamery by³ zgodny z widokiem ze stania na wprost robota *)
+						SimBoardValue := CONVERT_BOARD[gBoardActual[i, j]];
+						CameraBoardValue := gBoardCamera[BOARD_SPACES + 1 - i, BOARD_SPACES + 1 - j];
 						
 						ColorCount[CameraBoardValue] := ColorCount[CameraBoardValue] + 1;
 						
@@ -59,20 +57,36 @@ PROGRAM _CYCLIC
 							
 							IF SetBoardTrigger THEN
 								IF CameraBoardValue = 0 THEN
+									(* Inkrementujemy najpierw, aby zacz¹æ od indeksu 1 *)
+									DrawCount := DrawCount + 1;
 									PiecesToDraw[DrawCount].Index.x := i;
 									PiecesToDraw[DrawCount].Index.y := j;
 									PiecesToDraw[DrawCount].Color := SimBoardValue;
-									DrawCount := DrawCount + 1;
 								ELSIF SimBoardValue = 0 THEN
+									(* Inkrementujemy najpierw, aby zacz¹æ od indeksu 1 *)
+									DiscardCount := DiscardCount + 1;
 									PiecesToDiscard[DiscardCount].Index.x := i;
 									PiecesToDiscard[DiscardCount].Index.y := j;
 									PiecesToDiscard[DiscardCount].Color := CameraBoardValue;
+								ELSE
+									(* Zarówno w symulacji, jak i w kamerze jest pionek, ale RÓ¯NYCH KOLORÓW -> ZAMIANA! *)
+									(* 1. Najpierw usuwamy to, co fizycznie stoi na planszy (widzi to kamera) *)
 									DiscardCount := DiscardCount + 1;
+									PiecesToDiscard[DiscardCount].Index.x := i;
+									PiecesToDiscard[DiscardCount].Index.y := j;
+									PiecesToDiscard[DiscardCount].Color := CameraBoardValue;
+                    
+									(* 2. Nastêpnie stawiamy to, co powinno tam byæ zgodnie z symulacj¹ *)
+									DrawCount := DrawCount + 1;
+									PiecesToDraw[DrawCount].Index.x := i;
+									PiecesToDraw[DrawCount].Index.y := j;
+									PiecesToDraw[DrawCount].Color := SimBoardValue;
 								END_IF;
 							END_IF;
 						END_IF;
 					END_FOR;
 				END_FOR;
+				
 				IF Match THEN
 					BoardGit := TRUE;
 					gStep := GameMove;
@@ -87,8 +101,8 @@ PROGRAM _CYCLIC
 			END_IF;
 					
 		GameMove:
-			(* GameMove -> wykonywany jest ruch warcabowy, gGameRound = TRUE -> ruch czï¿½owieka *)
-			gPlayerMove := gGameRound = TRUE;	
+			(* GameMove -> wykonywany jest ruch warcabowy, gGameRound = TRUE -> ruch cz³owieka *)
+			gPlayerMove := (gGameRound = TRUE);	
 			IF RobotMoveMarker AND gRobotMoveVar.RTRMove THEN
 				gPlayerMove := FALSE;
 				MoveStep := IdleRM;
@@ -107,8 +121,8 @@ PROGRAM _CYCLIC
 					MoveExecute:
 						IF gMotionInterface.Ready THEN
 							gMotionInterface.Command := MOVE_START_END;
-							gMotionInterface.StartPos := COORD_POSITION[gRobotMoveVar.StartPoint.x,gRobotMoveVar.StartPoint.y];
-							gMotionInterface.EndPos := COORD_POSITION[gRobotMoveVar.EndPoint.x,gRobotMoveVar.EndPoint.y];
+							gMotionInterface.StartPos := COORD_POSITION[gRobotMoveVar.StartPoint.x, gRobotMoveVar.StartPoint.y];
+							gMotionInterface.EndPos := COORD_POSITION[gRobotMoveVar.EndPoint.x, gRobotMoveVar.EndPoint.y];
 							gMotionInterface.Execute := TRUE;
 							MoveStep := MoveBusy;
 						END_IF;
@@ -119,7 +133,7 @@ PROGRAM _CYCLIC
 							IF gRobotMoveVar.Capture THEN
 								MoveStep := DiscardExecute;
 							ELSE
-								MoveStep := EndRM;
+								MoveStep := HomeExecute;
 							END_IF;
 						END_IF;
 			
@@ -128,13 +142,27 @@ PROGRAM _CYCLIC
 							gMotionInterface.Command := MOVE_START_END;
 							gMotionInterface.EndPos := BUFOR_POSITION[gRobotMoveVar.DiscardColor, 12 - ColorCount[gRobotMoveVar.DiscardColor] + 1];
 							ColorCount[gRobotMoveVar.DiscardColor] := ColorCount[gRobotMoveVar.DiscardColor] - 1;
-							gMotionInterface.StartPos := COORD_POSITION[gRobotMoveVar.DiscardPoint.x,gRobotMoveVar.DiscardPoint.y];
-							
+							gMotionInterface.StartPos := COORD_POSITION[gRobotMoveVar.DiscardPoint.x, gRobotMoveVar.DiscardPoint.y];
 							gMotionInterface.Execute := TRUE;
 							MoveStep := DiscardBusy;
 						END_IF;
 			
 					DiscardBusy:
+						IF gMotionInterface.Done THEN
+							gMotionInterface.Execute := FALSE;
+							MoveStep := HomeExecute;
+						END_IF;
+						
+					HomeExecute:
+						IF gMotionInterface.Ready THEN
+							gMotionInterface.Command := MOVE_HOME;
+							gMotionInterface.StartPos := DEFAULT_POSITION;
+							gMotionInterface.EndPos := DEFAULT_POSITION;
+							gMotionInterface.Execute := TRUE;
+							MoveStep := HomeBusy;
+						END_IF;
+						
+					HomeBusy:
 						IF gMotionInterface.Done THEN
 							gMotionInterface.Execute := FALSE;
 							MoveStep := EndRM;
@@ -147,6 +175,7 @@ PROGRAM _CYCLIC
 				END_CASE;
 			ELSE
 				gStep := ResetRobotPos;
+				SetBoardStep := SetBoardBusy;
 				gRobotMoveVar.RTRMove := FALSE;
 				MoveStep := IdleRM;
 			END_IF;
@@ -160,96 +189,146 @@ PROGRAM _CYCLIC
 			
 		ResetRobotPos:
 			IF gESTOP THEN
+				RRPTrigger := TRUE;
 				IF RRPConfirm THEN
-					(* Dodaj program do resetu robota i powortu do pozycji, gdzie robot nie zasï¿½ania kamery *);
-					IF (* Skoï¿½czyï¿½ ruch *)FALSE THEN
-						gStep := PhotoCheck;
-						RRPConfirm := FALSE;
-					END_IF;
+					CASE SetBoardStep OF
+						SetBoardBusy:
+							gMotionInterface.Enable := TRUE;
+							SetBoardStep := SetBoardHomeExecute;
+							
+						SetBoardHomeExecute:
+							IF gMotionInterface.Ready THEN
+								gMotionInterface.Command := MOVE_HOME;
+								gMotionInterface.StartPos := DEFAULT_POSITION;
+								gMotionInterface.EndPos := DEFAULT_POSITION;
+								gMotionInterface.Execute := TRUE;
+								SetBoardStep := SetBoardHomeBusy;
+							END_IF;
+					
+						SetBoardHomeBusy:
+							IF gMotionInterface.Done THEN
+								gMotionInterface.Execute := FALSE;
+								RRPConfirm := FALSE;
+								RRPTrigger := FALSE;
+								SetBoardStep := SetBoardExecute;
+								gStep := PhotoCheck;
+							END_IF;
+					END_CASE;
 				ELSIF RRPCancel THEN
 					gStart := FALSE;
 					RRPCancel := FALSE;
+					RRPTrigger := FALSE;
 				END_IF;
 			ELSE
 				RRPConfirm := FALSE;
 				RRPCancel := FALSE;
+				RRPTrigger := FALSE;
 			END_IF;
 			
 		SetBoardPrep:
-			FOR i := 0 TO 11 DO
+			SetBoardTrigger := FALSE;
+			
+			(* Obliczanie aktualnego stanu bufora *)
+			BuforLastPieceIndex[1] := 12 - ColorCount[1];
+			BuforLastPieceIndex[2] := 12 - ColorCount[2];
+			
+			(* Zerowanie tablic flag *)
+			FOR i := 1 TO 24 DO
 				DrawHandled[i] := FALSE;
+				DiscardHandled[i]:= FALSE;
 			END_FOR;
-
+			
 			IF DrawCount > 0 OR DiscardCount > 0 THEN
 				CommandCount := 0;
+				
+				(* KROK 1: Przesuniêcia bezpoœrednie z logik¹ antykolizyjn¹ *)
 				IF DiscardCount > 0 THEN
-					FOR i := 0 TO (DiscardCount - 1) DO
-						MatchFound := FALSE;
-            
-						(* Szukamy wolnego miejsca o TAKIM SAMYM KOLORZE *)
-						FOR j := 0 TO (DrawCount - 1) DO
-							IF NOT DrawHandled[j] AND (PiecesToDiscard[i].Color = PiecesToDraw[j].Color) THEN
-                    
-								(* ZNALEZIONO DOPASOWANIE! *)
-								MatchFound := TRUE;
-								DrawHandled[j] := TRUE; (* Odznaczamy to miejsce, by nie uï¿½yï¿½ go podwï¿½jnie *)
-                    			
-								(* >> ZADANIE: PRZENIEï¿½ BEZPOï¿½REDNIO NA PLANSZY << 
-								Zabierz z: PiecesToDiscard[i].Index
-								Odï¿½ï¿½ na : PiecesToDraw[j].Index
-								*)
-								CommandList[CommandCount].StartPos := COORD_POSITION[PiecesToDiscard[i].Index.x, PiecesToDiscard[i].Index.y];
-								CommandList[CommandCount].EndPos := COORD_POSITION[PiecesToDraw[j].Index.x, PiecesToDraw[j].Index.y];
-								CommandCount := CommandCount + 1;
-                    
-								EXIT; (* Przerywamy wewnï¿½trznï¿½ pï¿½tlï¿½, szukamy dla kolejnego i *)
+					FOR i := 1 TO DiscardCount DO
+						IF NOT DiscardHandled[i] THEN
+							MatchFound := FALSE;
+							
+							(* Szukamy wolnego miejsca o TAKIM SAMYM KOLORZE na planszy *)
+							IF DrawCount > 0 THEN
+								FOR j := 1 TO DrawCount DO
+									IF NOT DrawHandled[j] AND (PiecesToDiscard[i].Color = PiecesToDraw[j].Color) THEN
+										MatchFound := TRUE;
+										
+										(* --- LOGIKA ANTYKOLIZYJNA --- *)
+										(* Sprawdzamy, czy na polu docelowym (PiecesToDraw[j]) fizycznie stoi jakiœ inny b³êdny pionek *)
+										FOR k := 1 TO DiscardCount DO
+											IF (NOT DiscardHandled[k]) AND 
+												(PiecesToDiscard[k].Index.x = PiecesToDraw[j].Index.x) AND 
+												(PiecesToDiscard[k].Index.y = PiecesToDraw[j].Index.y) THEN
+												
+												(* ZNALEZIONO KOLIZJÊ! Najpierw odk³adamy blokuj¹cy pionek do bufora *)
+												CommandCount := CommandCount + 1;
+												CommandList[CommandCount].StartPos := COORD_POSITION[PiecesToDiscard[k].Index.x, PiecesToDiscard[k].Index.y];
+												
+												IF BuforLastPieceIndex[PiecesToDiscard[k].Color] < 12 THEN
+													BuforLastPieceIndex[PiecesToDiscard[k].Color] := BuforLastPieceIndex[PiecesToDiscard[k].Color] + 1;
+												END_IF;
+												
+												CommandList[CommandCount].EndPos := BUFOR_POSITION[PiecesToDiscard[k].Color, BuforLastPieceIndex[PiecesToDiscard[k].Color]];
+												
+												(* Zaznaczamy, ¿e ten blokuj¹cy pionek zosta³ ju¿ obs³u¿ony *)
+												DiscardHandled[k] := TRUE; 
+											END_IF;
+										END_FOR;
+										(* ----------------------------- *)
+										
+										(* Teraz pole docelowe jest NA PEWNO puste. Robimy ruch bezpoœredni. *)
+										CommandCount := CommandCount + 1;
+										CommandList[CommandCount].StartPos := COORD_POSITION[PiecesToDiscard[i].Index.x, PiecesToDiscard[i].Index.y];
+										CommandList[CommandCount].EndPos := COORD_POSITION[PiecesToDraw[j].Index.x, PiecesToDraw[j].Index.y];
+										
+										(* Oznaczamy jako obs³u¿one *)
+										DiscardHandled[i] := TRUE;
+										DrawHandled[j] := TRUE;
+										EXIT; (* Przerywamy pêtlê szukaj¹c¹ pary dla tego pionka *)
+									END_IF;
+								END_FOR;
 							END_IF;
-						END_FOR;
-            
-						(* Jeï¿½li pï¿½tla siï¿½ skoï¿½czyï¿½a i nie znaleziono dopasowania koloru... *)
-						IF NOT MatchFound THEN
-                
-                (* >> ZADANIE: ODï¿½Ó¯ DO MAGAZYNU << 
-                   Zabierz z: PiecesToDiscard[i].Index
-                   Odï¿½ï¿½ do : Magazyn
-                *)
-							CommandList[CommandCount].StartPos := COORD_POSITION[PiecesToDiscard[i].Index.x, PiecesToDiscard[i].Index.y];
-							CommandList[CommandCount].EndPos := BUFOR_POSITION[PiecesToDiscard[i].Color, 12 - ColorCount[PiecesToDiscard[i].Color] + 1];
-							ColorCount[PiecesToDiscard[i].Color] := ColorCount[PiecesToDiscard[i].Color] - 1;
-							CommandCount := CommandCount + 1;
-                
+							
+							(* Jeœli nie znaleŸliœmy miejsca na planszy dla tego pionka (MatchFound = FALSE) -> zrzucamy do bufora *)
+							IF NOT MatchFound THEN
+								CommandCount := CommandCount + 1;
+								CommandList[CommandCount].StartPos := COORD_POSITION[PiecesToDiscard[i].Index.x, PiecesToDiscard[i].Index.y];
+								
+								IF BuforLastPieceIndex[PiecesToDiscard[i].Color] < 12 THEN
+									BuforLastPieceIndex[PiecesToDiscard[i].Color] := BuforLastPieceIndex[PiecesToDiscard[i].Color] + 1;
+								END_IF;
+								
+								CommandList[CommandCount].EndPos := BUFOR_POSITION[PiecesToDiscard[i].Color, BuforLastPieceIndex[PiecesToDiscard[i].Color]];
+								DiscardHandled[i] := TRUE;
+							END_IF;
 						END_IF;
 					END_FOR;
 				END_IF;
 
-						(* =================================================================
-						KROK 2: Uzupeï¿½nianie pozostaï¿½ych miejsc, dla ktï¿½rych zabrakï¿½o klockï¿½w na planszy
-						================================================================= *)
+				(* KROK 2: Uzupe³nianie brakuj¹cych miejsc (tych, które nie znalaz³y pary) z bufora *)
 				IF DrawCount > 0 THEN
-					FOR j := 0 TO (DrawCount - 1) DO
-            
-						(* Bierzemy pod uwagï¿½ TYLKO te miejsca, ktï¿½rych nie odhaczyliï¿½my w Kroku 1 *)
+					FOR j := 1 TO DrawCount DO
 						IF NOT DrawHandled[j] THEN
-                
-                (* >> ZADANIE: WEï¿½ Z MAGAZYNU << 
-                   Bierz z  : Magazyn (kolor okreï¿½la PiecesToDraw[j].Color)
-                   Odï¿½ï¿½ na : PiecesToDraw[j].Index
-                *)
-							CommandList[CommandCount].StartPos := BUFOR_POSITION[PiecesToDraw[j].Color, 12 - ColorCount[PiecesToDraw[j].Color] + 1];
-							CommandList[CommandCount].EndPos := COORD_POSITION[PiecesToDraw[j].Index.x, PiecesToDraw[j].Index.y];
-							ColorCount[PiecesToDraw[j].Color] := ColorCount[PiecesToDraw[j].Color] + 1;
 							CommandCount := CommandCount + 1;
-                
+							
+							IF BuforLastPieceIndex[PiecesToDraw[j].Color] > 0 THEN
+								CommandList[CommandCount].StartPos := BUFOR_POSITION[PiecesToDraw[j].Color, BuforLastPieceIndex[PiecesToDraw[j].Color]];
+								BuforLastPieceIndex[PiecesToDraw[j].Color] := BuforLastPieceIndex[PiecesToDraw[j].Color] - 1;
+							ELSE
+								CommandList[CommandCount].StartPos := BUFOR_POSITION[PiecesToDraw[j].Color, 1];
+							END_IF;
+							
+							CommandList[CommandCount].EndPos := COORD_POSITION[PiecesToDraw[j].Index.x, PiecesToDraw[j].Index.y];
+							DrawHandled[j] := TRUE;
 						END_IF;
-            
 					END_FOR;
 				END_IF;
+				
 				CommandDoneCount := 0;
 				gStep := SetBoard;
 				SetBoardStep := SetBoardExecute;
 			ELSE
 				gStep := PhotoCheck;
-				SetBoardTrigger := FALSE;
 			END_IF;
 			
 		SetBoard:
@@ -257,6 +336,7 @@ PROGRAM _CYCLIC
 				CASE SetBoardStep OF
 					SetBoardExecute:
 						IF gMotionInterface.Ready THEN
+							CommandDoneCount := CommandDoneCount + 1;
 							gMotionInterface.Command := MOVE_START_END;
 							gMotionInterface.StartPos := CommandList[CommandDoneCount].StartPos;
 							gMotionInterface.EndPos := CommandList[CommandDoneCount].EndPos;
@@ -267,31 +347,38 @@ PROGRAM _CYCLIC
 					SetBoardBusy:
 						IF gMotionInterface.Done THEN
 							gMotionInterface.Execute := FALSE;
-							IF (CommandDoneCount + 1) < CommandCount THEN
+							
+							IF CommandDoneCount < CommandCount THEN
 								SetBoardStep := SetBoardExecute;
-								CommandDoneCount := CommandDoneCount + 1;
-						
 							ELSE
-								CommandDoneCount := CommandDoneCount + 1;
-								SetBoardTrigger := FALSE;
-								SetBoardStep := SetBoardExecute;
-								gStep := PhotoCheck;
+								SetBoardStep := SetBoardHomeExecute;
 							END_IF;
 						END_IF;
 					
+					SetBoardHomeExecute:
+						IF gMotionInterface.Ready THEN
+							gMotionInterface.Command := MOVE_HOME;
+							gMotionInterface.StartPos := DEFAULT_POSITION;
+							gMotionInterface.EndPos := DEFAULT_POSITION;
+							gMotionInterface.Execute := TRUE;
+							SetBoardStep := SetBoardHomeBusy;
+						END_IF;
+					
+					SetBoardHomeBusy:
+						IF gMotionInterface.Done THEN
+							gMotionInterface.Execute := FALSE;
+							SetBoardStep := SetBoardExecute;
+							gStep := PhotoCheck;
+						END_IF;
 				END_CASE;
 			ELSE
 				SetBoardTrigger := FALSE;
 				gStep := ResetRobotPos;
+				SetBoardStep := SetBoardBusy;
 			END_IF;
-		
-		
 	END_CASE;
-
-	 
 END_PROGRAM
 
 PROGRAM _EXIT
-	(* Insert code here *)
+	(* Miejsce na kod wywo³ywany przy zatrzymaniu zadania *)
 END_PROGRAM
-

@@ -22,5 +22,6 @@
     <Object Type="Package">AlarmInncorrectBoard</Object>
     <Object Type="Package">ReHomeDialog</Object>
     <Object Type="Package">RobotNotBasedDialog</Object>
+    <Object Type="Package">RRPDialog</Object>
   </Objects>
 </Package>

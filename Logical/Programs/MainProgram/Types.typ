@@ -7,6 +7,8 @@ TYPE
 		MoveBusy,
 		DiscardExecute,
 		DiscardBusy,
+		HomeExecute,
+		HomeBusy,
 		EndRM
 		);
 	SetBoardInfoType : 	STRUCT 
@@ -17,10 +19,14 @@ TYPE
 		(
 		SetBoardCommandGen,
 		SetBoardExecute,
-		SetBoardBusy
+		SetBoardBusy,
+		SetBoardHomeExecute,
+		SetBoardHomeBusy
 		);
 	CommandType : 	STRUCT 
 		EndPos : McPosType;
 		StartPos : McPosType;
+		EndIndex : IndexPointType;
+		StartIndex : IndexPointType;
 	END_STRUCT;
 END_TYPE

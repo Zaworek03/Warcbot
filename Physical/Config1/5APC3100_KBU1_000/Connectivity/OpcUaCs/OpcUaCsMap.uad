@@ -133,6 +133,9 @@
     <Task Name="MainProgra">
       <Variable Name="BoardGit" />
       <Variable Name="RobotMoveMarker" />
+      <Variable Name="RRPCancel" />
+      <Variable Name="RRPConfirm" />
+      <Variable Name="RRPTrigger" />
     </Task>
     <Task Name="PositionIn">
       <Variable Name="AxisQ1Pos" EngineeringUnitId="1" />
