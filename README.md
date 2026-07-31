@@ -2,10 +2,6 @@
 
 **🇬🇧 English** · [🇵🇱 Polski](README.pl.md)
 
-<p align="center">
-  <img src="Documentation/assets/cell_photo.png" alt="Warcabot cell" width="360">
-</p>
-
 **Warcabot** is an automated cell in which a six-axis **Comau Racer 3** robot plays a full game
 of checkers against a human. The player declares their moves solely through the touch-based
 **mapp View** visualization, while the robot performs every physical action on the board —
@@ -175,7 +171,7 @@ channel (client certificate `client_cert.der` / `client_key.pem`). Default endpo
 The visualization is the sole human–machine interface. Screens: **Main** (project overview),
 **Play** (interactive 8×8 board, statistics, new/load/save game), **Alarm** (active list &
 history), **Manual** (Cartesian/joint jog, positions, homing) and **Settings**. Manual and
-Settings are protected by login (mapp UserX). Screenshots are in `Documentation/assets/`.
+Settings are protected by login (mapp UserX). Screenshots are included in the technical documentation.
 
 ## Technology stack
 
@@ -198,7 +194,7 @@ Warcbot/
 ├── Robot-programy/                 # ST Motion programs (move.st, gohome.st, moveAB.st)
 ├── SceneViewer/                    # Simulation model of the cell (Scene Viewer)
 ├── Checkers-Engine-Warcbot-main/   # Checkers engine (C core + Python, OPC UA)
-├── Documentation/                  # Technical documentation (PL + EN) and figures
+├── Documentation/                  # Technical documentation (PL + EN, PDF)
 ├── warcabot.apj                    # Automation Studio project file
 └── LICENSE                         # GNU GPL v3
 ```
@@ -229,8 +225,8 @@ Warcbot/
 Full technical description of the system — architecture, every ST task, the checkers engine,
 OPC UA, vision, HMI, hardware, safety and startup — is available in two languages:
 
-- 🇬🇧 [`Documentation/Warcabot_Technical_Documentation.docx`](Documentation/Warcabot_Technical_Documentation.docx) — English
-- 🇵🇱 [`Documentation/Warcabot_Dokumentacja_Techniczna.docx`](Documentation/Warcabot_Dokumentacja_Techniczna.docx) — Polish
+- 🇬🇧 [`Documentation/Warcabot_Technical_Documentation.pdf`](Documentation/Warcabot_Technical_Documentation.pdf) — English
+- 🇵🇱 [`Documentation/Warcabot_Dokumentacja_Techniczna.pdf`](Documentation/Warcabot_Dokumentacja_Techniczna.pdf) — Polish
 
 ## Project status
 
