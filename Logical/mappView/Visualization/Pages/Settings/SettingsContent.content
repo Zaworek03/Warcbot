@@ -33,16 +33,91 @@
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem3" left="0" width="150" zIndex="2" text="Parametry kamery">
           <Widgets>
-            <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="50" left="20" width="120" zIndex="0" text="ToggleButton1" />
-            <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="130" left="260" zIndex="1" maxValue="100000" minValue="500" />
-            <Widget xsi:type="widgets.brease.Label" id="Label1" top="130" left="180" zIndex="2" text="exposure" />
-            <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="190" left="260" zIndex="3" maxValue="4" />
-            <Widget xsi:type="widgets.brease.Label" id="Label2" top="190" left="180" zIndex="4" text="gain" />
-            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="130" left="520" zIndex="5" maxValue="12" />
-            <Widget xsi:type="widgets.brease.Label" id="Label3" top="130" left="480" zIndex="6" text="białe" />
-            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="210" left="540" zIndex="7" maxValue="12" />
-            <Widget xsi:type="widgets.brease.Label" id="Label4" top="210" left="500" zIndex="8" text="czarne" />
-            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput3" top="290" left="560" zIndex="9" maxValue="26" />
+            <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="50" left="380" width="140" height="50" zIndex="0" text="Zrób zdjęcie" style="Operate" />
+            <Widget xsi:type="widgets.brease.Label" id="Label1" top="150" left="0" width="140" zIndex="1" text="Exposure Time" style="Title2" />
+            <Widget xsi:type="widgets.brease.Label" id="Label2" top="230" left="0" width="100" zIndex="2" text="Gain Level" style="Title2" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="150" left="540" zIndex="3" maxValue="12" backColor="rgba(192, 192, 192, 1)" />
+            <Widget xsi:type="widgets.brease.Label" id="Label3" top="150" left="300" width="200" zIndex="4" text="Liczba białych pionków" style="Title2" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="230" left="540" zIndex="5" maxValue="12" backColor="rgba(192, 192, 192, 1)" />
+            <Widget xsi:type="widgets.brease.Label" id="Label4" top="230" left="300" width="220" zIndex="6" text="Liczba czarnych pionków" style="Title2" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput3" top="310" left="540" zIndex="7" maxValue="26" backColor="rgba(192, 192, 192, 1)" />
+            <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton2" top="50" left="60" width="140" height="50" zIndex="8" text="Auto parametry" style="Operate" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput4" top="150" left="140" zIndex="9" backColor="rgba(192, 192, 192, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput5" top="230" left="140" zIndex="10" backColor="rgba(192, 192, 192, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput6" top="310" left="140" zIndex="11" backColor="rgba(192, 192, 192, 1)" />
+            <Widget xsi:type="widgets.brease.Label" id="Label5" top="310" left="0" zIndex="12" text="Focus" style="Title2" />
+            <Widget xsi:type="widgets.brease.Label" id="Label6" top="310" left="300" width="220" zIndex="13" text="Liczba wszystkich wyników" style="Title2" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput7" top="640" left="200" width="80" zIndex="14" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput8" top="640" left="280" width="80" zIndex="15" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput9" top="640" left="360" width="80" zIndex="16" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput10" top="640" left="440" width="80" zIndex="17" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput11" top="640" left="520" width="80" zIndex="18" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput12" top="640" left="600" width="80" zIndex="19" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput13" top="640" left="680" width="80" zIndex="20" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput14" top="640" left="760" width="80" zIndex="21" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput15" top="610" left="280" width="80" zIndex="22" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput16" top="610" left="440" width="80" zIndex="23" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput17" top="610" left="600" width="80" zIndex="24" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput18" top="610" left="760" width="80" zIndex="25" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput19" top="580" left="200" width="80" zIndex="26" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput20" top="580" left="360" width="80" zIndex="27" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput21" top="580" left="520" width="80" zIndex="28" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput22" top="580" left="680" width="80" zIndex="29" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput23" top="550" left="280" width="80" zIndex="30" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput24" top="550" left="440" width="80" zIndex="31" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput25" top="550" left="600" width="80" zIndex="32" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput26" top="550" left="760" width="80" zIndex="33" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput27" top="520" left="200" width="80" zIndex="34" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput28" top="520" left="360" width="80" zIndex="35" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput29" top="520" left="520" width="80" zIndex="36" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput30" top="520" left="680" width="80" zIndex="37" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput31" top="490" left="280" width="80" zIndex="38" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput32" top="490" left="440" width="80" zIndex="39" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput33" top="490" left="600" width="80" zIndex="40" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput34" top="490" left="760" width="80" zIndex="41" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput35" top="460" left="200" width="80" zIndex="42" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput36" top="460" left="360" width="80" zIndex="43" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput37" top="460" left="520" width="80" zIndex="44" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput38" top="460" left="680" width="80" zIndex="45" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput39" top="430" left="280" width="80" zIndex="46" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput40" top="430" left="440" width="80" zIndex="47" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput41" top="430" left="600" width="80" zIndex="48" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput42" top="430" left="760" width="80" zIndex="49" backColor="rgba(255, 222, 173, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput43" top="610" left="200" width="80" zIndex="50" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput44" top="520" left="280" width="80" zIndex="51" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput45" top="520" left="440" width="80" zIndex="52" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput46" top="520" left="600" width="80" zIndex="53" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput47" top="520" left="760" width="80" zIndex="54" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput48" top="580" left="280" width="80" zIndex="55" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput49" top="580" left="440" width="80" zIndex="56" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput50" top="580" left="600" width="80" zIndex="57" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput51" top="460" left="280" width="80" zIndex="58" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput52" top="460" left="440" width="80" zIndex="59" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput53" top="460" left="600" width="80" zIndex="60" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput54" top="460" left="760" width="80" zIndex="61" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput55" top="550" left="200" width="80" zIndex="62" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput56" top="610" left="360" width="80" zIndex="63" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput57" top="610" left="520" width="80" zIndex="64" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput58" top="490" left="200" width="80" zIndex="65" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput59" top="430" left="200" width="80" zIndex="66" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput60" top="430" left="360" width="80" zIndex="67" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput61" top="430" left="520" width="80" zIndex="68" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput62" top="430" left="680" width="80" zIndex="69" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput63" top="490" left="360" width="80" zIndex="70" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput64" top="550" left="360" width="80" zIndex="71" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput65" top="490" left="520" width="80" zIndex="72" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput66" top="490" left="680" width="80" zIndex="73" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput67" top="550" left="520" width="80" zIndex="74" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput68" top="550" left="680" width="80" zIndex="75" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput69" top="580" left="760" width="80" zIndex="76" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput70" top="610" left="680" width="80" zIndex="77" backColor="rgba(250, 240, 230, 1)" />
+            <Widget xsi:type="widgets.brease.Label" id="Label7" top="400" left="420" width="140" zIndex="78" text="Widok planszy" style="Title2" />
+            <Widget xsi:type="widgets.brease.Label" id="Label8" top="560" left="860" width="140" zIndex="79" text="2- pionek czarny" style="Title2" />
+            <Widget xsi:type="widgets.brease.Label" id="Label9" top="520" left="860" width="140" zIndex="80" text="1- pionek biały" style="Title2" />
+            <Widget xsi:type="widgets.brease.Label" id="Label10" top="30" left="580" width="720" height="50" zIndex="81" text="Najpierw należy włączyć Auto parametry, poczekać aż kamera znajdzie prawidłowe parametry," style="Caption" />
+            <Widget xsi:type="widgets.brease.Label" id="Label11" top="65" left="580" width="800" zIndex="82" text=" następnie trzeba wyłączyć Auto parametry i dopiero wtedy można wykonać testowe zdjęcie i sprawdzić, " style="Caption" />
+            <Widget xsi:type="widgets.brease.Label" id="Label12" top="90" left="580" width="540" zIndex="84" text="czy poniższy podgląd planszy zgadza się z rzeczywistym ułożeniem." style="Caption" />
+            <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="30" left="560" width="820" zIndex="83" />
           </Widgets>
         </Widget>
       </Widgets>

@@ -21,7 +21,12 @@ VAR
 	gCameraEnd : BOOL;
 	gPlayerMove : BOOL;
 	gStop : BOOL := TRUE; (*Odwrotnoœæ gStart*)
+	New_Variable : USINT;
+	gCameraAutoAdjust : BOOL;
 	gCameraNumResults : USINT;
 	gCameraBlackCount : USINT;
 	gCameraWhiteCount : USINT;
+	gCameraReadFocus : UINT;
+	gCameraReadGainLevel : USINT;
+	gCameraReadExposureTime : UDINT;
 END_VAR

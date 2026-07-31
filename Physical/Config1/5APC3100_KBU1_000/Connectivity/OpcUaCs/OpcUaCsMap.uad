@@ -78,6 +78,11 @@
       <Variable Name="gCameraBlackCount" />
       <Variable Name="gCameraWhiteCount" />
       <Variable Name="gCameraNumResults" />
+      <Variable Name="gCameraReadExposureTime" />
+      <Variable Name="gCameraReadFocus" />
+      <Variable Name="gCameraReadGainLevel" />
+      <Variable Name="gCameraAutoAdjust" />
+      <Variable Name="gBoardCamera" RecursiveEnable="2" />
     </GlobalVariables>
     <Task Name="SaveGame">
       <Variable Name="UIConnect">
