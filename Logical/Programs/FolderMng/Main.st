@@ -13,7 +13,7 @@ PROGRAM _CYCLIC
 			fbDirInfo();
 
 			IF fbDirInfo.status = 0 THEN
-				IF fbDirInfo.filenum <> 2 THEN
+				IF fbDirInfo.filenum <> 3 THEN
 					gAlarm.MissingSTMotionProgram := TRUE;
 				ELSE
 					gAlarm.MissingSTMotionProgram := FALSE;

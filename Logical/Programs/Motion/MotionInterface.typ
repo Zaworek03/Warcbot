@@ -68,6 +68,6 @@ TYPE
 	END_STRUCT;
 	RobotFeedrateType : 	STRUCT 
 		High : LREAL := 10000;
-		Low : LREAL := 500;
+		Low : LREAL := 1500;
 	END_STRUCT;
 END_TYPE

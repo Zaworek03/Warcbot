@@ -61,13 +61,18 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gPlayerMove" attribute="value" />
 <Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="AbortGameBtn" attribute="enable" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gPlayerMove" attribute="value" />
-<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="SaveGameBtn" attribute="enable" />
-</Binding>
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gStop" attribute="value" />
 <Target xsi:type="brease" contentRefId="SaveContent" widgetRefId="BtnLoad" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gStop" attribute="value" />
+<Target xsi:type="brease" contentRefId="SaveContent" widgetRefId="BtnNewSave" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gStop" attribute="value" />
+<Target xsi:type="brease" contentRefId="PlayContent" widgetRefId="SaveGameBtn" attribute="enable" />
 </Binding>
 </Bindings>
 </BindingsSet>
