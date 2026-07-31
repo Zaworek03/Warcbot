@@ -121,8 +121,8 @@ PROGRAM _CYCLIC
 					MoveExecute:
 						IF gMotionInterface.Ready THEN
 							gMotionInterface.Command := MOVE_START_END;
-							gMotionInterface.StartPos := COORD_POSITION[gRobotMoveVar.StartPoint.x, gRobotMoveVar.StartPoint.y];
-							gMotionInterface.EndPos := COORD_POSITION[gRobotMoveVar.EndPoint.x, gRobotMoveVar.EndPoint.y];
+							gMotionInterface.StartPos := COORD_POSITION[gRobotMoveVar.StartPoint.y, gRobotMoveVar.StartPoint.x];
+							gMotionInterface.EndPos := COORD_POSITION[gRobotMoveVar.EndPoint.y, gRobotMoveVar.EndPoint.x];
 							gMotionInterface.Execute := TRUE;
 							MoveStep := MoveBusy;
 						END_IF;
@@ -142,7 +142,7 @@ PROGRAM _CYCLIC
 							gMotionInterface.Command := MOVE_START_END;
 							gMotionInterface.EndPos := BUFOR_POSITION[gRobotMoveVar.DiscardColor, 12 - ColorCount[gRobotMoveVar.DiscardColor] + 1];
 							ColorCount[gRobotMoveVar.DiscardColor] := ColorCount[gRobotMoveVar.DiscardColor] - 1;
-							gMotionInterface.StartPos := COORD_POSITION[gRobotMoveVar.DiscardPoint.x, gRobotMoveVar.DiscardPoint.y];
+							gMotionInterface.StartPos := COORD_POSITION[gRobotMoveVar.DiscardPoint.y, gRobotMoveVar.DiscardPoint.x];
 							gMotionInterface.Execute := TRUE;
 							MoveStep := DiscardBusy;
 						END_IF;
