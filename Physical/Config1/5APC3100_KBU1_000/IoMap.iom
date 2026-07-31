@@ -3,7 +3,7 @@ VAR_CONFIG
 	::Program2:gCameraCtrl.Status.AcquisitionReady AT %IX."VSS112Q22.042P-000".ImageAcquisitionReady;
 	::Program2:gCameraCtrl.Status.ProcessingError AT %IW."VSS112Q22.042P-000".ImageProcessingError;
 	::Program2:gCameraCtrl.Status.ProcessingActive AT %IX."VSS112Q22.042P-000".ImageProcessingActive;
-	::Program2:gCameraCtrl.Cmd.SearchAcquisitionSettings AT %QX."VSS112Q22.042P-000".SearchAcquisitionSettings;
+	::gCameraAutoAdjust AT %QX."VSS112Q22.042P-000".SearchAcquisitionSettings;
 	::Program2:gCameraCtrl.Status.ReadFocus AT %IW."VSS112Q22.042P-000".ReadFocus;
 	::Program2:gCameraCtrl.NumResults AT %IB."VSS112Q22.042P-000".NumResults_Out_1;
 	::Program2:gCameraCtrl.Pieces[1].PositionX AT %ID."VSS112Q22.042P-000".PositionX_Out_101;

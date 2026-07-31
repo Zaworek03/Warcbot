@@ -17,13 +17,279 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gCameraTrigger" attribute="value" />
 <Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="ToggleButton1" attribute="value" />
 </Binding>
+
+
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gCameraExposureTime" attribute="value" />
-<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericInput1" attribute="value" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gCameraReadExposureTime" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput4" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gCameraGainLevel" attribute="node" />
-<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericInput2" attribute="node" />
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gCameraReadGainLevel" attribute="value" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput5" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gCameraReadFocus" attribute="value" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput6" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gCameraAutoAdjust" attribute="value" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="ToggleButton2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[1,1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput7" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[1,2]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput8" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[1,3]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput9" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[1,4]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput10" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[1,5]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput11" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[1,6]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput12" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[1,7]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput13" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[1,8]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput14" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[2,1]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput43" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[2,2]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput15" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[2,3]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput56" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[2,4]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput16" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[2,5]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput57" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[2,6]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput17" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[2,7]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput70" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[2,8]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput18" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[3,1]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput19" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[3,2]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput48" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[3,3]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput20" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[3,4]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput49" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[3,5]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput21" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[3,6]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput50" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[3,7]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput22" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[3,8]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput69" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[4,1]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput55" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[4,2]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput23" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[4,3]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput64" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[4,4]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput24" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[4,5]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput67" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[4,6]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput25" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[4,7]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput68" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[4,8]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput26" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[5,1]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput27" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[5,2]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput44" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[5,3]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput28" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[5,4]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput45" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[5,5]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput29" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[5,6]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput46" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[5,7]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput30" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[5,8]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput47" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[6,1]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput58" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[6,2]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput31" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[6,3]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput63" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[6,4]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput32" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[6,5]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput65" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[6,6]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput33" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[6,7]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput66" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[6,8]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput34" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[7,1]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput35" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[7,2]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput51" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[7,3]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput36" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[7,4]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput52" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[7,5]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput37" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[7,6]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput53" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[7,7]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput38" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[7,8]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput54" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[8,1]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput59" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[8,2]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput39" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[8,3]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput60" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[8,4]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput40" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[8,5]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput61" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[8,6]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput41" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[8,7]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput62" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gBoardCamera[8,8]" attribute="node" />
+<Target xsi:type="brease" contentRefId="SettingsContent" widgetRefId="NumericOutput42" attribute="node" />
 </Binding>
 </Bindings>
 </BindingsSet>

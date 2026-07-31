@@ -2,13 +2,19 @@ PROGRAM _INIT
 
 	gCameraCtrl.Cmd.Enable := TRUE;
 	gCameraCtrl.Cmd.AcquireImage := FALSE;
-	gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
+	
+	gCameraAutoAdjust := FALSE;
+	PreviousCameraAutoAdjust := FALSE;
+		
+	gCameraExposureTime := 20884;
+	gCameraGainLevel := 4;
+	gCameraFocus := 53073;
 
 	gCameraCtrl.Parameters.ExposureTime := gCameraExposureTime;
 	gCameraCtrl.Parameters.SetFocus := gCameraFocus;
 	gCameraCtrl.Parameters.GainLevel := gCameraGainLevel;
-	gCameraCtrl.Parameters.FlashColor := 0;
-	gCameraCtrl.Parameters.FlashSegment := 0;
+	gCameraCtrl.Parameters.FlashColor := 3;
+	gCameraCtrl.Parameters.FlashSegment := 1;
 	
 	gCameraCtrl.Parameters.ScoreMin := 75;
 	gCameraCtrl.Parameters.NumSearchMax := 26;
@@ -45,12 +51,59 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 
-	gCameraCtrl.Cmd.Enable := TRUE;
-	gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
+	gCameraCtrl.Cmd.Enable := TRUE;	
 	
-	gCameraCtrl.Parameters.ExposureTime := gCameraExposureTime;
-	gCameraCtrl.Parameters.SetFocus := gCameraFocus;
-	gCameraCtrl.Parameters.GainLevel := gCameraGainLevel;
+	(* Wyœwietlanie rzeczywistych wartoœci kamery *)
+	gCameraReadExposureTime :=
+	gCameraCtrl.Status.ReadExposureTime;
+
+	gCameraReadGainLevel :=
+	gCameraCtrl.Status.ReadGainLevel;
+
+	gCameraReadFocus :=
+	gCameraCtrl.Status.ReadFocus;
+
+
+	(* Po wy³¹czeniu ustawiania zapisz znalezione parametry *)
+	IF PreviousCameraAutoAdjust AND NOT gCameraAutoAdjust THEN
+
+		gCameraExposureTime :=
+		gCameraCtrl.Status.ReadExposureTime;
+
+		gCameraGainLevel :=
+		gCameraCtrl.Status.ReadGainLevel;
+
+		gCameraFocus :=
+		gCameraCtrl.Status.ReadFocus;
+
+	END_IF;
+
+
+	(* Poza automatycznym ustawianiem wysy³aj zapisane nastawy *)
+	IF NOT gCameraAutoAdjust THEN
+
+		gCameraCtrl.Parameters.ExposureTime :=
+		gCameraExposureTime;
+
+		gCameraCtrl.Parameters.GainLevel :=
+		gCameraGainLevel;
+
+		gCameraCtrl.Parameters.SetFocus :=
+		gCameraFocus;
+
+	END_IF;
+
+
+	PreviousCameraAutoAdjust := gCameraAutoAdjust;
+	
+	IF gCameraTrigger
+		AND NOT gCameraAutoAdjust
+		AND NOT gCameraEnd
+		AND gCameraCtrl.Status.AcquisitionReady
+		AND NOT gCameraCtrl.Status.ProcessingActive
+		AND (gCameraCtrl.Status.ProcessingError = 0) THEN
+		gCameraCtrl.Cmd.AcquireImage := TRUE;
+	END_IF;
 	
 	gCameraBlackCount := gCameraCtrl.BlackCount;
 	gCameraWhiteCount := gCameraCtrl.WhiteCount;
@@ -63,13 +116,6 @@ PROGRAM _CYCLIC
 		gCameraEnd := FALSE;
 	END_IF;
 
-	IF gCameraTrigger
-		AND NOT gCameraEnd
-		AND gCameraCtrl.Status.AcquisitionReady
-		AND NOT gCameraCtrl.Status.ProcessingActive
-		AND (gCameraCtrl.Status.ProcessingError = 0) THEN
-		gCameraCtrl.Cmd.AcquireImage := TRUE;
-	END_IF;
 
 	IF gCameraCtrl.Status.ProcessingActive THEN
 		gCameraCtrl.Cmd.AcquireImage := FALSE;
@@ -358,7 +404,6 @@ END_PROGRAM
 PROGRAM _EXIT
 
 	gCameraCtrl.Cmd.AcquireImage := FALSE;
-	gCameraCtrl.Cmd.SearchAcquisitionSettings := FALSE;
 	gCameraCtrl.Cmd.Enable := FALSE;
 
 	gCameraCtrl.BoardReady := FALSE;
@@ -367,5 +412,7 @@ PROGRAM _EXIT
 
 	gCameraEnd := FALSE;
 	PreviousProcessingActive := FALSE;
+	PreviousCameraAutoAdjust := FALSE;
+	gCameraAutoAdjust := FALSE;
 
 END_PROGRAM
